@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Footer, Form, Header, Hero, Services } from '../components';
+import { Benefits, Footer, Contacts, Header, Hero, Process, References, Services } from '../components';
 
 export default function Home() {
   return (
@@ -13,8 +13,11 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <Contacts />
+        <Benefits />
         <Services />
-        <Form />
+        <Process />
+        <References />
       </main>
       <Footer />
     </>

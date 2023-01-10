@@ -62,8 +62,6 @@ const Form = () => {
 
       if (response.ok) {
         const body = await response.json();
-        console.log('body:',body)
-        
       }
     } catch (error) {
       console.error(error)
@@ -84,78 +82,75 @@ const Form = () => {
   }
 
   return (
-    <section>
-      <h2>Udělejte nezávaznou objednávku</h2>
-      <form
-        onSubmit={submitHandler}
-        className='my-8 flex flex-col gap-4'
+    <form
+      onSubmit={submitHandler}
+      className='my-8 flex flex-col gap-4'
+    >
+      <Input>
+        <label htmlFor='firstName'>Jméno</label>
+        <input
+          type='text'
+          name='firstName'
+          id='firstName'
+          autoComplete='given-name'
+          placeholder='Jméno'
+          value={firstName}
+          onChange={firstNameChangeHandler}
+          onBlur={firstNameBlurHandler}
+        />
+        {firstNameHasError && (<p>Error</p>)}
+      </Input>
+
+      <Input>
+        <label htmlFor='lastName'>Příjmení</label>
+        <input
+          type='text'
+          name='lastName'
+          id='lastName'
+          autoComplete='family-name'
+          placeholder='Příjmení'
+          value={lastName}
+          onChange={lastNameChangeHandler}
+          onBlur={lastNameBlurHandler}
+        />
+        {lastNameHasError && (<p>Error</p>)}
+      </Input>
+
+      <Input>
+        <label htmlFor='email'>Email</label>
+        <input
+          type='email'
+          name='email'
+          id='email'
+          autoComplete='email'
+          placeholder='vas@email.cz'
+          value={email}
+          onChange={emailChangeHandler}
+          onBlur={emailBlurHandler}
+        />
+      </Input>
+
+      <Input>
+        <label htmlFor='phoneNumber'>Telefonní číslo</label>
+        <input
+          type='tel'
+          name='phoneNumber'
+          id='phoneNumber'
+          autoComplete='tel'
+          placeholder='123 456 789'
+          value={phoneNumber}
+          onChange={phoneNumberChangeHandler}
+          onBlur={phoneNumberBlurHandler}
+        />
+      </Input>
+
+      <button
+        type='submit'
+        disabled={!formIsValid}
       >
-        <Input>
-          <label htmlFor='firstName'>Jméno</label>
-          <input
-            type='text'
-            name='firstName'
-            id='firstName'
-            autoComplete='given-name'
-            placeholder='Jméno'
-            value={firstName}
-            onChange={firstNameChangeHandler}
-            onBlur={firstNameBlurHandler}
-          />
-          {firstNameHasError && (<p>Error</p>)}
-        </Input>
-
-        <Input>
-          <label htmlFor='lastName'>Příjmení</label>
-          <input
-            type='text'
-            name='lastName'
-            id='lastName'
-            autoComplete='family-name'
-            placeholder='Příjmení'
-            value={lastName}
-            onChange={lastNameChangeHandler}
-            onBlur={lastNameBlurHandler}
-          />
-          {lastNameHasError && (<p>Error</p>)}
-        </Input>
-
-        <Input>
-          <label htmlFor='email'>Email</label>
-          <input
-            type='email'
-            name='email'
-            id='email'
-            autoComplete='email'
-            placeholder='vas@email.cz'
-            value={email}
-            onChange={emailChangeHandler}
-            onBlur={emailBlurHandler}
-          />
-        </Input>
-
-        <Input>
-          <label htmlFor='phoneNumber'>Telefonní číslo</label>
-          <input
-            type='tel'
-            name='phoneNumber'
-            id='phoneNumber'
-            autoComplete='tel'
-            placeholder='123 456 789'
-            value={phoneNumber}
-            onChange={phoneNumberChangeHandler}
-            onBlur={phoneNumberBlurHandler}
-          />
-        </Input>
-
-        <button
-          type='submit'
-          disabled={!formIsValid}
-        >
-          Odeslat
-        </button>
-      </form>
-    </section>
+        Odeslat
+      </button>
+    </form>
   );
 };
 

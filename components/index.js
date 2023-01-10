@@ -1,5 +1,10 @@
+export {default as Benefits} from './Benefits';
+export {default as Contacts} from './Contacts';
+export {default as CTAButton} from './CTAButton';
 export {default as Footer} from './Footer';
 export {default as Form} from './Form';
 export {default as Header} from './Header';
 export {default as Hero} from './Hero';
+export {default as Process} from './Process';
+export {default as References} from './References';
 export {default as Services} from './Services';

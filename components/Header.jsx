@@ -38,14 +38,14 @@ const Header = () => {
 
       <div className={`fixed left-[50%] transition ${isOnTop ? '' : 'translate-x-[-40%]'}`}>
         <Link href='/'>
-        <img
-          src='/logo.png'
-          alt='logo'
-          width={60}
-          height={60}
-          className={`absolute top-[1px] left-[10px] -z-10 transition-[200] delay-150 ${isOnTop ? '' : 'translate-x-[-150%]'}
+          <img
+            src='/logo.png'
+            alt='logo'
+            width={60}
+            height={60}
+            className={`absolute top-[1px] left-[10px] -z-10 transition-[200] ${isOnTop ? '' : 'delay-150 translate-x-[-150%]'}
           bg-[#fff] rounded-full p-2 shadow-lg`}
-        />
+          />
         </Link>
         <nav className={`bg-[#fff] py-4 px-12 rounded-full shadow-lg`}>
           <ul className='flex justify-center items-center gap-14'>

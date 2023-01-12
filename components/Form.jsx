@@ -128,6 +128,7 @@ const Form = () => {
           onChange={emailChangeHandler}
           onBlur={emailBlurHandler}
         />
+        {emailHasError && (<p>Error</p>)}
       </Input>
 
       <Input>
@@ -142,6 +143,7 @@ const Form = () => {
           onChange={phoneNumberChangeHandler}
           onBlur={phoneNumberBlurHandler}
         />
+        {phoneNumber && (<p>Error</p>)}
       </Input>
 
       <button

@@ -14,7 +14,9 @@ const Header = () => {
     <header
       className='flex justify-around items-center p-8'
     >
+      <Link href='/'>
       <img src='/logo-name.png' alt='logo' width={300} />
+      </Link>
       <nav className=''>
         <ul className='flex justify-center items-center gap-12'>
           {

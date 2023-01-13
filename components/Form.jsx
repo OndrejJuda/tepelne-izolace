@@ -1,24 +1,22 @@
 import React from 'react';
 import useInput from '../hooks/use-input';
-import { ButtonStyle } from './';
 
-const Input = ({ inputProps, errorMessage, hasError, title }) => {
+const Input = ({ inputProps, hasError, title }) => {
   return (
     <div
-      className='flex flex-col gap-2 '
+      className='flex flex-col gap-2'
     >
-      <label 
-      htmlFor={inputProps.id}
-      className='font-semibold text-primary-500'
+      <label
+        htmlFor={inputProps.id}
+        className='font-semibold text-primary-500'
       >
         {title}
-        </label>
+      </label>
       <input
         {...inputProps}
         className={`shadow-lg rounded-full py-4 px-8 
         ${hasError ? 'border-red-500 border-[2px]' : 'm-[2px]'}`}
       />
-      {/* {hasError && (<p>{errorMessage}</p>)} */}
     </div>
   )
 };
@@ -64,6 +62,7 @@ const Form = () => {
     e.preventDefault();
 
     try {
+      alert('Testovací režim. Kontakt nebyl odeslán.')
       // const response = await fetch(
       //   '/api/sendgrid/',
       //   {
@@ -88,15 +87,15 @@ const Form = () => {
     phoneNumberResetHandler();
   };
 
-  let formIsValid = true;
+  let isFormValid = true;
   if (!firstNameIsValid || !lastNameIsValid || !emailIsValid || !phoneNumberIsValid) {
-    formIsValid = false;
+    isFormValid = false;
   }
 
   return (
     <form
       onSubmit={submitHandler}
-      className='mt-8 flex flex-col gap-8'
+      className='mt-8 flex flex-col items-start gap-8'
     >
       <div className='flex flex-wrap gap-16'>
         <Input
@@ -110,7 +109,6 @@ const Form = () => {
             onChange: firstNameChangeHandler,
             onBlur: firstNameBlurHandler,
           }}
-          errorMessage='Error'
           hasError={firstNameHasError}
           title='Jméno'
         />
@@ -126,7 +124,6 @@ const Form = () => {
             onChange: lastNameChangeHandler,
             onBlur: lastNameBlurHandler,
           }}
-          errorMessage='Error'
           hasError={lastNameHasError}
           title='Příjmení'
         />
@@ -144,7 +141,6 @@ const Form = () => {
             onChange: emailChangeHandler,
             onBlur: emailBlurHandler,
           }}
-          errorMessage='Error'
           hasError={emailHasError}
           title='Email'
         />
@@ -160,7 +156,6 @@ const Form = () => {
             onChange: phoneNumberChangeHandler,
             onBlur: phoneNumberBlurHandler,
           }}
-          errorMessage='Error'
           hasError={phoneNumberHasError}
           title='Telefonní číslo'
         />
@@ -169,12 +164,14 @@ const Form = () => {
 
       <button
         type='submit'
-        disabled={!formIsValid}
-        className='mt-12'
+        disabled={!isFormValid}
+        className='inline-block mt-12 py-4 px-8 rounded-full 
+        text-xl text-primary-50 bg-primary-700 shadow-lg
+        disabled:bg-gray-200 disabled:text-black disabled:scale-90 disabled:shadow-none
+        transition enabled:hover:bg-primary-300 enabled:hover:text-primary-900 
+        enabled:hover:scale-105 enabled:hover:shadow-md enabled:active:scale-95 enabled:active:shadow-lg'
       >
-        <ButtonStyle>
-          Odeslat
-        </ButtonStyle>
+        Odeslat
       </button>
     </form >
   );

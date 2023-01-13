@@ -58,7 +58,7 @@ const Header = () => {
                   <Link href={id}>
                     {title}
                   </Link>
-                  <div className='w-full h-[2px] bg-primary-500 -translate-x-[100%] group-hover:translate-x-0 transition' />
+                  <div className='w-full h-[2px] bg-primary-500 -translate-x-[105%] group-hover:translate-x-0 transition' />
                 </li>
               ))
             }

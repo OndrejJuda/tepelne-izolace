@@ -7,8 +7,8 @@ const Contacts = () => {
       id='kontakty'
       className='flex justify-center my-48'
     >
-      <div>
-        <HSecondary>Sit sit dolor</HSecondary>
+      <div className='bg-primary-50 rounded-xl px-36 py-24 mt-8'>
+        <HSecondary additionalStyling='mb-16 text-center'>Sit sit dolor</HSecondary>
         <Form />
       </div>
     </section>

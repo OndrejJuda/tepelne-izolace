@@ -1,12 +1,24 @@
 import React from 'react';
 import useInput from '../hooks/use-input';
+import { ButtonStyle } from './';
 
-const Input = ({ children }) => {
+const Input = ({ inputProps, errorMessage, hasError, title }) => {
   return (
     <div
-      className='flex gap-2'
+      className='flex flex-col gap-2 '
     >
-      {children}
+      <label 
+      htmlFor={inputProps.id}
+      className='font-semibold text-primary-500'
+      >
+        {title}
+        </label>
+      <input
+        {...inputProps}
+        className={`shadow-lg rounded-full py-4 px-8 
+        ${hasError ? 'border-red-500 border-[2px]' : 'm-[2px]'}`}
+      />
+      {/* {hasError && (<p>{errorMessage}</p>)} */}
     </div>
   )
 };
@@ -52,17 +64,17 @@ const Form = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(
-        '/api/sendgrid/',
-        {
-          method: 'POST',
-          body: JSON.stringify({ firstName, lastName, email, phoneNumber }),
-        }
-      );
+      // const response = await fetch(
+      //   '/api/sendgrid/',
+      //   {
+      //     method: 'POST',
+      //     body: JSON.stringify({ firstName, lastName, email, phoneNumber }),
+      //   }
+      // );
 
-      if (response.ok) {
-        const body = await response.json();
-      }
+      // if (response.ok) {
+      //   const body = await response.json();
+      // }
     } catch (error) {
       console.error(error)
     }
@@ -84,75 +96,87 @@ const Form = () => {
   return (
     <form
       onSubmit={submitHandler}
-      className='my-8 flex flex-col gap-4'
+      className='mt-8 flex flex-col gap-8'
     >
-      <Input>
-        <label htmlFor='firstName'>Jméno</label>
-        <input
-          type='text'
-          name='firstName'
-          id='firstName'
-          autoComplete='given-name'
-          placeholder='Jméno'
-          value={firstName}
-          onChange={firstNameChangeHandler}
-          onBlur={firstNameBlurHandler}
+      <div className='flex flex-wrap gap-16'>
+        <Input
+          inputProps={{
+            type: 'text',
+            name: 'firstName',
+            id: 'firstName',
+            autoComplete: 'given-name',
+            placeholder: 'Jméno',
+            value: firstName,
+            onChange: firstNameChangeHandler,
+            onBlur: firstNameBlurHandler,
+          }}
+          errorMessage='Error'
+          hasError={firstNameHasError}
+          title='Jméno'
         />
-        {firstNameHasError && (<p>Error</p>)}
-      </Input>
 
-      <Input>
-        <label htmlFor='lastName'>Příjmení</label>
-        <input
-          type='text'
-          name='lastName'
-          id='lastName'
-          autoComplete='family-name'
-          placeholder='Příjmení'
-          value={lastName}
-          onChange={lastNameChangeHandler}
-          onBlur={lastNameBlurHandler}
+        <Input
+          inputProps={{
+            type: 'text',
+            name: 'lastName',
+            id: 'lastName',
+            autoComplete: 'family-name',
+            placeholder: 'Příjmení',
+            value: lastName,
+            onChange: lastNameChangeHandler,
+            onBlur: lastNameBlurHandler,
+          }}
+          errorMessage='Error'
+          hasError={lastNameHasError}
+          title='Příjmení'
         />
-        {lastNameHasError && (<p>Error</p>)}
-      </Input>
+      </div>
 
-      <Input>
-        <label htmlFor='email'>Email</label>
-        <input
-          type='email'
-          name='email'
-          id='email'
-          autoComplete='email'
-          placeholder='vas@email.cz'
-          value={email}
-          onChange={emailChangeHandler}
-          onBlur={emailBlurHandler}
+      <div className='flex flex-wrap gap-16'>
+        <Input
+          inputProps={{
+            type: 'email',
+            name: 'email',
+            id: 'email',
+            autoComplete: 'email',
+            placeholder: 'vas@email.cz',
+            value: email,
+            onChange: emailChangeHandler,
+            onBlur: emailBlurHandler,
+          }}
+          errorMessage='Error'
+          hasError={emailHasError}
+          title='Email'
         />
-        {emailHasError && (<p>Error</p>)}
-      </Input>
 
-      <Input>
-        <label htmlFor='phoneNumber'>Telefonní číslo</label>
-        <input
-          type='tel'
-          name='phoneNumber'
-          id='phoneNumber'
-          autoComplete='tel'
-          placeholder='123 456 789'
-          value={phoneNumber}
-          onChange={phoneNumberChangeHandler}
-          onBlur={phoneNumberBlurHandler}
+        <Input
+          inputProps={{
+            type: 'tel',
+            name: 'phoneNumber',
+            id: 'phoneNumber',
+            autoComplete: 'tel',
+            placeholder: '123 456 789',
+            value: phoneNumber,
+            onChange: phoneNumberChangeHandler,
+            onBlur: phoneNumberBlurHandler,
+          }}
+          errorMessage='Error'
+          hasError={phoneNumberHasError}
+          title='Telefonní číslo'
         />
-        {phoneNumber && (<p>Error</p>)}
-      </Input>
+      </div>
+
 
       <button
         type='submit'
         disabled={!formIsValid}
+        className='mt-12'
       >
-        Odeslat
+        <ButtonStyle>
+          Odeslat
+        </ButtonStyle>
       </button>
-    </form>
+    </form >
   );
 };
 

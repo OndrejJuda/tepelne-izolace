@@ -10,7 +10,7 @@ const Hero = () => {
       >
         <div className='relative'>
           <img
-            src='/logo-one-color.svg'
+            src='/logo/logo-one-color.svg'
             alt='logo'
             className='absolute right-32 top-64 scale-125'
           />

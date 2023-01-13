@@ -1,6 +1,6 @@
 export { default as Benefits } from './Benefits';
 export { default as Contacts } from './Contacts';
-export { default as CTAButton } from './CTAButton';
+export { CTAButton, ButtonStyle } from './Buttons';
 export { default as Footer } from './Footer';
 export { default as Form } from './Form';
 export { default as Header } from './Header';

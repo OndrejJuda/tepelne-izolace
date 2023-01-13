@@ -32,14 +32,14 @@ const Header = () => {
     >
       <div className='ml-36'>
         <Link href='/'>
-          <img src='/logo-name.png' alt='logo' width={300} />
+          <img src='/logo/logo-name.png' alt='logo' width={300} />
         </Link>
       </div>
 
       <div className={`fixed left-[50%] transition ${isOnTop ? '' : 'translate-x-[-40%]'}`}>
         <Link href='/'>
           <img
-            src='/logo.png'
+            src='/logo/logo.png'
             alt='logo'
             width={60}
             height={60}

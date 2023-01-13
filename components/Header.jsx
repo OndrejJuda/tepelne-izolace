@@ -36,7 +36,7 @@ const Header = () => {
         </Link>
       </div>
 
-      <div className={`fixed left-[50%] transition ${isOnTop ? '' : 'translate-x-[-40%]'}`}>
+      <div className={`fixed z-10 left-[50%] transition ${isOnTop ? '' : 'translate-x-[-40%]'}`}>
         <Link href='/'>
           <img
             src='/logo/logo.png'

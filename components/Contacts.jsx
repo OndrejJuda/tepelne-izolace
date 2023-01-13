@@ -7,7 +7,7 @@ const Contacts = () => {
       id='kontakty'
       className='flex justify-center my-48'
     >
-      <div className='bg-primary-50 flex mt-36 rounded-lg overflow-hidden'>
+      <div className='bg-primary-50 flex my-36 rounded-lg overflow-hidden'>
         <img
           src='/people/smiling-businessman.jpg'
           alt='smiling businessman'

@@ -9,7 +9,7 @@ const Contacts = () => {
     >
       <div className='bg-primary-50 flex my-36 rounded-lg overflow-hidden'>
         <img
-          src='/people/smiling-businessman.jpg'
+          src='/business/smiling-businessman.jpg'
           alt='smiling businessman'
           className='w-[500px] object-cover'
         />

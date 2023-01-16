@@ -36,15 +36,17 @@ const Header = () => {
         </Link>
       </div>
 
-      <div className={`fixed z-10 left-[50%] transition ${isOnTop ? '' : 'translate-x-[-40%]'}`}>
+      <div className={`fixed z-50 left-[50%] transition ${isOnTop ? '' : 'translate-x-[-40%]'}`}>
         <Link href='/'>
           <img
             src='/logo/logo.png'
             alt='logo'
             width={60}
             height={60}
-            className={`absolute top-[1px] left-[10px] -z-10 transition-[200] ${isOnTop ? '' : 'delay-150 translate-x-[-150%]'}
-          bg-[#fff] rounded-full p-2 shadow-lg`}
+            className={`absolute top-[1px] left-[10px] -z-10 
+            rounded-full p-2 bg-[#fff]
+            transition-[200] ${isOnTop ? '' : 'delay-150 translate-x-[-150%] shadow-lg'}
+            hover:scale-110 hover:shadow-xl active:scale-95 active:shadow-md`}
           />
         </Link>
         <nav className={`bg-[#fff] py-4 px-12 rounded-full shadow-lg`}>

@@ -24,25 +24,32 @@ const Benefits = () => {
       className='flex my-48'
     >
       <div className='flex flex-col items-center
-      bg-primary-50 px-32 my-36'>
-        <HSecondary additionalStyling='mt-16 mb-8'>Proč nás?</HSecondary>
-        <ul className='flex gap-8 p-8'>
-          {
-            benefits.map((item) => (
-              <li
-                key={item.title}
-                className='py-4 px-16
+      bg-primary-50 px-32 my-36 relative overflow-hidden'>
+        <img
+          src='/logo/logo-one-color.svg'
+          alt='logo'
+          className='absolute right-[50%] top-0 scale-125 opacity-50'
+        />
+        <div className='flex flex-col items-center z-10'>
+          <HSecondary additionalStyling='mt-16 mb-8'>Proč nás?</HSecondary>
+          <ul className='flex gap-8 p-8'>
+            {
+              benefits.map((item) => (
+                <li
+                  key={item.title}
+                  className='py-4 px-16
                 flex-1 flex flex-col items-center jus'
-              >
-                <div className='w-[82px] h-[82px] mb-8 bg-white rounded-full p-3
+                >
+                  <div className='w-[82px] h-[82px] mb-8 bg-white rounded-full p-3
                 flex justify-center items-center'>
-                  {item.icon}
-                </div>
-                <p className='text-3xl p-2 font-semibold text-primary-500'>{item.title}</p>
-              </li>
-            ))
-          }
-        </ul>
+                    {item.icon}
+                  </div>
+                  <p className='text-3xl p-2 font-semibold text-primary-500'>{item.title}</p>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
       </div>
     </section>
   );

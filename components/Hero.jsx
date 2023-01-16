@@ -18,7 +18,7 @@ const Hero = () => {
       </div>
       <div>
         <h1 className='text-6xl font-bold text-primary-600 mb-16'>
-          Doma teplo, na duši klid
+          Zateplete se s námi
         </h1>
 
         <p className='text-4xl text-primary-500 max-w-[1200px] mb-24'>

@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import useInput from '../hooks/use-input';
+import { AiOutlineCheck } from 'react-icons/ai';
+import Link from 'next/link';
 
 const Input = ({ inputProps, hasError, title }) => {
   return (
@@ -22,6 +24,8 @@ const Input = ({ inputProps, hasError, title }) => {
 };
 
 const Form = () => {
+  const [isGDPRChecked, setIsGDPRChecked] = useState(false);
+
   const {
     value: firstName,
     hasError: firstNameHasError,
@@ -88,7 +92,7 @@ const Form = () => {
   };
 
   let isFormValid = true;
-  if (!firstNameIsValid || !lastNameIsValid || !emailIsValid || !phoneNumberIsValid) {
+  if (!firstNameIsValid || !lastNameIsValid || !emailIsValid || !phoneNumberIsValid || !isGDPRChecked) {
     isFormValid = false;
   }
 
@@ -161,6 +165,35 @@ const Form = () => {
         />
       </div>
 
+      <div
+        className='flex flex-col gap-2'
+      >
+        <p
+          htmlFor='checkbox'
+          className='font-semibold text-primary-500'
+        >
+          GDPR
+        </p>
+        <div className='flex items-center gap-4'>
+          <div
+            className='bg-white w-12 h-12 rounded-full group
+          shadow-lg
+          flex justify-center items-center'
+            onClick={() => setIsGDPRChecked((prevValue) => !prevValue)}
+          >
+            <AiOutlineCheck
+              className={`${isGDPRChecked ? 'text-primary-500' : 'hidden group-hover:inline text-primary-200'}`}
+              size={30}
+            />
+          </div>
+          <p className='flex-1'>
+            Souhlasím se
+            <Link href='/gdpr'>
+              <span className='text-primary-600 hover:text-primary-700 font-medium'> zpracováním osobních údajů</span>
+            </Link>
+          </p>
+        </div>
+      </div>
 
       <button
         type='submit'

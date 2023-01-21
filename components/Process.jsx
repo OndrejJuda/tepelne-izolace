@@ -29,7 +29,7 @@ const Process = () => {
                   <div className='relative'>
                     <span
                       className={`text-8xl text-white bg-primary-50 p-2 w-[120px] h-[120px] xl:w-[164px] xl:h-[164px] rounded-full opacity-50
-                      absolute -top-10 right-0 ${index % 2 ? 'xl:-right-28' : 'xl:-left-28'}
+                      absolute -top-10 right-0 ${index % 2 ? 'xl:right-0 2xl:-right-28' : 'xl:left-0 2xl:-left-28'}
                       flex justify-center items-center -z-10`}
                     >
                       {index + 1}

@@ -28,7 +28,7 @@ const Process = () => {
                 <img
                   src={image}
                   alt={image}
-                  className={`${index % 2 ? 'order-1' : 'order-2'} w-[400px] h-[400px] object-cover rounded-xl flex-1`}
+                  className={`${index % 2 ? 'order-1' : 'order-2'} w-[400px] h-[400px] object-cover rounded-xl flex-1 shadow-xl`}
                 />
                 <div className={`${index % 2 ? 'order-2' : 'order-1'} flex-1 flex flex-col justify-center`}>
                   <div className='relative'>

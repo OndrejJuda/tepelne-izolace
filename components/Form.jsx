@@ -12,7 +12,7 @@ const Input = ({ inputProps, hasError, title }) => {
         htmlFor={inputProps.id}
         className='font-semibold text-primary-500'
       >
-        {title}
+        {title}<span className='text-red-600 font-bold'> *</span>
       </label>
       <input
         {...inputProps}
@@ -172,7 +172,7 @@ const Form = () => {
           htmlFor='checkbox'
           className='font-semibold text-primary-500'
         >
-          GDPR
+          GDPR<span className='text-red-600 font-bold'> *</span>
         </p>
         <div className='flex items-center gap-4'>
           <div

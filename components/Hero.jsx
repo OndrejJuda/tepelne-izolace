@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section className='flex flex-col items-center py-40'>
       <div
-        className='absolute top-0 left-0 w-screen -z-10 bg-primary-50 h-[85vh]'
+        className='absolute top-0 left-0 w-full -z-10 bg-primary-50 h-[85vh]'
         style={{ clipPath: 'polygon(0 0, 100% 0, 100% 80%, 0% 100%)' }}
       >
         <div className='relative'>

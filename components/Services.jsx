@@ -1,46 +1,39 @@
 import React from 'react';
-
-const services = [
-  {
-    title: 'Foukaná izolace',
-    descriptions: [
-      `Sit duis et ex ullamco. Sit aliquip officia nisi esse sint ea non. Culpa eiusmod sint voluptate sit laboris qui ut excepteur occaecat ad aute ea velit consectetur. Proident fugiat nisi magna labore esse cillum ea nostrud sint irure veniam. Id consectetur velit deserunt nulla id consectetur Lorem mollit consectetur ex minim nulla mollit minim.`,
-      `Ea quis sint do Lorem anim minim ullamco eiusmod consequat aute quis esse. Sit sunt voluptate sint cillum anim et culpa in. Nostrud officia ullamco esse enim. Sint duis consequat commodo occaecat do commodo velit. Sunt occaecat minim cupidatat Lorem aute aute elit ad magna commodo consectetur in sunt deserunt. Pariatur adipisicing magna proident qui eu sint occaecat magna veniam sunt. Enim ea amet nulla fugiat id fugiat nulla aliquip voluptate occaecat do deserunt consectetur aute.`
-    ]
-  },
-  {
-    title: 'Zateplení minerální foukanou vatou',
-    descriptions: [
-      `Sit duis et ex ullamco. Sit aliquip officia nisi esse sint ea non. Culpa eiusmod sint voluptate sit laboris qui ut excepteur occaecat ad aute ea velit consectetur. Proident fugiat nisi magna labore esse cillum ea nostrud sint irure veniam. Id consectetur velit deserunt nulla id consectetur Lorem mollit consectetur ex minim nulla mollit minim.`,
-      `Ea quis sint do Lorem anim minim ullamco eiusmod consequat aute quis esse. Sit sunt voluptate sint cillum anim et culpa in. Nostrud officia ullamco esse enim. Sint duis consequat commodo occaecat do commodo velit. Sunt occaecat minim cupidatat Lorem aute aute elit ad magna commodo consectetur in sunt deserunt. Pariatur adipisicing magna proident qui eu sint occaecat magna veniam sunt. Enim ea amet nulla fugiat id fugiat nulla aliquip voluptate occaecat do deserunt consectetur aute.`
-    ]
-  },
-  {
-    title: 'Termokamera pro diagnostiku budov',
-    descriptions: [
-      `Sit duis et ex ullamco. Sit aliquip officia nisi esse sint ea non. Culpa eiusmod sint voluptate sit laboris qui ut excepteur occaecat ad aute ea velit consectetur. Proident fugiat nisi magna labore esse cillum ea nostrud sint irure veniam. Id consectetur velit deserunt nulla id consectetur Lorem mollit consectetur ex minim nulla mollit minim.`,
-      `Ea quis sint do Lorem anim minim ullamco eiusmod consequat aute quis esse. Sit sunt voluptate sint cillum anim et culpa in. Nostrud officia ullamco esse enim. Sint duis consequat commodo occaecat do commodo velit. Sunt occaecat minim cupidatat Lorem aute aute elit ad magna commodo consectetur in sunt deserunt. Pariatur adipisicing magna proident qui eu sint occaecat magna veniam sunt. Enim ea amet nulla fugiat id fugiat nulla aliquip voluptate occaecat do deserunt consectetur aute.`
-    ]
-  },
-];
+import { HSecondary } from './';
 
 const Services = () => {
   return (
-    <section id='služby'>
-      <ul>
-        {
-          services.map(({title, descriptions}) => (
-            <li key={title}>
-              <p>{title}</p>
-              {
-                descriptions.map((text, index) => (
-                  <p key={index}>{text}</p>
-                ))
-              }
-            </li>
-          ))
-        }
-      </ul>
+    <section
+      id='služby'
+      className='flex justify-center my-48 mx-36'
+    >
+      <div className='bg-primary-50 flex my-36 rounded-lg overflow-hidden shadow-xl'>
+        <div
+          className='p-20 
+          flex-1 flex flex-col justify-center'
+        >
+          <HSecondary additionalStyling='mb-10'>Foukaná vata</HSecondary>
+          <div
+            className='text-primary-800 text-lg flex flex-col gap-4'
+          >
+            <p>
+              Foukaná izolace je dnes již velmi dobře zavedená technologie zateplování konstrukcí. Izolační materiál je pneumaticky, pomocí hadice a vzduchu, nanášen i do hůře přístupných míst stavby. Při samotné instalaci izolace tak není potřeba nanášet velké balíky izolačního materiálu do budovy, ale je třeba zajistit pouze servisní otvory pro průchod foukací hadice.
+            </p>
+            <p>
+              Foukané izolace se často používají jako oprava stávající izolace, která časem slehla a ztratila tak část své izolační schopnosti. Mezi konstrukcí a izolací vznikla mezera plná tepelných mostů, kterou lze nafoukáním izolace snadno vyplnit. Tím možnosti využití foukané vaty ale rozhodně nekončí. Lze ji využít i pro zavedení nové izolační vrstvy, která bude mít nepřekonatelné vlastnosti.
+            </p>
+            <p>
+              Foukanou izolaci oceníte i v letním období, kdy chrání dům před přehříváním. V tomto případě je vhodné zateplit podlahu půdy - tím se teplo z přehřátého půdního prostoru nebude dostávat do obytné části. Je však možné zateplit i střešní šikminy do dutin vzniklých po zaklopení. Tak se teplo nedostane ani do půdního prostoru a tak si uchová příjemné prostředí.
+            </p>
+          </div>
+        </div>
+
+        <img
+          src='/business/vata.png'
+          alt='vata'
+          className='flex-1 object-cover w-[300px] h-[700px]'
+        />
+      </div>
     </section>
   );
 };

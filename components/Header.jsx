@@ -2,11 +2,10 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const links = [
-  { id: '#kontakty', title: 'Kontakt' },
-  { id: '#benefity', title: 'Proč nás?' },
-  { id: '#služby', title: 'Služby' },
-  { id: '#proces', title: 'Proces' },
-  { id: '#reference', title: 'Reference' },
+  { href: '#kontakty', title: 'Nezávazná poptávka', cta: true },
+  { href: '#benefity', title: 'Proč nás?' },
+  { href: '#služby', title: 'Foukaná vata' },
+  { href: '#proces', title: 'Proces' },
 ];
 
 const Header = () => {
@@ -52,12 +51,12 @@ const Header = () => {
         <nav className={`bg-[#fff] py-4 px-12 rounded-full shadow-lg`}>
           <ul className='flex justify-center items-center gap-14'>
             {
-              links.map(({ id, title }) => (
+              links.map(({ href, title, cta }) => (
                 <li
-                  key={id}
-                  className='text-primary-500 text-xl font-semibold group relative overflow-hidden'
+                  key={href}
+                  className={`${cta ? 'text-primary-700 font-bold' : 'text-primary-500'} text-xl font-semibold group relative overflow-hidden`}
                 >
-                  <Link href={id}>
+                  <Link href={href}>
                     {title}
                   </Link>
                   <div className='w-full h-[2px] bg-primary-500 -translate-x-[105%] group-hover:translate-x-0 transition' />

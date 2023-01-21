@@ -32,7 +32,7 @@ const Benefits = () => {
         />
         <div className='flex flex-col items-center z-10'>
           <HSecondary additionalStyling='text-5xl mt-16 mb-8'>Proč nás?</HSecondary>
-          <ul className='flex gap-8 p-8'>
+          <ul className='flex flex-wrap gap-8 p-8'>
             {
               benefits.map((item) => (
                 <li

@@ -3,7 +3,7 @@ import { CTAButton } from './';
 
 const Hero = () => {
   return (
-    <section className='flex flex-col items-center lg:py-40'>
+    <section className='flex flex-col items-center py-16 lg:py-40'>
       <div
         className='absolute top-0 left-0 w-full -z-10 bg-primary-50 h-screen md:h-[85vh] md:clip-hero overflow-hidden'
       >

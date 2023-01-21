@@ -5,9 +5,9 @@ const Contacts = () => {
   return (
     <section
       id='kontakty'
-      className='flex justify-center my-48'
+      className='flex justify-center py-16 lg:py-36 xl:my-48'
     >
-      <div className='bg-primary-50 lg:flex my-36 mx-8 rounded-lg overflow-hidden shadow-xl'>
+      <div className='bg-primary-50 lg:flex my-8 md:my-36 mx-8 rounded-lg overflow-hidden shadow-xl'>
         <img
           src='/business/smiling-businessman.jpg'
           alt='smiling businessman'

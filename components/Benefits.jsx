@@ -21,10 +21,10 @@ const Benefits = () => {
   return (
     <section
       id='benefity'
-      className='flex my-48'
+      className='flex py-16 lg:py-36 xl:my-48'
     >
       <div className='flex flex-col items-center
-      bg-primary-50 px-32 my-36 relative overflow-hidden'>
+      bg-primary-50 px-32 my-8 md:my-36 relative overflow-hidden'>
         <img
           src='/logo/logo-one-color.svg'
           alt='logo'

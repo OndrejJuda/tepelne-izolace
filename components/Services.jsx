@@ -5,9 +5,9 @@ const Services = () => {
   return (
     <section
       id='služby'
-      className='flex justify-center my-48 mx-8 md:mx-16 lg:mx-36'
+      className='flex justify-center py-16 lg:py-36 xl:my-48 mx-8 md:mx-16 lg:mx-36'
     >
-      <div className='bg-primary-50 flex flex-col xl:flex-row my-36 rounded-lg overflow-hidden shadow-xl'>
+      <div className='bg-primary-50 flex flex-col xl:flex-row my-8 md:my-36 rounded-lg overflow-hidden shadow-xl'>
         <div
           className='p-8 lg:p-20 
           flex-1 flex flex-col justify-center order-2 xl:order-1'

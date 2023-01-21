@@ -13,9 +13,9 @@ const Process = () => {
   return (
     <section
       id='proces'
-      className='flex justify-center my-48'
+      className='flex justify-center py-16 lg:py-36 xl:my-48'
     >
-      <div className='flex flex-col my-36 justify-center items-center'>
+      <div className='flex flex-col my-8 md:my-36 justify-center items-center'>
         <HSecondary additionalStyling='text-4xl md:text-5xl mb-32'>Jak to u nás funguje?</HSecondary>
         <ul className='flex flex-col gap-24 xl:gap-16 mb-16 xl:mb-32 mx-8 lg:mx-16'>
           {

@@ -16,7 +16,7 @@ const Process = () => {
       className='flex justify-center my-48 '
     >
       <div className='flex flex-col my-36 justify-center items-center'>
-        <HSecondary additionalStyling='mb-32'>Jak to u nás funguje?</HSecondary>
+        <HSecondary additionalStyling='text-5xl mb-32'>Jak to u nás funguje?</HSecondary>
         <ul className='flex flex-col gap-16 mb-32'>
           {
             processSteps.map(({ image, title, descripton }, index) => (

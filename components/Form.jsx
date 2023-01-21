@@ -6,7 +6,7 @@ import Link from 'next/link';
 const Input = ({ inputProps, hasError, title }) => {
   return (
     <div
-      className='flex flex-col gap-2'
+      className='flex w-full xl:w-auto flex-col gap-2'
     >
       <label
         htmlFor={inputProps.id}
@@ -101,7 +101,7 @@ const Form = () => {
       onSubmit={submitHandler}
       className='mt-8 flex flex-col items-start gap-8'
     >
-      <div className='flex flex-wrap gap-16'>
+      <div className='flex flex-wrap gap-8'>
         <Input
           inputProps={{
             type: 'text',
@@ -133,7 +133,7 @@ const Form = () => {
         />
       </div>
 
-      <div className='flex flex-wrap gap-16'>
+      <div className='flex flex-wrap gap-8 lg'>
         <Input
           inputProps={{
             type: 'email',
@@ -169,7 +169,6 @@ const Form = () => {
         className='flex flex-col gap-2'
       >
         <p
-          htmlFor='checkbox'
           className='font-semibold text-primary-500'
         >
           GDPR<span className='text-red-600 font-bold'> *</span>
@@ -198,7 +197,7 @@ const Form = () => {
       <button
         type='submit'
         disabled={!isFormValid}
-        className='inline-block mt-12 py-4 px-8 rounded-full 
+        className='inline-block mt-4 lg:mt-12 py-4 px-8 rounded-full 
         text-xl text-primary-50 bg-primary-700 shadow-lg
         disabled:bg-gray-200 disabled:text-black disabled:scale-90 disabled:shadow-none
         transition enabled:hover:bg-primary-300 enabled:hover:text-primary-900 

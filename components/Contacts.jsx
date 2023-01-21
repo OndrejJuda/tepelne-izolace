@@ -7,14 +7,14 @@ const Contacts = () => {
       id='kontakty'
       className='flex justify-center my-48'
     >
-      <div className='bg-primary-50 flex my-36 rounded-lg overflow-hidden shadow-xl'>
+      <div className='bg-primary-50 lg:flex my-36 mx-8 rounded-lg overflow-hidden shadow-xl'>
         <img
           src='/business/smiling-businessman.jpg'
           alt='smiling businessman'
-          className='w-[500px] object-cover'
+          className='w-full h-[400px] lg:h-auto lg:w-[400px] object-cover'
         />
-        <div className='rounded-xl px-36 py-24 '>
-          <HSecondary additionalStyling='mb-16'>Domluvte si s námi schůzku</HSecondary>
+        <div className='rounded-xl p-8 2xl:px-36 lg:py-24 '>
+          <HSecondary additionalStyling='mb-8 lg:mb-16 text-4xl lg:text-5xl'>Domluvte si s námi schůzku</HSecondary>
           <Form />
         </div>
       </div>

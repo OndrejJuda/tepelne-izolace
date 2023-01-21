@@ -9,6 +9,9 @@ module.exports = {
       // fontFamily: {
       //   primary: ['IBM Plex Serif', 'serif'],
       // },
+      screens: {
+        '2xl': '1500px',
+      },
       colors: {
         'primary': {
           50: '#f5ede9',

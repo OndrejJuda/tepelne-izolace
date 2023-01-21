@@ -31,7 +31,7 @@ const Benefits = () => {
           className='absolute right-[50%] top-0 scale-125 opacity-50'
         />
         <div className='flex flex-col items-center z-10'>
-          <HSecondary additionalStyling='mt-16 mb-8'>Proč nás?</HSecondary>
+          <HSecondary additionalStyling='text-5xl mt-16 mb-8'>Proč nás?</HSecondary>
           <ul className='flex gap-8 p-8'>
             {
               benefits.map((item) => (

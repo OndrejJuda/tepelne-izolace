@@ -12,7 +12,7 @@ const Services = () => {
           className='p-20 
           flex-1 flex flex-col justify-center'
         >
-          <HSecondary additionalStyling='mb-10'>Foukaná vata</HSecondary>
+          <HSecondary additionalStyling='text-5xl mb-10'>Foukaná vata</HSecondary>
           <div
             className='text-primary-800 text-lg flex flex-col gap-4'
           >

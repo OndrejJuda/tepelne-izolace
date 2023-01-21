@@ -29,13 +29,13 @@ const Header = () => {
     <header
       className='flex justify-start items-center py-8'
     >
-      <div className='ml-36'>
+      <div className='mx-auto md:ml-16 xl:ml-36'>
         <Link href='/'>
           <img src='/logo/logo-name.png' alt='logo' width={300} />
         </Link>
       </div>
 
-      <div className={`fixed z-50 left-[50%] transition ${isOnTop ? '' : 'translate-x-[-40%]'}`}>
+      <div className={`hidden xl:block fixed z-50 left-[50%] transition ${isOnTop ? '' : 'translate-x-[-40%]'}`}>
         <Link href='/'>
           <img
             src='/logo/logo.png'

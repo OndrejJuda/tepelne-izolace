@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Benefits, Footer, Contacts, Header, Hero, Process, References, Services } from '../components';
+import { Benefits, Footer, Contacts, Header, Hero, Process, Services } from '../components';
 
 export default function Home() {
   return (
@@ -24,7 +24,6 @@ export default function Home() {
         <Benefits />
         <Services />
         <Process />
-        {/* <References /> */}
       </main>
       <Footer />
     </>

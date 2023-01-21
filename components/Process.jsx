@@ -23,7 +23,7 @@ const Process = () => {
               <li
                 height={100}
                 key={title}
-                className='flex-1 flex gap-32'
+                className='flex-1 flex flex-col md:flex-row gap-32'
               >
                 <img
                   src={image}

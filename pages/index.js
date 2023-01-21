@@ -24,7 +24,7 @@ export default function Home() {
         <Benefits />
         {/* <Services /> */}
         <Process />
-        <References />
+        {/* <References /> */}
       </main>
       <Footer />
     </>

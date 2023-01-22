@@ -3,6 +3,7 @@ export { default as Contacts } from './Contacts';
 export { CTAButton } from './Buttons';
 export { default as Footer } from './Footer';
 export { default as Form } from './Form';
+export { default as GDPR } from './GDPR';
 export { default as Header } from './Header';
 export { HSecondary } from './Headings';
 export { default as Hero } from './Hero';

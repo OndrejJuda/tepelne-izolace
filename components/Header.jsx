@@ -27,7 +27,7 @@ const Header = () => {
 
   return (
     <header
-      className='flex justify-start items-center py-8'
+      className='flex justify-start items-center py-8 bg-primary-50'
     >
       <div className='mx-auto md:ml-16 xl:ml-36'>
         <Link href='/'>

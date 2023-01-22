@@ -8,4 +8,5 @@ export { HSecondary } from './Headings';
 export { default as Hero } from './Hero';
 export { default as Process } from './Process';
 export { default as References } from './References';
+export { default as SectionWrapper } from './SectionWrapper';
 export { default as Services } from './Services';

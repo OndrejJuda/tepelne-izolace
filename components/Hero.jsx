@@ -3,19 +3,14 @@ import { CTAButton } from './';
 
 const Hero = () => {
   return (
-    <section className='flex flex-col items-center py-16 lg:py-40'>
-      <div
-        className='absolute top-0 left-0 w-full -z-10 bg-primary-50 h-screen md:h-[85vh] md:clip-hero overflow-hidden'
-      >
-        <div className='relative'>
-          <img
-            src='/logo/logo-one-color.svg'
-            alt='logo'
-            className='absolute top-[600px] -right-44 md:right-32 md:top-64 scale-125'
-          />
-        </div>
-      </div>
-      <div className='flex flex-col justify-center items-center lg:items-start p-6 sm:px-12 h-[calc(100vh-155px)] md:h-auto'>
+    <section className='flex flex-col items-center py-16 lg:py-40 bg-primary-50 md:clip-hero overflow-hidden relative'>
+      <img
+        src='/logo/logo-one-color.svg'
+        alt='logo'
+        className='absolute opacity-50 top-[600px] -right-44 md:right-32 md:top-64 scale-125'
+      />
+      <div className='flex flex-col justify-center items-center lg:items-start p-6 sm:px-12 h-[calc(100vh-155px)] md:h-auto relative'>
+
         <h1 className='text-5xl md:text-6xl font-bold text-primary-600 mb-16'>
           Tepelné izolace snadno a rychle
         </h1>

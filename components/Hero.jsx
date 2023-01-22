@@ -9,7 +9,7 @@ const Hero = () => {
         alt='logo'
         className='absolute top-[600px] -right-44 md:right-32 md:top-64 opacity-50 scale-125'
       />
-      <div className='flex flex-col justify-center items-center lg:items-start p-6 sm:px-12 h-[calc(100vh-155px)] md:h-auto relative'>
+      <div className='flex flex-col justify-center items-center lg:items-start p-6 sm:px-12 min-h-[calc(100vh-155px)] md:h-auto relative'>
 
         <h1 className='text-5xl md:text-6xl font-bold text-primary-600 mb-16'>
           Tepelné izolace snadno a rychle

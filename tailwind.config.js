@@ -11,6 +11,7 @@ module.exports = {
       // },
       screens: {
         '2xl': '1500px',
+        'short': { 'raw': '(max-height: 400px)' }
       },
       colors: {
         'primary': {
@@ -25,7 +26,7 @@ module.exports = {
           800: '#3e1e0d',
           900: '#1f0f07',
         }
-      }
+      },
     },
   },
   plugins: [],

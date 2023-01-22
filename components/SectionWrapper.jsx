@@ -4,10 +4,10 @@ const SectionWrapper = ({ children, id, sectionStyle, innerDivStyle }) => {
   return (
     <section 
     id={id} 
-    className={`flex justify-center my-48 xl:my-0  ${sectionStyle}`}
+    className={`flex justify-center ${sectionStyle}`}
     >
       <div 
-      className={`xl:my-36 ${innerDivStyle}`}
+      className={`my-36 ${innerDivStyle}`}
       >
         {children}
       </div>

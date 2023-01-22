@@ -7,6 +7,7 @@ export { default as GDPR } from './GDPR';
 export { default as Header } from './Header';
 export { HSecondary } from './Headings';
 export { default as Hero } from './Hero';
+export { default as Navbar } from './Navbar';
 export { default as Process } from './Process';
 export { default as References } from './References';
 export { default as SectionWrapper } from './SectionWrapper';

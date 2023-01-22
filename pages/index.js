@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Benefits, Footer, Contacts, Header, Hero, Process, Services } from '../components';
+import { Benefits, Footer, Contacts, Header, Hero, Process, Services, Navbar } from '../components';
 
 export default function Home() {
   return (
@@ -17,6 +17,7 @@ export default function Home() {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
+      <Navbar />
       <Header />
       <main>
         <Hero />

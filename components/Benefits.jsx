@@ -29,7 +29,9 @@ const Benefits = () => {
         className='absolute right-[50%] top-0 scale-125 opacity-50'
       />
       <div className='flex flex-col items-center z-10'>
+        
         <HSecondary additionalStyling='text-5xl mt-16 mb-8'>Proč nás?</HSecondary>
+
         <ul className='flex flex-wrap gap-8 p-8'>
           {
             benefits.map((item) => (
@@ -42,7 +44,9 @@ const Benefits = () => {
                 flex justify-center items-center'>
                   {item.icon}
                 </div>
+
                 <p className='text-3xl p-2 font-semibold text-primary-500'>{item.title}</p>
+
               </li>
             ))
           }

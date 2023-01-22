@@ -13,9 +13,11 @@ const Footer = () => {
         alt='logo'
         className='absolute right-[50%] opacity-50 2xl:opacity-100 top-0 translate-x-[50%] scale-125'
       />
+
       <Link href='/' className='lg:mr-auto z-10'>
         <img src='/logo/logo-name.png' alt='logo' width={300} />
       </Link>
+
       <div className='z-10 flex flex-col sm:flex-row gap-16 text-primary-500 font-medium text-lg'>
         <div>
           <p>LUNASTAV s.r.o.</p>
@@ -23,6 +25,7 @@ const Footer = () => {
           <a href={`mailto:${email}`} target='_blank' rel='noreferrer' className='block'>{email}</a>
           <a href={`tel:${tel}`} target='_blank' rel='noreferrer' className='block'>{tel}</a>
         </div>
+        
         <address>
           Sídlo:<br />
           LUNASTAV s.r.o. <br />

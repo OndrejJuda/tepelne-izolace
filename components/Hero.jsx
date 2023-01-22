@@ -3,11 +3,11 @@ import { CTAButton } from './';
 
 const Hero = () => {
   return (
-    <section className='flex flex-col items-center py-16 lg:py-40 bg-primary-50 md:clip-hero overflow-hidden relative'>
+    <section className='flex flex-col items-center bg-primary-50 py-16 lg:py-40 md:clip-hero overflow-hidden relative'>
       <img
         src='/logo/logo-one-color.svg'
         alt='logo'
-        className='absolute opacity-50 top-[600px] -right-44 md:right-32 md:top-64 scale-125'
+        className='absolute top-[600px] -right-44 md:right-32 md:top-64 opacity-50 scale-125'
       />
       <div className='flex flex-col justify-center items-center lg:items-start p-6 sm:px-12 h-[calc(100vh-155px)] md:h-auto relative'>
 

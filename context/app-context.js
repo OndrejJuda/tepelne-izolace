@@ -6,12 +6,15 @@ const defaultFormData = {
   lastName: '',
   email: '',
   phone: '',
+  region: {},
+  district: {},
   gdpr: undefined,
 };
 
 const CoinContext = createContext({
   formData: defaultFormData,
   setFormData: (field, value) => { },
+  clearFormData: () => { },
 });
 
 export const CoinContextProvider = ({ children }) => {
@@ -22,11 +25,17 @@ export const CoinContextProvider = ({ children }) => {
     []
   );
 
+  const clearFormDataHandler = useCallback(
+    () => setFormData(defaultFormData),
+    []
+  );
+
   return (
     <CoinContext.Provider
       value={{
         formData,
         setFormData: setFormDataHandler,
+        clearFormData: clearFormDataHandler,
       }}
     >
       {children}

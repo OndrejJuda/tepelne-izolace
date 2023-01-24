@@ -3,11 +3,13 @@ import useInput from '../hooks/use-input';
 import { AiOutlineCheck } from 'react-icons/ai';
 import Link from 'next/link';
 import CoinContext from '../context/app-context';
+import { Select } from './';
+import { regions } from '../regions-and-districts';
 
 const Input = ({ inputProps, hasError, title }) => {
   return (
     <div
-      className='flex w-full xl:w-auto flex-col gap-2'
+      className='flex-1 flex xl:w-auto flex-col gap-2'
     >
       <label
         htmlFor={inputProps.id}
@@ -27,14 +29,16 @@ const Input = ({ inputProps, hasError, title }) => {
 const Form = () => {
   const [isGDPRChecked, setIsGDPRChecked] = useState(false);
 
-  const { formData, setFormData } = useContext(CoinContext);
+  const { formData, setFormData, clearFormData } = useContext(CoinContext);
 
   useEffect(() => {
-    const { firstName, lastName, email, phone, gdpr } = formData;
+    const { firstName, lastName, email, phone, gdpr, district, region } = formData;
     firstName && firstNameChangeHandler({ target: { value: firstName } });
     lastName && lastNameChangeHandler({ target: { value: lastName } });
     email && emailChangeHandler({ target: { value: email } });
     phone && phoneNumberChangeHandler({ target: { value: phone } });
+    region && regionChangeHandler({ target: { value: region } });
+    district && districtChangeHandler({ target: { value: district } });
     gdpr !== undefined && setIsGDPRChecked(gdpr);
   }, []);
 
@@ -78,6 +82,18 @@ const Form = () => {
     reset: phoneNumberResetHandler
   } = useInput((value) => value.trim() !== '');
 
+  const {
+    value: region,
+    valueChangeHandler: regionChangeHandler,
+    reset: regionResetHandler
+  } = useInput((value) => true);
+
+  const {
+    value: district,
+    valueChangeHandler: districtChangeHandler,
+    reset: districtResetHandler
+  } = useInput((value) => true);
+
   const submitHandler = async (e) => {
     e.preventDefault();
 
@@ -98,13 +114,51 @@ const Form = () => {
       console.error(error)
     }
 
-    console.log('')
-    console.log('submitHandler')
-
     firstNameResetHandler();
     lastNameResetHandler();
     emailResetHandler();
     phoneNumberResetHandler();
+    regionResetHandler();
+    districtResetHandler();
+
+    clearFormData();
+  };
+
+  const updateValueHandler = (fieldName, event) => {
+    let value;
+
+    switch (fieldName) {
+      case 'firstName':
+        firstNameChangeHandler(event);
+        value = event.target.value;
+        break;
+      case 'lastName':
+        lastNameChangeHandler(event);
+        value = event.target.value;
+        break;
+      case 'email':
+        emailChangeHandler(event);
+        value = event.target.value;
+        break;
+      case 'phone':
+        phoneNumberChangeHandler(event);
+        value = event.target.value;
+        break;
+      case 'region':
+        regionChangeHandler({ target: { value: event } });
+        value = event;
+        if (event.name !== region.name) {
+          districtChangeHandler({ target: { value: {} } });
+          setFormData('district', {});
+        }
+        break;
+      case 'district':
+        districtChangeHandler({ target: { value: event } });
+        value = event;
+        break;
+    }
+
+    setFormData(fieldName, value);
   };
 
   let isFormValid = true;
@@ -112,33 +166,14 @@ const Form = () => {
     isFormValid = false;
   }
 
-  const updateValueHandler = (fieldName, event) => {
-    switch (fieldName) {
-      case 'firstName':
-        firstNameChangeHandler(event);
-        break;
-      case 'lastName':
-        lastNameChangeHandler(event);
-        break;
-      case 'email':
-        emailChangeHandler(event);
-        break;
-      case 'phone':
-        phoneNumberChangeHandler(event);
-        break;
-      case 'gdpr':
-        break;
-    }
-
-    setFormData(fieldName, event.target.value);
-  };
+  const districts = region?.districts ?? [];
 
   return (
     <form
       onSubmit={submitHandler}
       className='mt-8 flex flex-col items-start gap-8'
     >
-      <div className='flex flex-wrap gap-8'>
+      <div className='flex flex-col sm:flex-row gap-8 w-full'>
         <Input
           inputProps={{
             type: 'text',
@@ -170,7 +205,7 @@ const Form = () => {
         />
       </div>
 
-      <div className='flex flex-wrap gap-8 lg'>
+      <div className='flex flex-col sm:flex-row gap-8 lg w-full'>
         <Input
           inputProps={{
             type: 'email',
@@ -200,6 +235,28 @@ const Form = () => {
           hasError={phoneNumberHasError}
           title='Telefonní číslo'
         />
+      </div>
+
+      <div className='flex flex-col sm:flex-row gap-8 lg w-full'>
+        <div className='flex-1 flex xl:w-auto flex-col gap-2'>
+          <p className='font-semibold text-primary-500'>Kraj</p>
+          <Select
+            options={regions}
+            placeholder='Kraj'
+            onChange={updateValueHandler.bind(null, 'region')}
+            value={region}
+          />
+        </div>
+
+        <div className='flex-1 flex xl:w-auto flex-col gap-2'>
+          <p className='font-semibold text-primary-500'>Okres</p>
+          <Select
+            options={districts}
+            placeholder='Okres'
+            onChange={updateValueHandler.bind(null, 'district')}
+            value={district}
+          />
+        </div>
       </div>
 
       <div
@@ -234,7 +291,7 @@ const Form = () => {
       <button
         type='submit'
         disabled={!isFormValid}
-        className='inline-block mt-4 lg:mt-12 py-4 px-8 rounded-full 
+        className='inline-block mt-4 py-4 px-8 rounded-full 
         text-xl text-primary-50 bg-primary-700 shadow-lg
         disabled:bg-gray-200 disabled:text-black disabled:scale-90 disabled:shadow-none
         transition enabled:hover:bg-primary-300 enabled:hover:text-primary-900 

@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import useInput from '../hooks/use-input';
 import { AiOutlineCheck } from 'react-icons/ai';
 import Link from 'next/link';
+import CoinContext from '../context/app-context';
 
 const Input = ({ inputProps, hasError, title }) => {
   return (
@@ -25,6 +26,21 @@ const Input = ({ inputProps, hasError, title }) => {
 
 const Form = () => {
   const [isGDPRChecked, setIsGDPRChecked] = useState(false);
+
+  const { formData, setFormData } = useContext(CoinContext);
+
+  useEffect(() => {
+    const { firstName, lastName, email, phone, gdpr } = formData;
+    firstName && firstNameChangeHandler({ target: { value: firstName } });
+    lastName && lastNameChangeHandler({ target: { value: lastName } });
+    email && emailChangeHandler({ target: { value: email } });
+    phone && phoneNumberChangeHandler({ target: { value: phone } });
+    gdpr !== undefined && setIsGDPRChecked(gdpr);
+  }, []);
+
+  useEffect(() => {
+    setFormData('gdpr', isGDPRChecked);
+  }, [isGDPRChecked]);
 
   const {
     value: firstName,
@@ -96,6 +112,27 @@ const Form = () => {
     isFormValid = false;
   }
 
+  const updateValueHandler = (fieldName, event) => {
+    switch (fieldName) {
+      case 'firstName':
+        firstNameChangeHandler(event);
+        break;
+      case 'lastName':
+        lastNameChangeHandler(event);
+        break;
+      case 'email':
+        emailChangeHandler(event);
+        break;
+      case 'phone':
+        phoneNumberChangeHandler(event);
+        break;
+      case 'gdpr':
+        break;
+    }
+
+    setFormData(fieldName, event.target.value);
+  };
+
   return (
     <form
       onSubmit={submitHandler}
@@ -110,7 +147,7 @@ const Form = () => {
             autoComplete: 'given-name',
             placeholder: 'Jméno',
             value: firstName,
-            onChange: firstNameChangeHandler,
+            onChange: updateValueHandler.bind(null, 'firstName'),
             onBlur: firstNameBlurHandler,
           }}
           hasError={firstNameHasError}
@@ -125,7 +162,7 @@ const Form = () => {
             autoComplete: 'family-name',
             placeholder: 'Příjmení',
             value: lastName,
-            onChange: lastNameChangeHandler,
+            onChange: updateValueHandler.bind(null, 'lastName'),
             onBlur: lastNameBlurHandler,
           }}
           hasError={lastNameHasError}
@@ -142,7 +179,7 @@ const Form = () => {
             autoComplete: 'email',
             placeholder: 'vas@email.cz',
             value: email,
-            onChange: emailChangeHandler,
+            onChange: updateValueHandler.bind(null, 'email'),
             onBlur: emailBlurHandler,
           }}
           hasError={emailHasError}
@@ -157,7 +194,7 @@ const Form = () => {
             autoComplete: 'tel',
             placeholder: '123 456 789',
             value: phoneNumber,
-            onChange: phoneNumberChangeHandler,
+            onChange: updateValueHandler.bind(null, 'phone'),
             onBlur: phoneNumberBlurHandler,
           }}
           hasError={phoneNumberHasError}

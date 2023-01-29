@@ -1,5 +1,5 @@
 const configuration = {
-  tile: 'Lunastav CZ s.r.o.',
+  title: 'Lunastav CZ s.r.o.',
   description: 'Tepelné izolace do každé rodiny.',
   url: 'https://tepelne-izolace.netlify.app/',
   email: 'abc@example.com',

@@ -354,7 +354,7 @@ const Form = () => {
                   setShowValid(false);
                 }}
               >
-                Odeslat znovu
+                Zavřít
               </button>
             </div>
           )

@@ -1,10 +1,14 @@
 import React, { useContext, useState, useEffect } from 'react';
 import useInput from '../hooks/use-input';
 import { AiOutlineCheck } from 'react-icons/ai';
+import { RxCross1 } from 'react-icons/rx';
 import Link from 'next/link';
 import CoinContext from '../context/app-context';
 import { Select } from './';
 import { regions } from '../regions-and-districts';
+import configuration from '../conf';
+
+const {phone} = configuration;
 
 const Input = ({ inputProps, hasError, title }) => {
   return (
@@ -28,6 +32,8 @@ const Input = ({ inputProps, hasError, title }) => {
 
 const Form = () => {
   const [isGDPRChecked, setIsGDPRChecked] = useState(false);
+  const [showValid, setShowValid] = useState(true);
+  const [submitError, setSubmitError] = useState('');
 
   const { formData, setFormData, clearFormData } = useContext(CoinContext);
 
@@ -98,20 +104,25 @@ const Form = () => {
     e.preventDefault();
 
     try {
-      alert('Testovací režim. Kontakt nebyl odeslán.')
-      // const response = await fetch(
-      //   '/api/sendgrid/',
-      //   {
-      //     method: 'POST',
-      //     body: JSON.stringify({ firstName, lastName, email, phoneNumber }),
-      //   }
-      // );
+      const response = await fetch(
+        '/api/sendgrid/',
+        {
+          method: 'POST',
+          body: JSON.stringify({ firstName, lastName, email, phoneNumber, region: region.name, district: district.name }),
+        }
+      );
 
-      // if (response.ok) {
-      //   const body = await response.json();
-      // }
+      if (response.ok) {
+        setShowValid(true);
+        setSubmitError('');
+      } else {
+        setShowValid(false);
+        setSubmitError(`Nastala chyba. Zkuste to znovu nebo nás kontaktujte na telefonním čísle ${phone}.`);
+      }
     } catch (error) {
-      console.error(error)
+      setShowValid(false);
+      setSubmitError(error.message);
+      console.error(error);
     }
 
     firstNameResetHandler();
@@ -120,6 +131,7 @@ const Form = () => {
     phoneNumberResetHandler();
     regionResetHandler();
     districtResetHandler();
+    setIsGDPRChecked(false);
 
     clearFormData();
   };
@@ -169,137 +181,185 @@ const Form = () => {
   const districts = region?.districts ?? [];
 
   return (
-    <form
-      onSubmit={submitHandler}
-      className='mt-8 flex flex-col items-start gap-8'
-    >
-      <div className='flex flex-col sm:flex-row gap-8 w-full'>
-        <Input
-          inputProps={{
-            type: 'text',
-            name: 'firstName',
-            id: 'firstName',
-            autoComplete: 'given-name',
-            placeholder: 'Jméno',
-            value: firstName,
-            onChange: updateValueHandler.bind(null, 'firstName'),
-            onBlur: firstNameBlurHandler,
-          }}
-          hasError={firstNameHasError}
-          title='Jméno'
-        />
+    <>
+      {
+        !submitError && !showValid
+          ? (
+            <form
+              onSubmit={submitHandler}
+              className='mt-8 flex flex-col items-start gap-8'
+            >
+              <div className='flex flex-col sm:flex-row gap-8 w-full'>
+                <Input
+                  inputProps={{
+                    type: 'text',
+                    name: 'firstName',
+                    id: 'firstName',
+                    autoComplete: 'given-name',
+                    placeholder: 'Jméno',
+                    value: firstName,
+                    onChange: updateValueHandler.bind(null, 'firstName'),
+                    onBlur: firstNameBlurHandler,
+                  }}
+                  hasError={firstNameHasError}
+                  title='Jméno'
+                />
 
-        <Input
-          inputProps={{
-            type: 'text',
-            name: 'lastName',
-            id: 'lastName',
-            autoComplete: 'family-name',
-            placeholder: 'Příjmení',
-            value: lastName,
-            onChange: updateValueHandler.bind(null, 'lastName'),
-            onBlur: lastNameBlurHandler,
-          }}
-          hasError={lastNameHasError}
-          title='Příjmení'
-        />
-      </div>
+                <Input
+                  inputProps={{
+                    type: 'text',
+                    name: 'lastName',
+                    id: 'lastName',
+                    autoComplete: 'family-name',
+                    placeholder: 'Příjmení',
+                    value: lastName,
+                    onChange: updateValueHandler.bind(null, 'lastName'),
+                    onBlur: lastNameBlurHandler,
+                  }}
+                  hasError={lastNameHasError}
+                  title='Příjmení'
+                />
+              </div>
 
-      <div className='flex flex-col sm:flex-row gap-8 lg w-full'>
-        <Input
-          inputProps={{
-            type: 'email',
-            name: 'email',
-            id: 'email',
-            autoComplete: 'email',
-            placeholder: 'vas@email.cz',
-            value: email,
-            onChange: updateValueHandler.bind(null, 'email'),
-            onBlur: emailBlurHandler,
-          }}
-          hasError={emailHasError}
-          title='Email'
-        />
+              <div className='flex flex-col sm:flex-row gap-8 lg w-full'>
+                <Input
+                  inputProps={{
+                    type: 'email',
+                    name: 'email',
+                    id: 'email',
+                    autoComplete: 'email',
+                    placeholder: 'vas@email.cz',
+                    value: email,
+                    onChange: updateValueHandler.bind(null, 'email'),
+                    onBlur: emailBlurHandler,
+                  }}
+                  hasError={emailHasError}
+                  title='Email'
+                />
 
-        <Input
-          inputProps={{
-            type: 'tel',
-            name: 'phoneNumber',
-            id: 'phoneNumber',
-            autoComplete: 'tel',
-            placeholder: '123 456 789',
-            value: phoneNumber,
-            onChange: updateValueHandler.bind(null, 'phone'),
-            onBlur: phoneNumberBlurHandler,
-          }}
-          hasError={phoneNumberHasError}
-          title='Telefonní číslo'
-        />
-      </div>
+                <Input
+                  inputProps={{
+                    type: 'tel',
+                    name: 'phoneNumber',
+                    id: 'phoneNumber',
+                    autoComplete: 'tel',
+                    placeholder: '123 456 789',
+                    value: phoneNumber,
+                    onChange: updateValueHandler.bind(null, 'phone'),
+                    onBlur: phoneNumberBlurHandler,
+                  }}
+                  hasError={phoneNumberHasError}
+                  title='Telefonní číslo'
+                />
+              </div>
 
-      <div className='flex flex-col sm:flex-row gap-8 lg w-full'>
-        <div className='flex-1 flex xl:w-auto flex-col gap-2'>
-          <p className='font-semibold text-primary-500'>Kraj</p>
-          <Select
-            options={regions}
-            placeholder='Kraj'
-            onChange={updateValueHandler.bind(null, 'region')}
-            value={region}
-          />
-        </div>
+              <div className='flex flex-col sm:flex-row gap-8 lg w-full'>
+                <div className='flex-1 flex xl:w-auto flex-col gap-2'>
+                  <p className='font-semibold text-primary-500'>Kraj</p>
+                  <Select
+                    options={regions}
+                    placeholder='Kraj'
+                    onChange={updateValueHandler.bind(null, 'region')}
+                    value={region}
+                  />
+                </div>
 
-        <div className='flex-1 flex xl:w-auto flex-col gap-2'>
-          <p className='font-semibold text-primary-500'>Okres</p>
-          <Select
-            options={districts}
-            placeholder='Okres'
-            onChange={updateValueHandler.bind(null, 'district')}
-            value={district}
-          />
-        </div>
-      </div>
+                <div className='flex-1 flex xl:w-auto flex-col gap-2'>
+                  <p className='font-semibold text-primary-500'>Okres</p>
+                  <Select
+                    options={districts}
+                    placeholder='Okres'
+                    onChange={updateValueHandler.bind(null, 'district')}
+                    value={district}
+                  />
+                </div>
+              </div>
 
-      <div
-        className='flex flex-col gap-2'
-      >
-        <p
-          className='font-semibold text-primary-500'
-        >
-          GDPR<span className='text-red-600 font-bold'> *</span>
-        </p>
-        <div className='flex items-center gap-4'>
-          <div
-            className='bg-white w-12 h-12 rounded-full group
-          shadow-lg
-          flex justify-center items-center'
-            onClick={() => setIsGDPRChecked((prevValue) => !prevValue)}
-          >
-            <AiOutlineCheck
-              className={`${isGDPRChecked ? 'text-primary-500' : 'hidden group-hover:inline text-primary-200'}`}
-              size={30}
-            />
-          </div>
-          <p className='flex-1'>
-            Souhlasím se
-            <Link href='/gdpr'>
-              <span className='text-primary-600 hover:text-primary-700 font-medium'> zpracováním osobních údajů</span>
-            </Link>
-          </p>
-        </div>
-      </div>
+              <div
+                className='flex flex-col gap-2'
+              >
+                <p
+                  className='font-semibold text-primary-500'
+                >
+                  GDPR<span className='text-red-600 font-bold'> *</span>
+                </p>
+                <div className='flex items-center gap-4'>
+                  <div
+                    className='bg-white w-12 h-12 rounded-full group
+            shadow-lg
+            flex justify-center items-center'
+                    onClick={() => setIsGDPRChecked((prevValue) => !prevValue)}
+                  >
+                    <AiOutlineCheck
+                      className={`${isGDPRChecked ? 'text-primary-500' : 'hidden group-hover:inline text-primary-200'}`}
+                      size={30}
+                    />
+                  </div>
+                  <p className='flex-1'>
+                    Souhlasím se
+                    <Link href='/gdpr'>
+                      <span className='text-primary-600 hover:text-primary-700 font-medium'> zpracováním osobních údajů</span>
+                    </Link>
+                  </p>
+                </div>
+              </div>
 
-      <button
-        type='submit'
-        disabled={!isFormValid}
-        className='inline-block mt-4 py-4 px-8 rounded-full 
-        text-xl text-primary-50 bg-primary-700 shadow-lg
-        disabled:bg-gray-200 disabled:text-black disabled:scale-90 disabled:shadow-none
-        transition enabled:hover:bg-primary-300 enabled:hover:text-primary-900 
-        enabled:hover:scale-105 enabled:hover:shadow-md enabled:active:scale-95 enabled:active:shadow-lg'
-      >
-        Odeslat
-      </button>
-    </form >
+              <button
+                type='submit'
+                disabled={!isFormValid}
+                className='inline-block mt-4 py-4 px-8 rounded-full 
+          text-xl text-primary-50 bg-primary-700 shadow-lg
+          disabled:bg-gray-200 disabled:text-black disabled:scale-90 disabled:shadow-none
+          transition enabled:hover:bg-primary-300 enabled:hover:text-primary-900 
+          enabled:hover:scale-105 enabled:hover:shadow-md enabled:active:scale-95 enabled:active:shadow-lg'
+              >
+                Odeslat
+              </button>
+            </form >
+          )
+          : (
+            <div className='flex gap-8 flex-col justify-center items-center my-12 lg:my-8'>
+              {
+                submitError && (
+                  <div className='flex flex-col justify-center items-center gap-4'>
+                    <div className='flex justify-center items-center bg-white rounded-full p-8'>
+                      <RxCross1
+                        className='text-[#f76f6f]'
+                        size={124}
+                      />
+                    </div>
+                    <p className='text-xl text-primary-700 md:px-8'>{submitError}</p>
+                  </div>
+                )
+              }
+              {
+                showValid && (
+                  <div className='flex justify-center items-center bg-white rounded-full p-8'>
+                    <AiOutlineCheck
+                      className='text-[#b2f291]'
+                      size={124}
+                    />
+                  </div>
+                )
+              }
+              <button
+                type='button'
+                className='inline-block mt-4 py-4 px-8 rounded-full 
+                text-xl text-primary-50 bg-primary-700 shadow-lg
+                disabled:bg-gray-200 disabled:text-black disabled:scale-90 disabled:shadow-none
+                transition enabled:hover:bg-primary-300 enabled:hover:text-primary-900 
+                enabled:hover:scale-105 enabled:hover:shadow-md enabled:active:scale-95 enabled:active:shadow-lg'
+                onClick={() => {
+                  setSubmitError('');
+                  setShowValid(false);
+                }}
+              >
+                Odeslat znovu
+              </button>
+            </div>
+          )
+      }
+    </>
   );
 };
 

@@ -4,6 +4,7 @@ const configuration = {
   url: 'https://tepelne-izolace.netlify.app/',
   email: 'abc@example.com',
   phone: '+420 123 456 789',
+  formSubmitEmail: 'ondra.juda@gmail.com',
   jsonLd: {
     '@context': 'https://schema.org',
     '@type': 'Organization',

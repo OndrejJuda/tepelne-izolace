@@ -13,3 +13,4 @@ export { default as References } from './References';
 export { default as SectionWrapper } from './SectionWrapper';
 export { default as Select } from './Select';
 export { default as Services } from './Services';
+export { default as WebsiteHead } from './WebsiteHead';

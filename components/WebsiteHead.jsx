@@ -4,9 +4,10 @@ import configuration from '../conf';
 
 const { title, description, url, jsonLd } = configuration;
 
-const WebsiteHead = ({titleSuffix}) => {
+const WebsiteHead = ({ titleSuffix, canonicalHref }) => {
   return (
     <Head>
+      <link rel='canonical' href={canonicalHref}></link>
       <meta name='viewport' content='width=device-width, initial-scale=1' />
       <link rel='icon' href='/favicon/favicon.ico' />
       <link rel='apple-touch-icon' sizes='180x180' href='/favicon/apple-touch-icon.png' />
@@ -18,7 +19,7 @@ const WebsiteHead = ({titleSuffix}) => {
       <meta name='theme-color' content='#ffffff' />
 
       {/* <!-- Primary Meta Tags --> */}
-      <title>{title}{titleSuffix ? titleSuffix : ''}</title>
+      <title>{`${title}${titleSuffix ? titleSuffix : ''}`}</title>
       <meta name='title' content={title} />
       <meta name='description' content={description} />
 

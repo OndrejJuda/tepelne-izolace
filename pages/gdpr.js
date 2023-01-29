@@ -1,5 +1,8 @@
 import Head from 'next/head';
 import { GDPR, Footer } from '../components';
+import configuration from '../conf';
+
+const { title, description, url } = configuration;
 
 const GDPRPage = () => {
 

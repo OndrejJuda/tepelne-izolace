@@ -32,7 +32,7 @@ const Input = ({ inputProps, hasError, title }) => {
 
 const Form = () => {
   const [isGDPRChecked, setIsGDPRChecked] = useState(false);
-  const [showValid, setShowValid] = useState(true);
+  const [showValid, setShowValid] = useState(false);
   const [submitError, setSubmitError] = useState('');
 
   const { formData, setFormData, clearFormData } = useContext(CoinContext);

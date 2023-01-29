@@ -8,7 +8,7 @@ const GDPRPage = () => {
 
   return (
     <>
-      <WebsiteHead />
+      <WebsiteHead titleSuffix=' - GDPR' />
       <div className='min-h-screen flex flex-col'>
         <main>
           <GDPR />

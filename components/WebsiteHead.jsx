@@ -4,7 +4,7 @@ import configuration from '../conf';
 
 const { title, description, url, jsonLd } = configuration;
 
-const WebsiteHead = () => {
+const WebsiteHead = ({titleSuffix}) => {
   return (
     <Head>
       <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -18,7 +18,7 @@ const WebsiteHead = () => {
       <meta name='theme-color' content='#ffffff' />
 
       {/* <!-- Primary Meta Tags --> */}
-      <title>{title}</title>
+      <title>{title}{titleSuffix ? titleSuffix : ''}</title>
       <meta name='title' content={title} />
       <meta name='description' content={description} />
 

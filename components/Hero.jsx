@@ -1,5 +1,8 @@
 import React from 'react';
 import { CTAButton } from './';
+import configuration from '../conf';
+
+const { email, phone } = configuration;
 
 const Hero = () => {
   return (
@@ -20,26 +23,18 @@ const Hero = () => {
         </p>
 
         <div className='lg:hidden flex flex-col items-center gap-4 bg-white py-6 px-6 rounded-xl'>
-          <a href='mailto:test@test.com' className='text-xl font-semibold text-primary-700'>test@test.com</a>
+          <a href={`mailto:${email}`} className='text-xl font-semibold text-primary-700'>{email}</a>
           <CTAButton>Nezávazná poptávka</CTAButton>
-          <a href='tel:+420775689770' className='text-xl font-semibold text-primary-700'>+420 775 689 770</a>
+          <a href={`tel:${phone.replaceAll(' ', '')}`} className='text-xl font-semibold text-primary-700'>{phone}</a>
         </div>
 
         <div className='hidden lg:flex items-center gap-8 bg-white rounded-full pr-8'>
           <div className='scale-110'>
-          <CTAButton>Nezávazná poptávka</CTAButton>
-          </div>
-          <a href='mailto:test@test.com' className='text-xl font-semibold text-primary-700'>test@test.com</a>
-          <a href='tel:+420775689770' className='text-xl font-semibold text-primary-700'>+420 775 689 770</a>
-        </div>
-
-        {/* <div className='flex flex-col lg:flex-row lg:gap-8 items-center lg:bg-white lg:rounded-full'>
-          <a href='mailto:test@test.com' className='text-lg font-bold text-primary-900 p-2 px-6 pb-4 -mb-2 bg-white rounded-t-3xl'>test@test.com</a>
-          <div className='z-10'>
             <CTAButton>Nezávazná poptávka</CTAButton>
           </div>
-          <a href='tel:+420775689770' className='text-lg font-bold text-primary-900 p-2 px-6 pt-4 -mt-2 bg-white rounded-b-3xl'>+420 775 689 770</a>
-        </div> */}
+          <a href={`mailto:${email}`} className='text-xl font-semibold text-primary-700'>{email}</a>
+          <a href={`tel:${phone.replaceAll(' ', '')}`} className='text-xl font-semibold text-primary-700'>{phone}</a>
+        </div>
       </div>
 
     </section>

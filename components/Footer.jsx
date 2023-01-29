@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
+import configuration from '../conf';
 
-const email = 'abc@example.com';
-const tel = '+420 123 456 789';
+const { email, phone } = configuration;
 
 const Footer = () => {
   return (
@@ -23,9 +23,9 @@ const Footer = () => {
           <p>LUNASTAV s.r.o.</p>
           <p>IČO: 00000000</p>
           <a href={`mailto:${email}`} target='_blank' rel='noreferrer' className='block'>{email}</a>
-          <a href={`tel:${tel}`} target='_blank' rel='noreferrer' className='block'>{tel}</a>
+          <a href={`tel:${phone.replaceAll(' ', '')}`} target='_blank' rel='noreferrer' className='block'>{phone}</a>
         </div>
-        
+
         <address>
           Sídlo:<br />
           LUNASTAV s.r.o. <br />

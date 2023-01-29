@@ -1,27 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?> 
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
-<url>
-  <loc>http://tepelne-izolace.netlify.app/</loc>
-</url>
-<url>
-  <loc>http://tepelne-izolace.netlify.app/#kontakty</loc>
-</url>
-<url>
-  <loc>http://tepelne-izolace.netlify.app/#benefity</loc>
-</url>
-<url>
-  <loc>http://tepelne-izolace.netlify.app/#slu%C5%BEby</loc>
-</url>
-<url>
-  <loc>http://tepelne-izolace.netlify.app/#proces</loc>
-</url>
-<url>
-  <loc>http://tepelne-izolace.netlify.app/tel:+420123456789</loc>
-</url>
-<url>
-  <loc>http://tepelne-izolace.netlify.app/gdpr</loc>
-</url>
-<url>
-  <loc></loc>
-</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>https://tepelne-izolace.netlify.app/</loc>
+		<lastmod>2023-01-29T20:20:29+01:00</lastmod>
+		<priority>0.4</priority>
+	</url>
+	<url>
+		<loc>https://tepelne-izolace.netlify.app/gdpr</loc>
+		<lastmod>2023-01-29T20:20:29+01:00</lastmod>
+		<priority>0.2</priority>
+	</url>
 </urlset>

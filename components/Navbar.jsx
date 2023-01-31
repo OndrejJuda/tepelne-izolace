@@ -63,7 +63,7 @@ const Navbar = () => {
         <nav className={`bg-[#fff] py-4 px-12 rounded-full shadow-lg relative`}>
           <Link href='/'>
             <img
-              src='/logo/logo.png'
+              src='/logo/logo.svg'
               alt='logo'
               width={60}
               height={60}

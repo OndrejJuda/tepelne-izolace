@@ -11,7 +11,7 @@ const configuration = {
     name: 'Lunastav CZ s.r.o.',
     alternateName: 'Lunastav CZ',
     url: 'https://tepelne-izolace.netlify.app/',
-    logo: 'https://tepelne-izolace.netlify.app/logo/logo.png'
+    logo: 'https://tepelne-izolace.netlify.app/logo/logo.svg'
   }
 };
 

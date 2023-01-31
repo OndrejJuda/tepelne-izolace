@@ -30,17 +30,17 @@ const Process = () => {
 
                 <div className='relative'>
                   <span
-                    className={`text-8xl text-white bg-primary-50 w-[120px] h-[120px] xl:w-[164px] xl:h-[164px] p-2 rounded-full opacity-50
-                      absolute -top-10 right-0 ${index % 2 ? 'xl:right-0 2xl:-right-28' : 'xl:left-0 2xl:-left-28'} -z-10
+                    className={`text-8xl text-white bg-secondary-500 w-[120px] h-[120px] xl:w-[164px] xl:h-[164px] p-2 rounded-full opacity-50
+                      absolute -top-10 right-0 ${index % 2 ? 'xl:right-0 2xl:-right-28' : 'xl:left-0 2xl:-left-28'}
                       flex justify-center items-center`}
                   >
                     {index + 1}
                   </span>
 
-                  <p className='text-3xl font-semibold text-primary-800 mb-8'>{title}</p>
                 </div>
+                <p className='text-3xl font-semibold text-primary-100 mb-8 z-10'>{title}</p>
 
-                <p className='max-w-[800px] text-xl text-primary-800'>{descripton}</p>
+                <p className='max-w-[800px] text-xl text-primary-100 z-10'>{descripton}</p>
 
               </div>
 

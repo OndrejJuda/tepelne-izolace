@@ -10,7 +10,7 @@ export default function Home() {
       <WebsiteHead canonicalHref={url} />
       <Navbar />
       <Header />
-      <main>
+      <main className='bg-secondary-700'>
         <Hero />
         <Contacts />
         <Benefits />

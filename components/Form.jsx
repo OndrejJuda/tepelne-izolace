@@ -17,7 +17,7 @@ const Input = ({ inputProps, hasError, title }) => {
     >
       <label
         htmlFor={inputProps.id}
-        className='font-semibold text-primary-500'
+        className='font-semibold text-primary-100'
       >
         {title}<span className='text-red-600 font-bold'> *</span>
       </label>
@@ -255,7 +255,7 @@ const Form = () => {
 
               <div className='flex flex-col sm:flex-row gap-8 lg w-full'>
                 <div className='flex-1 flex xl:w-auto flex-col gap-2'>
-                  <p className='font-semibold text-primary-500'>Kraj</p>
+                  <p className='font-semibold text-primary-100'>Kraj</p>
                   <Select
                     options={regions}
                     placeholder='Kraj'
@@ -265,7 +265,7 @@ const Form = () => {
                 </div>
 
                 <div className='flex-1 flex xl:w-auto flex-col gap-2'>
-                  <p className='font-semibold text-primary-500'>Okres</p>
+                  <p className='font-semibold text-primary-100'>Okres</p>
                   <Select
                     options={districts}
                     placeholder='Okres'
@@ -279,7 +279,7 @@ const Form = () => {
                 className='flex flex-col gap-2'
               >
                 <p
-                  className='font-semibold text-primary-500'
+                  className='font-semibold text-primary-100'
                 >
                   GDPR<span className='text-red-600 font-bold'> *</span>
                 </p>
@@ -295,10 +295,10 @@ const Form = () => {
                       size={30}
                     />
                   </div>
-                  <p className='flex-1'>
+                  <p className='flex-1 text-primary-100'>
                     Souhlasím se
                     <Link href='/gdpr'>
-                      <span className='text-primary-600 hover:text-primary-700 font-medium'> zpracováním osobních údajů</span>
+                      <span className='text-primary-300 hover:text-primary-700 font-medium'> zpracováním osobních údajů</span>
                     </Link>
                   </p>
                 </div>

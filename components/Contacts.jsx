@@ -5,7 +5,7 @@ const Contacts = () => {
   return (
     <SectionWrapper
       id='kontakty'
-      innerDivStyle='bg-primary-50 lg:flex mx-8 rounded-lg overflow-hidden shadow-xl'
+      innerDivStyle='bg-secondary-600 lg:flex mx-8 rounded-lg overflow-hidden shadow-xl'
     >
       <img
         src='/business/smiling-businessman.jpg'

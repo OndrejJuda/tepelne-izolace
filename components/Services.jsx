@@ -5,7 +5,7 @@ const Services = () => {
   return (
     <SectionWrapper
       id='služby'
-      innerDivStyle='mx-8 md:mx-16 lg:mx-36 bg-primary-50 flex flex-col xl:flex-row rounded-lg overflow-hidden shadow-xl'
+      innerDivStyle='mx-8 md:mx-16 lg:mx-36 bg-secondary-600 flex flex-col xl:flex-row rounded-lg overflow-hidden shadow-xl'
     >
       <div
         className='p-8 lg:p-20 
@@ -13,7 +13,7 @@ const Services = () => {
       >
         <HSecondary additionalStyling='text-5xl mb-10'>Foukaná vata</HSecondary>
         <div
-          className='text-primary-800 text-lg flex flex-col gap-4'
+          className='text-primary-100 text-lg flex flex-col gap-4'
         >
           <p>
             Foukaná izolace je dnes již velmi dobře zavedená technologie zateplování konstrukcí. Izolační materiál je pneumaticky, pomocí hadice a vzduchu, nanášen i do hůře přístupných míst stavby. Při samotné instalaci izolace tak není potřeba nanášet velké balíky izolačního materiálu do budovy, ale je třeba zajistit pouze servisní otvory pro průchod foukací hadice.

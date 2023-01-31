@@ -105,7 +105,7 @@ const Form = () => {
 
     try {
       const response = await fetch(
-        '/api/sendgrid/',
+        '/api/raynet/',
         {
           method: 'POST',
           body: JSON.stringify({ firstName, lastName, email, phoneNumber, region: region.name, district: district.name }),

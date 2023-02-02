@@ -1,5 +1,5 @@
 const configuration = {
-  title: 'Lunastav CZ s.r.o.',
+  title: 'LUNASTAV CZ s.r.o.',
   description: 'Tepelné izolace do každé rodiny.',
   url: 'https://tepelne-izolace.netlify.app/',
   email: 'abc@example.com',
@@ -8,7 +8,7 @@ const configuration = {
   jsonLd: {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Lunastav CZ s.r.o.',
+    name: 'LUNASTAV CZ s.r.o.',
     alternateName: 'Lunastav CZ',
     url: 'https://tepelne-izolace.netlify.app/',
     logo: 'https://tepelne-izolace.netlify.app/logo/logo.svg'

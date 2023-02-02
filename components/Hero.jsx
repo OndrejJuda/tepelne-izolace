@@ -28,7 +28,7 @@ const Hero = () => {
           <a href={`tel:${phone.replaceAll(' ', '')}`} className='text-xl font-semibold text-primary-100'>{phone}</a>
         </div>
 
-        <div className='hidden lg:flex items-center gap-8 bg-secondary-400 rounded-full pr-8'>
+        <div className='hidden lg:flex items-center gap-8 bg-secondary-400 rounded-xl pr-8'>
           <div className='scale-110'>
             <CTAButton>Nezávazná poptávka</CTAButton>
           </div>

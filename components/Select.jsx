@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment } from 'react';
 import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 
@@ -6,8 +6,8 @@ const Select = ({ options, placeholder, onChange, value}) => {
   return (
     <Listbox value={value} onChange={onChange} disabled={placeholder === 'Okres' && options.length === 0}>
       <div className='relative mt-1 inline-block'>
-        <Listbox.Button className='relative w-full cursor-default rounded-full bg-white py-4 px=8 pl-3 pr-10 text-left shadow-lg focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm'>
-          <span className={`block truncate ml-6 ${value?.name ?? 'text-gray-400'}`}>{value?.name ?? placeholder}</span>
+        <Listbox.Button className='relative w-full cursor-default rounded-xl bg-white py-4 px-8 pl-3 pr-10 text-left shadow-lg focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm'>
+          <span className={`block truncate ml-2 ${value?.name ?? 'text-gray-400'}`}>{value?.name ?? placeholder}</span>
           <span className='pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2'>
             <ChevronUpDownIcon
               className={`h-5 w-5 ${placeholder === 'Okres' && options.length === 0 ? 'text-gray-400' : 'text-primary-500'}`}

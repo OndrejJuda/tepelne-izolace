@@ -23,7 +23,7 @@ const Input = ({ inputProps, hasError, title }) => {
       </label>
       <input
         {...inputProps}
-        className={`shadow-lg rounded-full py-4 px-8 
+        className={`shadow-lg rounded-xl py-4 px-4 
         ${hasError ? 'border-red-500 border-[2px]' : 'm-[2px]'}`}
       />
     </div>
@@ -187,9 +187,9 @@ const Form = () => {
           ? (
             <form
               onSubmit={submitHandler}
-              className='mt-8 flex flex-col items-start gap-8'
+              className='mt-8 flex flex-col items-start gap-4 sm:gap-8'
             >
-              <div className='flex flex-col sm:flex-row gap-8 w-full'>
+              <div className='flex flex-col sm:flex-row gap-4 sm:gap-8 w-full'>
                 <Input
                   inputProps={{
                     type: 'text',
@@ -221,7 +221,7 @@ const Form = () => {
                 />
               </div>
 
-              <div className='flex flex-col sm:flex-row gap-8 lg w-full'>
+              <div className='flex flex-col sm:flex-row gap-4 sm:gap-8 lg w-full'>
                 <Input
                   inputProps={{
                     type: 'email',
@@ -253,7 +253,7 @@ const Form = () => {
                 />
               </div>
 
-              <div className='flex flex-col sm:flex-row gap-8 lg w-full'>
+              <div className='flex flex-col sm:flex-row gap-4 sm:gap-8 lg w-full'>
                 <div className='flex-1 flex xl:w-auto flex-col gap-2'>
                   <p className='font-semibold text-primary-100'>Kraj</p>
                   <Select
@@ -307,7 +307,7 @@ const Form = () => {
               <button
                 type='submit'
                 disabled={!isFormValid}
-                className='inline-block mt-4 py-4 px-8 rounded-full 
+                className='inline-block mt-4 py-4 px-8 rounded-xl 
           text-xl text-primary-50 bg-primary-700 shadow-lg
           disabled:bg-gray-200 disabled:text-black disabled:scale-90 disabled:shadow-none
           transition enabled:hover:bg-primary-300 enabled:hover:text-primary-900 
@@ -322,7 +322,7 @@ const Form = () => {
               {
                 submitError && (
                   <div className='flex flex-col justify-center items-center gap-4'>
-                    <div className='flex justify-center items-center bg-white rounded-full p-8'>
+                    <div className='flex justify-center items-center bg-white rounded-xl p-8'>
                       <RxCross1
                         className='text-[#f76f6f]'
                         size={124}
@@ -334,7 +334,7 @@ const Form = () => {
               }
               {
                 showValid && (
-                  <div className='flex justify-center items-center bg-white rounded-full p-8'>
+                  <div className='flex justify-center items-center bg-white rounded-xl p-8'>
                     <AiOutlineCheck
                       className='text-[#b2f291]'
                       size={124}
@@ -344,7 +344,7 @@ const Form = () => {
               }
               <button
                 type='button'
-                className='inline-block mt-4 py-4 px-8 rounded-full 
+                className='inline-block mt-4 py-4 px-8 rounded-xl 
                 text-xl text-primary-50 bg-primary-700 shadow-lg
                 disabled:bg-gray-200 disabled:text-black disabled:scale-90 disabled:shadow-none
                 transition enabled:hover:bg-primary-300 enabled:hover:text-primary-900 

@@ -96,7 +96,7 @@ const Navbar = () => {
 
         <button className={`z-10 mr-4 transition ${showButton() ? '' : '-translate-y-[100px]'} shadow-lg bg-primary-50 rounded-full`}>
           <HiOutlineMenu
-            size={48}
+            size={54}
             color='#8b431e'
             className={`p-2 transition ${isOpen ? '' : 'rotate-180'} `}
             onClick={() => setIsOpen((prevValue) => !prevValue)}

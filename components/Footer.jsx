@@ -15,23 +15,22 @@ const Footer = () => {
       />
 
       <Link href='/' className='lg:mr-auto z-10'>
-        {/* <img src='/logo/logo-name.png' alt='logo' width={300} /> */}
         <img src='/logo/logo-name.svg' alt='logo' width={100} />
       </Link>
 
       <div className='z-10 flex flex-col sm:flex-row gap-16 text-primary-100 font-medium text-lg'>
         <div>
-          <p>LUNASTAV s.r.o.</p>
-          <p>IČO: 00000000</p>
+          <p>LUNASTAV CZ s.r.o.</p>
+          <p>IČO: 05591872</p>
           <a href={`mailto:${email}`} target='_blank' rel='noreferrer' className='block'>{email}</a>
           <a href={`tel:${phone.replaceAll(' ', '')}`} target='_blank' rel='noreferrer' className='block'>{phone}</a>
         </div>
 
         <address>
           Sídlo:<br />
-          LUNASTAV s.r.o. <br />
-          Pražská 123/456 <br />
-          123 56, Praha 1
+          LUNASTAV CZ s.r.o. <br />
+          Ostrovní 2059/4 <br />
+          110 00, Praha 1
         </address>
       </div>
     </footer>

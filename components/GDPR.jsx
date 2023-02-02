@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { BiArrowBack } from 'react-icons/bi';
 import Link from 'next/link';
 import parse from 'html-react-parser';
@@ -6,13 +6,41 @@ import parse from 'html-react-parser';
 import gdpr from '../gdpr';
 
 const GDPR = () => {
+  const [isVisible, setIsVisible] = useState(true);
+
+  const previousYScroll = useRef();
+
+  useEffect(() => {
+    const handleScroll = (event) => {
+      const { scrollY } = window;
+
+      const diffY = previousYScroll.current - scrollY
+      previousYScroll.current = scrollY;
+
+      if (scrollY < 50) {
+        setIsVisible(true);
+      }
+      else if (diffY > 0) { // scrolling upwards
+        setIsVisible(true);
+      } else if (diffY < 0) { // scrolling downwards
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  
   return (
     <>
-      <nav>
+      <nav className={`ml-2 md:ml-16 mt-10 fixed transition ${isVisible ? '' : '-translate-y-[200px]'}`}>
         <Link
           href='/#kontakty'
         >
-          <div className='w-16 h-16 m-16 mb-0 shadow-lg rounded-full
+          <div className='p-2 shadow-lg rounded-full bg-primary-50
       flex justify-center items-center transition
       hover:shadow-md hover:scale-110
       active:shadow-md active:scale-95'>
@@ -23,7 +51,7 @@ const GDPR = () => {
           </div>
         </Link>
       </nav>
-      <div className='py-20 px-4 md:px-16 lg:px-36 flex flex-col gap-8'>
+      <div className='my-20 py-20 px-4 md:px-16 lg:px-36 flex flex-col gap-8 text-primary-100'>
         <h1 className='text-4xl font-semibold'>Zásady ochrany osobních údajů</h1>
         {
           gdpr.map((lv0, i0) => {

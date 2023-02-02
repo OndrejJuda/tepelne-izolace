@@ -2,10 +2,10 @@ import React from 'react';
 import { CTAButton, HSecondary, SectionWrapper } from './';
 
 const processSteps = [
-  { image: '/business/first-contact.jpg', title: 'První kontakt', descripton: 'Nostrud elit sunt mollit reprehenderit adipisicing quis cupidatat dolor enim sit.' },
-  { image: '/business/preparation.jpg', title: 'Příprava realizace', descripton: 'Ullamco adipisicing ullamco minim deserunt aliquip dolore nisi amet dolor ad ipsum.' },
+  { image: '/business/first-contact.jpg', title: 'Osobní návštěva', descripton: 'Zaměření nemovitosti naším odborným konzultantem. Necháme vypracovat odborný posudek kvůli vyřízení dotace pro Vaši nemovitost' },
+  { image: '/business/preparation.jpg', title: 'Zpracování a požádání o dotaci z programu NZÚ', descripton: 'Necháme vypracovat odborný posudek a podáme žádost o dotaci z programu NZÚ' },
   { image: '/business/construction.jpg', title: 'Realizace', descripton: 'Lorem sint sit magna ea duis.' },
-  { image: '/business/details.jpg', title: 'Doladění detailů', descripton: 'Dolore cupidatat laboris cillum fugiat nulla dolore adipisicing.' },
+  { image: '/business/details.jpg', title: 'Doložení realizace na NZÚ', descripton: '' },
   { image: '/business/finish.jpg', title: 'Dokončení izolace', descripton: 'Sit quis laborum elit dolore veniam tempor ex nostrud dolore ullamco ipsum labore proident.Sit quis laborum elit dolore veniam tempor ex nostrud dolore ullamco ipsum labore proident.' },
 ];
 

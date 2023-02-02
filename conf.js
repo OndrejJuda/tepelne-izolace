@@ -2,8 +2,8 @@ const configuration = {
   title: 'LUNASTAV CZ s.r.o.',
   description: 'Tepelné izolace do každé rodiny.',
   url: 'https://tepelne-izolace.netlify.app/',
-  email: 'abc@example.com',
-  phone: '+420 123 456 789',
+  email: 'info@lunastav.cz',
+  phone: '+420 605 898 894',
   formSubmitEmail: 'ondra.juda@gmail.com',
   jsonLd: {
     '@context': 'https://schema.org',

@@ -11,18 +11,27 @@ const Services = () => {
         className='p-8 lg:p-20 
           flex-1 flex flex-col justify-center order-2 xl:order-1'
       >
-        <HSecondary additionalStyling='text-5xl mb-10'>Foukaná vata</HSecondary>
+        <HSecondary additionalStyling='text-5xl mb-10'>Používáme kvalitní minerální vlnu vyráběnou v Belgii</HSecondary>
         <div
           className='text-primary-100 text-lg flex flex-col gap-4'
         >
           <p>
-            Foukaná izolace je dnes již velmi dobře zavedená technologie zateplování konstrukcí. Izolační materiál je pneumaticky, pomocí hadice a vzduchu, nanášen i do hůře přístupných míst stavby. Při samotné instalaci izolace tak není potřeba nanášet velké balíky izolačního materiálu do budovy, ale je třeba zajistit pouze servisní otvory pro průchod foukací hadice.
+            Foukaná minerální izolace je tepelná izolace, která se aplikuje na stěny, stropy a podhledy pomocí speciálního stroje, který rozptýlí vláknité materiály, jako jsou skleněné vlákna nebo minerální vlákna, do nástěnných prostorů. Foukananá izolace se díky svým vlastnostem poskytuje dokonalou tepelnou izolaci téměř každému objektu bez vzniku tepelných mostů. Tato izolace má několik výhod, jako jsou:
           </p>
           <p>
-            Foukané izolace se často používají jako oprava stávající izolace, která časem slehla a ztratila tak část své izolační schopnosti. Mezi konstrukcí a izolací vznikla mezera plná tepelných mostů, kterou lze nafoukáním izolace snadno vyplnit. Tím možnosti využití foukané vaty ale rozhodně nekončí. Lze ji využít i pro zavedení nové izolační vrstvy, která bude mít nepřekonatelné vlastnosti.
+            1. Vysoká tepelná izolace: foukaná minerální izolace poskytuje vysokou tepelnou izolaci, což pomáhá udržovat teplo uvnitř budovy a snižuje potřebu vytápění.
           </p>
           <p>
-            Foukanou izolaci oceníte i v letním období, kdy chrání dům před přehříváním. V tomto případě je vhodné zateplit podlahu půdy - tím se teplo z přehřátého půdního prostoru nebude dostávat do obytné části. Je však možné zateplit i střešní šikminy do dutin vzniklých po zaklopení. Tak se teplo nedostane ani do půdního prostoru a tak si uchová příjemné prostředí.
+            2. Snadná instalace: foukaná minerální izolace se snadno aplikuje pomocí speciálního stroje, což umožňuje rychlou a efektivní instalaci bez potřeby velkých stavebních úprav.
+          </p>
+          <p>
+            3. Flexibilita: Foukaná minerální izolace se dá aplikovat na různé typy konstrukcí a prostorů, včetně obtížně přístupných míst.
+          </p>
+          <p>
+            4. Odolnost: Foukaná minerální izolace je odolná proti vlhkosti a plísním, což ji činí vhodnou pro použití ve vlhkých prostorách, jako jsou koupelny nebo sklepy.
+          </p>
+          <p>
+            5. Bezpečnost: Foukaná minerální izolace je nehořlavá, bezpečná pro použití v interiéru a neobsahuje žádné škodlivé látky.
           </p>
         </div>
       </div>

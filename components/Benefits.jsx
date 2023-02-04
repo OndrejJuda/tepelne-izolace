@@ -25,7 +25,7 @@ const Benefits = () => {
   return (
     <SectionWrapper
       id='benefity'
-      innerDivStyle='flex flex-col items-center bg-secondary-600 px-32 relative overflow-hidden'
+      innerDivStyle='flex flex-col items-center bg-secondary-600 relative overflow-hidden w-screen'
     >
       <img
         src='/logo/logo-one-color.svg'
@@ -33,23 +33,23 @@ const Benefits = () => {
         className='absolute right-[50%] top-0 scale-125 opacity-5'
       />
       <div className='flex flex-col items-center z-10'>
-        
+
         <HSecondary additionalStyling='text-5xl mt-16 mb-8'>Proč nás?</HSecondary>
 
-        <ul className='flex flex-wrap gap-8 p-8'>
+        <ul className='grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4'>
           {
             benefits.map((item) => (
               <li
                 key={item.title}
                 className='py-4 px-16
-                flex-1 flex flex-col items-center jus'
+                flex-1 flex md:flex-col items-center'
               >
-                <div className='w-[82px] h-[82px] mb-8 bg-white rounded-full p-3
+                <div className='w-[74px] h-[74px] xl:w-[82px] xl:h-[82px] mr-4 md:mr-0 md:mb-4 xl:mb-8 bg-white rounded-full p-3
                 flex justify-center items-center'>
                   {item.icon}
                 </div>
 
-                <p className='text-3xl p-2 font-semibold text-primary-300'>{item.title}</p>
+                <p className='text-xl md:text-2xl xl:text-3xl p-2 font-semibold text-primary-300'>{item.title}</p>
 
               </li>
             ))

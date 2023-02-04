@@ -12,9 +12,9 @@ export default function Home() {
       <Header />
       <main className='bg-secondary-700'>
         <Hero />
-        <Contacts />
-        <Benefits />
         <Services />
+        <Benefits />
+        <Contacts />
         <Process />
       </main>
       <Footer />

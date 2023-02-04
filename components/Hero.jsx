@@ -15,19 +15,13 @@ const Hero = () => {
       <div className='flex flex-col justify-center items-center lg:items-start p-6 sm:px-12 min-h-[calc(100vh-110px)] sm:min-h-[calc(100vh-155px)] md:h-auto relative'>
 
         <h1 className='text-5xl md:text-6xl font-bold text-primary-200 mb-16'>
-          Vyřídíme Vám zateplení domu i s dotací na klíč.
+          Vyřídíme Vám zateplení domu i s dotací na klíč
         </h1>
 
         <p className='text-3xl md:text-4xl text-primary-100 max-w-[1200px] mb-12'>
-          Zabýváme se zateplováním budov pomocí foukané izolace.
-          Věříme, že kvalitně zateplený dům je v současné situaci správnou cestou ke snížení nákladů Vaší domácnosti. Preferujeme kvalitu před kvantitou a zakládáme si na individuálním přístupu ke každému klientovi.
-        </p>
-        <p className='text-3xl md:text-4xl text-primary-100 max-w-[1200px] mb-12'>
-          Naší odborníci Vám pomohou vybrat idealní variantu zateplení pro Váš dům a vyřídíme Vám státní dotaci od NZÚ.
-        </p>
-        <p className='text-3xl md:text-4xl text-primary-100 max-w-[1200px] mb-12'>
           Naším cílem je Vaše spokojenost.
         </p>
+        
         <div className='lg:hidden flex flex-col items-center gap-4 bg-secondary-400 py-6 px-6 rounded-xl'>
           <a href={`mailto:${email}`} className='text-xl font-semibold text-primary-100'>{email}</a>
           <CTAButton>Nezávazná poptávka</CTAButton>

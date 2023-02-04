@@ -4,8 +4,8 @@ import { HiOutlineMenu } from 'react-icons/hi';
 
 const links = [
   { href: '#kontakty', title: 'Nezávazná poptávka', cta: true },
-  { href: '#benefity', title: 'Proč nás?' },
   { href: '#služby', title: 'Foukaná vata' },
+  { href: '#benefity', title: 'Proč nás?' },
   { href: '#proces', title: 'Proces' },
 ];
 

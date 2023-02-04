@@ -6,7 +6,6 @@ const processSteps = [
   { image: '/business/preparation.jpg', title: 'Zpracování a požádání o dotaci z programu NZÚ', descripton: 'Necháme vypracovat odborný posudek a podáme žádost o dotaci z programu NZÚ' },
   { image: '/business/construction.jpg', title: 'Realizace', descripton: '' },
   { image: '/business/details.jpg', title: 'Doložení realizace na NZÚ', descripton: '' },
-  { image: '/business/finish.jpg', title: 'Dokončení izolace', descripton: '' },
 ];
 
 const Process = () => {

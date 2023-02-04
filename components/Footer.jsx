@@ -32,6 +32,12 @@ const Footer = () => {
           Ostrovní 2059/4 <br />
           110 00, Praha 1
         </address>
+        <address>
+          Provozovna:<br />
+          LUNASTAV CZ s.r.o. <br />
+          Šimkova 1224/2b <br />
+          500 03, Hradec Králové
+        </address>
       </div>
     </footer>
   );

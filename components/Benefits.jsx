@@ -1,9 +1,13 @@
 import React from 'react';
 import { HSecondary, SectionWrapper } from './';
-import { AiOutlineVideoCamera } from 'react-icons/ai';
-import { BsPersonCheck } from 'react-icons/bs';
-import { RiPriceTag3Line } from 'react-icons/ri';
-import { SlSpeedometer } from 'react-icons/sl';
+import { RxPerson } from 'react-icons/rx';
+import { TbAward } from 'react-icons/tb';
+import { MdLooksOne } from 'react-icons/md';
+import { GiTakeMyMoney } from 'react-icons/gi';
+import { GiDiceSixFacesFive } from 'react-icons/gi';
+import { FiTrendingDown } from 'react-icons/fi';
+import { RiLeafLine } from 'react-icons/ri';
+import { GiShieldReflect } from 'react-icons/gi';
 
 const iconProps = {
   size: 100,
@@ -11,14 +15,14 @@ const iconProps = {
 };
 
 const benefits = [
-  { icon: <AiOutlineVideoCamera {...iconProps} />, title: 'Konzultace a zaměření Vaší nemovitosti zdarma', description: 'Veniam et do aliqua cupidatat ea dolore velit ullamco mollit non enim laborum eu est.' },
-  { icon: <BsPersonCheck {...iconProps} />, title: 'Garance nejvyšší kvality použitých materiálů', description: 'Deserunt dolor id deserunt non labore.' },
-  { icon: <RiPriceTag3Line {...iconProps} />, title: 'Kvalitní realizaci provedeme za jediný den', description: 'Culpa nisi mollit ipsum duis dolor culpa consectetur aliquip exercitation id laborum enim Lorem dolor.' },
-  { icon: <SlSpeedometer {...iconProps} />, title: 'Vyřídíme za Vás dotaci Nová Zelená Úsporám (Light)', description: 'Excepteur consequat proident voluptate deserunt ullamco occaecat excepteur.' },
-  { icon: <SlSpeedometer {...iconProps} />, title: 'Poskytujeme nadstardartní záruku 5 let', description: 'Excepteur consequat proident voluptate deserunt ullamco occaecat excepteur.' },
-  { icon: <SlSpeedometer {...iconProps} />, title: 'Snížíme Vám účty za vytápění', description: 'Excepteur consequat proident voluptate deserunt ullamco occaecat excepteur.' },
-  { icon: <SlSpeedometer {...iconProps} />, title: 'Ochráníme Vaši nemovitost před horkem', description: 'Excepteur consequat proident voluptate deserunt ullamco occaecat excepteur.' },
-  { icon: <SlSpeedometer {...iconProps} />, title: 'Přispějete k ochraně životního prostředí', description: 'Excepteur consequat proident voluptate deserunt ullamco occaecat excepteur.' },
+  { icon: <RxPerson {...iconProps} />, title: 'Konzultace a zaměření Vaší nemovitosti zdarma', description: 'Veniam et do aliqua cupidatat ea dolore velit ullamco mollit non enim laborum eu est.' },
+  { icon: <TbAward {...iconProps} />, title: 'Garance nejvyšší kvality použitých materiálů', description: 'Deserunt dolor id deserunt non labore.' },
+  { icon: <MdLooksOne {...iconProps} />, title: 'Kvalitní realizaci provedeme za jediný den', description: 'Culpa nisi mollit ipsum duis dolor culpa consectetur aliquip exercitation id laborum enim Lorem dolor.' },
+  { icon: <GiTakeMyMoney {...iconProps} />, title: 'Vyřídíme za Vás dotaci Nová Zelená Úsporám (Light)', description: 'Excepteur consequat proident voluptate deserunt ullamco occaecat excepteur.' },
+  { icon: <GiDiceSixFacesFive {...iconProps} />, title: 'Poskytujeme nadstardartní záruku 5 let', description: 'Excepteur consequat proident voluptate deserunt ullamco occaecat excepteur.' },
+  { icon: <FiTrendingDown {...iconProps} />, title: 'Snížíme Vám účty za vytápění', description: 'Excepteur consequat proident voluptate deserunt ullamco occaecat excepteur.' },
+  { icon: <GiShieldReflect {...iconProps} />, title: 'Ochráníme Vaši nemovitost před horkem', description: 'Excepteur consequat proident voluptate deserunt ullamco occaecat excepteur.' },
+  { icon: <RiLeafLine {...iconProps} />, title: 'Přispějete k ochraně životního prostředí', description: 'Excepteur consequat proident voluptate deserunt ullamco occaecat excepteur.' },
 ];
 
 const Benefits = () => {

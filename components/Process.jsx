@@ -4,9 +4,9 @@ import { CTAButton, HSecondary, SectionWrapper } from './';
 const processSteps = [
   { image: '/business/first-contact.jpg', title: 'Osobní návštěva', descripton: 'Zaměření nemovitosti naším odborným konzultantem. Necháme vypracovat odborný posudek kvůli vyřízení dotace pro Vaši nemovitost' },
   { image: '/business/preparation.jpg', title: 'Zpracování a požádání o dotaci z programu NZÚ', descripton: 'Necháme vypracovat odborný posudek a podáme žádost o dotaci z programu NZÚ' },
-  { image: '/business/construction.jpg', title: 'Realizace', descripton: 'Lorem sint sit magna ea duis.' },
+  { image: '/business/construction.jpg', title: 'Realizace', descripton: '' },
   { image: '/business/details.jpg', title: 'Doložení realizace na NZÚ', descripton: '' },
-  { image: '/business/finish.jpg', title: 'Dokončení izolace', descripton: 'Sit quis laborum elit dolore veniam tempor ex nostrud dolore ullamco ipsum labore proident.Sit quis laborum elit dolore veniam tempor ex nostrud dolore ullamco ipsum labore proident.' },
+  { image: '/business/finish.jpg', title: 'Dokončení izolace', descripton: '' },
 ];
 
 const Process = () => {

@@ -1,4 +1,4 @@
-import { Benefits, Footer, Contacts, Header, Hero, Process, Services, Navbar, WebsiteHead } from '../components';
+import { Benefits, Footer, Contacts, Header, Hero, Process, Services, Navbar, WebsiteHead, Gallery } from '../components';
 import configuration from '../conf';
 
 const { url } = configuration;
@@ -16,6 +16,7 @@ export default function Home() {
         <Benefits />
         <Contacts />
         <Process />
+        {/* <Gallery /> */}
       </main>
       <Footer />
     </>

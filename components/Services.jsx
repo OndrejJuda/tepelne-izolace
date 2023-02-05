@@ -49,9 +49,9 @@ const Services = () => {
         </div>
 
         <img
-          src='/business/vata.png'
-          alt='vata'
-          className='flex-1 object-cover w-auto h-[200px] xl:h-auto xl:w-[300px] order-1 xl:order-2'
+          src='/business/ursa.jpg'
+          alt='ursa'
+          className='flex-1 object-center w-auto h-[200px] xl:h-auto xl:w-[300px] xl:object-fit order-1 xl:order-2'
         />
       </div>
     </SectionWrapper>

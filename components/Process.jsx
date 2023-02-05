@@ -2,10 +2,11 @@ import React from 'react';
 import { CTAButton, HSecondary, SectionWrapper } from './';
 
 const processSteps = [
-  { image: '/business/first-contact.jpg', title: 'Osobní návštěva', descripton: 'Zaměření nemovitosti naším odborným konzultantem. Necháme vypracovat odborný posudek kvůli vyřízení dotace pro Vaši nemovitost' },
-  { image: '/business/preparation.jpg', title: 'Zpracování a požádání o dotaci z programu NZÚ', descripton: 'Necháme vypracovat odborný posudek a podáme žádost o dotaci z programu NZÚ' },
-  { image: '/business/construction.jpg', title: 'Realizace', descripton: '' },
-  { image: '/business/details.jpg', title: 'Doložení realizace na NZÚ', descripton: '' },
+  { image: '/business/first-contact.jpg', title: 'Osobní návštěva – konzultace', descripton: 'Náš odborný konzultant zaměří Vaši nemovitost a posoudí vhodnost použitého materiálu, tloušťku izolace a způsob provedení. Detailně Vám vysvětlí proces zakázky a průběh dotace.' },
+  { image: '/business/architekt.jpg', title: 'Necháme zpracovat odborný posudek', descripton: 'Na základě nasbíraných dat necháme zpracovat odborný posudek potřebný k instalaci a schválení dotace.' },
+  { image: '/business/documents.jpg', title: 'Zpracujeme a požádáme o dotaci z programu NZÚ', descripton: 'Pokud splňujete podmínky NZÚ Light, tak Vám může být dotace poskytnuta i před realizací' },
+  { image: '/business/roofworker.jpg', title: 'Realizace', descripton: 'Doba trvání realizace záleží na mnoha faktorech, ale u rodinných domů je realizace zpravidla hotová během jediného dne' },
+  { image: '/business/fin.jpg', title: 'Doložení realizace NZÚ', descripton: 'Po realizaci doložíme všechny potřebné dokumenty na NZÚ' },
 ];
 
 const Process = () => {

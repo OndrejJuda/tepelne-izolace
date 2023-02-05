@@ -6,7 +6,7 @@ const links = [
   { href: '#kontakty', title: 'Nezávazná poptávka', cta: true },
   { href: '#služby', title: 'Foukaná vata' },
   { href: '#benefity', title: 'Proč nás?' },
-  { href: '#proces', title: 'Proces' },
+  { href: '#proces', title: 'Jak to u nás funguje?' },
 ];
 
 const Navbar = () => {

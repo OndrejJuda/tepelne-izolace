@@ -11,8 +11,8 @@ const Contacts = () => {
       innerDivStyle='bg-secondary-600 lg:flex mx-8 rounded-lg overflow-hidden shadow-xl'
     >
       <img
-        src='/business/smiling-businessman.jpg'
-        alt='smiling businessman'
+        src='/business/house.jpg'
+        alt='house'
         className='w-full h-[400px] lg:h-auto lg:w-[400px] object-cover'
       />
 

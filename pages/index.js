@@ -6,7 +6,7 @@ const { url } = configuration;
 
 export default function Home() {
   return (
-    <>
+    <div>
       <WebsiteHead canonicalHref={url} />
       <Navbar />
       <Header />
@@ -19,6 +19,6 @@ export default function Home() {
         {/* <Gallery /> */}
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

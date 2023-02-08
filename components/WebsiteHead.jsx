@@ -7,6 +7,7 @@ const { title, description, url, jsonLd } = configuration;
 const WebsiteHead = ({ titleSuffix, canonicalHref }) => {
   return (
     <Head>
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
       <link rel='canonical' href={canonicalHref}></link>
       <meta name='viewport' content='width=device-width, initial-scale=1' />
       <link rel='icon' href='/favicon/favicon.ico' />

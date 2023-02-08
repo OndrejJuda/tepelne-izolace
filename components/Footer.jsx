@@ -6,22 +6,24 @@ const { email, phone } = configuration;
 
 const Footer = () => {
   return (
-    <footer className='flex flex-col gap-16 lg:flex-row lg:justify-between items-center
-    px-8  sm:px-16 md:px-36 py-16 md:py-32 bg-secondary-600 relative overflow-hidden'>
+    <footer className='flex flex-col gap-16 2xl:flex-row lg:justify-between items-center
+    px-8  sm:px-16 lg:px-36 py-16 2xl:py-36 bg-secondary-600 relative overflow-hidden'>
       <img
         src='/logo/logo-one-color.svg'
         alt='logo'
         className='absolute right-[50%] opacity-5 top-0 translate-x-[50%] scale-125'
       />
 
-      <Link href='/'>
-        <img src='/logo/logo-name.svg' alt='logo' width={400} />
-      </Link>
-      <Link href='/'>
-        <img src='/logo/nzulight-logo.png' width={120} alt='nzu light logo' />
-      </Link>
+      <div className='flex gap-4 sm:gap-16'>
+        <Link href='/'>
+          <img src='/logo/logo-name.svg' alt='logo' width={400} />
+        </Link>
+        <Link href='/'>
+          <img src='/logo/nzulight-logo.png' width={120} alt='nzu light logo' />
+        </Link>
+      </div>
 
-      <div className='z-10 flex flex-col sm:flex-row gap-16 text-primary-100 font-medium text-lg'>
+      <div className='z-10 flex flex-col sm:flex-row gap-8 sm:gap-16 text-primary-100 font-medium text-lg'>
         <div>
           <p>LUNASTAV CZ s.r.o.</p>
           <p>IČO: 05591872</p>

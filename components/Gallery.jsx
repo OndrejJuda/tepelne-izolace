@@ -49,9 +49,9 @@ const Gallery = () => {
         className='m-8 bg-primary-800 rounded-lg group relative select-none'
       >
         <div className='absolute top-0 left-0 z-10 w-full h-full select-none'></div>
-        <Link href={link} target='_blank'>
+        {/* <Link href={link} target='_blank'>
           <AiOutlineInstagram className='absolute z-20 top-2 right-2 opacity-50 hover:opacity-100 text-primary-400 transition hover:scale-110' size={84} />
-        </Link>
+        </Link> */}
         {/* <div className='absolute top-0 left-0 w-full h-full bg-black transition opacity-0 group-hover:opacity-50 flex justify-center items-center select-none'>
           <div className='opacity-0 group-hover:opacity-100 transition delay-150'>
             <Link href={link} target='_blank'>

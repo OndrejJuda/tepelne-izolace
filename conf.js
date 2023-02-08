@@ -1,7 +1,7 @@
 const configuration = {
   title: 'LUNASTAV CZ s.r.o.',
   description: 'Tepelné izolace do každé rodiny.',
-  url: 'lunastav.cz',
+  url: 'https://www.lunastav.cz',
   email: 'info@lunastav.cz',
   phone: '+420 605 898 894',
   jsonLd: {
@@ -9,8 +9,8 @@ const configuration = {
     '@type': 'Organization',
     name: 'LUNASTAV CZ s.r.o.',
     alternateName: 'Lunastav CZ',
-    url: 'lunastav.cz',
-    logo: 'lunastav.cz/logo/logo.svg'
+    url: 'https://www.lunastav.cz',
+    logo: 'https://www.lunastav.cz/logo/logo.svg'
   }
 };
 

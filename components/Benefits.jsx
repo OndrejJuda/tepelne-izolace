@@ -18,7 +18,7 @@ const benefits = [
   { icon: <RxPerson {...iconProps} />, title: 'Konzultace a zaměření Vaší nemovitosti zdarma', description: 'Veniam et do aliqua cupidatat ea dolore velit ullamco mollit non enim laborum eu est.' },
   { icon: <TbAward {...iconProps} />, title: 'Garance nejvyšší kvality použitých materiálů', description: 'Deserunt dolor id deserunt non labore.' },
   { icon: <MdLooksOne {...iconProps} />, title: 'Kvalitní realizaci provedeme za jediný den', description: 'Culpa nisi mollit ipsum duis dolor culpa consectetur aliquip exercitation id laborum enim Lorem dolor.' },
-  { icon: <GiTakeMyMoney {...iconProps} />, title: 'Vyřídíme za Vás dotaci Nová Zelená Úsporám (Light)', description: 'Excepteur consequat proident voluptate deserunt ullamco occaecat excepteur.' },
+  { icon: <GiTakeMyMoney {...iconProps} />, title: 'Vyřídíme za Vás dotaci Nová Zelená Úsporám Light', description: 'Excepteur consequat proident voluptate deserunt ullamco occaecat excepteur.' },
   { icon: <GiDiceSixFacesFive {...iconProps} />, title: 'Poskytujeme nadstardartní záruku 5 let', description: 'Excepteur consequat proident voluptate deserunt ullamco occaecat excepteur.' },
   { icon: <FiTrendingDown {...iconProps} />, title: 'Snížíme Vám účty za vytápění', description: 'Excepteur consequat proident voluptate deserunt ullamco occaecat excepteur.' },
   { icon: <GiShieldReflect {...iconProps} />, title: 'Ochráníme Vaši nemovitost před horkem', description: 'Excepteur consequat proident voluptate deserunt ullamco occaecat excepteur.' },

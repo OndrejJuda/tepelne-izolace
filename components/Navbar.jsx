@@ -8,6 +8,7 @@ const links = [
   { href: '#benefity', title: 'Proč nás?' },
   { href: '#proces', title: 'Jak to u nás funguje?' },
   { href: '#galerie', title: 'Galerie' },
+  { href: '/dotace', title: 'Dotace' },
 ];
 
 const Navbar = () => {
@@ -59,8 +60,8 @@ const Navbar = () => {
 
   return (
     <>
-      <div className={`hidden lg:flex justify-end mr-4 xl:mr-8 sticky top-[2.25rem] -mt-16 z-50
-          transition ${isOnTop ? '' : 'translate-x-[-8%] xl:translate-x-[-12%] 2xl:translate-x-[-18%]'}`}>
+      <div className={`hidden lg:flex justify-end mr-4 xl:mr-8 sticky top-[2.25rem] 2xl:top-12 -mt-16 z-50
+          transition ${isOnTop ? '' : 'translate-x-[-4%] xl:translate-x-[-7%] 2xl:translate-x-[-12%]'}`}>
         <nav className={`bg-secondary-400 py-4 px-12 lg:px-6 xl:px-12 rounded-full shadow-lg relative`}>
           <Link href='/'>
             <img

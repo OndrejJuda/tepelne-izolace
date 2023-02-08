@@ -1,15 +1,15 @@
-import { GDPR, Footer, WebsiteHead } from '../components';
+import { Grant, Footer, WebsiteHead } from '../components';
 import configuration from '../conf';
 
 const { url } = configuration;
 
-const GDPRPage = () => {
+const GrantPage = () => {
   return (
     <>
-      <WebsiteHead titleSuffix=' - GDPR' canonicalHref={`${url}/gdpr`} />
+      <WebsiteHead titleSuffix=' - Dotace' canonicalHref={`${url}/dotace`} />
       <div className='min-h-screen flex flex-col'>
         <main className='bg-secondary-700'>
-          <GDPR />
+          <Grant />
         </main>
         <div className='mt-auto'>
           <Footer />
@@ -19,4 +19,4 @@ const GDPRPage = () => {
   );
 };
 
-export default GDPRPage;
+export default GrantPage;

@@ -16,7 +16,7 @@ export default function Home() {
         <Benefits />
         <Contacts />
         <Process />
-        {/* <Gallery /> */}
+        <Gallery />
       </main>
       <Footer />
     </div>

@@ -7,7 +7,7 @@ const Services = () => {
       id='služby'
       innerDivStyle=''
     >
-      <div className='text-primary-100 text-3xl 
+      <div className='text-primary-100 text-lg md:text-3xl 
       mx-8 md:mx-16 lg:mx-36 mb-36'>
         <p className='mb-8'>
           Zabýváme se zateplováním budov pomocí foukané izolace.

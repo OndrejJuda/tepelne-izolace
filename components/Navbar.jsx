@@ -7,6 +7,7 @@ const links = [
   { href: '#služby', title: 'Foukaná vata' },
   { href: '#benefity', title: 'Proč nás?' },
   { href: '#proces', title: 'Jak to u nás funguje?' },
+  { href: '#galerie', title: 'Galerie' },
 ];
 
 const Navbar = () => {
@@ -58,9 +59,9 @@ const Navbar = () => {
 
   return (
     <>
-      <div className={`hidden lg:flex justify-end mr-4 xl:mr-36 sticky top-[2.25rem] -mt-16 z-50
-          transition ${isOnTop ? '' : 'translate-x-[-13%] xl:translate-x-[-12%] 2xl:translate-x-[-23%]'}`}>
-        <nav className={`bg-secondary-400 py-4 px-12 rounded-full shadow-lg relative`}>
+      <div className={`hidden lg:flex justify-end mr-4 xl:mr-8 sticky top-[2.25rem] -mt-16 z-50
+          transition ${isOnTop ? '' : 'translate-x-[-8%] xl:translate-x-[-12%] 2xl:translate-x-[-18%]'}`}>
+        <nav className={`bg-secondary-400 py-4 px-12 lg:px-6 xl:px-12 rounded-full shadow-lg relative`}>
           <Link href='/'>
             <img
               src='/logo/logo.svg'
@@ -79,7 +80,7 @@ const Navbar = () => {
               links.map(({ href, title, cta }) => (
                 <li
                   key={href}
-                  className={`${cta ? 'text-primary-200 font-bold' : 'text-primary-100'} text-xl font-semibold group relative overflow-hidden`}
+                  className={`${cta ? 'text-primary-200 font-bold' : 'text-primary-100'} text-xl lg:text-lg xl:text-xl font-semibold group relative overflow-hidden`}
                 >
                   <Link href={href}>
                     {title}

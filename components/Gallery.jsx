@@ -70,9 +70,9 @@ const Gallery = () => {
   return (
     <SectionWrapper
       id='galerie'
-      innerDivStyle='bg-secondary-600 w-screen pb-8 overflow-x-hidden flex flex-col justify-center items-center px-8 md:px-16 lg:px-36'
+      innerDivStyle='bg-secondary-600 w-screen p-8 overflow-x-hidden flex flex-col justify-center items-center px-8 md:px-16 lg:px-36'
     >
-      <HSecondary additionalStyling='mb-8 lg:mb-16 mt-16 text-3xl sm:text-4xl lg:text-5xl'>Nejnovější fotky z realizace</HSecondary>
+      <HSecondary additionalStyling='mb-8 lg:mb-16 mt-16 text-3xl sm:text-4xl lg:text-5xl'>Galerie</HSecondary>
       {
         items.length > 0
           ? (

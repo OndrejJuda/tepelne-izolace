@@ -42,8 +42,8 @@ const Services = () => {
           </div>
 
           <img
-            src='/business/ursa.jpg'
-            alt='ursa'
+            src='/business/isolation.jpg'
+            alt='isolation'
             className='block 2xl:hidden flex-1 object-cover w-full h-[400px]'
           />
 
@@ -80,8 +80,8 @@ const Services = () => {
         </div>
 
         <img
-          src='/business/ursa.jpg'
-          alt='ursa'
+          src='/business/isolation.jpg'
+          alt='isolation'
           className='hidden 2xl:block object-left object-cover w-[400px]'
         />
       </div>

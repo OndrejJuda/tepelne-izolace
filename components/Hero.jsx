@@ -6,32 +6,28 @@ const { email, phone } = configuration;
 
 const Hero = () => {
   return (
-    <section className='flex flex-col items-center bg-secondary-600 lg:clip-hero overflow-hidden relative'>
+    <section className='flex flex-col items-center bg-secondary-600 2xl:clip-hero overflow-hidden relative px-8 md:px-16 lg:px-36'>
       <img
         src='/logo/logo-one-color.svg'
         alt='logo'
         className='absolute top-[600px] -right-44 md:right-32 md:top-64 opacity-5 scale-125'
       />
-      <div className='flex flex-col justify-center items-center lg:items-start p-6 sm:px-12 min-h-[calc(100vh-110px)] sm:min-h-[calc(100vh-155px)] md:h-auto relative'>
+      <div className='flex flex-col justify-center items-center lg:items-start min-h-[calc(100vh-110px)] sm:min-h-[calc(100vh-155px)] md:h-auto relative pb-8'>
 
         <h1 className='text-5xl md:text-6xl font-bold text-primary-200 mb-16'>
-          Zateplíme Vám dům pomocí foukané izolace
-          </h1>
-          <h1 className='text-5xl md:text-6xl font-bold text-primary-200 mb-16'>
-          s dotací NZÚ Light s příspěvkem až 100%.
-
+          Zateplíme Vám dům pomocí foukané izolace s dotací NZÚ Light s příspěvkem až 100%.
         </h1>
 
-        <p className='text-3xl md:text-4xl text-primary-100 max-w-[1200px] mb-4'>
-        U rodinných domů je instalace hotová zpravidla během jednoho dne.
+        <p className='text-3xl md:text-4xl text-primary-100 max-w-[1200px] mb-1'>
+          U rodinných domů je instalace hotová zpravidla během jednoho dne.
         </p>
-        <p className='text-3xl md:text-4xl text-primary-100 max-w-[1200px] mb-4'>
-        Pokud pobíráte důchod, tak může dotace pokrýt až 100% z ceny realizace.
+        <p className='text-3xl md:text-4xl text-primary-100 max-w-[1200px] mb-1'>
+          Pokud pobíráte důchod, tak může dotace pokrýt až 100% z ceny realizace.
         </p>
         <p className='text-3xl md:text-4xl text-primary-100 max-w-[1200px] mb-12'>
-        Dotaci je možné čerpat i před instalací a vyřídíme ji za Vás.
+          Dotaci je možné čerpat i před instalací a vyřídíme ji za Vás.
         </p>
-        
+
         <div className='lg:hidden flex flex-col items-center gap-4 bg-secondary-400 py-6 px-6 rounded-xl'>
           <a href={`mailto:${email}`} className='text-xl font-semibold text-primary-100'>{email}</a>
           <CTAButton>Nezávazná poptávka</CTAButton>

@@ -11,7 +11,8 @@ module.exports = {
       // },
       screens: {
         '2xl': '1500px',
-        'short': { 'raw': '(max-height: 400px)' }
+        'short': { 'raw': '(max-height: 400px)' },
+        '2alice': '900px',
       },
       colors: {
         'primary': {

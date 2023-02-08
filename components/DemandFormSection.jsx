@@ -2,7 +2,7 @@ import React from 'react';
 import { useWindowWidth } from '@react-hook/window-size';
 import { Form, HSecondary, SectionWrapper } from './';
 
-const Contacts = () => {
+const DemandFormSection = () => {
   const width = useWindowWidth();
 
   return (
@@ -28,4 +28,4 @@ const Contacts = () => {
   );
 };
 
-export default Contacts;
+export default DemandFormSection;

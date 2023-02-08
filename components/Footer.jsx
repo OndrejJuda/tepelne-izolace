@@ -7,7 +7,7 @@ const { email, phone } = configuration;
 const Footer = () => {
   return (
     <footer className='flex flex-col gap-16 2xl:flex-row lg:justify-between items-center
-    px-8  sm:px-16 lg:px-36 py-16 2xl:py-36 bg-secondary-600 relative overflow-hidden'>
+    px-8 sm:px-16 lg:px-36 py-16 2xl:py-36 bg-secondary-600 relative overflow-hidden'>
       <img
         src='/logo/logo-one-color.svg'
         alt='logo'
@@ -37,6 +37,7 @@ const Footer = () => {
           Ostrovní 2059/4 <br />
           110 00, Praha 1
         </address>
+
         <address>
           Provozovna:<br />
           LUNASTAV CZ s.r.o. <br />

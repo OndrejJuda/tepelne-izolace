@@ -36,7 +36,6 @@ const Gallery = () => {
 
   const slideHandler = ({ item, itemsInSlide }) => {
     if (item + itemsInSlide * 2 >= posts.length) {
-      console.log('yes')
     }
   };
 
@@ -46,7 +45,7 @@ const Gallery = () => {
     items = posts.map(({ id, imageUrl, link }) => (
       <div
         key={id}
-        className='m-8 bg-primary-800 rounded-lg group relative select-none'
+        className='rounded-lg group relative select-none 2alice:p-4'
       >
         <div className='absolute top-0 left-0 z-10 w-full h-full select-none'></div>
         {/* <Link href={link} target='_blank'>
@@ -71,7 +70,7 @@ const Gallery = () => {
   return (
     <SectionWrapper
       id='galerie'
-      innerDivStyle='bg-secondary-600 w-screen pb-8 overflow-x-hidden flex flex-col justify-center items-center'
+      innerDivStyle='bg-secondary-600 w-screen pb-8 overflow-x-hidden flex flex-col justify-center items-center px-8 md:px-16 lg:px-36'
     >
       <HSecondary additionalStyling='mb-8 lg:mb-16 mt-16 text-3xl sm:text-4xl lg:text-5xl'>Nejnovější fotky z realizace</HSecondary>
       {

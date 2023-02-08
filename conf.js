@@ -1,6 +1,6 @@
 const configuration = {
   title: 'LUNASTAV CZ s.r.o.',
-  description: 'Tepelné izolace do každé rodiny.',
+  description: 'Zateplujeme pomocí foukané izolace a vyřídíme za Vás dotaci NZÚ Light.',
   url: 'https://www.lunastav.cz',
   email: 'info@lunastav.cz',
   phone: '+420 605 898 894',

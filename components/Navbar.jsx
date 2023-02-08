@@ -4,7 +4,7 @@ import { HiOutlineMenu } from 'react-icons/hi';
 
 const links = [
   { href: '#kontakty', title: 'Nezávazná poptávka', cta: true },
-  { href: '#služby', title: 'Foukaná vata' },
+  { href: '#služby', title: 'Foukaná izolace' },
   { href: '#benefity', title: 'Proč nás?' },
   { href: '#proces', title: 'Jak to u nás funguje?' },
 ];

@@ -1,15 +1,15 @@
-import { Grant, Footer, WebsiteHead } from '../components';
+import { Contacts, Footer, WebsiteHead } from '../components';
 import configuration from '../conf';
 
 const { url } = configuration;
 
-const GrantPage = () => {
+const ContactsPage = () => {
   return (
     <>
-      <WebsiteHead titleSuffix=' - Dotace' canonicalHref={`${url}/dotace`} />
+      <WebsiteHead titleSuffix=' - Kontakty' canonicalHref={`${url}/kontakty`} />
       <div className='min-h-screen flex flex-col'>
         <main className='bg-secondary-700 flex-1'>
-          <Grant />
+          <Contacts />
         </main>
         <Footer />
       </div>
@@ -17,4 +17,4 @@ const GrantPage = () => {
   );
 };
 
-export default GrantPage;
+export default ContactsPage;

@@ -7,8 +7,8 @@ const DemandFormSection = () => {
 
   return (
     <SectionWrapper
-      id={width > 1024 ? 'kontakty' : ''}
-      innerDivStyle='bg-secondary-600 lg:flex mx-8 rounded-lg overflow-hidden shadow-xl'
+      id={width > 1024 ? 'poptavka' : ''}
+      innerDivStyle='bg-secondary-600 lg:flex mx-8 rounded-lg overflow-hidden shadow-xl mx-8 md:mx-16 lg:mx-36 w-full'
     >
       <img
         src='/business/house.jpg'
@@ -17,10 +17,10 @@ const DemandFormSection = () => {
       />
 
       <div
-        id={width > 1024 ? '' : 'kontakty'}
-        className='rounded-xl p-6 sm:p-8 2xl:px-36 lg:py-8'
+        id={width > 1024 ? '' : 'poptavka'}
+        className='xl:flex-1 rounded-xl p-6 sm:p-8 2xl:px-36 lg:py-6'
       >
-        <HSecondary additionalStyling='mb-8 lg:mb-16 text-4xl lg:text-5xl'>Domluvte si s námi schůzku</HSecondary>
+        <HSecondary additionalStyling='mb-8 text-4xl lg:text-5xl'>Domluvte si s námi schůzku</HSecondary>
         <Form />
       </div>
 

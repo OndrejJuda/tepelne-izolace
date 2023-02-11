@@ -189,7 +189,7 @@ const Form = () => {
               onSubmit={submitHandler}
               className='mt-8 flex flex-col items-start gap-4 sm:gap-8'
             >
-              <div className='flex flex-col sm:flex-row gap-4 sm:gap-8 w-full'>
+              <div className='flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4 sm:gap-8 w-full'>
                 <Input
                   inputProps={{
                     type: 'text',
@@ -221,7 +221,7 @@ const Form = () => {
                 />
               </div>
 
-              <div className='flex flex-col sm:flex-row gap-4 sm:gap-8 lg w-full'>
+              <div className='flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4 sm:gap-8 lg w-full'>
                 <Input
                   inputProps={{
                     type: 'email',
@@ -253,7 +253,7 @@ const Form = () => {
                 />
               </div>
 
-              <div className='flex flex-col sm:flex-row gap-4 sm:gap-8 lg w-full'>
+              <div className='flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4 sm:gap-8 lg w-full'>
                 <div className='flex-1 flex xl:w-auto flex-col gap-2'>
                   <p className='font-semibold text-primary-100'>Kraj</p>
                   <Select

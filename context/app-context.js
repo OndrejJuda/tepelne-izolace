@@ -11,13 +11,13 @@ const defaultFormData = {
   gdpr: undefined,
 };
 
-const CoinContext = createContext({
+const AppContext = createContext({
   formData: defaultFormData,
   setFormData: (field, value) => { },
   clearFormData: () => { },
 });
 
-export const CoinContextProvider = ({ children }) => {
+export const AppContextProvider = ({ children }) => {
   const [formData, setFormData] = useState(defaultFormData);
 
   const setFormDataHandler = useCallback(
@@ -31,7 +31,7 @@ export const CoinContextProvider = ({ children }) => {
   );
 
   return (
-    <CoinContext.Provider
+    <AppContext.Provider
       value={{
         formData,
         setFormData: setFormDataHandler,
@@ -39,8 +39,8 @@ export const CoinContextProvider = ({ children }) => {
       }}
     >
       {children}
-    </CoinContext.Provider>
+    </AppContext.Provider>
   );
 };
 
-export default CoinContext;
+export default AppContext;

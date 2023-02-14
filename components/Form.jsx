@@ -3,7 +3,7 @@ import useInput from '../hooks/use-input';
 import { AiOutlineCheck } from 'react-icons/ai';
 import { RxCross1 } from 'react-icons/rx';
 import Link from 'next/link';
-import CoinContext from '../context/app-context';
+import AppContext from '../context/app-context';
 import { Select } from './';
 import { regions } from '../regions-and-districts';
 import configuration from '../conf';
@@ -35,7 +35,7 @@ const Form = () => {
   const [showValid, setShowValid] = useState(false);
   const [submitError, setSubmitError] = useState('');
 
-  const { formData, setFormData, clearFormData } = useContext(CoinContext);
+  const { formData, setFormData, clearFormData } = useContext(AppContext);
 
   useEffect(() => {
     const { firstName, lastName, email, phone, gdpr, district, region } = formData;

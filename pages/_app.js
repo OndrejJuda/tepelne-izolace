@@ -1,10 +1,10 @@
-import { CoinContextProvider } from '../context/app-context';
+import { AppContextProvider } from '../context/app-context';
 import '../styles/globals.css';
 
 export default function App({ Component, pageProps }) {
   return (
-    <CoinContextProvider>
+    <AppContextProvider>
       <Component {...pageProps} />
-    </CoinContextProvider>
+    </AppContextProvider>
   );
 }

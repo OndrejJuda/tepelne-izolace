@@ -62,7 +62,11 @@ const Contacts = () => {
           <h1 className='text-4xl sm:text-5xl md:text-6xl font-semibold text-primary-100 mb-16 lg:mb-32'>Kde nás najdete?</h1>
           <div className='w-full grid grid-rows-2 gap-y-8 grid-flow-col-1 md:grid-cols-[1fr_max-content] md:grid-rows-1 gap-x-8'>
             <div className='relative w-full h-full rounded-lg overflow-hidden row-start-2 row-end-3 md:row-span-1'>
-              <Map />
+              {
+                process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY && (
+                  <Map />
+                )
+              }
             </div>
             <ul className='flex flex-col justify-center gap-8'>
               <li className='bg-secondary-600 p-8 shadow-lg rounded-lg'>

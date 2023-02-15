@@ -20,17 +20,17 @@ const Hero = () => {
           </Link>
         </div>
 
-        <h1 className='text-5xl md:text-6xl font-bold text-primary-200 mb-16'>
+        <h1 className='text-3xl sm:text-5xl md:text-6xl font-bold text-primary-200 mb-8 sm:mb-16'>
           Zateplíme Vám dům pomocí foukané izolace s dotací NZÚ Light s příspěvkem až 100%.
         </h1>
 
-        <p className='text-3xl md:text-4xl text-primary-100 max-w-[1200px] mb-1'>
+        <p className='text-xl sm:text-3xl md:text-4xl text-primary-100 max-w-[1200px] mb-1'>
           U rodinných domů je instalace hotová zpravidla během jednoho dne.
         </p>
-        <p className='text-3xl md:text-4xl text-primary-100 max-w-[1200px] mb-1'>
+        <p className='text-xl sm:text-3xl md:text-4xl text-primary-100 max-w-[1200px] mb-1'>
           Pokud pobíráte důchod, tak může dotace pokrýt až 100% z ceny realizace.
         </p>
-        <p className='text-3xl md:text-4xl text-primary-100 max-w-[1200px] mb-12'>
+        <p className='text-xl sm:text-3xl md:text-4xl text-primary-100 max-w-[1200px] mb-12'>
           Dotaci je možné čerpat i před instalací a vyřídíme ji za Vás.
         </p>
 

@@ -22,9 +22,7 @@ const Footer = () => {
         <img src='/logo/logo-name.svg' alt='logo' width={400} />
       </Link>
 
-      <div className='z-10 text-primary-100 font-medium text-lg'>
-        <p>LUNASTAV CZ s.r.o.</p>
-        <p>IČO: 05591872</p>
+      <div className='z-10 text-primary-100 font-medium text-xl'>
         <a href={`mailto:${email}`} target='_blank' rel='noreferrer' className='block'>{email}</a>
         <a href={`tel:${phone.replaceAll(' ', '')}`} target='_blank' rel='noreferrer' className='block'>{phone}</a>
         <a href='http://www.lunastav.cz' target='_blank' rel='noopener noreferrer'>{urlSubdomain}</a>

@@ -1,13 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>https://tepelne-izolace.netlify.app/</loc>
-		<lastmod>2023-01-29T20:20:29+01:00</lastmod>
-		<priority>0.4</priority>
+		<loc>http://lunastav.cz/</loc>
+		<lastmod>2023-02-16</lastmod>
 	</url>
 	<url>
-		<loc>https://tepelne-izolace.netlify.app/gdpr</loc>
-		<lastmod>2023-01-29T20:20:29+01:00</lastmod>
-		<priority>0.2</priority>
+		<loc>http://lunastav.cz/#poptavka</loc>
+		<lastmod>2023-02-16</lastmod>
+	</url>
+	<url>
+		<loc>http://lunastav.cz/#sluzby</loc>
+		<lastmod>2023-02-16</lastmod>
+	</url>
+	<url>
+		<loc>http://lunastav.cz/#benefity</loc>
+		<lastmod>2023-02-16</lastmod>
+	</url>
+	<url>
+		<loc>http://lunastav.cz/#proces</loc>
+		<lastmod>2023-02-16</lastmod>
+	</url>
+	<url>
+		<loc>http://lunastav.cz/#galerie</loc>
+		<lastmod>2023-02-16</lastmod>
+	</url>
+	<url>
+		<loc>http://lunastav.cz/dotace</loc>
+		<lastmod>2023-02-16</lastmod>
+	</url>
+	<url>
+		<loc>http://lunastav.cz/kontakty</loc>
+		<lastmod>2023-02-16</lastmod>
+	</url>
+	<url>
+		<loc>http://lunastav.cz/#kontakty</loc>
+		<lastmod>2023-02-16</lastmod>
+	</url>
+	<url>
+		<loc>http://lunastav.cz/tel:+420605898894</loc>
+		<lastmod>2023-02-16</lastmod>
+	</url>
+	<url>
+		<loc>http://lunastav.cz/gdpr</loc>
+		<lastmod>2023-02-16</lastmod>
 	</url>
 </urlset>

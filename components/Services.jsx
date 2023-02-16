@@ -4,7 +4,7 @@ import { HSecondary, SectionWrapper } from './';
 const Services = () => {
   return (
     <SectionWrapper
-      id='služby'
+      id='sluzby'
       innerDivStyle=''
     >
       <div className='mx-8 md:mx-16 lg:mx-36 bg-secondary-600 rounded-lg overflow-hidden shadow-xl 2xl:flex relative'>

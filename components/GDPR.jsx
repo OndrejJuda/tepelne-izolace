@@ -38,7 +38,7 @@ const GDPR = () => {
     <>
       <nav className={`ml-2 md:ml-16 mt-10 fixed transition ${isVisible ? '' : '-translate-y-[200px]'}`}>
         <Link
-          href='/#kontakty'
+          href='/#poptavka'
         >
           <div className='p-2 shadow-lg rounded-full bg-primary-50
       flex justify-center items-center transition

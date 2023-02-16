@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const CTAButton = ({ children }) => {
   return (
     <Link
-      href='#kontakty'
+      href='#poptavka'
       className='inline-block text-xl text-primary-80 bg-primary-100 
       py-4 px-8 rounded-xl
       hover:bg-primary-50 hover:text-primary-900 transition

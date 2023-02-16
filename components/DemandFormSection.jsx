@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useWindowWidth } from '@react-hook/window-size';
 import { Form, HSecondary, SectionWrapper } from './';
 
 const DemandFormSection = () => {
-  const width = useWindowWidth();
+  const useWidth = useWindowWidth();
+  const [width, setWidth] = useState(useWidth);
+
+  useEffect(() => {
+    setWidth(useWidth)
+  }, [useWidth]);
 
   return (
     <SectionWrapper
       id={width > 1024 ? 'poptavka' : ''}
-      innerDivStyle='bg-secondary-600 lg:flex mx-8 rounded-lg overflow-hidden shadow-xl mx-8 md:mx-16 lg:mx-36 w-full'
+      innerDivStyle='bg-secondary-600 lg:flex rounded-lg overflow-hidden shadow-xl mx-8 md:mx-16 lg:mx-36 w-full'
     >
       <img
         src='/business/house.jpg'

@@ -1,47 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>http://lunastav.cz/</loc>
+		<loc>https://lunastav.cz/</loc>
 		<lastmod>2023-02-16</lastmod>
 	</url>
 	<url>
-		<loc>http://lunastav.cz/#poptavka</loc>
+		<loc>https://lunastav.cz/#poptavka</loc>
 		<lastmod>2023-02-16</lastmod>
 	</url>
 	<url>
-		<loc>http://lunastav.cz/#sluzby</loc>
+		<loc>https://lunastav.cz/#sluzby</loc>
 		<lastmod>2023-02-16</lastmod>
 	</url>
 	<url>
-		<loc>http://lunastav.cz/#benefity</loc>
+		<loc>https://lunastav.cz/#benefity</loc>
 		<lastmod>2023-02-16</lastmod>
 	</url>
 	<url>
-		<loc>http://lunastav.cz/#proces</loc>
+		<loc>https://lunastav.cz/#proces</loc>
 		<lastmod>2023-02-16</lastmod>
 	</url>
 	<url>
-		<loc>http://lunastav.cz/#galerie</loc>
+		<loc>https://lunastav.cz/#galerie</loc>
 		<lastmod>2023-02-16</lastmod>
 	</url>
 	<url>
-		<loc>http://lunastav.cz/dotace</loc>
+		<loc>https://lunastav.cz/dotace</loc>
 		<lastmod>2023-02-16</lastmod>
 	</url>
 	<url>
-		<loc>http://lunastav.cz/kontakty</loc>
+		<loc>https://lunastav.cz/kontakty</loc>
 		<lastmod>2023-02-16</lastmod>
 	</url>
 	<url>
-		<loc>http://lunastav.cz/#kontakty</loc>
+		<loc>https://lunastav.cz/tel:+420605898894</loc>
 		<lastmod>2023-02-16</lastmod>
 	</url>
 	<url>
-		<loc>http://lunastav.cz/tel:+420605898894</loc>
-		<lastmod>2023-02-16</lastmod>
-	</url>
-	<url>
-		<loc>http://lunastav.cz/gdpr</loc>
+		<loc>https://lunastav.cz/gdpr</loc>
 		<lastmod>2023-02-16</lastmod>
 	</url>
 </urlset>

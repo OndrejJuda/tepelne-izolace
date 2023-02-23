@@ -21,7 +21,7 @@ const Hero = () => {
         </div>
 
         <h1 className='text-3xl sm:text-5xl md:text-6xl font-bold text-primary-200 mb-8 sm:mb-16'>
-          Zateplíme Vám dům pomocí foukané izolace s dotací NZÚ Light s příspěvkem až 100%.
+          Zateplujeme domy pomocí foukané izolace bez i s podporou dotace NZÚ Light s příspěvkem až 100%.
         </h1>
 
         <p className='text-xl sm:text-3xl md:text-4xl text-primary-100 max-w-[1200px] mb-1'>

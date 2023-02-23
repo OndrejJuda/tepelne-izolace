@@ -72,6 +72,11 @@ const Contacts = () => {
               <li className='bg-secondary-600 p-8 shadow-lg rounded-lg'>
                 <p className='text-3xl text-primary-400 font-semibold mb-8'>Hlavní město Praha<br />a Středočeský kraj:</p>
                 <div className='text-2xl text-primary-100'>
+                  <p>
+                    <i>
+                      IČO: 05591872
+                    </i>
+                  </p>
                   <address>
                     Ostrovní 2059/4 <br />
                     110 00, Praha 1

@@ -69,12 +69,7 @@ const Services = () => {
             </div>
           </div>
         </div>
-
-        {/* <img
-          src='/business/isolation.jpg'
-          alt='isolation'
-          className='hidden 2xl:block object-left object-cover w-[400px]'
-        /> */}
+        
         <img
           src='/business/isolation.jpg'
           alt='isolation'

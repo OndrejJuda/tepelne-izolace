@@ -1,4 +1,4 @@
-import { Benefits, Footer, DemandFormSection, Header, Hero, Process, Services, Navbar, WebsiteHead, Gallery } from '../components';
+import { Benefits, Footer, DemandFormSection, Header, Hero, Process, Services, Navbar, WebsiteHead, Gallery, ImageSection } from '../components';
 import configuration from '../conf';
 import CookieBot from 'react-cookiebot';
 
@@ -17,6 +17,7 @@ export default function Home() {
       <Header />
       <main className='bg-secondary-700'>
         <Hero />
+        <ImageSection sectionName='predvadeci-obrazek' imageUrl='/business/zateplenss.jpg' />
         <Services />
         <Benefits />
         <DemandFormSection />

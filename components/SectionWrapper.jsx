@@ -7,7 +7,7 @@ const SectionWrapper = ({ children, id, sectionStyle, innerDivStyle }) => {
     className={`flex ${sectionStyle}`}
     >
       <div 
-      className={`my-36 ${innerDivStyle}`}
+      className={`my-16 md:my-36 ${innerDivStyle}`}
       >
         {children}
       </div>

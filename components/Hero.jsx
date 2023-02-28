@@ -21,17 +21,17 @@ const Hero = () => {
         </div>
 
         <h1 className='text-3xl sm:text-5xl md:text-6xl font-bold text-primary-200 mb-8 sm:mb-16'>
-          Zateplujeme domy pomocí foukané izolace bez i s podporou dotace NZÚ Light s příspěvkem až 100%.
+          Foukaná izolace s dotací od NZÚ
         </h1>
 
         <p className='text-xl sm:text-3xl md:text-4xl text-primary-100 max-w-[1200px] mb-1'>
-          U rodinných domů je instalace hotová zpravidla během jednoho dne.
+          Zateplete svůj dům minerální foukanou izolací s úsporou až 35%.
         </p>
         <p className='text-xl sm:text-3xl md:text-4xl text-primary-100 max-w-[1200px] mb-1'>
-          Pokud pobíráte důchod, tak může dotace pokrýt až 100% z ceny realizace.
+          Vyřídíme Vám dotaci z programu NZÚ Light.
         </p>
         <p className='text-xl sm:text-3xl md:text-4xl text-primary-100 max-w-[1200px] mb-12'>
-          Dotaci je možné čerpat i před instalací a vyřídíme ji za Vás.
+          Dotaci je možné čerpat i před realizací.
         </p>
 
         <div className='lg:hidden flex flex-col items-center gap-4 bg-secondary-400 py-6 px-6 rounded-xl'>

@@ -25,13 +25,13 @@ const Hero = () => {
         </h1>
 
         <p className='text-xl sm:text-3xl md:text-4xl text-primary-100 max-w-[1200px] mb-1'>
-          Zateplete svůj dům minerální foukanou izolací s minimální investicí.
+          Zateplete svůj dům minerální foukanou izolací s úsporou až 35%.
         </p>
         <p className='text-xl sm:text-3xl md:text-4xl text-primary-100 max-w-[1200px] mb-1'>
-          Dotace může pokrýt až 100% z celkové ceny realizace pokud pobíráte důchod.
+          Vyřídíme Vám dotaci z programu NZÚ Light.
         </p>
         <p className='text-xl sm:text-3xl md:text-4xl text-primary-100 max-w-[1200px] mb-12'>
-          Peníze je možné čerpat i před instalací a vše vyřídíme za Vás.
+          Dotaci je možné čerpat i před realizací.
         </p>
 
         <div className='lg:hidden flex flex-col items-center gap-4 bg-secondary-400 py-6 px-6 rounded-xl'>

@@ -10,7 +10,7 @@ const Services = () => {
       <div className='mx-8 md:mx-16 lg:mx-36 bg-secondary-600 rounded-lg overflow-hidden shadow-xl 2xl:flex relative'>
         <div className='p-8 lg:p-20'>
           <div className='mb-10'>
-            <HSecondary additionalStyling='text-3xl sm:text-5xl mb-10'>Zateplujeme foukanou izolací střechy a stropy nových i starších budov</HSecondary>
+            <HSecondary additionalStyling='text-3xl sm:text-5xl mb-10'>Zateplujeme střechy a stropy nových i starších budov</HSecondary>
             <div className='text-primary-100 text-lg '>
               <p className='mb-4'>
                 Minerální foukaná izolace je moderní způsob izolace, který se v posledních letech stává stále populárnějším. Jedná se o proces, při kterém se drobné částice minerální vlny foukají do stěn, stropů nebo podlahy budov, kde se postupně usazují a vytvářejí účinnou izolační bariéru.

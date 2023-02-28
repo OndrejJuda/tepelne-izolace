@@ -97,7 +97,7 @@ const Navbar = () => {
 
       <div className='w-screen flex justify-end lg:hidden fixed top-4 left-0 z-50'>
 
-        <button className={`z-10 mr-4 transition ${showButton() ? '' : '-translate-y-[100px]'} shadow-lg bg-primary-50 rounded-full`}>
+        <button className={`z-10 mr-4 transition ${showButton() ? '' : '-translate-y-[100px]'} shadow-lg bg-primary-25 rounded-full`}>
           <HiOutlineMenu
             size={54}
             className={`p-2 transition ${isOpen ? '' : 'rotate-180'} text-primary-700`}

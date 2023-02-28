@@ -72,7 +72,7 @@ const Contacts = () => {
               <li className='bg-primary-50 p-8 shadow-lg rounded-lg'>
                 <p className='text-3xl text-primary-900 font-semibold mb-8'>Hlavní město Praha<br />a Středočeský kraj:</p>
                 <div className='text-2xl text-primary-900'>
-                  <p>IČO: 05591872</p>
+                  <p className='italic'>IČO: 05591872</p>
                   <address>
                     Ostrovní 2059/4 <br />
                     110 00, Praha 1

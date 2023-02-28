@@ -45,13 +45,13 @@ const GDPR = () => {
       hover:shadow-md hover:scale-110
       active:shadow-md active:scale-95'>
             <BiArrowBack
-              className='text-primary-500'
+              className='text-primary-900'
               size={50}
             />
           </div>
         </Link>
       </nav>
-      <div className='my-20 py-20 px-4 md:px-16 lg:px-36 flex flex-col gap-8 text-primary-100'>
+      <div className='my-20 py-20 px-4 md:px-16 lg:px-36 flex flex-col gap-8 text-primary-900'>
         <h1 className='text-4xl font-semibold'>Ochrana osobních údajů</h1>
         {
           gdpr.map((lv0, i0) => {

@@ -17,7 +17,7 @@ const Input = ({ inputProps, hasError, title }) => {
     >
       <label
         htmlFor={inputProps.id}
-        className='font-semibold text-primary-100'
+        className='font-semibold text-lg text-primary-900'
       >
         {title}<span className='text-red-600 font-bold'> *</span>
       </label>
@@ -255,7 +255,7 @@ const Form = () => {
 
               <div className='flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4 sm:gap-8 lg w-full'>
                 <div className='flex-1 flex xl:w-auto flex-col gap-2'>
-                  <p className='font-semibold text-primary-100'>Kraj</p>
+                  <p className='font-semibold text-primary-900 text-lg'>Kraj</p>
                   <Select
                     options={regions}
                     placeholder='Kraj'
@@ -265,7 +265,7 @@ const Form = () => {
                 </div>
 
                 <div className='flex-1 flex xl:w-auto flex-col gap-2'>
-                  <p className='font-semibold text-primary-100'>Okres</p>
+                  <p className='font-semibold text-primary-900 text-lg'>Okres</p>
                   <Select
                     options={districts}
                     placeholder='Okres'
@@ -279,7 +279,7 @@ const Form = () => {
                 className='flex flex-col gap-2'
               >
                 <p
-                  className='font-semibold text-primary-100'
+                  className='font-semibold text-primary-900 text-lg'
                 >
                   GDPR<span className='text-red-600 font-bold'> *</span>
                 </p>
@@ -291,14 +291,14 @@ const Form = () => {
                     onClick={() => setIsGDPRChecked((prevValue) => !prevValue)}
                   >
                     <AiOutlineCheck
-                      className={`${isGDPRChecked ? 'text-primary-500' : 'hidden group-hover:inline text-primary-200'}`}
+                      className={`${isGDPRChecked ? 'text-primary-900' : 'hidden group-hover:inline text-primary-100'}`}
                       size={30}
                     />
                   </div>
-                  <p className='flex-1 text-primary-100'>
+                  <p className='flex-1 text-primary-700'>
                     Souhlasím se
                     <Link href='/gdpr'>
-                      <span className='text-primary-300 hover:text-primary-700 font-medium'> zpracováním osobních údajů</span>
+                      <span className='text-primary-800 hover:text-primary-900 font-medium'> zpracováním osobních údajů</span>
                     </Link>
                   </p>
                 </div>
@@ -307,10 +307,10 @@ const Form = () => {
               <button
                 type='submit'
                 disabled={!isFormValid}
-                className='inline-block mt-4 py-4 px-8 rounded-xl 
-          text-xl text-primary-50 bg-primary-700 shadow-lg
+                className='inline-block mt-4 py-4 px-8 rounded-xl font-semibold
+          text-xl text-primary-900 bg-primary-200 shadow-lg
           disabled:bg-gray-200 disabled:text-black disabled:scale-90 disabled:shadow-none
-          transition enabled:hover:bg-primary-300 enabled:hover:text-primary-900 
+          transition enabled:hover:bg-primary-400
           enabled:hover:scale-105 enabled:hover:shadow-md enabled:active:scale-95 enabled:active:shadow-lg'
               >
                 Odeslat

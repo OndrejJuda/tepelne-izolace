@@ -7,11 +7,11 @@ const Services = () => {
       id='sluzby'
       innerDivStyle=''
     >
-      <div className='mx-8 md:mx-16 lg:mx-36 bg-secondary-600 rounded-lg overflow-hidden shadow-xl 2xl:flex relative'>
+      <div className='mx-8 md:mx-16 lg:mx-36 bg-primary-50 rounded-lg overflow-hidden shadow-xl 2xl:flex relative'>
         <div className='p-8 lg:p-20'>
           <div className='mb-10'>
             <HSecondary additionalStyling='text-3xl sm:text-5xl mb-10'>Zateplujeme foukanou izolací střechy a stropy nových i starších budov</HSecondary>
-            <div className='text-primary-100 text-lg '>
+            <div className='text-primary-900 text-lg '>
               <p className='mb-4'>
                 Zabýváme se zateplováním budov pomocí foukané izolace.
                 Věříme, že kvalitně zateplený dům je v současné situaci správnou cestou ke snížení nákladů Vaší domácnosti. Preferujeme kvalitu před kvantitou a zakládáme si na individuálním přístupu ke každému klientovi.
@@ -27,7 +27,7 @@ const Services = () => {
           >
             <HSecondary additionalStyling='text-3xl sm:text-5xl mb-10'>Používáme čedičovou vatu, nebo minerální vlnu vyráběnou v Belgii</HSecondary>
             <div
-              className='text-primary-100 text-lg flex flex-col gap-4'
+              className='text-primary-900 text-lg flex flex-col gap-4'
             >
               <p>
                 Foukaná minerální izolace je tepelná izolace, která se aplikuje na stěny, stropy a podhledy pomocí speciálního stroje, který rozptýlí vláknité materiály, jako jsou skleněné vlákna nebo minerální vlákna, do nástěnných prostorů. Foukananá izolace se díky svým vlastnostem poskytuje dokonalou tepelnou izolaci téměř každému objektu bez vzniku tepelných mostů. Tato izolace má několik výhod, jako jsou:

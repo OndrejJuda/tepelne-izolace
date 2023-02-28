@@ -15,7 +15,7 @@ export default function Home() {
       )}
       <Navbar />
       <Header />
-      <main className='bg-secondary-700'>
+      <main className=''>
         <Hero />
         <ImageSection sectionName='predvadeci-obrazek' imageUrl='/business/zateplenss.jpg' />
         <Services />

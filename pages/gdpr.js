@@ -8,7 +8,7 @@ const GDPRPage = () => {
     <>
       <WebsiteHead titleSuffix=' - GDPR' canonicalHref={`${url}/gdpr`} />
       <div className='min-h-screen flex flex-col'>
-        <main className='bg-secondary-700 flex-1'>
+        <main className='flex-1'>
           <GDPR />
         </main>
         <Footer />

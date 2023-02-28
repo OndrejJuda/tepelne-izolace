@@ -42,14 +42,14 @@ const Grant = () => {
     hover:shadow-md hover:scale-110
     active:shadow-md active:scale-95'>
             <BiArrowBack
-              className='text-primary-500'
+              className='text-primary-900'
               size={50}
             />
           </div>
         </Link>
       </nav>
       <div className='flex flex-col 2xl:flex-row 2xl:items-center my-20 py-20 px-4 md:px-16 lg:px-36 gap-16 2xl:gap-32'>
-        <div className='flex flex-col gap-8 text-primary-100 order-2 2xl:order-1'>
+        <div className='flex flex-col gap-8 text-primary-900 order-2 2xl:order-1'>
           <h1 className='text-4xl font-semibold'>Vyřizujeme dotace z programu NZÚ Light</h1>
           <p className='text-lg'>
             Se zvládnutím energetické krize nám má pomoci nový dotační program s názvem Nová zelená úsporám Light (NZÚ Light). V rámci tohoto programu můžete čerpat štědré dotace na zateplení různých částí domu jako je strop, střecha či fasáda, nebo na výměnu plastových oken a vchodových dveří. Výhodou celého programu je rychlost čerpání dotace a pomoc tam, kde je to skutečně potřeba a také možnost čerpání i v případech, že už je některá část domu zateplená. Například pokud máte zateplené podkroví, tak můžete čerpat dotaci na zateplení fasády a opačně.

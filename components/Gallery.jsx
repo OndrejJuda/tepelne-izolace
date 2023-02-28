@@ -70,7 +70,7 @@ const Gallery = () => {
   return (
     <SectionWrapper
       id='galerie'
-      innerDivStyle='bg-secondary-600 w-screen p-8 overflow-x-hidden flex flex-col justify-center items-center px-8 md:px-16 lg:px-36'
+      innerDivStyle='bg-primary-50 w-screen p-8 overflow-x-hidden flex flex-col justify-center items-center px-8 md:px-16 lg:px-36'
     >
       <HSecondary additionalStyling='mb-8 lg:mb-16 mt-16 text-3xl sm:text-4xl lg:text-5xl'>Galerie</HSecondary>
       {
@@ -88,7 +88,7 @@ const Gallery = () => {
             />
           )
           : (
-            <p className='text-2xl text-primary-100'>Načítání...</p>
+            <p className='text-2xl text-primary-900'>Načítání...</p>
           )
       }
     </SectionWrapper>

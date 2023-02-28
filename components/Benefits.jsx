@@ -29,7 +29,7 @@ const Benefits = () => {
   return (
     <SectionWrapper
       id='benefity'
-      innerDivStyle='flex flex-col items-center bg-secondary-600 relative overflow-hidden w-screen px-8 md:px-16 lg:px-36'
+      innerDivStyle='flex flex-col items-center bg-primary-50 relative overflow-hidden w-screen px-8 md:px-16 lg:px-36'
     >
       <img
         src='/logo/logo-one-color.svg'
@@ -53,7 +53,7 @@ const Benefits = () => {
                   {item.icon}
                 </div>
 
-                <p className='text-xl md:text-2xl xl:text-3xl p-2 font-semibold text-primary-300'>{item.title}</p>
+                <p className='text-xl md:text-2xl xl:text-3xl p-2 font-semibold text-primary-900'>{item.title}</p>
 
               </li>
             ))

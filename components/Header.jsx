@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Header = () => {
   return (
     <header
-      className='flex justify-start items-center py-8 bg-secondary-600 -mb-[4px] px-8 md:px-16 lg:px-36'
+      className='flex justify-start items-center py-8 bg-primary-50 -mb-[4px] px-8 md:px-16 lg:px-36'
     >
       <div className='h-auto lg:h-[50px] 3xl:h-auto'>
         <div className='block lg:hidden 3xl:block'>

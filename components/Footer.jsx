@@ -7,7 +7,7 @@ const { email, phone, urlSubdomain } = configuration;
 const Footer = () => {
   return (
     <footer className='flex flex-col gap-16 lg:flex-row lg:justify-between items-center
-    px-8 sm:px-16 lg:px-36 py-16 2xl:py-36 bg-secondary-600 relative overflow-hidden'>
+    px-8 sm:px-16 lg:px-36 py-16 2xl:py-36 bg-primary-50 relative overflow-hidden'>
       <img
         src='/logo/logo-one-color.svg'
         alt='logo'
@@ -22,7 +22,7 @@ const Footer = () => {
         <img src='/logo/logo-name.svg' alt='logo' width={400} />
       </Link>
 
-      <div className='z-10 text-primary-100 font-medium text-xl'>
+      <div className='z-10 text-primary-900 font-medium text-xl'>
         <a href={`mailto:${email}`} target='_blank' rel='noreferrer' className='block'>{email}</a>
         <a href={`tel:${phone.replaceAll(' ', '')}`} target='_blank' rel='noreferrer' className='block'>{phone}</a>
         <a href='http://www.lunastav.cz' target='_blank' rel='noopener noreferrer'>{urlSubdomain}</a>

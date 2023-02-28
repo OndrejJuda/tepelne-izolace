@@ -29,7 +29,7 @@ const Process = () => {
 
                 <div className='relative'>
                   <span
-                    className={`text-8xl text-white bg-secondary-500 w-[120px] h-[120px] xl:w-[164px] xl:h-[164px] p-2 rounded-full opacity-50
+                    className={`text-8xl text-white bg-primary-100 w-[120px] h-[120px] xl:w-[164px] xl:h-[164px] p-2 rounded-full opacity-50
                       absolute -top-10 right-0 ${index % 2 ? 'xl:right-0 2xl:-right-28' : 'xl:left-0 2xl:-left-28'}
                       flex justify-center items-center`}
                   >
@@ -37,9 +37,9 @@ const Process = () => {
                   </span>
 
                 </div>
-                <p className='text-3xl font-semibold text-primary-100 mb-8 z-10'>{title}</p>
+                <p className='text-3xl font-semibold text-primary-900 mb-8 z-10'>{title}</p>
 
-                <p className='text-xl text-primary-100 z-10'>{descripton}</p>
+                <p className='text-xl text-primary-900 z-10'>{descripton}</p>
 
               </div>
 

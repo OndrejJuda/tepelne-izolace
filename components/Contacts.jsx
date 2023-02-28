@@ -50,7 +50,7 @@ const Contacts = () => {
     hover:shadow-md hover:scale-110
     active:shadow-md active:scale-95'>
             <BiArrowBack
-              className='text-primary-500'
+              className='text-primary-900'
               size={50}
             />
           </div>
@@ -59,9 +59,9 @@ const Contacts = () => {
 
       <div className='mt-20 2xl:my-20 py-20 px-4 md:px-16 lg:px-36 flex flex-col gap-16 2xl:gap-32'>
         <section className='flex flex-col items-center'>
-          <h1 className='text-4xl sm:text-5xl md:text-6xl font-semibold text-primary-100 mb-16 lg:mb-32'>Kde nás najdete?</h1>
+          <h1 className='text-4xl sm:text-5xl md:text-6xl font-semibold text-primary-900 mb-16 lg:mb-32'>Kde nás najdete?</h1>
           <div className='w-full grid grid-rows-2 gap-y-8 grid-flow-col-1 md:grid-cols-[1fr_max-content] md:grid-rows-1 gap-x-8'>
-            <div className='relative w-full h-full rounded-lg overflow-hidden row-start-2 row-end-3 md:row-span-1'>
+            <div className='relative w-full h-full rounded-lg overflow-hidden row-start-2 row-end-3 md:row-span-1 shadow-lg'>
               {
                 process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY && (
                   <Map />
@@ -69,43 +69,43 @@ const Contacts = () => {
               }
             </div>
             <ul className='flex flex-col justify-center gap-8'>
-              <li className='bg-secondary-600 p-8 shadow-lg rounded-lg'>
-                <p className='text-3xl text-primary-400 font-semibold mb-8'>Hlavní město Praha<br />a Středočeský kraj:</p>
-                <div className='text-2xl text-primary-100'>
+              <li className='bg-primary-50 p-8 shadow-lg rounded-lg'>
+                <p className='text-3xl text-primary-900 font-semibold mb-8'>Hlavní město Praha<br />a Středočeský kraj:</p>
+                <div className='text-2xl text-primary-900'>
                   <address>
                     Ostrovní 2059/4 <br />
                     110 00, Praha 1
                   </address>
                   <a href={`mailto:${email}`} target='_blank' rel='noreferrer' className='block'>
                     <div className='flex items-center gap-4 mt-4'>
-                      <MdAlternateEmail size={36} className='text-primary-400' />
+                      <MdAlternateEmail size={36} className='text-primary-900' />
                       <span>{email}</span>
                     </div>
                   </a>
                   <a href={`tel:${phone.replaceAll(' ', '')}`} target='_blank' rel='noreferrer' className='block'>
                     <div className='flex items-center gap-4 mt-4'>
-                      <FiPhoneCall size={36} className='text-primary-400' />
+                      <FiPhoneCall size={36} className='text-primary-900' />
                       <span>{phone}</span>
                     </div>
                   </a>
                 </div>
               </li>
-              <li className='bg-secondary-600 p-8 shadow-lg rounded-lg'>
-                <p className='text-3xl text-primary-400 font-semibold mb-8'>Královéhradecký kraj<br />a Pardubický kraj:</p>
-                <div className='text-2xl text-primary-100'>
+              <li className='bg-primary-50 p-8 shadow-lg rounded-lg'>
+                <p className='text-3xl text-primary-900 font-semibold mb-8'>Královéhradecký kraj<br />a Pardubický kraj:</p>
+                <div className='text-2xl text-primary-900'>
                   <address>
                     Šimkova 1224/2b <br />
                     500 03, Hradec Králové
                   </address>
                   <a href={`mailto:${email}`} target='_blank' rel='noreferrer' className='block'>
                     <div className='flex items-center gap-4 mt-4'>
-                      <MdAlternateEmail size={36} className='text-primary-400' />
+                      <MdAlternateEmail size={36} className='text-primary-900' />
                       <span>{email}</span>
                     </div>
                   </a>
                   <a href={`tel:${phone.replaceAll(' ', '')}`} target='_blank' rel='noreferrer' className='block'>
                     <div className='flex items-center gap-4 mt-4'>
-                      <FiPhoneCall size={36} className='text-primary-400' />
+                      <FiPhoneCall size={36} className='text-primary-900' />
                       <span>{phone}</span>
                     </div>
                   </a>
@@ -117,7 +117,7 @@ const Contacts = () => {
 
         <section className=''>
           <div className=''>
-            <div className='bg-secondary-600 lg:flex rounded-lg overflow-hidden shadow-xl'>
+            <div className='bg-primary-50 lg:flex rounded-lg overflow-hidden shadow-xl'>
               <img
                 src='/business/house.jpg'
                 alt='house'

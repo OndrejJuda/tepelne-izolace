@@ -5,7 +5,7 @@ const ImageSection = ({ sectionName, imageUrl }) => {
   return (
     <SectionWrapper
       id={sectionName}
-      innerDivStyle='bg-secondary-600 lg:flex rounded-lg overflow-hidden shadow-xl mx-8 md:mx-16 lg:mx-36 w-full'
+      innerDivStyle='lg:flex rounded-lg overflow-hidden shadow-xl mx-8 md:mx-16 lg:mx-36 w-full'
     >
       <img
         src={imageUrl}

@@ -13,27 +13,16 @@ const Services = () => {
             <HSecondary additionalStyling='text-3xl sm:text-5xl mb-10'>Zateplujeme foukanou izolací střechy a stropy nových i starších budov</HSecondary>
             <div className='text-primary-900 text-lg '>
               <p className='mb-4'>
-                Minerální foukaná izolace se v posledních letech stává stále populárnější. Jedná se o proces, při kterém se drobné částice minerální vlny foukají do stěn, stropů nebo podlahy budov, kde se postupně usazují a vytvářejí účinnou izolační bariéru.
-                <br />
-                Hlavní výhodou minerální foukané izolace je její schopnost snížit tepelné ztráty v budovách. Izolace vytváří ochrannou vrstvu, která brání průniku chladu v zimě a tepla v létě. Tímto způsobem dokáže snížit energetické náklady spojené s vytápěním a klimatizací.
-                <br />
-                Další výhodou minerální foukané izolace je její flexibilita a snadná aplikace. Její aplikace se provádí pomocí foukacího stroje, který dokáže izolaci umístit do nejrůznějších částí budovy. Tento způsob umožňuje izolaci stěn, stropů, podlah a dalších oblastí, které by jinak byly velmi obtížné k izolaci.
-                <br />
-                Minerální foukaná izolace také poskytuje vysokou úroveň zvukové izolace, která pomáhá snížit hluk v budově. To může být obzvláště užitečné v oblastech s vysokou úrovní hluku, jako jsou silnice, letiště a jiná průmyslová místa.
-                <br />
-                Další výhodou minerální foukané izolace je její odolnost vůči plísním, hmyzu a dalším škůdcům. Minerální vlna, která se používá v této izolaci, je nehořlavá a odolná proti vodě, což z ní dělá trvanlivou a spolehlivou izolační materiál.
-                <br />
-                Kromě výše uvedených výhod má minerální foukaná izolace také vynikající životnost. S pravidelnou údržbou může trvat mnoho let bez potřeby výměny.
-                <br />
-                Je také ekologickou volbou, protože je vyráběna z recyklovaných materiálů a lze ji snadno recyklovat.
-                <br />
-                Vzhledem k výše uvedeným výhodám se minerální foukaná izolace stává stále populárnější volbou pro ty, kteří hledají účinný a spolehlivý způsob jak zlepšit tepelnou a zvukovou izolaci svých budov. Tento typ izolace se často používá v nových stavbách, ale také může být instalován v existujících budovách během renovace.
-                <br />
-                Za zmínku také stojí, že minerální foukaná izolace je relativně levnou volbou v porovnání s jinými způsoby izolace, jako je například izolace pěnovými deskami. Tento typ izolace také není náchylný k tvarování a mnoho typů má příznivé hodnoty pro životní prostředí.
-                <br />
-                Pokud hledáte spolehlivou a účinnou izolační metodu pro svou budovu, minerální foukaná izolace by mohla být tou správnou volbou. Snižuje energetické náklady, zlepšuje zvukovou izolaci, je odolná proti škůdcům a má dlouhou životnost. Může být také aplikována do různých částí budovy a je relativně cenově dostupná.
-                <br />
-                Vzhledem k těmto výhodám může být minerální foukaná izolace lákavou nabídkou pro potenciální zákazníky, kteří hledají úsporu energie a snížení nákladů na vytápění a klimatizaci svých budov.
+              <p className='mb-4'>
+               Minerální foukaná izolace je moderní způsob izolace, který se v posledních letech stává stále populárnějším. Jedná se o <b>proces, při kterém se drobné částice minerální vlny foukají do stěn, stropů nebo podlahy budov, kde se postupně usazují a vytvářejí účinnou izolační bariéru.</b> 
+              </p>
+              <p className='mb-4'>Výhodou minerální foukané izolace je její flexibilita a snadná aplikace. Její aplikace se provádí pomocí foukacího stroje, který dokáže izolaci umístit do nejrůznějších částí budovy. <b>Tento způsob umožňuje izolaci stěn, stropů, podlah a dalších oblastí, které by jinak byly velmi obtížné k izolaci.</b></p>
+              <p className='mb-4'>Minerální foukaná izolace také poskytuje vysokou úroveň zvukové izolace, která pomáhá snížit hluk v budově. To může být obzvláště užitečné v oblastech s vysokou úrovní hluku, jako jsou silnice, letiště a jiná průmyslová místa.</p>
+              <p className='mb-4'>Další výhodou minerální foukané izolace je její <b>odolnost vůči plísním, hmyzu a dalším škůdcům. Používáme nehořlavou, paropropustnou izolaci odolnou proti vodě</b>, což z ní dělá trvanlivou a spolehlivou izolační materiál s dlouhou životností.</p>
+              <p className='mb-4'>Vzhledem k výše uvedeným výhodám se minerální foukaná izolace stává stále populárnější volbou pro ty, kteří hledají účinný a spolehlivý způsob, jak zlepšit tepelnou a zvukovou izolaci svých budov. Tento typ izolace se často používá v nových stavbách, ale také může být instalován v existujících budovách během renovace.</p>
+              <p className='mb-4'>Je také ekologickou volbou, protože je vyráběna z recyklovaných materiálů a lze ji snadno recyklovat.
+              Pokud hledáte spolehlivou a účinnou izolační metodu pro svou budovu, minerální foukaná izolace je tou správnou volbou. Snižuje energetické náklady, zlepšuje zvukovou izolaci, je odolná proti škůdcům, má dlouhou životnost a v letních měsících Vás ochrání před horkem. 
+              </p>
                 <br />
                 Naší odborníci Vám pomohou vybrat idealní variantu zateplení pro Váš dům a vyřídíme Vám státní dotaci od NZÚ.
               </p>

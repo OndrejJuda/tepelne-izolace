@@ -4,7 +4,6 @@ import CookieBot from 'react-cookiebot';
 
 const { url } = configuration;
 const domainGroupId = process.env.NEXT_PUBLIC_COOKIEBOT_DOMAIN_GROUP_ID;
-console.log('domainGroupId:', domainGroupId);
 
 export default function Home() {
   return (
@@ -17,10 +16,10 @@ export default function Home() {
       <Header />
       <main className=''>
         <Hero />
+        <DemandFormSection />
         <ImageSection sectionName='predvadeci-obrazek' imageUrl='/business/zateplenss.jpg' />
         <Services />
         <Benefits />
-        <DemandFormSection />
         <Process />
         <Gallery />
       </main>

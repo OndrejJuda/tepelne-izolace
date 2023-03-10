@@ -8,7 +8,7 @@ const Services = () => {
       innerDivStyle=''
     >
       <div className='mx-8 md:mx-16 lg:mx-36 bg-primary-50 rounded-lg overflow-hidden shadow-xl 2xl:flex relative'>
-        <div className='p-8 lg:p-20'>
+        <div className='p-8 lg:p-20 relative z-10'>
           <div className='mb-10'>
             <HSecondary additionalStyling='text-3xl sm:text-5xl mb-10'>Zateplujeme foukanou izolací střechy a stropy nových i starších budov</HSecondary>
             <div className='text-primary-900 text-lg '>
@@ -32,9 +32,13 @@ const Services = () => {
           </div>
 
           <div className='flex flex-col justify-center'>
-            <HSecondary additionalStyling='text-3xl sm:text-5xl mb-10'>Foukáme minerální vlnu a celulózu</HSecondary>
+            <HSecondary
+              additionalStyling='text-3xl sm:text-5xl mb-10'
+            >
+              Foukáme minerální vlnu a celulózu
+            </HSecondary>
             <div className='text-primary-900 text-lg'>
-            <p className='mb-4'><HSecondary additionalStyling='text-3xl sm:text-3xl mb-4'>Minerální vlna URSA</HSecondary></p>
+              <HSecondary additionalStyling='text-3xl sm:text-3xl mb-8'>Minerální vlna URSA</HSecondary>
               <p className='mb-10'>
                 K zateplování používáme izolaci URSA Pure Floc z minerální vlny bez obsahu formaldehydu a pojiv. Je určena k nafoukání do nových i stávajících otevřených i uzavřených podkrovních, půdních prostor, podhledů, dutin a dalších různých střešních konstrukcí.
                 URSA Pure Floc má vynikající tepelně technické vlastnosti, výbornou schopnost vyplnit dutiny ve stavebních konstrukcích a ideální vlastnosti pro aplikaci foukáním. Kromě rychlé instalace tím zajišťuje také dosažení maximální kvality zateplení.
@@ -61,17 +65,16 @@ const Services = () => {
                 <br />
                 Pro splnění podmínek dotace NZÚ Light je potřeba zateplit vrstvou o minimální tloušťce 30 centimetrů a hustotou alespoň 18 kg/m3
               </p>
-              <p className='mb-4'><HSecondary additionalStyling='text-3xl sm:text-3xl mb-4'>Celulózová izolace Thermofloc</HSecondary></p>
+              <HSecondary
+                additionalStyling='text-3xl sm:text-3xl mb-8'
+              >
+                Celulózová izolace Thermofloc
+              </HSecondary>
               <p className='mb-4'>
-
-
-
-
-
-Izolační materiál THERMOFLOC se vyrábí pouze z novinového papíru, za přidání minerálních látek pro konzervaci a protipožární ochranu. Papír se nahrubo rozdrtí a potom dále zpracuje v rozvlákňovacím zařízení na jemná, pružná celulózová vlákna. Hotový výrobek se balí do pytlů a skládá na palety. Certifikovaná interní a externí kontrola kvality zaručuje, že celulózová izolace THERMOFLOC vyhovuje nejvyšším evropským nárokům na kvalitu. Dokladem toho je Evropské technické schválení.Celulózou můžeme izolovat v tloušťce od 20 do 500 mm. Zhutnění izolačního materiálu je přitom, podle oblasti použití, od 28 do 60 kg/m3.
-<br />
-<br />
-<b>1) Nejlepší ochrana proti přehřívání konstrukce v létě</b>
+                Izolační materiál THERMOFLOC se vyrábí pouze z novinového papíru, za přidání minerálních látek pro konzervaci a protipožární ochranu. Papír se nahrubo rozdrtí a potom dále zpracuje v rozvlákňovacím zařízení na jemná, pružná celulózová vlákna. Hotový výrobek se balí do pytlů a skládá na palety. Certifikovaná interní a externí kontrola kvality zaručuje, že celulózová izolace THERMOFLOC vyhovuje nejvyšším evropským nárokům na kvalitu. Dokladem toho je Evropské technické schválení.Celulózou můžeme izolovat v tloušťce od 20 do 500 mm. Zhutnění izolačního materiálu je přitom, podle oblasti použití, od 28 do 60 kg/m3.
+                <br />
+                <br />
+                <b>1) Nejlepší ochrana proti přehřívání konstrukce v létě</b>
                 <br />
                 <b>2) Nižší pořizovací cena</b>
                 <br />
@@ -84,9 +87,9 @@ Izolační materiál THERMOFLOC se vyrábí pouze z novinového papíru, za při
                 6) Po usednutí nepráší
                 <br />
                 7) Vyrobená pouze z novinového papíru
-<br />
                 <br />
-Pro splnění podmínek dotace NZÚ Light je potřeba zateplit vrstvou o minimální tloušťce 30 centimetrů a hustotou alespoň 28 kg/m3.</p>
+                <br />
+                Pro splnění podmínek dotace NZÚ Light je potřeba zateplit vrstvou o minimální tloušťce 30 centimetrů a hustotou alespoň 28 kg/m3.</p>
             </div>
           </div>
         </div>
@@ -94,11 +97,12 @@ Pro splnění podmínek dotace NZÚ Light je potřeba zateplit vrstvou o minimá
         <img
           src='/business/isolation.jpg'
           alt='isolation'
-          className='object-left object-cover absolute top-0 left-0 w-full h-full opacity-[15%]'
+          className='object-left object-cover absolute top-0 left-0 z-0 w-full h-full opacity-[15%]'
         />
       </div>
 
     </SectionWrapper>
-)};
+  )
+};
 
 export default Services;

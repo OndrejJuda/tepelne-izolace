@@ -19,7 +19,7 @@ const Footer = () => {
       </Link>
 
       <Link href='/'>
-        <img src='/logo/logo-name.svg' alt='logo' width={400} />
+        <img src='/logo/logo-name.png' alt='logo' width={400} />
       </Link>
 
       <div className='z-10 text-primary-900 font-medium text-xl'>

@@ -110,7 +110,7 @@ const Navbar = () => {
         >
           <ul className='flex flex-col justify-center items-center gap-8'>
             <Link href='/' onClick={() => { setIsOpen(false); setIsVisible(false); }}>
-              <img src='/logo/logo-name.svg' alt='logo' className='w-[250px]' />
+              <img src='/logo/logo-name.png' alt='logo' className='w-[250px]' />
             </Link>
             {
               links.map(({ href, title, cta }) => (

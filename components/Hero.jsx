@@ -16,7 +16,7 @@ const Hero = () => {
       <div className='w-full flex flex-col sm:justify-center lg:items-start min-h-[calc(100vh-110px)] sm:min-h-[calc(100vh-155px)] md:h-auto relative pb-8'>
         <div className='hidden lg:block 3xl:hidden mb-4'>
           <Link href='/'>
-            <img src='/logo/logo-name.svg' alt='logo' className='w-[300px]' />
+            <img src='/logo/logo-name.png' alt='logo' className='w-[300px]' />
           </Link>
         </div>
 

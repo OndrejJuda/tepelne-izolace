@@ -9,7 +9,7 @@ const Header = () => {
       <div className='h-auto lg:h-[50px] 3xl:h-auto'>
         <div className='block lg:hidden 3xl:block'>
           <Link href='/'>
-            <img src='/logo/logo-name.svg' alt='logo' className='w-[300px]' />
+            <img src='/logo/logo-name.png' alt='logo' className='w-[300px]' />
           </Link>
         </div>
       </div>

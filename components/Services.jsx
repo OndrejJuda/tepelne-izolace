@@ -13,7 +13,7 @@ const Services = () => {
             <HSecondary additionalStyling='text-3xl sm:text-5xl mb-10'>Zateplujeme foukanou izolací střechy a stropy nových i starších budov</HSecondary>
             <div className='text-primary-900 text-lg '>
               <p className='mb-4'>
-                Minerální foukaná izolace je moderní způsob izolace, který se v posledních letech stává stále populárnějším. Jedná se o <b>proces, při kterém se drobné částice minerální vlny foukají do stěn, stropů nebo podlahy budov, kde se postupně usazují a vytvářejí účinnou izolační bariéru.</b> 
+                Minerální foukaná izolace je moderní způsob izolace, který se v posledních letech stává stále populárnějším. Jedná se o <b>proces, při kterém se drobné částice minerální vlny foukají do stěn, stropů nebo podlahy budov, kde se postupně usazují a vytvářejí účinnou izolační bariéru.</b>
                 <br />
                 Výhodou minerální foukané izolace je její flexibilita a snadná aplikace. Její aplikace se provádí pomocí foukacího stroje, který dokáže izolaci umístit do nejrůznějších částí budovy. <b>Tento způsob umožňuje izolaci stěn, stropů, podlah a dalších oblastí, které by jinak byly velmi obtížné k izolaci.</b>
                 <br />
@@ -31,33 +31,62 @@ const Services = () => {
             </div>
           </div>
 
-          <div
-            className='flex flex-col justify-center'
-          >
-            <HSecondary additionalStyling='text-3xl sm:text-5xl mb-10'>Používáme minerální vlnu bez formaldehydu vyráběnou v Belgii</HSecondary>
-            <div
-              className='text-primary-900 text-lg'
-            >
-              <p className='mb-4'>
-                Foukaná minerální izolace je tepelná izolace, která se aplikuje na stěny, stropy a podhledy pomocí speciálního stroje, který rozptýlí vláknité materiály, jako jsou skleněné vlákna nebo minerální vlákna, do nástěnných prostorů. Foukananá izolace se díky svým vlastnostem poskytuje dokonalou tepelnou izolaci téměř každému objektu bez vzniku tepelných mostů. Tato izolace má několik výhod, jako jsou:
+          <div className='flex flex-col justify-center'>
+            <HSecondary additionalStyling='text-3xl sm:text-5xl mb-10'>Foukáme minerální vlnu a celulózu</HSecondary>
+            <div className='text-primary-900 text-lg'>
+            <p className='mb-4'><HSecondary additionalStyling='text-3xl sm:text-3xl mb-4'>Minerální vlna URSA</HSecondary></p>
+              <p className='mb-10'>
+                K zateplování používáme izolaci URSA Pure Floc z minerální vlny bez obsahu formaldehydu a pojiv. Je určena k nafoukání do nových i stávajících otevřených i uzavřených podkrovních, půdních prostor, podhledů, dutin a dalších různých střešních konstrukcí.
+                URSA Pure Floc má vynikající tepelně technické vlastnosti, výbornou schopnost vyplnit dutiny ve stavebních konstrukcích a ideální vlastnosti pro aplikaci foukáním. Kromě rychlé instalace tím zajišťuje také dosažení maximální kvality zateplení.
+                Izolace má nízkou sedavost, zvukovou a protipožární ochranu v jednom, je odolná proti plísním a nehnije ani se nerozkládá – a to vše bez umělých přísad.
+                Výhody zateplovacího materiálu:
+                <br />
+                <br />
+                <b>1) Nízká hmotnost aplikovaného materiálu</b>
+                <br />
+                <b>2) Přirozeně nehořlavá – třída reakce na oheň A1</b>
+                <br />
+                3) Lambda 0,039 při objemové hmotnosti 18 kg/m3
+                <br />
+                4) Vynikající akustický útlum
+                <br />
+                5) Paropropustná
+                <br />
+                6) Odolná proti plísním, nehnije ani se nerozkládá
+                <br />
+                7) Nepráší
+                <br />
+                8) Čistě přírodní – zdravotně nezávadná
+                <br />
+                <br />
+                Pro splnění podmínek dotace NZÚ Light je potřeba zateplit vrstvou o minimální tloušťce 30 centimetrů a hustotou alespoň 18 kg/m3
               </p>
-              <ul className='pl-4 flex flex-col gap-2'>
-                <li>
-                  1. Vysoká tepelná izolace: foukaná minerální izolace poskytuje vysokou tepelnou izolaci, což pomáhá udržovat teplo uvnitř budovy a snižuje potřebu vytápění.
-                </li>
-                <li>
-                  2. Snadná instalace: foukaná minerální izolace se snadno aplikuje pomocí speciálního stroje, což umožňuje rychlou a efektivní instalaci bez potřeby velkých stavebních úprav.
-                </li>
-                <li>
-                  3. Flexibilita: Foukaná minerální izolace se dá aplikovat na různé typy konstrukcí a prostorů, včetně obtížně přístupných míst.
-                </li>
-                <li>
-                  4. Odolnost: Foukaná minerální izolace je odolná proti vlhkosti a plísním, což ji činí vhodnou pro použití ve vlhkých prostorách, jako jsou koupelny nebo sklepy.
-                </li>
-                <li>
-                  5. Bezpečnost: Foukaná minerální izolace je nehořlavá, bezpečná pro použití v interiéru a neobsahuje žádné škodlivé látky.
-                </li>
-              </ul>
+              <p className='mb-4'><HSecondary additionalStyling='text-3xl sm:text-3xl mb-4'>Celulózová izolace Thermofloc</HSecondary></p>
+              <p className='mb-4'>
+
+
+
+
+
+Izolační materiál THERMOFLOC se vyrábí pouze z novinového papíru, za přidání minerálních látek pro konzervaci a protipožární ochranu. Papír se nahrubo rozdrtí a potom dále zpracuje v rozvlákňovacím zařízení na jemná, pružná celulózová vlákna. Hotový výrobek se balí do pytlů a skládá na palety. Certifikovaná interní a externí kontrola kvality zaručuje, že celulózová izolace THERMOFLOC vyhovuje nejvyšším evropským nárokům na kvalitu. Dokladem toho je Evropské technické schválení.Celulózou můžeme izolovat v tloušťce od 20 do 500 mm. Zhutnění izolačního materiálu je přitom, podle oblasti použití, od 28 do 60 kg/m3.
+<br />
+<br />
+<b>1) Nejlepší ochrana proti přehřívání konstrukce v létě</b>
+                <br />
+                <b>2) Nižší pořizovací cena</b>
+                <br />
+                3)Lambda 0,037 při montážní hustotě 28 - 47 kg/m3
+                <br />
+                4) Vynikající akustický útlum
+                <br />
+                5) 100% biologická – 100% certifikovaná
+                <br />
+                6) Po usednutí nepráší
+                <br />
+                7) Vyrobená pouze z novinového papíru
+<br />
+                <br />
+Pro splnění podmínek dotace NZÚ Light je potřeba zateplit vrstvou o minimální tloušťce 30 centimetrů a hustotou alespoň 28 kg/m3.</p>
             </div>
           </div>
         </div>
@@ -70,7 +99,6 @@ const Services = () => {
       </div>
 
     </SectionWrapper>
-  );
-};
+)};
 
 export default Services;

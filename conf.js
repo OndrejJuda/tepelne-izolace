@@ -5,6 +5,7 @@ const configuration = {
   urlSubdomain: 'www.lunastav.cz',
   email: 'info@lunastav.cz',
   phone: '+420 605 898 894',
+  phoneSekretarka: '+420 731 513 994',
   jsonLd: {
     '@context': 'https://schema.org',
     '@type': 'Organization',

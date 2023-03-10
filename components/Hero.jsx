@@ -24,14 +24,17 @@ const Hero = () => {
           Foukaná izolace s dotací od NZÚ
         </h1>
 
-        <p className='text-2xl sm:text-3xl md:text-4xl text-primary-900 max-w-[1200px] mb-1'>
+        <p className='text-2xl sm:text-3xl md:text-4xl text-primary-900 max-w-[1200px] mb-2'>
           Zateplete svůj dům foukanou izolací s úsporou až 30%.
         </p>
-        <p className='text-2xl sm:text-3xl md:text-4xl text-primary-900 max-w-[1200px] mb-1'>
-          Vyřídíme Vám dotaci z programu NZÚ Light.
+        <p className='text-2xl sm:text-3xl md:text-4xl text-primary-900 max-w-[1200px] mb-2'>
+          Realizaci i dotaci Vám zařídíme na klíč
+        </p>
+        <p className='text-2xl sm:text-3xl md:text-4xl text-primary-900 max-w-[1200px] mb-2'>
+          Dotaci lze čerpat i před realizací
         </p>
         <p className='text-2xl sm:text-3xl md:text-4xl text-primary-900 max-w-[1200px] mb-12'>
-          Dotaci je možné čerpat i před realizací.
+          Prostor bude rovnoměrně zaizolován bez tepelných mostů
         </p>
 
         <div className='lg:hidden flex flex-col items-center gap-4 bg-primary-100 shadow-sm py-6 px-6 rounded-xl'>

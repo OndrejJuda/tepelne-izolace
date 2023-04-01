@@ -4,7 +4,6 @@ import configuration from '../conf';
 import Script from 'next/script';
 
 const { title, description, url, jsonLd } = configuration;
-const measurementId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;
 
 const WebsiteHead = ({ titleSuffix, canonicalHref }) => {
   return (
@@ -47,24 +46,6 @@ const WebsiteHead = ({ titleSuffix, canonicalHref }) => {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </Head>
-      {
-        measurementId && (
-          <>
-            <Script
-              strategy="afterInteractive"
-              src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
-            />
-            <Script id="google-analytics" strategy="afterInteractive">
-              {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${measurementId}');
-              `}
-            </Script>
-          </>
-        )
-      }
     </>
   );
 };

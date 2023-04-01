@@ -5,10 +5,11 @@ import { RxCross1 } from 'react-icons/rx';
 import Link from 'next/link';
 import AppContext from '../context/app-context';
 import { Select } from './';
+import { event } from 'nextjs-google-analytics';
 import { regions } from '../regions-and-districts';
 import configuration from '../conf';
 
-const {phone} = configuration;
+const { phone } = configuration;
 
 const Input = ({ inputProps, hasError, title }) => {
   return (
@@ -115,9 +116,17 @@ const Form = () => {
       if (response.ok) {
         setShowValid(true);
         setSubmitError('');
+        event('submit_form', {
+          category: 'Poptávka',
+          label: 'Úspěšně odesláno'
+        });
       } else {
         setShowValid(false);
         setSubmitError(`Nastala chyba. Zkuste to znovu nebo nás kontaktujte na telefonním čísle ${phone}.`);
+        event('submit_form', {
+          category: 'Poptávka',
+          label: 'Nastala chyba'
+        });
       }
     } catch (error) {
       setShowValid(false);

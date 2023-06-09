@@ -24,6 +24,14 @@ export default function App({ Component, pageProps }) {
             window.rc.conversionHit(conversionConf);
           }`}
       </Script>
+      <Script id='sklik-seznam-rtg'>
+        {`var retargetingConf = {
+          rtgId: 1395987
+          };
+          if (window.rc &amp;&amp; window.rc.retargetingHit) {
+          window.rc.retargetingHit(retargetingConf);
+          }`}
+      </Script>
       <Component {...pageProps} />
     </AppContextProvider>
   );

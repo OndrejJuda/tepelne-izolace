@@ -21,7 +21,7 @@ const Hero = () => {
         </div>
 
         <h1 className='text-5xl sm:text-5xl md:text-6xl font-bold text-primary-900 mb-8 sm:mb-16'>
-          Foukaná izolace s dotací od NZÚ
+          Foukaná izolace s dotací od NZÚ 
         </h1>
 
         <p className='text-2xl sm:text-3xl md:text-4xl text-primary-900 max-w-[1200px] mb-2'>

@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import configuration from '../conf';
-import Script from 'next/script';
 
 const { title, description, url, jsonLd } = configuration;
 

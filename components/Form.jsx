@@ -338,12 +338,14 @@ const Form = () => {
                       />
                     </div>
                     <p className='text-xl text-primary-700 md:px-8'>{submitError}</p>
+                    
                   </div>
                 )
               }
               {
                 showValid && (
                   <div className='flex justify-center items-center bg-white rounded-xl p-8'>
+                    <p className='text-2xl text-primary-700 font-semibold mb-8'>Děkujeme za Vaši poptávku. Během několika dní Vás budeme kontaktovat.</p>
                     <AiOutlineCheck
                       className='text-[#b2f291]'
                       size={124}

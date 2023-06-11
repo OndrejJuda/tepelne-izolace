@@ -35,13 +35,18 @@ const Services = () => {
             <HSecondary
               additionalStyling='text-3xl sm:text-5xl mb-10'
             >
-              Foukáme minerální vlnu a celulózu
+              Jsme certifikovaná společnost pro aplikaci:
             </HSecondary>
             <div className='text-primary-900 text-lg'>
-              <HSecondary additionalStyling='text-3xl sm:text-3xl mb-8'>Minerální vlna URSA</HSecondary>
+              <HSecondary additionalStyling='text-3xl sm:text-3xl mb-8'>KNAUF – SUPAFIL LOFT</HSecondary>
+              <img
+                src='/logo/knauf.svg'
+                alt='knauf'
+                className='w-full h-[400px] lg:h-auto lg:w-[400px] object-cover'
+              />
               <p className='mb-10'>
-                K zateplování používáme izolaci URSA Pure Floc z minerální vlny bez obsahu formaldehydu a pojiv. Je určena k nafoukání do nových i stávajících otevřených i uzavřených podkrovních, půdních prostor, podhledů, dutin a dalších různých střešních konstrukcí.
-                URSA Pure Floc má vynikající tepelně technické vlastnosti, výbornou schopnost vyplnit dutiny ve stavebních konstrukcích a ideální vlastnosti pro aplikaci foukáním. Kromě rychlé instalace tím zajišťuje také dosažení maximální kvality zateplení.
+                K zateplování používáme izolaci Supafil Loft od Knaufu z minerální vlny bez obsahu formaldehydu a pojiv. Je určena k nafoukání do nových i stávajících otevřených i uzavřených podkrovních, půdních prostor, podhledů, dutin a dalších různých střešních konstrukcí.
+                SUPAFIL LOFT má vynikající tepelně technické vlastnosti, výbornou schopnost vyplnit dutiny ve stavebních konstrukcích a ideální vlastnosti pro aplikaci foukáním. Kromě rychlé instalace tím zajišťuje také dosažení maximální kvality zateplení.
                 Izolace má nízkou sedavost, zvukovou a protipožární ochranu v jednom, je odolná proti plísním a nehnije ani se nerozkládá – a to vše bez umělých přísad.
                 Výhody zateplovacího materiálu:
                 <br />
@@ -50,7 +55,7 @@ const Services = () => {
                 <br />
                 <b>2) Přirozeně nehořlavá – třída reakce na oheň A1</b>
                 <br />
-                3) Lambda 0,039 při objemové hmotnosti 18 kg/m3
+                3) Lambda 0,039 při objemové hmotnosti 16 kg/m3
                 <br />
                 4) Vynikající akustický útlum
                 <br />
@@ -63,7 +68,7 @@ const Services = () => {
                 8) Čistě přírodní – zdravotně nezávadná
                 <br />
                 <br />
-                Pro splnění podmínek dotace NZÚ Light je potřeba zateplit vrstvou o minimální tloušťce 30 centimetrů a hustotou alespoň 18 kg/m3
+                Pro splnění podmínek dotace NZÚ Light je potřeba zateplit vrstvou o minimální tloušťce 30 centimetrů a hustotou alespoň 16 kg/m3
               </p>
               <HSecondary
                 additionalStyling='text-3xl sm:text-3xl mb-8'
@@ -101,7 +106,7 @@ const Services = () => {
         />
       </div>
 
-    </SectionWrapper>
+    </SectionWrapper >
   )
 };
 

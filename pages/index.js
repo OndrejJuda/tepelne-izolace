@@ -17,7 +17,7 @@ export default function Home() {
       <main className=''>
         <Hero />
         <DemandFormSection />
-        <ImageSection sectionName='predvadeci-obrazek' imageUrl='/business/zateplenss.jpg' />
+        {/* <ImageSection sectionName='predvadeci-obrazek' imageUrl='/business/vata.jpg' /> */}
         <Services />
         <Benefits />
         <Process />

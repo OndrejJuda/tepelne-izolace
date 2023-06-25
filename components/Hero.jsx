@@ -9,9 +9,9 @@ const Hero = () => {
   return (
     <section className='flex flex-col items-center bg-primary-50 2xl:clip-hero overflow-hidden relative px-8 md:px-16 lg:px-36 pb-8'>
       <img
-        src='/logo/logo-one-color.svg'
+        src='/business/swek.png'
         alt='logo'
-        className='absolute top-[600px] -right-44 md:right-32 md:top-64 opacity-5 scale-125'
+        className='absolute w-full object-cover lg:w-75 md:w-50 sm:w-35 h-full'
       />
       <div className='w-full flex flex-col sm:justify-center lg:items-start min-h-[calc(100vh-110px)] sm:min-h-[calc(100vh-155px)] md:h-auto relative pb-8'>
         <div className='hidden lg:block 3xl:hidden mb-4'>
@@ -20,20 +20,20 @@ const Hero = () => {
           </Link>
         </div>
 
-        <h1 className='text-5xl sm:text-5xl md:text-6xl font-bold text-primary-900 mb-8 sm:mb-16'>
+        <h1 className='text-5xl sm:text-5xl md:text-6xl font-bold text-primary-white mb-8 sm:mb-16'>
           Foukaná izolace s dotací od NZÚ 
         </h1>
 
-        <p className='text-2xl sm:text-3xl md:text-4xl text-primary-900 max-w-[1200px] mb-2'>
+        <p className='text-2xl sm:text-3xl md:text-4xl text-primary-white max-w-[1200px] mb-2'>
           Zateplete svůj dům foukanou izolací s úsporou až 30%.
         </p>
-        <p className='text-2xl sm:text-3xl md:text-4xl text-primary-900 max-w-[1200px] mb-2'>
+        <p className='text-2xl sm:text-3xl md:text-4xl text-primary-white max-w-[1200px] mb-2'>
           Realizaci i dotaci Vám zařídíme na klíč
         </p>
-        <p className='text-2xl sm:text-3xl md:text-4xl text-primary-900 max-w-[1200px] mb-2'>
+        <p className='text-2xl sm:text-3xl md:text-4xl text-primary-white max-w-[1200px] mb-2'>
           Dotaci lze čerpat i před realizací
         </p>
-        <p className='text-2xl sm:text-3xl md:text-4xl text-primary-900 max-w-[1200px] mb-12'>
+        <p className='text-2xl sm:text-3xl md:text-4xl text-primary-white max-w-[1200px] mb-12'>
           Prostor bude rovnoměrně zaizolován bez tepelných mostů
         </p>
 

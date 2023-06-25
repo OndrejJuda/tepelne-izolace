@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }) {
           id: 100178723,
           value: null
           };
-          if (window.rc &amp;&amp; window.rc.conversionHit) {
+          if (window.rc && window.rc.conversionHit) {
             window.rc.conversionHit(conversionConf);
           }`}
       </Script>
@@ -28,7 +28,7 @@ export default function App({ Component, pageProps }) {
         {`var retargetingConf = {
           rtgId: 1395987
           };
-          if (window.rc &amp;&amp; window.rc.retargetingHit) {
+          if (window.rc && window.rc.retargetingHit) {
           window.rc.retargetingHit(retargetingConf);
           }`}
       </Script>

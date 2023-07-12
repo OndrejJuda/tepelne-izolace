@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 import { Benefits, Footer, DemandFormSection, Header, Hero, Process, Services, Navbar, WebsiteHead, Gallery, ImageSection, FVE } from '../components';
 import configuration from '../conf';
 import CookieBot from 'react-cookiebot';
@@ -25,6 +26,16 @@ export default function Home() {
         <Gallery />
       </main>
       <Footer />
+      <script type="text/javascript" src="https://c.seznam.cz/js/rc.js"></script>
+      <script dangerouslySetInnerHTML={{
+        __html: `
+        var retargetingConf = {
+          rtgId: 1395987
+        };
+        if (window.rc && window.rc.retargetingHit) {
+          window.rc.retargetingHit(retargetingConf);
+        }
+      ` }} />
     </div>
   );
 }

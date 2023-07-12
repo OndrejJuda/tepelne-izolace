@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 import { GoogleAnalytics } from 'nextjs-google-analytics';
 import { AppContextProvider } from '../context/app-context';
 import '../styles/globals.css';

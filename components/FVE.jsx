@@ -16,7 +16,6 @@ const FVE = () => {
           </div>
         </div>
       </div>
-
     </SectionWrapper >
   );
 };

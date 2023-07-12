@@ -29,7 +29,7 @@ const Benefits = () => {
   return (
     <SectionWrapper
       id='benefity'
-      innerDivStyle='flex flex-col items-center bg-primary-50 relative overflow-hidden w-screen px-8 md:px-16 lg:px-36'
+      innerDivStyle='lg:mx-36 bg-primary-50 rounded-lg overflow-hidden shadow-xl relative'
     >
       <img
         src='/logo/logo-one-color.svg'
@@ -40,7 +40,7 @@ const Benefits = () => {
 
         <HSecondary additionalStyling='text-5xl mt-16 mb-8'>Proč nás?</HSecondary>
 
-        <ul className='grid gap-8 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 mb-16'>
+        <ul className='grid gap-8 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 mb-16 text-center'>
           {
             benefits.map((item) => (
               <li

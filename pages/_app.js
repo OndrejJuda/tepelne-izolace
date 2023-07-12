@@ -14,24 +14,16 @@ export default function App({ Component, pageProps }) {
         )
       }
 
-      <Script type='text/javascript' src='https://c.seznam.cz/js/rc.js' />
-      <Script id='sklik-seznam'>
-        {`var conversionConf = {
-          id: 100178723,
-          value: null
-          };
-          if (window.rc && window.rc.conversionHit) {
-            window.rc.conversionHit(conversionConf);
-          }`}
-      </Script>
-      <Script id='sklik-seznam-rtg'>
-        {`var retargetingConf = {
+      <script type="text/javascript" src="https://c.seznam.cz/js/rc.js"></script>
+      <script dangerouslySetInnerHTML={{
+        __html: `
+        var retargetingConf = {
           rtgId: 1395987
-          };
-          if (window.rc && window.rc.retargetingHit) {
+        };
+        if (window.rc && window.rc.retargetingHit) {
           window.rc.retargetingHit(retargetingConf);
-          }`}
-      </Script>
+        }
+      ` }} />
       <Component {...pageProps} />
     </AppContextProvider>
   );

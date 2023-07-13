@@ -22,29 +22,29 @@ const FVE = () => {
                   Solární ohřev vody s dotací NZÚ
                 </HSecondary>
               </div>
-              <div className='my-4'>
+              <div className='my-4 text-center'>
                 <HSecondary additionalStyling='text-3xl sm:text-4xl font-bold mb-4'>Přínosy solárního ohřevu vody</HSecondary>
               </div>
               <ul className='flex flex-col justify-center'>
                 <li className='flex items-center j mb-2'>
                   <BsArrowRight className='mr-2' />
-                  <strong>Snížení nákladů na ohřev vody a úspora energie.</strong>
+                  <strong style={{ fontSize: '1.2em' }}>Snížení nákladů na ohřev vody a úspora energie.</strong>
                 </li>
                 <li className='flex items-center  mb-2'>
                   <BsArrowRight className='mr-2' />
-                  <strong>Šetrnost k životnímu prostředí - snížení emisí skleníkových plynů.</strong>
+                  <strong style={{ fontSize: '1.2em' }}>Šetrnost k životnímu prostředí - snížení emisí skleníkových plynů.</strong>
                 </li>
                 <li className='flex items-center mb-2'>
                   <BsArrowRight className='mr-2' />
-                  <strong>Zvýšení energetické nezávislosti a snížení závislosti na fosilních palivech.</strong>
+                  <strong style={{ fontSize: '1.2em' }}>Zvýšení energetické nezávislosti a snížení závislosti na fosilních palivech.</strong>
                 </li>
                 <li className='flex items-center  mb-2'>
                   <BsArrowRight className='mr-2' />
-                  <strong>Dlouhá životnost solárních kolektorů a nízké náklady na údržbu.</strong>
+                  <strong style={{ fontSize: '1.2em' }}>Dlouhá životnost solárních kolektorů a nízké náklady na údržbu.</strong>
                 </li>
                 <li className='flex items-center  mb-8'>
                   <BsArrowRight className='mr-2' />
-                  <strong>Podpora státních dotací a pobídek pro solární technologie.</strong>
+                  <strong style={{ fontSize: '1.2em' }}>Podpora státních dotací a pobídek pro solární technologie.</strong>
                 </li>
               </ul>
               <div className='text-center'>

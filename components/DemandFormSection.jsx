@@ -7,7 +7,7 @@ const DemandFormSection = () => {
   const [width, setWidth] = useState(undefined);
 
   useEffect(() => {
-    setWidth(useWidth)
+    setWidth(useWidth);
   }, [useWidth]);
 
   return (
@@ -25,10 +25,11 @@ const DemandFormSection = () => {
         id={(width ?? 0) > 1024 ? '' : 'poptavka'}
         className='xl:flex-1 rounded-xl p-6 sm:p-8 2xl:px-36 lg:py-6'
       >
-        <HSecondary additionalStyling='mb-8 text-4xl lg:text-5xl'>Pošlete nám nezávaznou poptávku</HSecondary>
+        <HSecondary additionalStyling='mb-8 text-4xl lg:text-5xl text-center'>
+          Pošlete nám nezávaznou poptávku
+        </HSecondary>
         <Form />
       </div>
-
     </SectionWrapper>
   );
 };

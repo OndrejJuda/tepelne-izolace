@@ -17,9 +17,11 @@ const FVE = () => {
             </div>
           </div>
           <div className='w-full md:w-2/3 flex flex-col justify-center items-center p-8'>
-              <HSecondary additionalStyling='text-3xl sm:text-5xl mb-10 font-bold '>
-                Solární ohřev vody s dotací NZÚ
-              </HSecondary>
+              <div>
+                <HSecondary additionalStyling='text-3xl sm:text-5xl mb-10 font-bold text-center'>
+                  Solární ohřev vody s dotací NZÚ
+                </HSecondary>
+              </div>
               <div className='my-4'>
                 <HSecondary additionalStyling='text-3xl sm:text-4xl font-bold mb-4'>Přínosy solárního ohřevu vody</HSecondary>
               </div>
@@ -45,7 +47,9 @@ const FVE = () => {
                   <strong>Podpora státních dotací a pobídek pro solární technologie.</strong>
                 </li>
               </ul>
-              <h3 className='text-3xl font-bold mb-4 bg-green-400 p-2 rounded-lg'>Celá sestava po odečtení dotace stojí pouze 1Kč</h3>
+              <div className='text-center'>
+                <h3 className='text-3xl font-bold mb-4 bg-green-400 p-2 rounded-lg'>Celá sestava po odečtení dotace stojí pouze 1Kč</h3>
+              </div>
               <div className='flex justify-center'>
                 <CTAButtonArrowDP>Zjistit více</CTAButtonArrowDP>
               </div>

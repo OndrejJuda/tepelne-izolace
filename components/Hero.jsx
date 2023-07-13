@@ -32,13 +32,13 @@ const Hero = () => {
 
         <div className='lg:hidden flex flex-col items-center gap-4 bg-primary-100 shadow-sm py-6 px-6 rounded-xl'>
           <a href={`mailto:${email}`} className='text-xl font-semibold text-primary-900'>{email}</a>
-          <CTAButton>Nezávazná poptávka</CTAButton>
+          <CTAButton>Začněte šetřit dnes - pošlete nezávaznou poptávku!</CTAButton>
           <a href={`tel:${phone.replaceAll(' ', '')}`} className='text-xl font-semibold text-primary-900'>{phone}</a>
         </div>
 
         <div className='hidden lg:flex items-center gap-8 bg-primary-100 shadow-sm rounded-xl pr-8'>
           <div className='scale-110'>
-            <CTAButton>Nezávazná poptávka</CTAButton>
+            <CTAButton>Začněte šetřit dnes - pošlete nezávaznou poptávku!</CTAButton>
           </div>
           <a href={`mailto:${email}`} className='text-xl font-semibold text-primary-900'>{email}</a>
           <a href={`tel:${phone.replaceAll(' ', '')}`} className='text-xl font-semibold text-primary-900'>{phone}</a>

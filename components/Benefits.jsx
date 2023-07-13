@@ -45,19 +45,19 @@ const Benefits = () => {
         <ul className='grid gap-8 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 mb-16 text-center'>
           {
             benefits.map((item) => (
-              <li
-                key={item.title}
+            <li
+              key={item.title}
                 className='
                 flex-1 flex md:flex-col items-center'
-              >
+            >
                 <div className='w-[74px] h-[74px] xl:w-[82px] xl:h-[82px] mr-4 md:mr-0 md:mb-4 xl:mb-8 bg-white rounded-full p-3
                 flex justify-center items-center'>
                   {item.icon}
-                </div>
+              </div>
 
                 <p className='text-xl md:text-2xl xl:text-3xl p-2 font-semibold text-primary-900'>{item.title}</p>
 
-              </li>
+            </li>
             ))
           }
         </ul>

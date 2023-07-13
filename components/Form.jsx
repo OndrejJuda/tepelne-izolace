@@ -352,8 +352,8 @@ const Form = () => {
                         size={124}
                       />
                     </div>
-                    <script type="text/javascript" src="https://c.seznam.cz/js/rc.js"></script>
-                    <script dangerouslySetInnerHTML={{
+                    <script type="text/javascript" src="https://c.seznam.cz/js/rc.js" async></script>
+                    <script async dangerouslySetInnerHTML={{
                       __html: `
                               var conversionConf = {
                                 id: 100178723,

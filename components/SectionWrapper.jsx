@@ -2,12 +2,12 @@ import React from 'react';
 
 const SectionWrapper = ({ children, id, sectionStyle, innerDivStyle }) => {
   return (
-    <section 
-    id={id} 
-    className={`flex ${sectionStyle}`}
+    <section
+      id={id}
+      className={`flex ${sectionStyle}`}
     >
-      <div 
-      className={`my-16 md:my-36 ${innerDivStyle}`}
+      <div
+        className={`my-8 md:my-8 ${innerDivStyle}`}
       >
         {children}
       </div>

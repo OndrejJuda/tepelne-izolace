@@ -27,16 +27,6 @@ const Footer = () => {
         <a href={`mailto:${email}`} target='_blank' rel='noreferrer' className='block'>{email}</a>
         <a href={`tel:${phone.replaceAll(' ', '')}`} target='_blank' rel='noreferrer' className='block'>{phone}</a>
         <a href='http://www.lunastav.cz' target='_blank' rel='noopener noreferrer'>{urlSubdomain}</a>
-        <script type="text/javascript" src="https://c.seznam.cz/js/rc.js"></script>
-        <script dangerouslySetInnerHTML={{
-          __html: `
-        var retargetingConf = {
-          rtgId: 1395987
-        };
-        if (window.rc && window.rc.retargetingHit) {
-          window.rc.retargetingHit(retargetingConf);
-        }
-      ` }} />
       </div>
     </footer>
   );

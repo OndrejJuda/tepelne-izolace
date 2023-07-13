@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-sync-scripts */
 import { GoogleAnalytics } from 'nextjs-google-analytics';
 import { AppContextProvider } from '../context/app-context';
 import '../styles/globals.css';
@@ -15,8 +14,8 @@ export default function App({ Component, pageProps }) {
         )
       }
 
-      <script type="text/javascript" src="https://c.seznam.cz/js/rc.js"></script>
-      <script dangerouslySetInnerHTML={{
+      <script type="text/javascript" src="https://c.seznam.cz/js/rc.js" async></script>
+      <script async dangerouslySetInnerHTML={{
         __html: `
         var retargetingConf = {
           rtgId: 1395987

@@ -53,8 +53,8 @@ const Services = () => {
               Jsme certifikovaná společnost pro aplikaci:
             </HSecondary>
             <div className='grid grid-cols-1 sm:grid-cols-2 gap-8 ' >
-              <div className='bg-white rounded-lg shadow-lg p-8 shadow-xl' >
-                <div className='text-primary-900'>
+              <div className='bg-white rounded-lg  shadow-xl' >
+                <div className='text-primary-900 p-4 sm:p-8'>
                   <h2 className='text-3xl sm:text-4xl mb-5 text-center font-bold'>
                     KNAUF – SUPAFIL LOFT
                   </h2>
@@ -63,7 +63,7 @@ const Services = () => {
                     alt='knauf'
                     className='w-64 h-auto lg:max-h-[400px] object-cover mx-auto mb-7'
                   />
-                  <p className='mb-10 text-center text-justify'>
+                  <p className='mb-10 text-justify'>
                     K zateplování používáme izolaci Supafil Loft od Knaufu z minerální vlny bez obsahu formaldehydu a pojiv. Je určena k nafoukání do nových i stávajících otevřených i uzavřených podkrovních, půdních prostor, podhledů, dutin a dalších různých střešních konstrukcí.
                     SUPAFIL LOFT má vynikající tepelně technické vlastnosti, výbornou schopnost vyplnit dutiny ve stavebních konstrukcích a ideální vlastnosti pro aplikaci foukáním. Kromě rychlé instalace tím zajišťuje také dosažení maximální kvality zateplení.
                     Izolace má nízkou sedavost, zvukovou a protipožární ochranu v jednom, je odolná proti plísním a nehnije ani se nerozkládá – a to vše bez umělých přísad.
@@ -86,8 +86,8 @@ const Services = () => {
                   </p>
                 </div>
               </div>
-              <div className='bg-white rounded-lg shadow-lg p-8 shadow-xl'>
-                <div className='text-primary-900'>
+              <div className='bg-white rounded-lg shadow-xl'>
+                <div className='text-primary-900 p-4 sm:p-8 '>
                   <h2 className='text-3xl sm:text-4xl mb-4 text-center font-bold'>
                     Izolace THERMOFLOC
                   </h2>
@@ -96,7 +96,7 @@ const Services = () => {
                     alt='thermofloc'
                     className='w-64 h-auto lg:max-h-[400px] object-cover mx-auto mb-6'
                   />
-                  <p className='mb-10 text-center text-justify'>
+                  <p className='mb-10 text-justify'>
                     Izolační materiál THERMOFLOC se vyrábí pouze z novinového papíru, za přidání minerálních látek pro konzervaci a protipožární ochranu. Papír se nahrubo rozdrtí a potom dále zpracuje v rozvlákňovacím zařízení na jemná, pružná celulózová vlákna. Hotový výrobek se balí do pytlů a skládá na palety. Certifikovaná interní a externí kontrola kvality zaručuje, že celulózová izolace THERMOFLOC vyhovuje nejvyšším evropským nárokům na kvalitu. Dokladem toho je Evropské technické schválení. Celulózou můžeme izolovat v tloušťce od 20 do 500 mm. Zhutnění izolačního materiálu je přitom, podle oblasti použití, od 28 do 60 kg/m3.
                   </p>
                   <div className='flex flex-col gap-2 text-center'>

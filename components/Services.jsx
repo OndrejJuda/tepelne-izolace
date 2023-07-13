@@ -10,8 +10,8 @@ const Services = () => {
       <div className='mx-8 md:mx-16 lg:mx-36 bg-primary-50 rounded-lg overflow-hidden shadow-xl 2xl:flex relative'>
         <div className='p-8 lg:p-20 relative z-10'>
           <div className='mb-10'>
-            <HSecondary additionalStyling='text-3xl sm:text-5xl mb-10 text-center'>
-              Zateplujeme foukanou izolací střechy a stropy nových i starších budov
+            <HSecondary additionalStyling='text-3xl sm:text-5xl mb-10 text-center font-bold'>
+              Moderní řešení pro zateplení střech a stropů: foukaná izolace pro nové i staré budovy
             </HSecondary>
             <div className='text-primary-900 text-lg'>
               <p className='mb-6'>
@@ -50,11 +50,11 @@ const Services = () => {
 
           <div className='flex flex-col justify-center'>
             <HSecondary additionalStyling='text-3xl sm:text-5xl mb-10 text-center font-bold'>
-              Jsme certifikovaná společnost pro aplikaci:
+              Certifikovaní specialisté na aplikaci
             </HSecondary>
             <div className='grid grid-cols-1 sm:grid-cols-2 gap-8 ' >
               <div className='bg-white rounded-lg  shadow-xl' >
-                <div className='text-primary-900 p-4 sm:p-8'>
+                <div className='text-primary-900 p-4 sm:p-8 text-xl sm:text-1xl'>
                   <h2 className='text-3xl sm:text-4xl mb-5 text-center font-bold'>
                     KNAUF – SUPAFIL LOFT
                   </h2>
@@ -87,7 +87,7 @@ const Services = () => {
                 </div>
               </div>
               <div className='bg-white rounded-lg shadow-xl'>
-                <div className='text-primary-900 p-4 sm:p-8 '>
+                <div className='text-primary-900 p-4 sm:p-8 text-xl sm:text-1xl'>
                   <h2 className='text-3xl sm:text-4xl mb-4 text-center font-bold'>
                     Izolace THERMOFLOC
                   </h2>

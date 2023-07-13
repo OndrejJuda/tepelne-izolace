@@ -38,7 +38,9 @@ const Benefits = () => {
       />
       <div className='flex flex-col items-center z-10'>
 
-        <HSecondary additionalStyling='text-5xl mt-16 mb-8'>Proč nás?</HSecondary>
+        <HSecondary additionalStyling='text-5xl mt-16 mb-8 text-center md:text-left'>
+          Proč si vybrat naše služby foukané izolace?
+        </HSecondary>
 
         <ul className='grid gap-8 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 mb-16 text-center'>
           {

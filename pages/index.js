@@ -19,7 +19,7 @@ export default function Home() {
         <DemandFormSection />
         {/* <ImageSection sectionName='predvadeci-obrazek' imageUrl='/business/vata.jpg' /> */}
         <Services />
-        {/* <FVE /> */}
+        <FVE />
         <Benefits />
         <Process />
         <Gallery />

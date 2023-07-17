@@ -17,42 +17,42 @@ const FVE = () => {
             </div>
           </div>
           <div className='w-full md:w-2/3 flex flex-col justify-center items-center p-8'>
-              <div>
-                <HSecondary additionalStyling='text-3xl sm:text-5xl mb-10 font-bold text-center'>
-                  Solární ohřev vody s dotací NZÚ
-                </HSecondary>
-              </div>
-              <div className='my-4 text-center'>
-                <HSecondary additionalStyling='text-3xl sm:text-4xl font-bold mb-4'>Přínosy solárního ohřevu vody</HSecondary>
-              </div>
-              <ul className='flex flex-col justify-center'>
-                <li className='flex items-center j mb-2'>
-                  <BsArrowRight className='mr-2' />
-                  <strong style={{ fontSize: '1.2em' }}>Snížení nákladů na ohřev vody a úspora energie.</strong>
-                </li>
-                <li className='flex items-center  mb-2'>
-                  <BsArrowRight className='mr-2' />
-                  <strong style={{ fontSize: '1.2em' }}>Šetrnost k životnímu prostředí - snížení emisí skleníkových plynů.</strong>
-                </li>
-                <li className='flex items-center mb-2'>
-                  <BsArrowRight className='mr-2' />
-                  <strong style={{ fontSize: '1.2em' }}>Zvýšení energetické nezávislosti a snížení závislosti na fosilních palivech.</strong>
-                </li>
-                <li className='flex items-center  mb-2'>
-                  <BsArrowRight className='mr-2' />
-                  <strong style={{ fontSize: '1.2em' }}>Dlouhá životnost solárních kolektorů a nízké náklady na údržbu.</strong>
-                </li>
-                <li className='flex items-center  mb-8'>
-                  <BsArrowRight className='mr-2' />
-                  <strong style={{ fontSize: '1.2em' }}>Podpora státních dotací a pobídek pro solární technologie.</strong>
-                </li>
-              </ul>
-              <div className='text-center'>
-                <h3 className='text-3xl font-bold mb-4 bg-green-400 p-2 rounded-lg'>Celá sestava po odečtení dotace stojí pouze 1Kč</h3>
-              </div>
-              <div className='flex justify-center'>
-                <CTAButtonArrowDP>Zjistit více</CTAButtonArrowDP>
-              </div>
+            <div>
+              <HSecondary additionalStyling='text-3xl sm:text-5xl mb-10 font-bold text-center'>
+                Solární ohřev vody s dotací NZÚ
+              </HSecondary>
+            </div>
+            <div className='my-4 text-center'>
+              <HSecondary additionalStyling='text-3xl sm:text-4xl font-bold mb-4'>Přínosy solárního ohřevu vody</HSecondary>
+            </div>
+            <ul className='flex flex-col justify-center'>
+              <li className='flex items-center j mb-2'>
+                <BsArrowRight className='mr-2' />
+                <strong style={{ fontSize: '1.2em' }}>Snížení nákladů na ohřev vody a úspora energie.</strong>
+              </li>
+              <li className='flex items-center  mb-2'>
+                <BsArrowRight className='mr-2' />
+                <strong style={{ fontSize: '1.2em' }}>Šetrnost k životnímu prostředí - snížení emisí skleníkových plynů.</strong>
+              </li>
+              <li className='flex items-center mb-2'>
+                <BsArrowRight className='mr-2' />
+                <strong style={{ fontSize: '1.2em' }}>Zvýšení energetické nezávislosti a snížení závislosti na fosilních palivech.</strong>
+              </li>
+              <li className='flex items-center  mb-2'>
+                <BsArrowRight className='mr-2' />
+                <strong style={{ fontSize: '1.2em' }}>Dlouhá životnost solárních kolektorů a nízké náklady na údržbu.</strong>
+              </li>
+              <li className='flex items-center  mb-8'>
+                <BsArrowRight className='mr-2' />
+                <strong style={{ fontSize: '1.2em' }}>Podpora státních dotací a pobídek pro solární technologie.</strong>
+              </li>
+            </ul>
+            <div className='text-center'>
+              <h3 className='text-3xl font-bold mb-4 bg-green-400 p-2 rounded-lg'>Celá sestava po odečtení dotace stojí pouze 1Kč</h3>
+            </div>
+            <div className='flex justify-center'>
+              <CTAButtonArrowDP>Zjistit více</CTAButtonArrowDP>
+            </div>
           </div>
         </div>
       </div>

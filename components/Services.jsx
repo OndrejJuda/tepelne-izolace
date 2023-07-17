@@ -14,7 +14,7 @@ const Services = () => {
               <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <dl className=" space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-3 lg:gap-x-8">
                   <div className="flex">
-                    <img src="/favicon/tick.svg" alt="Icon" className="flex-shrink-0 w-8 h-8 dark:text-violet-400" />
+                    <img src="/favicon/tick.svg" alt="Icon" className="flex-shrink-0 w-8 h-8" />
                     <div className="ml-3">
                       <dt className="text-xl font-medium">Výhody minerální foukané izolace</dt>
                       <p className="mb-6 text-lg">
@@ -23,7 +23,7 @@ const Services = () => {
                     </div>
                   </div>
                   <div className="flex">
-                    <img src="/favicon/tick.svg" alt="Icon" className="flex-shrink-0 w-8 h-8 dark:text-violet-400" />
+                    <img src="/favicon/tick.svg" alt="Icon" className="flex-shrink-0 w-8 h-8" />
                     <div className="ml-3">
                       <dt className="text-xl font-medium">Snadná a flexibilní instalace izolace</dt>
                       <p className="mb-6 text-lg">
@@ -32,7 +32,7 @@ const Services = () => {
                     </div>
                   </div>
                   <div className="flex">
-                    <img src="/favicon/tick.svg" alt="Icon" className="flex-shrink-0 w-8 h-8 dark:text-violet-400" />
+                    <img src="/favicon/tick.svg" alt="Icon" className="flex-shrink-0 w-8 h-8 " />
                     <div className="ml-3">
                       <dt className="text-xl font-medium">Vysoká úroveň zvukové izolace</dt>
                       <p className="mb-6 text-lg">
@@ -41,7 +41,7 @@ const Services = () => {
                     </div>
                   </div>
                   <div className="flex">
-                    <img src="/favicon/tick.svg" alt="Icon" className="flex-shrink-0 w-8 h-8 dark:text-violet-400" />
+                    <img src="/favicon/tick.svg" alt="Icon" className="flex-shrink-0 w-8 h-8" />
                     <div className="ml-3">
                       <dt className="text-xl font-medium">Odolnost vůči plísním, hmyzu a škůdcům</dt>
                       <p className="mb-6 text-lg">
@@ -50,7 +50,7 @@ const Services = () => {
                     </div>
                   </div>
                   <div className="flex">
-                    <img src="/favicon/tick.svg" alt="Icon" className="flex-shrink-0 w-8 h-8 dark:text-violet-400" />
+                    <img src="/favicon/tick.svg" alt="Icon" className="flex-shrink-0 w-8 h-8" />
                     <div className="ml-3">
                       <dt className="text-xl font-medium">Popularita minerální foukané izolace</dt>
                       <p className="mb-6 text-lg">
@@ -59,7 +59,7 @@ const Services = () => {
                     </div>
                   </div>
                   <div className="flex">
-                    <img src="/favicon/tick.svg" alt=" Icon" className="flex-shrink-0 w-8 h-8 dark:text-violet-400" />
+                    <img src="/favicon/tick.svg" alt=" Icon" className="flex-shrink-0 w-8 h-8" />
                     <div className="ml-3">
                       <dt className="text-xl font-medium">Ekologická volba s mnoha výhodami</dt>
                       <p className="mb-6 text-lg">
@@ -105,6 +105,26 @@ const Services = () => {
                   <p className='mt-6 sm:mt-8 text-center'>
                     Pro splnění podmínek dotace NZÚ Light je potřeba zateplit vrstvou o minimální tloušťce 30 centimetrů a hustotou alespoň 16 kg/m3.
                   </p>
+                  <div className='grid grid-cols-1 sm:grid-cols-2 gap-8'>
+                    <div className='bg-white rounded-lg shadow-xl'>
+                      <div className='text-primary-900 p-4 sm:p-8 text-lg sm:text-xl'>
+                        <img
+                          src='/business/knauf_cert.png'
+                          alt='knauf_cert'
+                          className='w-full h-auto rounded-md mb-4'
+                        />
+                      </div>
+                    </div>
+                    <div className='bg-white rounded-lg shadow-xl'>
+                      <div className='text-primary-900 p-4 sm:p-8 text-lg sm:text-xl'>
+                        <img
+                          src='/business/knauf_cert2.png'
+                          alt='knauf_cert2'
+                          className='w-full h-auto rounded-md mb-4'
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className='bg-white rounded-lg shadow-xl'>
@@ -135,13 +155,33 @@ const Services = () => {
                   <p className='mt-6 sm:mt-8 text-center'>
                     Pro splnění podmínek dotace NZÚ Light je potřeba zateplit vrstvou o minimální tloušťce 30 centimetrů a hustotou alespoň 28 kg/m3.
                   </p>
+                  <div className='grid grid-cols-1 sm:grid-cols-2 gap-8'>
+                    <div className='bg-white rounded-lg shadow-xl'>
+                      <div className='text-primary-900 p-4 sm:p-8 text-lg sm:text-xl'>
+                        <img
+                          src='/business/thermofloc_cert.png'
+                          alt='thermofloc_cert'
+                          className='w-full h-auto rounded-md mb-4'
+                        />
+                      </div>
+                    </div>
+                    <div className='bg-white rounded-lg shadow-xl'>
+                      <div className='text-primary-900 p-4 sm:p-8 text-lg sm:text-xl'>
+                        <img
+                          src='/business/thermofloc_cetr2.png'
+                          alt='thermofloc_cetr2'
+                          className='w-full h-auto rounded-md mb-4'
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </SectionWrapper>
+    </SectionWrapper >
   );
 };
 

@@ -105,6 +105,26 @@ const Services = () => {
                   <p className='mt-6 sm:mt-8 text-center'>
                     Pro splnění podmínek dotace NZÚ Light je potřeba zateplit vrstvou o minimální tloušťce 30 centimetrů a hustotou alespoň 16 kg/m3.
                   </p>
+                  <div className='grid grid-cols-1 sm:grid-cols-2 gap-8'>
+                    <div className='bg-white rounded-lg shadow-xl'>
+                      <div className='text-primary-900 p-4 sm:p-8 text-lg sm:text-xl'>
+                        <img
+                          src='/business/knauf_cert.png'
+                          alt='knauf_cert'
+                          className='w-full h-auto rounded-md mb-4'
+                        />
+                      </div>
+                    </div>
+                    <div className='bg-white rounded-lg shadow-xl'>
+                      <div className='text-primary-900 p-4 sm:p-8 text-lg sm:text-xl'>
+                        <img
+                          src='/business/knauf_cert2.png'
+                          alt='knauf_cert2'
+                          className='w-full h-auto rounded-md mb-4'
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className='bg-white rounded-lg shadow-xl'>
@@ -135,13 +155,33 @@ const Services = () => {
                   <p className='mt-6 sm:mt-8 text-center'>
                     Pro splnění podmínek dotace NZÚ Light je potřeba zateplit vrstvou o minimální tloušťce 30 centimetrů a hustotou alespoň 28 kg/m3.
                   </p>
+                  <div className='grid grid-cols-1 sm:grid-cols-2 gap-8'>
+                    <div className='bg-white rounded-lg shadow-xl'>
+                      <div className='text-primary-900 p-4 sm:p-8 text-lg sm:text-xl'>
+                        <img
+                          src='/business/thermofloc_cert.png'
+                          alt='thermofloc_cert'
+                          className='w-full h-auto rounded-md mb-4'
+                        />
+                      </div>
+                    </div>
+                    <div className='bg-white rounded-lg shadow-xl'>
+                      <div className='text-primary-900 p-4 sm:p-8 text-lg sm:text-xl'>
+                        <img
+                          src='/business/thermofloc_cetr2.png'
+                          alt='thermofloc_cetr2'
+                          className='w-full h-auto rounded-md mb-4'
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </SectionWrapper>
+    </SectionWrapper >
   );
 };
 

@@ -31,7 +31,7 @@ const FVE = () => {
         <img
           src='/business/fve_zoomed.png'
           alt='house'
-          className='object-cover object-center h-full w-full'
+          className='object-cover object-center h-full w-full rounded-tr-lg rounded-br-lg'
         />
       </div>
     </SectionWrapper >

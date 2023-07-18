@@ -15,7 +15,7 @@ const Process = () => {
       id='proces'
       innerDivStyle='flex flex-col justify-center items-center mx-8 md:mx-16 lg:mx-36 w-screen'
     >
-      <HSecondary additionalStyling='text-4xl md:text-5xl mb-32 text-center font-bold'>Náš proces: Jak vám poskytneme nejlepší služby v oblasti foukané izolace</HSecondary>
+      <HSecondary additionalStyling='text-4xl sm:text-6xl my-12 mb-12 text-center font-bold'>Náš proces: Jak vám poskytneme nejlepší služby v oblasti foukané izolace</HSecondary>
 
       <ul className='flex flex-col gap-24 xl:gap-16 mb-16 xl:mb-32'>
         {

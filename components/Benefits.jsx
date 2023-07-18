@@ -31,13 +31,8 @@ const Benefits = () => {
       id='benefity'
       innerDivStyle='mx-8 md:mx-16 lg:mx-36 bg-primary-50 rounded-lg overflow-hidden shadow-xl'
     >
-      <img
-        src='/logo/logo-one-color.svg'
-        alt='logo'
-        className='absolute right-[50%] top-0 scale-125 opacity-5'
-      />
       <div className='flex flex-col items-center z-10 mb-6'>
-        <HSecondary additionalStyling='text-5xl mt-16 mb-8 text-center md:text-left font-bold text-center '>
+        <HSecondary additionalStyling='text-4xl sm:text-6xl my-12 mb-12 text-center font-bold'>
           Proč si vybrat naše služby foukané izolace?
         </HSecondary>
         <div className="container mx-auto grid justify-center gap-8 sm:grid-cols-2 lg:grid-cols-4 text-center">

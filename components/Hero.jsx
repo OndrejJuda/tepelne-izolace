@@ -21,13 +21,13 @@ const Hero = () => {
         </div>
 
         <h1 className='text-5xl sm:text-5xl md:text-6xl font-bold text-primary-white mb-8 sm:mb-16'>
-        Zvyšte komfort a účinnost vašeho domova s naší foukanou izolací a získejte dotaci od NZÚ
+          Zvyšte komfort a účinnost vašeho domova s naší foukanou izolací a získejte dotaci od NZÚ
         </h1>
 
         <p className='text-2xl sm:text-3xl md:text-4xl text-primary-white max-w-[1200px] mb-16'>
-        Zažijte úsporu až 30% s našimi službami foukané izolace.<br></br> 
-        Zajistíme vše od realizace po žádosti o dotace. <br></br>
-        Můžete dokonce žádat o dotace před samotnou realizací. Užijte si rovnoměrně izolovaný prostor bez tepelných mostů.
+          Zažijte úsporu až 30% s našimi službami foukané izolace.<br></br>
+          Zajistíme vše od realizace po žádosti o dotace. <br></br>
+          Můžete dokonce žádat o dotace před samotnou realizací. Užijte si rovnoměrně izolovaný prostor bez tepelných mostů.
         </p>
 
         <div className='lg:hidden flex flex-col items-center gap-4 bg-primary-100 shadow-sm py-6 px-6 rounded-xl'>

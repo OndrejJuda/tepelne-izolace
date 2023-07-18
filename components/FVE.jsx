@@ -4,59 +4,37 @@ import { BsArrowRight } from 'react-icons/bs';
 
 const FVE = () => {
   return (
-    <SectionWrapper id='fve' innerDivStyle=''>
-      <div className='mx-8 md:mx-16 lg:mx-36 bg-primary-50 rounded-lg overflow-hidden shadow-xl'>
-        <div className='md:flex'>
-          <div className='w-full md:w-1/3 flex justify-center items-center'>
-            <div className='w-full h-full aspect-w-4 aspect-h-3'>
-              <img
-                src='/business/barak_fotovoltaika.png'
-                alt='house'
-                className='object-cover object-center h-full w-full'
-              />
-            </div>
-          </div>
-          <div className='w-full md:w-2/3 flex flex-col justify-center items-center p-8'>
-            <div>
-              <HSecondary additionalStyling='text-3xl sm:text-5xl mb-10 font-bold text-center'>
-                Solární ohřev vody s dotací NZÚ
-              </HSecondary>
-            </div>
-            <div className='my-4 text-center'>
-              <HSecondary additionalStyling='text-3xl sm:text-4xl font-bold mb-4'>Přínosy solárního ohřevu vody</HSecondary>
-            </div>
-            <ul className='flex flex-col justify-center'>
-              <li className='flex items-center j mb-2'>
-                <BsArrowRight className='mr-2' />
-                <strong style={{ fontSize: '1.2em' }}>Snížení nákladů na ohřev vody a úspora energie.</strong>
-              </li>
-              <li className='flex items-center  mb-2'>
-                <BsArrowRight className='mr-2' />
-                <strong style={{ fontSize: '1.2em' }}>Šetrnost k životnímu prostředí - snížení emisí skleníkových plynů.</strong>
-              </li>
-              <li className='flex items-center mb-2'>
-                <BsArrowRight className='mr-2' />
-                <strong style={{ fontSize: '1.2em' }}>Zvýšení energetické nezávislosti a snížení závislosti na fosilních palivech.</strong>
-              </li>
-              <li className='flex items-center  mb-2'>
-                <BsArrowRight className='mr-2' />
-                <strong style={{ fontSize: '1.2em' }}>Dlouhá životnost solárních kolektorů a nízké náklady na údržbu.</strong>
-              </li>
-              <li className='flex items-center  mb-8'>
-                <BsArrowRight className='mr-2' />
-                <strong style={{ fontSize: '1.2em' }}>Podpora státních dotací a pobídek pro solární technologie.</strong>
-              </li>
-            </ul>
-            <div className='text-center'>
-              <h3 className='text-3xl font-bold mb-4 bg-green-400 p-2 rounded-lg'>Celá sestava po odečtení dotace stojí pouze 1Kč</h3>
-            </div>
-            <div className='flex justify-center'>
-              <CTAButtonArrowDP>Zjistit více</CTAButtonArrowDP>
-            </div>
+    <SectionWrapper id='fve' innerDivStyle='flex flex-col justify-center bg-primary-50 rounded-lg items-center mx-8 md:mx-16 lg:mx-36 w-screen sm:grid sm:grid-cols-2 shadow-xl'>
+      <div className="p-8 md:p-12 lg:px-16 lg:py-24">
+        <div
+          className="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right"
+        >
+          <h2 className="text-4xl sm:text-6xl mb-10 text-center font-bold">
+            Solární ohřev vody
+          </h2>
+
+          <p className="text-m sm:text-l">
+            Máte jedinečnou příležitost získat dotaci až 90 000 Kč na instalaci solárního ohřevu vody. Ušetřete na energiích, chraňte planetu a užívejte si teplou vodu díky slunci. Tato nabídka je omezená, tak neváhejte. Investujte do své budoucnosti a budoucnosti naší planety. Pro více informací nás kontaktujte.
+          </p>
+
+          <div className="mt-4 md:mt-8">
+            <a
+              href='https://www.damepanely.cz/'
+              class="inline-block rounded-full bg-green-500 px-6 pb-2 pt-2.5 text-xl font-bold leading-normal text-white shadow-md transition duration-150 ease-in-out hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg dark:shadow-md dark:hover:shadow-lg dark:focus:shadow-lg dark:active:shadow-lg"
+            >
+              Získejte solární ohřev za symbolickou korunu!
+            </a>
           </div>
         </div>
       </div>
-    </SectionWrapper>
+      <div className='w-full h-full aspect-w-4 aspect-h-3'>
+        <img
+          src='/business/fve_zoomed.png'
+          alt='house'
+          className='object-cover object-center h-full w-full'
+        />
+      </div>
+    </SectionWrapper >
   );
 };
 

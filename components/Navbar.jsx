@@ -61,7 +61,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className={`hidden lg:flex justify-end mr-4 xl:mr-8 sticky top-[2.25rem] 2xl:top-12 -mt-16 z-50
+      <div className={`hidden lg:flex justify-end mr-4 xl:mr-8 sticky top-[2.25rem] 2xl:top-10 -mt-16 z-50
           transition ${isOnTop ? '' : 'translate-x-[-2%] xl:translate-x-[-3%] 2xl:translate-x-[-4%]'}`}>
         <nav className={`bg-primary-25 py-4 px-12 lg:px-6 xl:px-12 rounded-full shadow-lg relative`}>
           <Link href='/'>
@@ -82,18 +82,18 @@ const Navbar = () => {
               links.map(({ href, title, cta }) => (
                 <li
                   key={href}
-                  className={`${cta ? 'text-primary-800 font-bold' : 'text-primary-700'} text-xl lg:text-lg xl:text-xl font-semibold group relative overflow-hidden`}
+                  className={`${cta ? 'text-primary-800 font-bold' : 'text-primary-700'} text-xl lg:text-lg xl:text-xl font-semibold group relative overflow-hidden scale-100 hover:scale-110 ease-in duration-200`}
                 >
                   <Link href={href}>
                     {title}
                   </Link>
-                  <div className='w-full h-[2px] bg-primary-700 -translate-x-[105%] group-hover:translate-x-0 transition' />
+                  <div className='w-full h-[2px] bg-black -translate-x-[105%] group-hover:translate-x-0 transition' />
                 </li>
               ))
             }
           </ul>
         </nav>
-      </div>
+      </div >
 
       <div className='w-screen flex justify-end lg:hidden fixed top-4 left-0 z-50'>
 

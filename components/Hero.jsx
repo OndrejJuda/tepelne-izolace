@@ -38,7 +38,7 @@ const Hero = () => {
 
         <div className='hidden lg:flex items-center gap-8 bg-primary-100 shadow-sm rounded-xl pr-8'>
           <div className='scale-110'>
-            <CTAButton>Začněte šetřit dnes - pošlete nezávaznou poptávku!</CTAButton>
+            <CTAButton>Začněte šetřit dnes </CTAButton>
           </div>
           <a href={`mailto:${email}`} className='text-xl font-semibold text-primary-900'>{email}</a>
           <a href={`tel:${phone.replaceAll(' ', '')}`} className='text-xl font-semibold text-primary-900'>{phone}</a>

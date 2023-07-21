@@ -106,8 +106,8 @@ const Services = () => {
                     Pro splnění podmínek dotace NZÚ Light je potřeba zateplit vrstvou o minimální tloušťce 30 centimetrů a hustotou alespoň 16 kg/m3.
                   </p>
                   <div className='grid grid-cols-1 sm:grid-cols-2 gap-8'>
-                    <div className='bg-white rounded-lg shadow-xl'>
-                      <div className='text-primary-900 p-4 sm:p-8 text-lg sm:text-xl'>
+                    <div className='bg-white rounded-lg shadow-xl '>
+                      <div className='text-primary-900 p-4 sm:p-8 text-lg sm:text-xl scale-100 hover:scale-150'>
                         <img
                           src='/business/knauf_cert.png'
                           alt='knauf_cert'
@@ -115,8 +115,8 @@ const Services = () => {
                         />
                       </div>
                     </div>
-                    <div className='bg-white rounded-lg shadow-xl'>
-                      <div className='text-primary-900 p-4 sm:p-8 text-lg sm:text-xl'>
+                    <div className='bg-white rounded-lg shadow-xl '>
+                      <div className='text-primary-900 p-4 sm:p-8 text-lg sm:text-xl scale-100 hover:scale-150'>
                         <img
                           src='/business/knauf_cert2.png'
                           alt='knauf_cert2'
@@ -156,8 +156,8 @@ const Services = () => {
                     Pro splnění podmínek dotace NZÚ Light je potřeba zateplit vrstvou o minimální tloušťce 30 centimetrů a hustotou alespoň 28 kg/m3.
                   </p>
                   <div className='grid grid-cols-1 sm:grid-cols-2 gap-8'>
-                    <div className='bg-white rounded-lg shadow-xl'>
-                      <div className='text-primary-900 p-4 sm:p-8 text-lg sm:text-xl'>
+                    <div className='bg-white rounded-lg shadow-xl 0'>
+                      <div className='text-primary-900 p-4 sm:p-8 text-lg sm:text-xl scale-100 hover:scale-150 '>
                         <img
                           src='/business/thermofloc_cert.png'
                           alt='thermofloc_cert'
@@ -165,8 +165,8 @@ const Services = () => {
                         />
                       </div>
                     </div>
-                    <div className='bg-white rounded-lg shadow-xl'>
-                      <div className='text-primary-900 p-4 sm:p-8 text-lg sm:text-xl'>
+                    <div className='bg-white rounded-lg shadow-xl '>
+                      <div className='text-primary-900 p-4 sm:p-8 text-lg sm:text-xl scale-100 hover:scale-150'>
                         <img
                           src='/business/thermofloc_cetr2.png'
                           alt='thermofloc_cetr2'

@@ -6,67 +6,68 @@ const Services = () => {
     <SectionWrapper id='sluzby' innerDivStyle=''>
       <div className='mx-8 md:mx-16 lg:mx-36 bg-primary-50 rounded-lg overflow-hidden shadow-xl 2xl:flex relative'>
         <div className='p-8 lg:p-20'>
-          <div className='mb-6'>
-            <h2 className='text-4xl sm:text-6xl mb-10 text-center font-bold'>
+          <div className='mb-16'>
+            <h2 className='text-4xl sm:text-6xl mb-20 text-center font-bold'>
               Moderní řešení pro zateplení střech a stropů: foukaná izolace pro nové i staré budovy
             </h2>
-            <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-              <dl className=" space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-3 lg:gap-x-8">
-                <div className="flex">
-                  <img src="/favicon/tick.svg" alt="tick" className="flex-shrink-0 w-8 h-8" />
-                  <div className="ml-3">
-                    <dt className="text-xl font-medium">Výhody minerální foukané izolace</dt>
-                    <p className="mb-6 text-lg">
+            <div className="mx-auto max-w-9xl sm:px-6 lg:px-8">
+              <div className=" space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-6 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-8">
+                <div className="flex flex-col items-center bg-white  rounded-lg shadow-xl">
+                  <img src="/favicon/tick.png" alt="tick" className="flex-shrink-0 w-20 h-22 mt-6 mb-6" />
+                  <div className="ml-3 mr-3">
+                    <h3 className="text-xl mb-2 font-medium text-center">Výhody minerální foukané izolace</h3>
+                    <p className="mb-6 text-lg text-center">
                       Naše minerální foukaná izolace je zárukou komfortu, energetické efektivity a dlouhé životnosti, což ji činí stále oblíbenější volbou v posledních letech. Tento proces spočívá v foukání drobných částic minerální vlny do stěn, stropů nebo podlah budov, kde se postupně usazují a vytváří efektivní izolační bariéru.
                     </p>
                   </div>
                 </div>
-                <div className="flex">
-                  <img src="/favicon/tick.svg" alt="tick" className="flex-shrink-0 w-8 h-8 " />
-                  <div className="ml-3">
-                    <dt className="text-xl font-medium">Snadná a flexibilní instalace izolace</dt>
-                    <p className="mb-6 text-lg">
+                <div className="flex flex-col items-center rounded-lg bg-white shadow-xl">
+                  <img src="/favicon/tick.png" alt="tick" className="flex-shrink-0 w-20 h-22 mt-6 mb-6" />
+                  <div className="ml-3 mr-3">
+                    <h3 className="text-xl mb-2 font-medium text-center">Snadná a flexibilní instalace izolace</h3>
+                    <p className="mb-6 text-lg text-center">
                       Naše izolace je flexibilní a její instalace je snadná. Aplikace se provádí pomocí foukacího stroje, který dokáže izolaci umístit do nejrůznějších částí budovy. Tento způsob umožňuje izolaci stěn, stropů, podlah a dalších oblastí, které by jinak byly velmi obtížné k izolaci.
                     </p>
                   </div>
                 </div>
-                <div className="flex">
-                  <img src="/favicon/tick.svg" alt="tick" className="flex-shrink-0 w-8 h-8 " />
-                  <div className="ml-3">
-                    <dt className="text-xl font-medium">Vysoká úroveň zvukové izolace</dt>
-                    <p className="mb-6 text-lg">
+                <div className="flex flex-col items-center rounded-lg bg-white shadow-xl">
+                  <img src="/favicon/tick.png" alt="tick" className="flex-shrink-0 w-20 h-22 mt-6 mb-6" />
+                  <div className="ml-3 mr-3">
+                    <h3 className="text-xl mb-2 font-medium text-center">Vysoká úroveň zvukové izolace</h3>
+                    <p className="mb-6 text-lg text-center">
                       Minerální foukaná izolace také poskytuje vysokou úroveň zvukové izolace, která pomáhá snížit hluk v budově. To může být obzvláště užitečné v oblastech s vysokou úrovní hluku, jako jsou silnice, letiště a jiná průmyslová místa.
                     </p>
                   </div>
                 </div>
-                <div className="flex">
-                  <img src="/favicon/tick.svg" alt="tick" className="flex-shrink-0 w-8 h-8 " />
-                  <div className="ml-3">
-                    <dt className="text-xl font-medium">Odolnost vůči plísním, hmyzu a škůdcům</dt>
-                    <p className="mb-6 text-lg">
+                <div className="flex flex-col items-center rounded-lg bg-white shadow-xl">
+                  <img src="/favicon/tick.png" alt="tick" className="flex-shrink-0 w-20 h-22 mt-6 mb-6" />
+                  <div className="ml-3 mr-3">
+                    <h3 className="text-xl mb-2 font-medium text-center">Odolnost vůči plísním, hmyzu a škůdcům</h3>
+                    <p className="mb-6 text-lg text-center">
                       Další výhodou minerální foukané izolace je její odolnost vůči plísním, hmyzu a dalším škůdcům. Používáme nehořlavou, paropropustnou izolaci odolnou proti vodě, což z ní dělá trvanlivou a spolehlivou izolační materiál s dlouhou životností.
                     </p>
                   </div>
                 </div>
-                <div className="flex">
-                  <img src="/favicon/tick.svg" alt="tick" className="flex-shrink-0 w-8 h-8 " />
-                  <div className="ml-3">
-                    <dt className="text-xl font-medium">Popularita minerální foukané izolace</dt>
-                    <p className="mb-6 text-lg">
+                <div className="flex flex-col items-center rounded-lg bg-white shadow-xl">
+                  <img src="/favicon/tick.png" alt="tick" className="flex-shrink-0 w-20 h-22 mt-6 mb-6" />
+                  <div className="ml-3 mr-3">
+                    <h3 className="text-xl mb-2 font-medium text-center">Popularita minerální foukané izolace</h3>
+                    <p className="mb-6 text-lg text-center">
                       Vzhledem k výše uvedeným výhodám se minerální foukaná izolace stává stále populárnější volbou pro ty, kteří hledají účinný a spolehlivý způsob, jak zlepšit tepelnou a zvukovou izolaci svých budov. Tuto izolaci můžete použít v nových domech nebo přidat do starších domů při rekonstrukci.
                     </p>
                   </div>
                 </div>
-                <div className="flex">
-                  <img src="/favicon/tick.svg" alt="tick" className="flex-shrink-0 w-8 h-8" />
-                  <div className="ml-3">
-                    <dt className="text-xl font-medium">Ekologická volba s mnoha výhodami</dt>
-                    <p className="mb-6 text-lg">
-                      Je také ekologickou volbou, protože je vyráběna z recyklovaných materiálů a lze ji snadno recyklovat. Pokud hledáte spolehlivou a účinnou izolační metodu pro svou budovu, minerální foukaná izolace je tou správnou volbou. Naše izolace vám pomůže šetřit energií, snížit hluk, odolávat škůdcům, vydržet dlouho a v létě vás ochránit před horkem.
+                <div class="flex flex-col items-center rounded-lg bg-white shadow-xl">
+                  <img src="/favicon/tick.png" alt="tick" class="flex-shrink-0 w-20 h-22 mt-6 mb-6" />
+                  <div class="ml-3 mr-3">
+                    <h3 class="text-xl mb-2 font-medium text-center">Ekologická volba s mnoha výhodami</h3>
+                    <p class="mb-6 text-lg text-center">
+                      Je také ekologickou volbou, protože je vyráběna z recyklovaných materiálů a lze ji snadno recyklovat. Pokud hledáte spolehlivou a účinnou izolační metodu pro svou budovu, minerální foukaná izolace je tou správnou volbou. Naše izolace vám pomůže šetřit energií, snížit hluk, odolávat škodcům, vydržet dlouho a v létě vás ochránit před horkem.
                     </p>
                   </div>
                 </div>
-              </dl>
+
+              </div>
             </div>
           </div>
           <div className='flex flex-col justify-center'>
@@ -109,7 +110,7 @@ const Services = () => {
                         <img
                           src='/business/knauf_cert.png'
                           alt='knauf_cert'
-                          className='w-full h-auto rounded-md mb-4'
+                          className='w-full h-auto rounded-md mb-4 border border-gray-300'
                         />
                       </div>
                     </div>
@@ -118,7 +119,7 @@ const Services = () => {
                         <img
                           src='/business/knauf_cert2.png'
                           alt='knauf_cert2'
-                          className='w-full h-auto rounded-md mb-4'
+                          className='w-full h-auto rounded-md mb-4 border border-gray-300'
                         />
                       </div>
                     </div>
@@ -159,7 +160,7 @@ const Services = () => {
                         <img
                           src='/business/thermofloc_cert.png'
                           alt='thermofloc_cert'
-                          className='w-full h-auto rounded-md mb-4'
+                          className='w-full h-auto rounded-md mb-4 border border-gray-300'
                         />
                       </div>
                     </div>
@@ -168,7 +169,7 @@ const Services = () => {
                         <img
                           src='/business/thermofloc_cetr2.png'
                           alt='thermofloc_cetr2'
-                          className='w-full h-auto rounded-md mb-4'
+                          className='w-full h-auto rounded-md mb-4 border border-gray-300'
                         />
                       </div>
                     </div>

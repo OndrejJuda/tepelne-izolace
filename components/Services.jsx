@@ -10,7 +10,7 @@ const Services = () => {
             <h2 className='text-4xl sm:text-6xl mb-10 text-center font-bold'>
               Moderní řešení pro zateplení střech a stropů: foukaná izolace pro nové i staré budovy
             </h2>
-            <div className="dark:bg-gray-800 dark:text-gray-100">
+            <div className="">
               <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <dl className=" space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-3 lg:gap-x-8">
                   <div className="flex">

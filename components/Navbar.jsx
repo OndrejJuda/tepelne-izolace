@@ -61,7 +61,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className={`hidden lg:flex justify-end mr-4 xl:mr-8 sticky top-[2.25rem] 2xl:top-10 -mt-16 z-50
+      <div className={`hidden lg:flex justify-end mr-4 xl:mr-8 sticky top-[2.25rem] 2xl:top-4 -mt-16 z-50
           transition ${isOnTop ? '' : 'translate-x-[-2%] xl:translate-x-[-3%] 2xl:translate-x-[-4%]'}`}>
         <nav className={`bg-primary-25 py-4 px-12 lg:px-6 xl:px-12 rounded-full shadow-lg relative`}>
           <Link href='/'>

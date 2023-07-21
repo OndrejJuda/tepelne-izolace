@@ -10,65 +10,63 @@ const Services = () => {
             <h2 className='text-4xl sm:text-6xl mb-10 text-center font-bold'>
               Moderní řešení pro zateplení střech a stropů: foukaná izolace pro nové i staré budovy
             </h2>
-            <div className="">
-              <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-                <dl className=" space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-3 lg:gap-x-8">
-                  <div className="flex">
-                    <img src="/favicon/tick.svg" alt="tick" className="flex-shrink-0 w-8 h-8" />
-                    <div className="ml-3">
-                      <dt className="text-xl font-medium">Výhody minerální foukané izolace</dt>
-                      <p className="mb-6 text-lg">
-                        Naše minerální foukaná izolace je zárukou komfortu, energetické efektivity a dlouhé životnosti, což ji činí stále oblíbenější volbou v posledních letech. Tento proces spočívá v foukání drobných částic minerální vlny do stěn, stropů nebo podlah budov, kde se postupně usazují a vytváří efektivní izolační bariéru.
-                      </p>
-                    </div>
+            <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
+              <dl className=" space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-3 lg:gap-x-8">
+                <div className="flex">
+                  <img src="/favicon/tick.svg" alt="tick" className="flex-shrink-0 w-8 h-8" />
+                  <div className="ml-3">
+                    <dt className="text-xl font-medium">Výhody minerální foukané izolace</dt>
+                    <p className="mb-6 text-lg">
+                      Naše minerální foukaná izolace je zárukou komfortu, energetické efektivity a dlouhé životnosti, což ji činí stále oblíbenější volbou v posledních letech. Tento proces spočívá v foukání drobných částic minerální vlny do stěn, stropů nebo podlah budov, kde se postupně usazují a vytváří efektivní izolační bariéru.
+                    </p>
                   </div>
-                  <div className="flex">
-                    <img src="/favicon/tick.svg" alt="tick" className="flex-shrink-0 w-8 h-8 " />
-                    <div className="ml-3">
-                      <dt className="text-xl font-medium">Snadná a flexibilní instalace izolace</dt>
-                      <p className="mb-6 text-lg">
-                        Naše izolace je flexibilní a její instalace je snadná. Aplikace se provádí pomocí foukacího stroje, který dokáže izolaci umístit do nejrůznějších částí budovy. Tento způsob umožňuje izolaci stěn, stropů, podlah a dalších oblastí, které by jinak byly velmi obtížné k izolaci.
-                      </p>
-                    </div>
+                </div>
+                <div className="flex">
+                  <img src="/favicon/tick.svg" alt="tick" className="flex-shrink-0 w-8 h-8 " />
+                  <div className="ml-3">
+                    <dt className="text-xl font-medium">Snadná a flexibilní instalace izolace</dt>
+                    <p className="mb-6 text-lg">
+                      Naše izolace je flexibilní a její instalace je snadná. Aplikace se provádí pomocí foukacího stroje, který dokáže izolaci umístit do nejrůznějších částí budovy. Tento způsob umožňuje izolaci stěn, stropů, podlah a dalších oblastí, které by jinak byly velmi obtížné k izolaci.
+                    </p>
                   </div>
-                  <div className="flex">
-                    <img src="/favicon/tick.svg" alt="tick" className="flex-shrink-0 w-8 h-8 " />
-                    <div className="ml-3">
-                      <dt className="text-xl font-medium">Vysoká úroveň zvukové izolace</dt>
-                      <p className="mb-6 text-lg">
-                        Minerální foukaná izolace také poskytuje vysokou úroveň zvukové izolace, která pomáhá snížit hluk v budově. To může být obzvláště užitečné v oblastech s vysokou úrovní hluku, jako jsou silnice, letiště a jiná průmyslová místa.
-                      </p>
-                    </div>
+                </div>
+                <div className="flex">
+                  <img src="/favicon/tick.svg" alt="tick" className="flex-shrink-0 w-8 h-8 " />
+                  <div className="ml-3">
+                    <dt className="text-xl font-medium">Vysoká úroveň zvukové izolace</dt>
+                    <p className="mb-6 text-lg">
+                      Minerální foukaná izolace také poskytuje vysokou úroveň zvukové izolace, která pomáhá snížit hluk v budově. To může být obzvláště užitečné v oblastech s vysokou úrovní hluku, jako jsou silnice, letiště a jiná průmyslová místa.
+                    </p>
                   </div>
-                  <div className="flex">
-                    <img src="/favicon/tick.svg" alt="tick" className="flex-shrink-0 w-8 h-8 " />
-                    <div className="ml-3">
-                      <dt className="text-xl font-medium">Odolnost vůči plísním, hmyzu a škůdcům</dt>
-                      <p className="mb-6 text-lg">
-                        Další výhodou minerální foukané izolace je její odolnost vůči plísním, hmyzu a dalším škůdcům. Používáme nehořlavou, paropropustnou izolaci odolnou proti vodě, což z ní dělá trvanlivou a spolehlivou izolační materiál s dlouhou životností.
-                      </p>
-                    </div>
+                </div>
+                <div className="flex">
+                  <img src="/favicon/tick.svg" alt="tick" className="flex-shrink-0 w-8 h-8 " />
+                  <div className="ml-3">
+                    <dt className="text-xl font-medium">Odolnost vůči plísním, hmyzu a škůdcům</dt>
+                    <p className="mb-6 text-lg">
+                      Další výhodou minerální foukané izolace je její odolnost vůči plísním, hmyzu a dalším škůdcům. Používáme nehořlavou, paropropustnou izolaci odolnou proti vodě, což z ní dělá trvanlivou a spolehlivou izolační materiál s dlouhou životností.
+                    </p>
                   </div>
-                  <div className="flex">
-                    <img src="/favicon/tick.svg" alt="tick" className="flex-shrink-0 w-8 h-8 " />
-                    <div className="ml-3">
-                      <dt className="text-xl font-medium">Popularita minerální foukané izolace</dt>
-                      <p className="mb-6 text-lg">
-                        Vzhledem k výše uvedeným výhodám se minerální foukaná izolace stává stále populárnější volbou pro ty, kteří hledají účinný a spolehlivý způsob, jak zlepšit tepelnou a zvukovou izolaci svých budov. Tuto izolaci můžete použít v nových domech nebo přidat do starších domů při rekonstrukci.
-                      </p>
-                    </div>
+                </div>
+                <div className="flex">
+                  <img src="/favicon/tick.svg" alt="tick" className="flex-shrink-0 w-8 h-8 " />
+                  <div className="ml-3">
+                    <dt className="text-xl font-medium">Popularita minerální foukané izolace</dt>
+                    <p className="mb-6 text-lg">
+                      Vzhledem k výše uvedeným výhodám se minerální foukaná izolace stává stále populárnější volbou pro ty, kteří hledají účinný a spolehlivý způsob, jak zlepšit tepelnou a zvukovou izolaci svých budov. Tuto izolaci můžete použít v nových domech nebo přidat do starších domů při rekonstrukci.
+                    </p>
                   </div>
-                  <div className="flex">
-                    <img src="/favicon/tick.svg" alt="tick" className="flex-shrink-0 w-8 h-8" />
-                    <div className="ml-3">
-                      <dt className="text-xl font-medium">Ekologická volba s mnoha výhodami</dt>
-                      <p className="mb-6 text-lg">
-                        Je také ekologickou volbou, protože je vyráběna z recyklovaných materiálů a lze ji snadno recyklovat. Pokud hledáte spolehlivou a účinnou izolační metodu pro svou budovu, minerální foukaná izolace je tou správnou volbou. Naše izolace vám pomůže šetřit energií, snížit hluk, odolávat škůdcům, vydržet dlouho a v létě vás ochránit před horkem.
-                      </p>
-                    </div>
+                </div>
+                <div className="flex">
+                  <img src="/favicon/tick.svg" alt="tick" className="flex-shrink-0 w-8 h-8" />
+                  <div className="ml-3">
+                    <dt className="text-xl font-medium">Ekologická volba s mnoha výhodami</dt>
+                    <p className="mb-6 text-lg">
+                      Je také ekologickou volbou, protože je vyráběna z recyklovaných materiálů a lze ji snadno recyklovat. Pokud hledáte spolehlivou a účinnou izolační metodu pro svou budovu, minerální foukaná izolace je tou správnou volbou. Naše izolace vám pomůže šetřit energií, snížit hluk, odolávat škůdcům, vydržet dlouho a v létě vás ochránit před horkem.
+                    </p>
                   </div>
-                </dl>
-              </div>
+                </div>
+              </dl>
             </div>
           </div>
           <div className='flex flex-col justify-center'>

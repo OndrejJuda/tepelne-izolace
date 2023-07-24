@@ -16,7 +16,7 @@ const DemandFormSection = () => {
       innerDivStyle='bg-primary-50 lg:flex rounded-lg overflow-hidden shadow-xl mx-8 md:mx-16 lg:mx-36 w-full'
     >
       <img
-        src='/business/house.jpg'
+        src='/business/house.png'
         alt='house'
         className='w-full h-[400px] lg:h-auto lg:w-[400px] object-cover'
       />

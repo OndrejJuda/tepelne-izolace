@@ -1,5 +1,5 @@
 import React from 'react';
-import { CTAButtonArrowDP, HSecondary, SectionWrapper } from './';
+import { CTAButtonArrowDP, HSecondary, SectionWrapper, CTAButton } from './';
 import { BsArrowRight } from 'react-icons/bs';
 import Link from 'next/link';
 

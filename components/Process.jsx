@@ -1,5 +1,5 @@
 import React from 'react';
-import { CTAButton, HSecondary, SectionWrapper } from './';
+import { HSecondary, SectionWrapper } from './';
 
 const processSteps = [
   { image: '/business/first-contact.jpg', title: 'Osobní návštěva – konzultace', descripton: 'Náš odborník se podívá na váš dům a poradí, jaký materiál a jakou tloušťku izolace použít. Detailně Vám vysvětlí proces zakázky a průběh dotace.' },
@@ -52,7 +52,6 @@ const Process = () => {
           ))
         }
       </ul>
-      <CTAButton>Začněte šetřit dnes - pošlete nezávaznou poptávku!</CTAButton>
     </SectionWrapper>
   );
 };

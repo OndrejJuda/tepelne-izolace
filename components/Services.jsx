@@ -1,5 +1,5 @@
 import React from 'react';
-import { HSecondary, SectionWrapper } from './';
+import { HSecondary, SectionWrapper, CTAButton } from './';
 import Link from 'next/link';
 
 const Services = () => {
@@ -90,7 +90,7 @@ const Services = () => {
                   </p>
                   <div className='flex flex-col gap-2'>
                     <p className='font-bold text-center'>Výhody zateplovacího materiálu:</p>
-                    <ul className='list-disc list-inside text-lg'>
+                    <ul className='list-disc marker:text-blue-600 list-outside pl-5 text-lg'>
                       <li>Nízká hmotnost aplikovaného materiálu</li>
                       <li>Přirozeně nehořlavý - třída reakce na oheň A1</li>
                       <li>Lambda 0,039 při objemové hmotnosti 16 kg/m3</li>
@@ -141,7 +141,7 @@ const Services = () => {
                   </p>
                   <div className='flex flex-col gap-2 '>
                     <p className='font-bold text-center'>Výhody zateplovacího materiálu:</p>
-                    <ul className='list-disc list-inside text-lg '>
+                    <ul className='list-disc marker:text-orange-600 list-outside pl-5 text-lg '>
                       <li>Nejlepší ochrana proti přehřívání konstrukce v létě</li>
                       <li>Nižší pořizovací cena</li>
                       <li>Lambda 0,037 při montážní hustotě 28 - 47 kg/m3</li>
@@ -190,10 +190,10 @@ const Services = () => {
               />
             </Link>
           </div>
-          <h2 className="text-4xl sm:text-6xl my-8 text-center font-bold">
+          <h2 className="text-4xl sm:text-6xl my-8 mb-12 text-center font-bold">
             Zateplení fasád pro rodinné domy
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-xl">
+          <div className="grid grid-cols-1  sm:grid-cols-2 my-6 gap-8 text-xl">
             <div className="border-l-4 border-orange-600 pl-4 text-justify">
               <strong>Zateplení fasády</strong>  efektivně bojuje proti ztrátám tepla, může je snížit až o polovinu. Pokud je zateplení domu správně provedeno, může výrazně snížit spotřebu energie a zároveň poskytnout ochranu fasádě. Dalším plusem je, že díky zateplení můžete dosáhnout lepšího akustického pohodlí po celý rok.
             </div>
@@ -205,12 +205,12 @@ const Services = () => {
               </Link>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-xl">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-xl mb-4">
             <div className='my-4'>
               <img
                 src='/business/izolace_fasady.jpg'
                 alt='izolacefasady'
-                className='object-cover object-center h-full w-full md:w-full rounded-tr-lg rounded-br-lg'
+                className='object-cover object-center h-full w-full md:w-full rounded-lg'
               />
             </div>
             <div className="my-4">
@@ -218,9 +218,9 @@ const Services = () => {
                 Kvalitním zateplením fasády zajistíte dlouhodobou ochranu domu proti vodě z deště, mrazu a slunečnímu světlu, což zamezuje přehřívání během letních měsíců. Tepelná izolace udržuje chlad mimo domov a zvyšuje schopnost stěny akumulovat teplo během zimy, což vede k lepší tepelné pohodě a snižuje chladné vedení ze stěn.
               </p>
               <p className="my-2 font-bold">
-                Cena je odvislá od:
+                Cena se odvíjí od:
               </p>
-              <ul className='list-disc list-inside'>
+              <ul className='list-disc marker:text-orange-600 list-outside pl-5'>
                 <li>Volby typu zateplovacího materiálu</li>
                 <li>Druhu budovy, která se má zateplit</li>
                 <li>Aplikačních podmínek při montáži</li>
@@ -228,7 +228,7 @@ const Services = () => {
               <p className="my-2 font-bold">
                 Důležité vlastnosti:
               </p>
-              <ul className='list-disc list-inside'>
+              <ul className='list-disc marker:text-orange-600 list-outside pl-5'>
                 <li>Tepelná a zvuková izolace</li>
                 <li>Redukce tepelných ztrát</li>
                 <li>Snadnější dosažení tepelného komfortu</li>
@@ -236,6 +236,36 @@ const Services = () => {
                 <li>Ekologické a zdravotně bezpečné složení</li>
                 <li>Prodloužení životnosti fasády</li>
               </ul>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-xl text-justify">
+            <div className='my-4'>
+              <h3 className='border-l-4 border-primary-nzuzelena pl-4 font-bold text-3xl sm:text-4xl mb-4'>Dotace</h3>
+              <h4 className='font-bold text-xl sm:text-2xl mb-2'>Kolik získáte?</h4>
+              <p className='font-bold sm:text-xl text-primary-nzuzelena mb-2 '>Až 150 000 Kč (6 000 Kč/běžný metr)</p>
+              <ul className='list-disc list-outside font-bold mb-2 pl-5'>
+                <li>Finanční prostředky můžete čerpat předem – zálohou</li>
+              </ul>
+              <h4 className='font-bold text-xl sm:text-2xl mb-2 '>Kdo může žádat?</h4>
+              <ul className='list-disc list-outside font-bold mb-6  pl-5'>
+                <li>Vlastníci nebo spoluvlastníci rodinného domu, ve kterém jsou trvale hlášeni déle než od 12. září 2022</li>
+                <li>Vlastníci nebo spoluvlastníci trvale obývané stavby pro rodinnou rekreaci, ve které jsou trvale hlášeni déle než od 12. září 2022 </li>
+              </ul>
+              <p className='border-l-4 border-primary-nzuzelena pl-4 mb-10'><span className='font-bold'>PODMÍNKA!</span> Žadatel a všichni členové jeho domácnosti pobírají ke dni podání žádosti o dotaci starobní důchod nebo invalidní důchod 3. stupně, nebo v období mezi 12. 9. 2022 a dnem podání žádosti pobírali příspěvek na bydlení.</p>
+              <div className="flex justify-center items-center">
+                <Link
+                  href='https://novazelenausporam.cz/nzu-light/'
+                  className="inline-block rounded-full bg-green-500 px-6 py-2.5 text-xl font-bold leading-normal text-white text-center shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg scale-100 hover:scale-110 duration-200">
+                  Zjistit více o dotacích
+                </Link>
+              </div>
+            </div>
+            <div className='my-4'>
+              <img
+                src='/business/donation.jpg'
+                alt='dotace'
+                className='object-cover object-center h-full w-full md:w-full rounded-lg '
+              />
             </div>
           </div>
         </div>

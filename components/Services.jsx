@@ -1,5 +1,6 @@
 import React from 'react';
 import { HSecondary, SectionWrapper } from './';
+import Link from 'next/link';
 
 const Services = () => {
   return (
@@ -181,13 +182,13 @@ const Services = () => {
             <div className="mb-10 text-4xl font-bold text-center">
               Jsme specialisté <span className="text-primary-nzumodra">Nové</span> <span className="text-primary-nzuzelena">zelené</span> <span className="text-primary-nzuzluta">úsporám</span>
             </div>
-            <a href='https://novazelenausporam.cz/specialista/14368' className='flex justify-center items-center w-full scale-100 hover:scale-110 duration-200 '>
+            <Link href='https://novazelenausporam.cz/specialista/14368' className='flex justify-center items-center w-full scale-100 hover:scale-110 duration-200 '>
               <img
                 src='/favicon/nzu-dlouhe.png'
                 alt='nzu-dlouhe'
                 className='object-cover object-center w-full md:h-1/2 md:w-1/2 rounded-tr-lg rounded-br-lg'
               />
-            </a>
+            </Link>
           </div>
           <h2 className="text-4xl sm:text-6xl my-8 text-center font-bold">
             Zateplení fasád pro rodinné domy
@@ -197,11 +198,11 @@ const Services = () => {
               <strong>Zateplení fasády</strong>  efektivně bojuje proti ztrátám tepla, může je snížit až o polovinu. Pokud je zateplení domu správně provedeno, může výrazně snížit spotřebu energie a zároveň poskytnout ochranu fasádě. Dalším plusem je, že díky zateplení můžete dosáhnout lepšího akustického pohodlí po celý rok.
             </div>
             <div className="flex justify-center items-center">
-              <a
+              <Link
                 href='/#poptavka'
                 className="inline-block rounded-full bg-green-500 px-6 py-2.5 text-xl font-bold leading-normal text-white text-center shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg scale-100 hover:scale-110 duration-200">
                 Začněte šetřit na vytápění! Zateplit nyní.
-              </a>
+              </Link>
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-xl">

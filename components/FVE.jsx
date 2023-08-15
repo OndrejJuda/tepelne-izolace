@@ -1,6 +1,7 @@
 import React from 'react';
 import { CTAButtonArrowDP, HSecondary, SectionWrapper } from './';
 import { BsArrowRight } from 'react-icons/bs';
+import Link from 'next/link';
 
 const FVE = () => {
   return (
@@ -18,12 +19,12 @@ const FVE = () => {
           </p>
 
           <div className="mt-4 md:mt-8">
-            <a
+            <Link
               href='https://www.damepanely.cz/'
               className="inline-block rounded-full bg-green-500 px-6 pb-2.5 pt-2.5 text-xl font-bold leading-normal text-white shadow-md transition ease-in-out hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg scale-100 hover:scale-110 duration-200"
             >
               Získejte solární ohřev za symbolickou korunu!
-            </a>
+            </Link>
           </div>
         </div>
       </div>

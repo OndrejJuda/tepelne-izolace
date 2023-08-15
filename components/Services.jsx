@@ -191,7 +191,7 @@ const Services = () => {
             </Link>
           </div>
           <h2 className="text-4xl sm:text-6xl my-8 mb-12 text-center font-bold">
-            Zateplení fasád pro rodinné domy
+            Zateplení fasády pro rodinné domy
           </h2>
           <div className="grid grid-cols-1  sm:grid-cols-2 my-6 gap-8 text-xl">
             <div className="border-l-4 border-orange-600 pl-4 text-justify">

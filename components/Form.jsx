@@ -6,8 +6,9 @@ import Link from 'next/link';
 import AppContext from '../context/app-context';
 import { Select } from './';
 import { event } from 'nextjs-google-analytics';
-import { regions } from '../regions-and-districts';
 import configuration from '../conf';
+import { regions } from '../regions-and-districts';
+import { products } from '../products';
 
 const { phone } = configuration;
 
@@ -39,13 +40,14 @@ const Form = () => {
   const { formData, setFormData, clearFormData } = useContext(AppContext);
 
   useEffect(() => {
-    const { firstName, lastName, email, phone, gdpr, district, region } = formData;
+    const { firstName, lastName, email, phone, gdpr, district, region, product } = formData;
     firstName && firstNameChangeHandler({ target: { value: firstName } });
     lastName && lastNameChangeHandler({ target: { value: lastName } });
     email && emailChangeHandler({ target: { value: email } });
     phone && phoneNumberChangeHandler({ target: { value: phone } });
     region && regionChangeHandler({ target: { value: region } });
     district && districtChangeHandler({ target: { value: district } });
+    product && productChangeHandler({ target: { value: product } });
     gdpr !== undefined && setIsGDPRChecked(gdpr);
   }, []);
 
@@ -96,6 +98,12 @@ const Form = () => {
   } = useInput((value) => true);
 
   const {
+    value: product,
+    valueChangeHandler: productChangeHandler,
+    reset: productResetHandler
+  } = useInput((value) => true);
+
+  const {
     value: district,
     valueChangeHandler: districtChangeHandler,
     reset: districtResetHandler
@@ -109,7 +117,7 @@ const Form = () => {
         '/api/raynet/',
         {
           method: 'POST',
-          body: JSON.stringify({ firstName, lastName, email, phoneNumber, region: region.name, district: district.name }),
+          body: JSON.stringify({ firstName, lastName, email, phoneNumber, region: region.name, district: district.name, product: product.name }),
         }
       );
 
@@ -140,6 +148,7 @@ const Form = () => {
     phoneNumberResetHandler();
     regionResetHandler();
     districtResetHandler();
+    productResetHandler();
     setIsGDPRChecked(false);
 
     clearFormData();
@@ -175,6 +184,10 @@ const Form = () => {
         break;
       case 'district':
         districtChangeHandler({ target: { value: event } });
+        value = event;
+        break;
+      case 'product':
+        productChangeHandler({ target: { value: event } });
         value = event;
         break;
     }
@@ -284,32 +297,36 @@ const Form = () => {
                 </div>
               </div>
 
-              <div
-                className='flex flex-col gap-2'
-              >
-                <p
-                  className='font-semibold text-primary-900 text-lg'
-                >
-                  GDPR<span className='text-red-600 font-bold'> *</span>
-                </p>
-                <div className='flex items-center gap-4'>
-                  <div
-                    className='bg-white w-12 h-12 rounded-full group
-            shadow-lg
-            flex justify-center items-center'
-                    onClick={() => setIsGDPRChecked((prevValue) => !prevValue)}
-                  >
-                    <AiOutlineCheck
-                      className={`${isGDPRChecked ? 'text-primary-900' : 'hidden group-hover:inline text-primary-100'}`}
-                      size={30}
-                    />
+              <div className='flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4 sm:gap-8 lg w-full'>
+                <div className='flex-1 flex xl:w-auto flex-col gap-2'>
+                  <p className='font-semibold text-primary-900 text-lg'>Produkt</p>
+                  <Select
+                    options={products}
+                    placeholder='Zajímám se o'
+                    onChange={updateValueHandler.bind(null, 'product')}
+                    value={product}
+                  />
+                </div>
+
+
+                <div className='flex-1 flex xl:w-auto flex-col gap-2'>
+                  <p className='font-semibold text-primary-900 text-lg'>GDPR</p>
+                  <div className='flex items-center gap-5'>
+                    <div
+                      className='bg-white w-12 h-12 rounded-full group shadow-lg flex justify-center items-center'
+                      onClick={() => setIsGDPRChecked((prevValue) => !prevValue)} >
+                      <AiOutlineCheck
+                        className={`${isGDPRChecked ? 'text-primary-900' : 'hidden group-hover:inline text-primary-100'}`}
+                        size={30}
+                      />
+                    </div>
+                    <p className='flex-1 text-primary-700'>
+                      Souhlasím se
+                      <Link href='/gdpr'>
+                        <span className='text-primary-800 hover:text-primary-900 font-medium'> zpracováním osobních údajů</span>
+                      </Link>
+                    </p>
                   </div>
-                  <p className='flex-1 text-primary-700'>
-                    Souhlasím se
-                    <Link href='/gdpr'>
-                      <span className='text-primary-800 hover:text-primary-900 font-medium'> zpracováním osobních údajů</span>
-                    </Link>
-                  </p>
                 </div>
               </div>
 

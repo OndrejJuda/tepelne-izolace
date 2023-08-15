@@ -29,6 +29,9 @@ module.exports = {
           800: '#5e4300',
           900: '#2f2100',
           white: '#ffffff',
+          nzumodra: '#006fb9',
+          nzuzelena: '#2cb34a',
+          nzuzluta: '#bfd22b'
           // 50: '#f5ede9',
           // 100: '#ebdbd3',
           // 200: '#cda590',

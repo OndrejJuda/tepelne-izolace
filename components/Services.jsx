@@ -57,20 +57,19 @@ const Services = () => {
                     </p>
                   </div>
                 </div>
-                <div class="flex flex-col items-center rounded-lg bg-white shadow-xl">
-                  <img src="/favicon/tick.png" alt="tick" class="flex-shrink-0 w-20 h-22 mt-6 mb-6" />
-                  <div class="ml-3 mr-3">
-                    <h3 class="text-xl mb-2 font-medium text-center">Ekologická volba s mnoha výhodami</h3>
-                    <p class="mb-6 text-lg text-center">
+                <div className="flex flex-col items-center rounded-lg bg-white shadow-xl">
+                  <img src="/favicon/tick.png" alt="tick" className="flex-shrink-0 w-20 h-22 mt-6 mb-6" />
+                  <div className="ml-3 mr-3">
+                    <h3 className="text-xl mb-2 font-medium text-center">Ekologická volba s mnoha výhodami</h3>
+                    <p className="mb-6 text-lg text-center">
                       Je také ekologickou volbou, protože je vyráběna z recyklovaných materiálů a lze ji snadno recyklovat. Pokud hledáte spolehlivou a účinnou izolační metodu pro svou budovu, minerální foukaná izolace je tou správnou volbou. Naše izolace vám pomůže šetřit energií, snížit hluk, odolávat škodcům, vydržet dlouho a v létě vás ochránit před horkem.
                     </p>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
-          <div className='flex flex-col justify-center'>
+          <div className='flex flex-col justify-center mb-16'>
             <h2 className='text-3xl sm:text-5xl mb-10 text-center font-bold'>
               Certifikovaní specialisté na aplikaci
             </h2>
@@ -88,9 +87,9 @@ const Services = () => {
                   <p className='mb-6 sm:mb-8 text-justify'>
                     K zateplování používáme izolaci Supafil Loft od Knaufu z minerální vlny bez obsahu formaldehydu a pojiv. Je určena k nafouknutí do nových i stávajících otevřených i uzavřených podkrovních, půdních prostor, podhledů, dutin a dalších různých střešních konstrukcí. SUPAFIL LOFT má vynikající tepelně technické vlastnosti, výbornou schopnost vyplnit dutiny ve stavebních konstrukcích a ideální vlastnosti pro aplikaci foukáním. Rychlá instalace zajišťuje maximální kvalitu zateplení. Izolace má nízkou sedavost, poskytuje zvukovou a protipožární ochranu a je odolná proti plísním. Neobsahuje umělé přísady a nehnije ani se nerozkládá.
                   </p>
-                  <div className='flex flex-col gap-2 text-center'>
-                    <p className='font-bold'>Výhody zateplovacího materiálu:</p>
-                    <ul className='list-disc list-inside'>
+                  <div className='flex flex-col gap-2'>
+                    <p className='font-bold text-center'>Výhody zateplovacího materiálu:</p>
+                    <ul className='list-disc list-inside text-lg'>
                       <li>Nízká hmotnost aplikovaného materiálu</li>
                       <li>Přirozeně nehořlavý - třída reakce na oheň A1</li>
                       <li>Lambda 0,039 při objemové hmotnosti 16 kg/m3</li>
@@ -101,7 +100,7 @@ const Services = () => {
                       <li>Čistě přírodní - zdravotně nezávadný</li>
                     </ul>
                   </div>
-                  <p className='mt-6 sm:mt-8 text-center'>
+                  <p className='mt-6 sm:mt-8 text-justify border-l-4 border-blue-600 pl-4 my-2'>
                     Pro splnění podmínek dotace NZÚ Light je potřeba zateplit vrstvou o minimální tloušťce 30 centimetrů a hustotou alespoň 16 kg/m3.
                   </p>
                   <div className='grid grid-cols-1 sm:grid-cols-2 gap-8'>
@@ -139,9 +138,9 @@ const Services = () => {
                   <p className='mb-6 sm:mb-8 text-justify'>
                     Izolační materiál THERMOFLOC se vyrábí pouze z novinového papíru s přidáním minerálních látek pro konzervaci a protipožární ochranu. Papír se nahrubo rozdrtí a poté zpracovává v rozvlákňovacím zařízení na jemná, pružná celulózová vlákna. Hotový výrobek se balí do pytlů a skládá na palety. Certifikovaná interní a externí kontrola kvality zaručuje, že celulózová izolace THERMOFLOC splňuje nejvyšší evropské standardy. To je doloženo Evropským technickým schválením. S celulózou můžeme izolovat tloušťky od 20 do 500 mm. Zhutnění izolačního materiálu se pohybuje od 28 do 60 kg/m3, v závislosti na oblasti použití.
                   </p>
-                  <div className='flex flex-col gap-2 text-center'>
-                    <p className='font-bold'>Výhody zateplovacího materiálu:</p>
-                    <ul className='list-disc list-inside'>
+                  <div className='flex flex-col gap-2 '>
+                    <p className='font-bold text-center'>Výhody zateplovacího materiálu:</p>
+                    <ul className='list-disc list-inside text-lg '>
                       <li>Nejlepší ochrana proti přehřívání konstrukce v létě</li>
                       <li>Nižší pořizovací cena</li>
                       <li>Lambda 0,037 při montážní hustotě 28 - 47 kg/m3</li>
@@ -151,7 +150,7 @@ const Services = () => {
                       <li>Vyrobený pouze z novinového papíru</li>
                     </ul>
                   </div>
-                  <p className='mt-6 sm:mt-8 text-center'>
+                  <p className='mt-6 sm:mt-8 border-l-4 border-orange-600 pl-4 text-justify my-8'>
                     Pro splnění podmínek dotace NZÚ Light je potřeba zateplit vrstvou o minimální tloušťce 30 centimetrů a hustotou alespoň 28 kg/m3.
                   </p>
                   <div className='grid grid-cols-1 sm:grid-cols-2 gap-8'>
@@ -178,8 +177,68 @@ const Services = () => {
               </div>
             </div>
           </div>
+          <div className="bg-white p-8 md:p-12 lg:px-10 lg:py-12 my-16 rounded-lg shadow-lg">
+            <div className="mb-10 text-4xl font-bold text-center">
+              Jsme specialisté <span className="text-primary-nzumodra">Nové</span> <span className="text-primary-nzuzelena">zelené</span> <span className="text-primary-nzuzluta">úsporám</span>
+            </div>
+            <a href='https://novazelenausporam.cz/specialista/14368' className='flex justify-center items-center w-full scale-100 hover:scale-110 duration-200 '>
+              <img
+                src='/favicon/nzu-dlouhe.png'
+                alt='nzu-dlouhe'
+                className='object-cover object-center w-full md:h-1/2 md:w-1/2 rounded-tr-lg rounded-br-lg'
+              />
+            </a>
+          </div>
+          <h2 className="text-4xl sm:text-6xl my-8 text-center font-bold">
+            Zateplení fasád pro rodinné domy
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-xl">
+            <div className="border-l-4 border-orange-600 pl-4 text-justify">
+              <strong>Zateplení fasády</strong>  efektivně bojuje proti ztrátám tepla, může je snížit až o polovinu. Pokud je zateplení domu správně provedeno, může výrazně snížit spotřebu energie a zároveň poskytnout ochranu fasádě. Dalším plusem je, že díky zateplení můžete dosáhnout lepšího akustického pohodlí po celý rok.
+            </div>
+            <div className="flex justify-center items-center">
+              <a
+                href='/#poptavka'
+                className="inline-block rounded-full bg-green-500 px-6 py-2.5 text-xl font-bold leading-normal text-white text-center shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg scale-100 hover:scale-110 duration-200">
+                Začněte šetřit na vytápění! Zateplit nyní.
+              </a>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-xl">
+            <div className='my-4'>
+              <img
+                src='/business/izolace_fasady.jpg'
+                alt='izolacefasady'
+                className='object-cover object-center h-full w-full md:w-full rounded-tr-lg rounded-br-lg'
+              />
+            </div>
+            <div className="my-4">
+              <p className='text-justify border-r-4 border-orange-600 pr-4'>
+                Kvalitním zateplením fasády zajistíte dlouhodobou ochranu domu proti vodě z deště, mrazu a slunečnímu světlu, což zamezuje přehřívání během letních měsíců. Tepelná izolace udržuje chlad mimo domov a zvyšuje schopnost stěny akumulovat teplo během zimy, což vede k lepší tepelné pohodě a snižuje chladné vedení ze stěn.
+              </p>
+              <p className="my-2 font-bold">
+                Cena je odvislá od:
+              </p>
+              <ul className='list-disc list-inside'>
+                <li>Volby typu zateplovacího materiálu</li>
+                <li>Druhu budovy, která se má zateplit</li>
+                <li>Aplikačních podmínek při montáži</li>
+              </ul>
+              <p className="my-2 font-bold">
+                Důležité vlastnosti:
+              </p>
+              <ul className='list-disc list-inside'>
+                <li>Tepelná a zvuková izolace</li>
+                <li>Redukce tepelných ztrát</li>
+                <li>Snadnější dosažení tepelného komfortu</li>
+                <li>Odolnost materiálu při zachování nízké hmotnosti</li>
+                <li>Ekologické a zdravotně bezpečné složení</li>
+                <li>Prodloužení životnosti fasády</li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
+      </div >
     </SectionWrapper >
   );
 };

@@ -4,10 +4,9 @@ const instanceName = process.env.RAYNET_INSTANCE_NAME;
 
 const sendEmail = async (req, res) => {
   const data = req.body;
-  const { firstName, lastName, email, phoneNumber, region, district } = JSON.parse(data);
+  const { firstName, lastName, email, phoneNumber, region, district, product } = JSON.parse(data);
 
   const token = btoa(`${userName}:${apiKey}`);
-
   const options = {
     method: 'PUT',
     headers: {
@@ -16,7 +15,7 @@ const sendEmail = async (req, res) => {
       'Authorization': `Basic ${token}`,
     },
     body: JSON.stringify({
-      "topic": "Poptávka na izolace",
+      "topic": `Poptávka přes web - ${product}`,
       "priority": "DEFAULT",
       "firstName": firstName,
       "lastName": lastName,

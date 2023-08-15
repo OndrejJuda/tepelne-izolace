@@ -16,12 +16,12 @@ export default function Home() {
       <Header />
       <main className=''>
         <Hero />
-        <DemandFormSection />
         {/* <ImageSection sectionName='predvadeci-obrazek' imageUrl='/business/vata.jpg' /> */}
         <Services />
         <FVE />
         <Benefits />
         <Process />
+        <DemandFormSection />
         <Gallery />
       </main>
       <Footer />

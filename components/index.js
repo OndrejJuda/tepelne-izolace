@@ -7,6 +7,7 @@ export { default as Footer } from './Footer';
 export { default as Form } from './Form';
 export { default as Gallery } from './Gallery';
 export { default as GDPR } from './GDPR';
+export { default as FormSentRedirect } from './FormSentRedirect';
 export { default as Grant } from './Grant';
 export { default as FVE } from './FVE';
 export { default as Header } from './Header';

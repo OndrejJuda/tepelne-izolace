@@ -9,6 +9,7 @@ import { event } from 'nextjs-google-analytics';
 import configuration from '../conf';
 import { regions } from '../regions-and-districts';
 import { products } from '../products';
+import { useRouter } from 'next/router';
 
 const { phone } = configuration;
 
@@ -33,6 +34,7 @@ const Input = ({ inputProps, hasError, title }) => {
 };
 
 const Form = () => {
+  const router = useRouter();
   const [isGDPRChecked, setIsGDPRChecked] = useState(false);
   const [showValid, setShowValid] = useState(false);
   const [submitError, setSubmitError] = useState('');
@@ -120,14 +122,15 @@ const Form = () => {
           body: JSON.stringify({ firstName, lastName, email, phoneNumber, region: region.name, district: district.name, product: product.name }),
         }
       );
-
       if (response.ok) {
         setShowValid(true);
+        router.replace('/dekujeme-vam');
         setSubmitError('');
         event('submit_form', {
           category: 'Poptávka',
           label: 'Úspěšně odesláno'
         });
+
       } else {
         setShowValid(false);
         setSubmitError(`Nastala chyba. Zkuste to znovu nebo nás kontaktujte na telefonním čísle ${phone}.`);
@@ -357,31 +360,6 @@ const Form = () => {
                     <p className='text-xl text-primary-700 md:px-8'>{submitError}</p>
 
                   </div>
-                )
-              }
-              {
-                showValid && (
-                  <div className='flex flex-col justify-center items-center gap-4'>
-                    <div className='flex justify-center items-center bg-white rounded-xl p-8'>
-                      <p className='text-2xl text-primary-700 font-semibold mb-8'>Děkujeme za Vaši poptávku. Během několika dní Vás budeme kontaktovat.</p>
-                      <AiOutlineCheck
-                        className='text-[#b2f291]'
-                        size={124}
-                      />
-                    </div>
-                    <script type="text/javascript" src="https://c.seznam.cz/js/rc.js" async></script>
-                    <script async dangerouslySetInnerHTML={{
-                      __html: `
-                              var conversionConf = {
-                                id: 100178723,
-                                value: null
-                              };
-                              if (window.rc && window.rc.conversionHit) {
-                                window.rc.conversionHit(conversionConf);
-                              }
-                            ` }} />
-                  </div>
-
                 )
               }
               <button

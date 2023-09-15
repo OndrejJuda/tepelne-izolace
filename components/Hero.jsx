@@ -1,52 +1,108 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { SectionWrapper } from './'; // Import the SectionWrapper component
 import Link from 'next/link';
-import { CTAButton } from './';
-import configuration from '../conf';
-
-const { email, phone } = configuration;
 
 const Hero = () => {
+  const [textIndex, setTextIndex] = useState(0);
+  const [text, setText] = useState('');
+  const [typing, setTyping] = useState(true);
+  const [cursorVisible, setCursorVisible] = useState(true);
+
+  const textOptions = [
+    'Zvyšte komfort a účinnost vašeho domova',
+    'Zateplením ušetříte 30% nákladů na vytápění',
+    'Solární ohřev vody v základní sestavě za korunu',
+    'Zajistíme vše od žádosti o dotaci až po realizaci',
+    'Užijte si rovnoměrně izolovaný prostor bez tepelných mostů',
+  ];
+
+  useEffect(() => {
+    let timeoutId;
+
+    if (typeof window !== 'undefined') {
+      if (typing) {
+        // Typing animation
+        timeoutId = setTimeout(() => {
+          setText((prevText) => {
+            const nextChar = textOptions[textIndex].charAt(prevText.length);
+            return prevText + nextChar;
+          });
+        }, 60);
+
+        if (text === textOptions[textIndex]) {
+          // When text is fully typed, initiate backspace
+          setTimeout(() => {
+            setTyping(false);
+            setCursorVisible(true);
+          }, 3000);
+        }
+      } else {
+        // Backspace animation
+        timeoutId = setTimeout(() => {
+          setText((prevText) => {
+            return prevText.slice(0, -1);
+          });
+        }, 50);
+
+        if (text === '') {
+          // When text is fully backspaced, switch to the next text
+          const nextIndex = (textIndex + 1) % textOptions.length;
+          setTextIndex(nextIndex);
+
+          setTimeout(() => {
+            setTyping(true);
+            setCursorVisible(true);
+          }, 1000);
+        }
+      }
+
+      return () => {
+        clearTimeout(timeoutId);
+      };
+    }
+  }, [text, typing, textIndex, textOptions]);
+
+  useEffect(() => {
+    const cursorInterval = setInterval(() => {
+      setCursorVisible((prev) => !prev);
+    }, 500);
+
+    return () => {
+      clearInterval(cursorInterval);
+    };
+  }, []);
+
+  const cursor = cursorVisible ? '|' : '';
+
   return (
-    <section className='flex flex-col items-center bg-primary-50 2xl:clip-hero overflow-hidden relative px-8 md:px-16 lg:px-36 pb-8'>
-      <img
-        src='/business/hero-gif.gif'
-        alt='logo'
-        className='absolute w-full object-cover lg:w-75 md:w-50 sm:w-35 h-full'
-      />
-      <div className='w-full flex flex-col sm:justify-center lg:items-start min-h-[calc(100vh-110px)] sm:min-h-[calc(100vh-155px)] md:h-auto relative pb-8'>
-        <div className='hidden lg:block 3xl:hidden mb-4'>
-          <Link href='/'>
-            <img src='/logo/logo-name.png' alt='logo' className='w-[300px]' />
-          </Link>
-        </div>
-
-        <h1 className='text-5xl sm:text-5xl md:text-6xl font-bold text-primary-white mb-8 sm:mb-16'>
-          Zvyšte komfort a účinnost vašeho domova s naší foukanou izolací a získejte dotaci od NZÚ
-        </h1>
-
-        <p className='text-2xl sm:text-3xl md:text-4xl font-bold text-primary-white  max-w-[1200px] mb-16'>
-          Zažijte úsporu až 30% s našimi službami foukané izolace.<br></br>
-          Zajistíme vše od realizace po žádosti o dotace. <br></br>
-          Můžete dokonce žádat o dotace před samotnou realizací. <br></br>
-          Užijte si rovnoměrně izolovaný prostor bez tepelných mostů.
-        </p>
-
-        <div className='lg:hidden flex flex-col items-center gap-4 bg-primary-100 shadow-sm py-6 px-6 rounded-xl'>
-          <a href={`mailto:${email}`} className='text-xl font-semibold text-primary-900'>{email}</a>
-          <CTAButton>Začněte šetřit dnes!</CTAButton>
-          <a href={`tel:${phone.replaceAll(' ', '')}`} className='text-xl font-semibold text-primary-900'>{phone}</a>
-        </div>
-
-        <div className='hidden lg:flex items-center gap-8 bg-primary-100 shadow-sm rounded-xl pr-8'>
-          <div className='scale-110'>
-            <CTAButton>Začněte šetřit dnes!</CTAButton>
-          </div>
-          <a href={`mailto:${email}`} className='text-xl font-semibold text-primary-900'>{email}</a>
-          <a href={`tel:${phone.replaceAll(' ', '')}`} className='text-xl font-semibold text-primary-900'>{phone}</a>
+    <SectionWrapper
+      id=''
+      innerDivStyle='flex flex-col justify-center bg-white rounded-lg mx-8 md:mx-16 lg:mx-36 w-screen relative'
+    >
+      <div className="w-full relative">
+        <img
+          src='/business/hero-gif.gif'
+          alt='hero'
+          className='w-full absolute object-cover lg:w-75 md:w-50 sm:w-35 h-[400px] rounded-2xl'
+        />
+        <div className="absolute top-8 left-8 w-full h-96 flex flex-col">
+          <p className="text-5xl sm:text-5xl md:text-6xl font-bold text-primary-white max-w-[900px]">
+            Vaše cesta k lepší izolaci.<br></br> To je LUNASTAV.<br></br>
+            <div className="text-3xl sm:text-3xl md:text-3xl font-bold text-primary-white my-8 max-w-[500px]">
+              {text}
+              <span className="text-primary-white">{cursor}</span>
+            </div>
+          </p>
         </div>
       </div>
-
-    </section>
+      <div className="flex justify-end my-1 mr-4">
+        <img
+          src='/business/typek.png'
+          alt='worker'
+          className='w-[450px] object-cover lg:w-75 md:w-50 sm:w-35 z-10'
+        />
+      </div>
+    </SectionWrapper>
   );
 };
 

@@ -43,6 +43,9 @@ module.exports = {
           // 800: '#3e1e0d',
           // 900: '#1f0f07',
         },
+        animation: {
+          'fade-in': 'fadeIn 2s ease-in-out', // Define the fade-in animation
+        },
       },
     },
   },

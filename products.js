@@ -1,6 +1,6 @@
 export const products = [
   {
-    name: 'Foukaná izolace',
+    name: 'Zateplení foukanou izolací (střecha/strop)',
   },
   {
     name: 'Zateplení fasády',

@@ -12,7 +12,6 @@ export default function Home() {
       {domainGroupId && (
         <CookieBot domainGroupId={domainGroupId} />
       )}
-      <Navbar />
       <Header />
       <main className=''>
         <Hero />

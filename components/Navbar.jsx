@@ -61,8 +61,12 @@ const Navbar = () => {
 
   return (
     <>
-      <div className={`hidden lg:flex justify-end mr-4 xl:mr-8 sticky top-[2.25rem] 2xl:top-4 -mt-16 z-50
-          transition ${isOnTop ? '' : 'translate-x-[-2%] xl:translate-x-[-3%] 2xl:translate-x-[-4%]'}`}>
+      <div
+        className={`sticky top-0 ${isOnTop
+            ? '' // Add your initial styles when at the top
+            : 'translate-x-[-2%] xl:translate-x-[-3%] 2xl:translate-x-[-4%]'
+          }`}
+      >
         <nav className={`bg-primary-25 py-4 px-12 lg:px-6 xl:px-12 rounded-full shadow-lg relative`}>
           <Link href='/'>
             <img
@@ -78,26 +82,23 @@ const Navbar = () => {
           </Link>
 
           <ul className='flex justify-center items-center gap-8 lg:gap-4 xl:gap-8 2xl:gap-14'>
-            {
-              links.map(({ href, title, cta }) => (
-                <li
-                  key={href}
-                  className={`${cta ? 'text-primary-800 font-bold' : 'text-primary-700'} text-xl lg:text-lg xl:text-xl font-semibold group relative overflow-hidden scale-100 hover:scale-110 ease-in duration-200`}
-                >
-                  <Link href={href}>
-                    {title}
-                  </Link>
-                  <div className='w-full h-[2px] bg-black -translate-x-[105%] group-hover:translate-x-0 transition' />
-                </li>
-              ))
-            }
+            {links.map(({ href, title, cta }) => (
+              <li
+                key={href}
+                className={`${cta ? 'text-primary-800 font-bold' : 'text-primary-700'} text-xl lg:text-lg xl:text-xl font-semibold group relative overflow-hidden scale-100 hover:scale-110 ease-in duration-200`}
+              >
+                <Link href={href}>{title}</Link>
+                <div className='w-full h-[2px] bg-black -translate-x-[105%] group-hover:translate-x-0 transition' />
+              </li>
+            ))}
           </ul>
         </nav>
-      </div >
+      </div>
 
       <div className='w-screen flex justify-end lg:hidden fixed top-4 left-0 z-50'>
-
-        <button className={`z-10 mr-4 transition ${showButton() ? '' : '-translate-y-[100px]'} shadow-lg bg-primary-25 rounded-full`}>
+        <button
+          className={`z-10 mr-4 transition ${showButton() ? '' : '-translate-y-[100px]'} shadow-lg bg-primary-25 rounded-full`}
+        >
           <HiOutlineMenu
             size={54}
             className={`p-2 transition ${isOpen ? '' : 'rotate-180'} text-primary-700`}
@@ -106,25 +107,24 @@ const Navbar = () => {
         </button>
 
         <nav
-          className={`absolute -top-4 right-0 min-h-screen w-screen h-[500px] bg-primary-50 transition ${isOpen ? '' : 'translate-x-[100%]'} flex justify-center items-center short:items-start short:pt-8 overflow-auto`}
+          className={`absolute -top-4 right-0 min-h-screen w-screen h-[500px] bg-primary-50 transition ${isOpen ? '' : 'translate-x-[100%]'
+            } flex justify-center items-center short:items-start short:pt-8 overflow-auto`}
         >
           <ul className='flex flex-col justify-center items-center gap-8'>
-            <Link href='/' onClick={() => { setIsOpen(false); setIsVisible(false); }}>
+            <Link href='/' onClick={() => { setIsOpen(false); }}>
               <img src='/logo/logo-name.png' alt='logo' className='w-[250px]' />
             </Link>
-            {
-              links.map(({ href, title, cta }) => (
-                <li
-                  key={href}
-                  className={`${cta ? 'text-primary-800 font-bold' : 'text-primary-700'} text-xl sm:text-2xl font-semibold group relative overflow-hidden`}
-                >
-                  <Link href={href} onClick={() => { setIsOpen(false); setIsVisible(false); }}>
-                    {title}
-                  </Link>
-                  <div className='w-full h-[2px] bg-primary-500 -translate-x-[105%] group-hover:translate-x-0 transition' />
-                </li>
-              ))
-            }
+            {links.map(({ href, title, cta }) => (
+              <li
+                key={href}
+                className={`${cta ? 'text-primary-800 font-bold' : 'text-primary-700'} text-xl sm:text-2xl font-semibold group relative overflow-hidden`}
+              >
+                <Link href={href} onClick={() => { setIsOpen(false); }}>
+                  {title}
+                </Link>
+                <div className='w-full h-[2px] bg-primary-500 -translate-x-[105%] group-hover:translate-x-0 transition' />
+              </li>
+            ))}
           </ul>
         </nav>
       </div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { IoIosArrowDown } from 'react-icons/io';
+import { FaBars, FaTimes } from 'react-icons/fa'; // Import the React Icons
 
 const links = [
   { href: '#sluzby', title: 'Zateplení' },
@@ -47,28 +48,26 @@ const Header = () => {
         className='md:hidden w-10 h-10 bg-primary-500 text-white rounded-full flex items-center justify-center absolute top-8 right-8 hover:scale-110 transition-transform'
         onClick={toggleMobileMenu}
       >
-        ☰
+        {mobileMenuOpen ? <FaTimes /> : <FaBars />}
       </div>
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className='md:hidden fixed top-2 left-0 w-full h-screen bg-primary-50 text-center'>
-          {/* "X" button with adjusted positioning */}
+        <div className='md:hidden fixed top-0 right-0 w-full h-screen bg-primary-50 text-center'>
           <button
-            className='w-10 h-10 bg-primary-500 text-white rounded-full flex items-center justify-center absolute top-6 right-8 hover:scale-110 transition-transform'
+            className='w-10 h-10 bg-primary-500 text-white rounded-full flex items-center justify-center absolute top-8 right-8 hover:scale-110 transition-transform'
             onClick={toggleMobileMenu}
           >
-            ✕
+            <FaTimes />
           </button>
-
           {/* Logo above the first link */}
-          <div className='h-auto lg:h-[50px] flex justify-center 3xl:h-auto my-4 mx-8'>
+          <div className='h-auto lg:h-[50px] flex justify-center 3xl:h-auto my-6 mx-8'>
             <Link href='/'>
               <img src='/logo/logo-name.png' alt='logo' className='w-[200px]' />
             </Link>
           </div>
 
-          <div className='h-full flex flex-col text-xl justify-start mt-8 md:mt-28 font-bold'>
+          <div className='h-full flex flex-col text-lg items-center justify-start mt-8 md:mt-28'>
             {links.map((link, index) => (
               <div
                 key={index}
@@ -77,75 +76,65 @@ const Header = () => {
                 onMouseEnter={() => handleHover(index)}
                 onMouseLeave={handleHoverExit}
               >
-                {link.title === 'Zateplení' || link.title === 'Fotovoltaika' ? (
-                  <div
-                    className={`text-black hover:text-primary-500 transition-transform ${hoveredLink === index ? 'open-submenu' : ''}`}
-                  >
+                <div className='text-black hover:text-primary-500 '>
+                  {link.title === 'Zateplení' || link.title === 'Fotovoltaika' ? (
+                    <div
+                      className={`text-black  transition-transform ${hoveredLink === index ? 'open-submenu' : ''}`}
+                    >
+                      <div className="flex justify-center items-center pl-7 hover:text-primary-500">
+                        {link.title}
+                        <IoIosArrowDown className={`inline-block mx-2 transform transition-transform ${hoveredLink === index ? 'rotate-180 mt-0.5' : ''}`} />
+                      </div>
+                      {hoveredLink === index && (
+                        <div
+                          className='bg-white my-2 rounded-md'
+                          onMouseEnter={() => handleHover(index)}
+                          onMouseLeave={handleHoverExit}
+                        >
+                          {link.title === 'Zateplení' && (
+                            <>
+                              <Link href='/#zatepleni-stropu' className="">
+                                <div className="link-content h-12 text-center text-base py-3 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-tr-md rounded-tl-md">
+                                  Zateplení stropu
+                                </div>
+                              </Link>
+
+                              <Link href='/#zatepleni-strechy'>
+                                <div className="link-content h-12 text-center text-base  py-3 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black">
+                                  Zateplení střechy
+                                </div>
+                              </Link>
+
+                              <Link href='/#zatepleni-fasady'>
+                                <div className="link-content h-12 text-center text-base  py-3 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-br-md rounded-bl-md">
+                                  Zateplení fasády
+                                </div>
+                              </Link>
+                            </>
+                          )}
+                          {link.title === 'Fotovoltaika' && (
+                            <>
+                              <Link href='/#submenu4'>
+                                <div className="link-content text-base h-12 text-center py-3 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-md">
+                                  Solární ohřev vody
+                                </div>
+                              </Link>
+                            </>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
                     <Link href={link.href}>
-                      <div className="link-content flex items-center"> {/* Added flex container */}
-                        {link.title} {link.title === 'Zateplení' || link.title === 'Fotovoltaika' ? (
-                          <span className={`inline-block ml-2 transform transition-transform ${hoveredLink === index ? 'rotate-180 mt-0.5' : ''}`}> {/* Adjusted margin-top */}
-                            <IoIosArrowDown />
-                          </span>
-                        ) : null}
+                      {/* Wrap the link in a div here */}
+                      <div className='text-black hover:text-primary-500 hover:scale-110 transition-transform'>
+                        <div className="link-content">
+                          {link.title}
+                        </div>
                       </div>
                     </Link>
-                    {hoveredLink === index && (
-                      <div
-                        className='pl-4'
-                        onMouseEnter={() => handleHover(index)}
-                        onMouseLeave={handleHoverExit}
-                      >
-                        {link.title === 'Zateplení' && (
-                          <>
-                            <Link href='/#submenu1'>
-                              <div className="link-content my-2 hover:bg-black">
-                                Submenu 1 for Zateplení
-                              </div>
-                            </Link>
-                            <Link href='/#submenu2'>
-                              <div className="link-content my-2">
-                                Submenu 2 for Zateplení
-                              </div>
-                            </Link>
-                            <Link href='/#submenu3'>
-                              <div className="link-content my-2">
-                                Submenu 3 for Zateplení
-                              </div>
-                            </Link>
-                          </>
-                        )}
-                        {link.title === 'Fotovoltaika' && (
-                          <>
-                            <Link href='/#submenu4'>
-                              <div className="link-content">
-                                Submenu 1 for Fotovoltaika
-                              </div>
-                            </Link>
-                            <Link href='/#submenu5'>
-                              <div className="link-content">
-                                Submenu 2 for Fotovoltaika
-                              </div>
-                            </Link>
-                            <Link href='/#submenu6'>
-                              <div className="link-content">
-                                Submenu 3 for Fotovoltaika
-                              </div>
-                            </Link>
-                          </>
-                        )}
-                      </div>
-                    )}
-                  </div>
-                ) : (
-                  <Link href={link.href}>
-                    <div className='text-black hover:text-primary-500 hover:scale-110 transition-transform'>
-                      <div className="link-content">
-                        {link.title}
-                      </div>
-                    </div>
-                  </Link>
-                )}
+                  )}
+                </div>
               </div>
             ))}
             <div className='my-4 bg-primary-400 rounded-full py-2 text-center text-lg font-bold mx-2 px-4 hover:text-white hover:scale-110 transition-transform'>
@@ -169,7 +158,7 @@ const Header = () => {
             onMouseLeave={handleHoverExit}
           >
             <div
-              className={`text-xl font-bold hover:text-primary-500 transition-transform cursor-pointer ${link.title === 'Zateplení' && hoveredLink === index ? 'open-submenu' : ''}`}
+              className={`text-lg hover:text-primary-500 transition-transform cursor-pointer ${link.title === 'Zateplení' && hoveredLink === index ? 'open-submenu' : ''}`}
             >
               <Link href={link.href}>
                 <div className="link-content flex items-center"> {/* Added flex container */}
@@ -182,21 +171,23 @@ const Header = () => {
               </Link>
             </div>
             {hoveredLink === index && (link.title === 'Zateplení' || link.title === 'Fotovoltaika') && (
-              <div className='absolute top-full left-0 mt-4 bg-white text-center rounded-lg py-2'>
+              <div className='absolute top-full left-0 mt-4 bg-white text-center rounded-md w-[150px] h-auto  '>
                 {link.title === 'Zateplení' && (
                   <>
-                    <Link href='/#zatepleni-stropu'>
-                      <div className="link-content my-2 hover:bg-black">
+                    <Link href='/#zatepleni-stropu' className="">
+                      <div className="link-content h-12 text-center  text-base  py-3 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-tr-md rounded-tl-md">
                         Zateplení stropu
                       </div>
                     </Link>
+
                     <Link href='/#zatepleni-strechy'>
-                      <div className="link-content my-2">
+                      <div className="link-content h-12 text-center text-base  py-3 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-none">
                         Zateplení střechy
                       </div>
                     </Link>
+
                     <Link href='/#zatepleni-fasady'>
-                      <div className="link-content my-2">
+                      <div className="link-content h-12 text-center text-base  py-3 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-br-md rounded-bl-md">
                         Zateplení fasády
                       </div>
                     </Link>
@@ -204,19 +195,9 @@ const Header = () => {
                 )}
                 {link.title === 'Fotovoltaika' && (
                   <>
-                    <Link href='/#fotovoltaika1'>
-                      <div className="link-content">
-                        Fotovoltaika 1
-                      </div>
-                    </Link>
-                    <Link href='/#fotovoltaika2'>
-                      <div className="link-content">
-                        Fotovoltaika 2
-                      </div>
-                    </Link>
-                    <Link href='/#fotovoltaika3'>
-                      <div className="link-content">
-                        Fotovoltaika 3
+                    <Link href="https://www.damepanely.cz">
+                      <div className="link-content h-12 text-center py-3 text-base  hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-md">
+                        Solární ohřev vody
                       </div>
                     </Link>
                   </>
@@ -228,7 +209,7 @@ const Header = () => {
       </nav>
 
       {/* Rounded div with phone number (Desktop version) */}
-      <div className='hidden md:block bg-primary-400 text-black rounded-xl py-2 text-center text-lg font-bold mx-2 px-4 hover:text-white hover:scale-110 transition-transform'>
+      <div className='hidden md:block bg-primary-400 text-black rounded-full py-2 text-center text-base font-bold mx-2 px-4 hover:text-white hover:scale-110 transition-transform'>
         <Link href='/#poptavka'>
           <div className="link-content">
             📩 Nezávazná poptávka
@@ -240,3 +221,4 @@ const Header = () => {
 };
 
 export default Header;
+``

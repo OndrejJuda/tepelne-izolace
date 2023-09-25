@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { IoIosArrowDown } from 'react-icons/io';
-import { FaBars, FaTimes } from 'react-icons/fa'; // Import the React Icons
+import { FaBars, FaTimes } from 'react-icons/fa'; // Import React Icons
 
+// Definice seznamu odkazů pro navigaci
 const links = [
   { href: '', title: 'Firma' },
   { href: '#sluzby', title: 'Služby' },
@@ -12,27 +13,36 @@ const links = [
 ];
 
 const Header = () => {
+  // Stav pro otevření/zavření mobilního menu
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // Stav pro označení, na který odkaz byl ukazatel myši
   const [hoveredLink, setHoveredLink] = useState(null);
+
+  // Referenční proměnná pro časovač zavírání submenu
   const submenuTimeoutRef = useRef(null);
 
+  // Funkce pro přepínání mobilního menu
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
+  // Funkce pro zavření mobilního menu
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
   };
 
+  // Funkce pro obsluhu přejetí myší nad odkazem
   const handleHover = (index) => {
     setHoveredLink(index);
     clearTimeout(submenuTimeoutRef.current);
   };
 
+  // Funkce pro obsluhu opuštění myši nad odkazem s časovým zpožděním
   const handleHoverExit = () => {
     submenuTimeoutRef.current = setTimeout(() => {
       setHoveredLink(null);
-    }, 300); // Adjust the delay time (in milliseconds) as needed
+    }, 300); // Nastavit časové zpoždění podle potřeby
   };
 
   return (
@@ -43,7 +53,7 @@ const Header = () => {
         </Link>
       </div>
 
-      {/* Mobile hamburger menu button */}
+      {/* Tlačítko pro otevření mobilního menu */}
       <div
         className='md:hidden w-10 h-10 bg-primary-500 text-white rounded-full flex items-center justify-center absolute top-8 right-8 hover:scale-110 transition-transform'
         onClick={toggleMobileMenu}
@@ -51,7 +61,7 @@ const Header = () => {
         {mobileMenuOpen ? <FaTimes /> : <FaBars />}
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobilní menu */}
       {mobileMenuOpen && (
         <div className='md:hidden fixed top-0 right-0 w-full h-screen bg-primary-50 text-center'>
           <button
@@ -60,7 +70,7 @@ const Header = () => {
           >
             <FaTimes />
           </button>
-          {/* Logo above the first link */}
+          {/* Logo nad prvním odkazem */}
           <div className='h-auto lg:h-[50px] flex justify-center 3xl:h-auto my-6 mx-8'>
             <Link href='/'>
               <img src='/logo/logo-name.png' alt='logo' className='w-[200px]' />
@@ -136,7 +146,7 @@ const Header = () => {
                     </div>
                   ) : (
                     <Link href={link.href}>
-                      {/* Wrap the link in a div here */}
+                      {/* Obalit odkaz divem zde */}
                       <div className='text-black hover:text-primary-500 hover:scale-110 transition-transform'>
                         <div className="link-content">
                           {link.title}
@@ -171,9 +181,9 @@ const Header = () => {
               className={`text-lg hover:text-primary-500 transition-transform cursor-pointer ${link.title === 'Zateplení' && hoveredLink === index ? 'open-submenu' : ''}`}
             >
               <Link href={link.href}>
-                <div className="link-content flex items-center"> {/* Added flex container */}
+                <div className="link-content flex items-center">
                   {link.title} {link.title === 'Firma' || link.title === 'Služby' ? (
-                    <span className={`inline-block ml-2 transform transition-transform ${hoveredLink === index ? 'rotate-180 mt-0.5' : ''}`}> {/* Adjusted margin-top */}
+                    <span className={`inline-block ml-2 transform transition-transform ${hoveredLink === index ? 'rotate-180 mt-0.5' : ''}`}> {/* Upraveno margin-top */}
                       <IoIosArrowDown />
                     </span>
                   ) : null}
@@ -228,7 +238,7 @@ const Header = () => {
         ))}
       </nav>
 
-      {/* Rounded div with phone number (Desktop version) */}
+      {/* Zaoblený div s odkazem na poptavku (verze pro desktop) */}
       <div className='hidden btn rounded-full md:block bg-primary-400 text-black py-2 text-center text-base font-bold mx-2 px-4 hover:text-white hover:scale-110 transition-transform'>
         <Link href='/#poptavka'>
           <div className="link-content">
@@ -241,4 +251,3 @@ const Header = () => {
 };
 
 export default Header;
-``

@@ -10,6 +10,7 @@ export { default as GDPR } from './GDPR';
 export { default as FormSentRedirect } from './FormSentRedirect';
 export { default as Grant } from './Grant';
 export { default as FVE } from './FVE';
+export { default as Offer } from './Offer';
 export { default as Header } from './Header';
 export { HSecondary } from './Headings';
 export { default as Hero } from './Hero';

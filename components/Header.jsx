@@ -36,7 +36,7 @@ const Header = () => {
   };
 
   return (
-    <header className='sticky top-0 flex flex-col md:flex-row justify-between items-center py-6 bg-primary-50 -mb-[4px] px-6 md:px-16 lg:px-36 z-50'>
+    <header className='sticky top-0 flex flex-col md:flex-row justify-between items-center py-6 bg-primary-50 -mb-[4px] px-6 md:px-16 lg:px-36 z-50 border-b border-solid'>
       <div className='mx-2'>
         <Link href='/'>
           <img src='/logo/logo-name.png' alt='logo' className='w-[200px] hover:scale-110 transition-transform' />
@@ -175,19 +175,19 @@ const Header = () => {
                 {link.title === 'Zateplení' && (
                   <>
                     <Link href='/#zatepleni-stropu' className="">
-                      <div className="link-content h-12 text-center  text-base  py-3 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-tr-md rounded-tl-md">
+                      <div className="link-content h-13 text-center  text-sm  py-4 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-tr-md rounded-tl-md">
                         Zateplení stropu
                       </div>
                     </Link>
 
                     <Link href='/#zatepleni-strechy'>
-                      <div className="link-content h-12 text-center text-base  py-3 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-none">
+                      <div className="link-content h-13 text-center text-sm  py-4 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-none">
                         Zateplení střechy
                       </div>
                     </Link>
 
                     <Link href='/#zatepleni-fasady'>
-                      <div className="link-content h-12 text-center text-base  py-3 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-br-md rounded-bl-md">
+                      <div className="link-content h-13 text-center text-sm  py-4 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-br-md rounded-bl-md">
                         Zateplení fasády
                       </div>
                     </Link>
@@ -196,7 +196,7 @@ const Header = () => {
                 {link.title === 'Fotovoltaika' && (
                   <>
                     <Link href="https://www.damepanely.cz">
-                      <div className="link-content h-12 text-center py-3 text-base  hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-md">
+                      <div className="link-content h-13 text-center py-4 text-sm  hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-md">
                         Solární ohřev vody
                       </div>
                     </Link>
@@ -209,7 +209,7 @@ const Header = () => {
       </nav>
 
       {/* Rounded div with phone number (Desktop version) */}
-      <div className='hidden md:block bg-primary-400 text-black rounded-full py-2 text-center text-base font-bold mx-2 px-4 hover:text-white hover:scale-110 transition-transform'>
+      <div className='hidden btn rounded-full md:block bg-primary-400 text-black py-2 text-center text-base font-bold mx-2 px-4 hover:text-white hover:scale-110 transition-transform'>
         <Link href='/#poptavka'>
           <div className="link-content">
             📩 Nezávazná poptávka

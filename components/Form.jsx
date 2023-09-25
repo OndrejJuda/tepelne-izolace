@@ -312,7 +312,7 @@ const Form = () => {
                 </div>
 
 
-                <div className='flex-1 flex xl:w-auto flex-col gap-2'>
+                <div className='flex-1 flex xl:w-auto flex-col gap-4'>
                   <p className='font-semibold text-primary-900 text-lg'>GDPR</p>
                   <div className='flex items-center gap-5'>
                     <div

@@ -1,4 +1,4 @@
-import { Benefits, Footer, DemandFormSection, Header, Hero, Process, Services, Navbar, WebsiteHead, Gallery, ImageSection, FVE } from '../components';
+import { Benefits, Footer, DemandFormSection, Header, Hero, Process, Services, Navbar, WebsiteHead, Gallery, ImageSection, Offer, FVE } from '../components';
 import configuration from '../conf';
 import CookieBot from 'react-cookiebot';
 
@@ -16,8 +16,9 @@ export default function Home() {
       <main className=''>
         <Hero />
         {/* <ImageSection sectionName='predvadeci-obrazek' imageUrl='/business/vata.jpg' /> */}
-        <Services />
-        <FVE />
+        {/*<Services />*/}
+        <Offer />
+        {/* <FVE /> */}
         <Benefits />
         <Process />
         <DemandFormSection />

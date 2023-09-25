@@ -15,7 +15,7 @@ const Process = () => {
       id='proces'
       innerDivStyle='flex flex-col justify-center items-center mx-8 md:mx-16 lg:mx-36 w-screen'
     >
-      <HSecondary additionalStyling='text-4xl sm:text-6xl my-12 mb-12 text-center font-bold'>Náš proces: Jak vám poskytneme nejlepší služby v oblasti foukané izolace</HSecondary>
+      <HSecondary additionalStyling='text-4xl sm:text-5xl my-12 mb-12 text-center'>Náš proces: Jak vám poskytneme nejlepší služby v oblasti foukané izolace</HSecondary>
 
       <ul className='flex flex-col gap-24 xl:gap-16 mb-16 xl:mb-32'>
         {
@@ -29,7 +29,7 @@ const Process = () => {
 
                 <div className='relative'>
                   <span
-                    className={`text-8xl text-white bg-primary-100 w-[120px] h-[120px] xl:w-[164px] xl:h-[164px] p-2 rounded-full opacity-50
+                    className={`text-8xl text-white bg-primary-100 w-[120px] h-[120px] xl:w-[164px] xl:h-[164px] p-2 rounded-full opacity-60
                       absolute -top-10 right-0 ${index % 2 ? 'xl:right-0 2xl:-right-28' : 'xl:left-0 2xl:-left-28'}
                       flex justify-center items-center`}
                   >
@@ -37,7 +37,7 @@ const Process = () => {
                   </span>
 
                 </div>
-                <p className='text-3xl font-semibold text-primary-900 mb-8 z-10'>{title}</p>
+                <p className='text-2xl font-semibold text-primary-900 mb-8 z-10'>{title}</p>
 
                 <p className='text-xl text-primary-900 z-10'>{descripton}</p>
 

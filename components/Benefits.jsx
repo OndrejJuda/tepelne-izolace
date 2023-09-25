@@ -32,14 +32,14 @@ const Benefits = () => {
       innerDivStyle='mx-8 md:mx-16 lg:mx-36 bg-primary-50 rounded-lg overflow-hidden shadow-xl w-screen'
     >
       <div className='flex flex-col items-center z-10 mb-6'>
-        <HSecondary additionalStyling='text-4xl sm:text-6xl my-12 mb-12 text-center font-bold'>
+        <HSecondary additionalStyling='text-4xl sm:text-5xl my-12 mb-12 text-center'>
           Proč si vybrat naše služby foukané izolace?
         </HSecondary>
         <div className="container mx-auto grid justify-center gap-8 sm:grid-cols-2 lg:grid-cols-4 text-center">
           {benefits.map((benefit, index) => (
             <div className="flex flex-col items-center p-4" key={index}>
               {benefit.icon}
-              <h3 className="my-3 text-3xl font-semibold text-center">{benefit.title}</h3>
+              <h3 className="my-3 text-2xl text-center">{benefit.title}</h3>
             </div>
           ))}
         </div>

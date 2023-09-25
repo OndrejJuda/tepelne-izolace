@@ -72,7 +72,7 @@ const Gallery = () => {
       id='galerie'
       innerDivStyle='bg-primary-50 w-screen p-8 overflow-x-hidden flex flex-col justify-center items-center px-8 md:px-16 lg:px-36'
     >
-      <HSecondary additionalStyling='mb-8 lg:mb-16 mt-8 text-3xl sm:text-4xl lg:text-5xl font-bold'>Galerie</HSecondary>
+      <HSecondary additionalStyling='mb-8 lg:mb-16 mt-8 text-2xl sm:text-2xl lg:text-3xl '>Galerie</HSecondary>
       {
         items.length > 0
           ? (

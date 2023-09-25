@@ -4,8 +4,8 @@ import { IoIosArrowDown } from 'react-icons/io';
 import { FaBars, FaTimes } from 'react-icons/fa'; // Import the React Icons
 
 const links = [
-  { href: '#sluzby', title: 'Zateplení' },
-  { href: '#fve', title: 'Fotovoltaika' },
+  { href: '', title: 'Firma' },
+  { href: '#sluzby', title: 'Služby' },
   { href: '#galerie', title: 'Galerie' },
   { href: '/dotace', title: 'Dotace' },
   { href: '/kontakty', title: 'Kontakt' },
@@ -77,7 +77,7 @@ const Header = () => {
                 onMouseLeave={handleHoverExit}
               >
                 <div className='text-black hover:text-primary-500 '>
-                  {link.title === 'Zateplení' || link.title === 'Fotovoltaika' ? (
+                  {link.title === 'Firma' || link.title === 'Služby' ? (
                     <div
                       className={`text-black  transition-transform ${hoveredLink === index ? 'open-submenu' : ''}`}
                     >
@@ -91,32 +91,42 @@ const Header = () => {
                           onMouseEnter={() => handleHover(index)}
                           onMouseLeave={handleHoverExit}
                         >
-                          {link.title === 'Zateplení' && (
+                          {link.title === 'Služby' && (
                             <>
-                              <Link href='/#zatepleni-stropu' className="">
+                              <Link href='/zatepleni-zatepleni-stropu' className="">
                                 <div className="link-content h-12 text-center text-base py-3 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-tr-md rounded-tl-md">
                                   Zateplení stropu
                                 </div>
                               </Link>
 
-                              <Link href='/#zatepleni-strechy'>
+                              <Link href='/zatepleni-zatepleni-strechy'>
                                 <div className="link-content h-12 text-center text-base  py-3 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black">
                                   Zateplení střechy
                                 </div>
                               </Link>
 
-                              <Link href='/#zatepleni-fasady'>
-                                <div className="link-content h-12 text-center text-base  py-3 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-br-md rounded-bl-md">
+                              <Link href='/zatepleni-zatepleni-fasady'>
+                                <div className="link-content h-12 text-center text-base  py-3 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-none">
                                   Zateplení fasády
+                                </div>
+                              </Link>
+                              <Link href='/fotovoltaika-solarni-ohrev-vody'>
+                                <div className="link-content h-12 text-center text-base  py-3 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-br-md rounded-bl-md">
+                                  Solární ohřev vody
                                 </div>
                               </Link>
                             </>
                           )}
-                          {link.title === 'Fotovoltaika' && (
+                          {link.title === 'Firma' && (
                             <>
-                              <Link href='/#submenu4'>
-                                <div className="link-content text-base h-12 text-center py-3 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-md">
-                                  Solární ohřev vody
+                              <Link href='/#benefity'>
+                                <div className="link-content text-base h-12 text-center py-3 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black  rounded-tr-md rounded-tl-md">
+                                  Naše výhody
+                                </div>
+                              </Link>
+                              <Link href='/#proces'>
+                                <div className="link-content text-base h-12 text-center py-3 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-br-md rounded-bl-md">
+                                  Náš proces
                                 </div>
                               </Link>
                             </>
@@ -162,7 +172,7 @@ const Header = () => {
             >
               <Link href={link.href}>
                 <div className="link-content flex items-center"> {/* Added flex container */}
-                  {link.title} {link.title === 'Zateplení' || link.title === 'Fotovoltaika' ? (
+                  {link.title} {link.title === 'Firma' || link.title === 'Služby' ? (
                     <span className={`inline-block ml-2 transform transition-transform ${hoveredLink === index ? 'rotate-180 mt-0.5' : ''}`}> {/* Adjusted margin-top */}
                       <IoIosArrowDown />
                     </span>
@@ -170,34 +180,44 @@ const Header = () => {
                 </div>
               </Link>
             </div>
-            {hoveredLink === index && (link.title === 'Zateplení' || link.title === 'Fotovoltaika') && (
+            {hoveredLink === index && (link.title === 'Firma' || link.title === 'Služby') && (
               <div className='absolute top-full left-0 mt-4 bg-white text-center rounded-md w-[150px] h-auto  '>
-                {link.title === 'Zateplení' && (
+                {link.title === 'Služby' && (
                   <>
-                    <Link href='/#zatepleni-stropu' className="">
+                    <Link href='/zatepleni-zatepleni-stropu' className="">
                       <div className="link-content h-13 text-center  text-sm  py-4 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-tr-md rounded-tl-md">
                         Zateplení stropu
                       </div>
                     </Link>
 
-                    <Link href='/#zatepleni-strechy'>
+                    <Link href='/zatepleni-zatepleni-strechy'>
                       <div className="link-content h-13 text-center text-sm  py-4 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-none">
                         Zateplení střechy
                       </div>
                     </Link>
 
-                    <Link href='/#zatepleni-fasady'>
-                      <div className="link-content h-13 text-center text-sm  py-4 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-br-md rounded-bl-md">
+                    <Link href='/zatepleni-zatepleni-fasady'>
+                      <div className="link-content h-13 text-center text-sm  py-4 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-none">
                         Zateplení fasády
+                      </div>
+                    </Link>
+                    <Link href="https://www.damepanely.cz">
+                      <div className="link-content h-13 text-center py-4 text-sm  hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-br-md rounded-bl-md">
+                        Solární ohřev vody
                       </div>
                     </Link>
                   </>
                 )}
-                {link.title === 'Fotovoltaika' && (
+                {link.title === 'Firma' && (
                   <>
-                    <Link href="https://www.damepanely.cz">
-                      <div className="link-content h-13 text-center py-4 text-sm  hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-md">
-                        Solární ohřev vody
+                    <Link href="/#benefity">
+                      <div className="link-content h-13 text-center py-4 text-sm  hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-tr-md rounded-tl-md">
+                        Naše výhody
+                      </div>
+                    </Link>
+                    <Link href="/#proces">
+                      <div className="link-content h-13 text-center py-4 text-sm  hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-br-md rounded-bl-md">
+                        Proces
                       </div>
                     </Link>
                   </>

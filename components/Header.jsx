@@ -239,7 +239,8 @@ const Header = () => {
       </nav>
 
       {/* Zaoblený div s odkazem na poptavku (verze pro desktop) */}
-      <div className='hidden btn rounded-full md:block bg-primary-400 text-black py-2 text-center text-base font-bold mx-2 px-4 hover:text-white hover:scale-110 transition-transform'>
+      <div className='hidden btn rounded-full md:block bg-primary-400 text-black py-2 text-center text-base font-bold mx-2 px-4 hover:text-white hover:scale-110 transition-transform
+      '>
         <Link href='/#poptavka'>
           <div className="link-content">
             📩 Nezávazná poptávka

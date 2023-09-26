@@ -81,12 +81,12 @@ const Hero = () => {
         <img
           src='/business/hero-gif.gif'
           alt='hero'
-          className='w-full absolute object-cover sm:h-[350px] lg:w-75 md:w-50 sm:w-35 lg:h-[450px] rounded-2xl'
+          className='w-full absolute object-cover h-[300px] md:h-[450px] lg:w-75 md:w-50 sm:w-35 rounded-2xl'
         />
 
         <div className="absolute top-8 left-8 w-full h-96 flex flex-col">
           <p className="text-3xl sm:text-4xl md:text-6xl font-bold text-primary-white max-w-[900px]">
-            Vaše cesta k lepší izolaci!<br></br> To je
+            Vaše cesta k větším úsporám!<br></br> To je
             <span className="text-transparent bg-gradient-to-r from-primary-50 to-primary-500 bg-clip-text  transition-bg-clip duration-500 "> LUNASTAV</span><br></br>
             <div className="text-2xl sm:text-3xl md:text-3xl font-bold text-primary-white my-8 md:max-w-[300px] lg:max-w-[700px] sm:max-w-[300px]">
               <em>{text}</em> {/* Použijte <em>, abyste text získali kurzívou */}
@@ -95,13 +95,16 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <div className="lg:flex md:flex justify-end xs:hidden">
+      <div className="lg:flex md:flex justify-end">
         <img
           src='/business/typek.png'
           alt='worker1'
-          className='sm:max-w-[500px] md:my-32 object-cover lg:w-75 md:w-50 sm:w-35 lg:z-20 sm:z-20'
+          className='sm:w-[400px] md:w-[500px] md:my-32 object-cover sm:mx-1 sm:my-32 z-10 relative opacity-0 sm:opacity-0 md:opacity-100'
         />
       </div>
+
+
+
     </section>
   );
 };

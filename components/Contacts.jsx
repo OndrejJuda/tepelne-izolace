@@ -5,6 +5,7 @@ import { useWindowWidth } from '@react-hook/window-size';
 import { Form, HSecondary, Map } from './';
 import { MdAlternateEmail } from 'react-icons/md';
 import { FiPhoneCall } from 'react-icons/fi';
+import { Header } from '../components';
 import configuration from '../conf';
 
 const { email, phone, phoneSekretarka } = configuration;
@@ -41,23 +42,9 @@ const Contacts = () => {
 
   return (
     <>
-      <nav className={`ml-2 md:ml-16 mt-10 fixed transition ${isVisible ? '' : '-translate-y-[200px]'}`}>
-        <Link
-          href='/'
-        >
-          <div className='p-2 shadow-lg rounded-full bg-primary-50
-    flex justify-center items-center transition
-    hover:shadow-md hover:scale-110
-    active:shadow-md active:scale-95'>
-            <BiArrowBack
-              className='text-primary-900'
-              size={50}
-            />
-          </div>
-        </Link>
-      </nav>
 
-      <div className='mt-20 2xl:my-20 py-20 px-4 md:px-16 lg:px-36 flex flex-col gap-16 2xl:gap-32'>
+      <Header />
+      <div className='mt-20 2xl:my-20 px-4 md:px-16 lg:px-36 flex flex-col gap-16 2xl:gap-32'>
         <section className='flex flex-col items-center'>
           <h1 className='text-4xl sm:text-5xl md:text-6xl font-semibold text-primary-900 mb-16 lg:mb-32'>Kde nás najdete?</h1>
           <div className='w-full grid grid-rows-2 gap-y-8 grid-flow-col-1 md:grid-cols-[1fr_max-content] md:grid-rows-1 gap-x-8'>
@@ -95,8 +82,8 @@ const Contacts = () => {
                 <p className='text-3xl text-primary-900 font-semibold mb-8'>Královéhradecký kraj<br />a Pardubický kraj:</p>
                 <div className='text-2xl text-primary-900'>
                   <address>
-                    Šimkova 1224/2b <br />
-                    500 03, Hradec Králové
+                    Spojovací 670/17 <br />
+                    503 11, Hradec Králové
                   </address>
                   <a href={`mailto:${email}`} target='_blank' rel='noreferrer' className='block'>
                     <div className='flex items-center gap-4 mt-4'>

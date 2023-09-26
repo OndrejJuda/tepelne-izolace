@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { BiArrowBack } from 'react-icons/bi';
 import Link from 'next/link';
+import { Header } from '../components';
 
 const Grant = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -33,21 +34,7 @@ const Grant = () => {
 
   return (
     <>
-      <nav className={`ml-2 md:ml-16 mt-10 fixed transition ${isVisible ? '' : '-translate-y-[200px]'}`}>
-        <Link
-          href='/'
-        >
-          <div className='p-2 shadow-lg rounded-full bg-primary-50
-    flex justify-center items-center transition
-    hover:shadow-md hover:scale-110
-    active:shadow-md active:scale-95'>
-            <BiArrowBack
-              className='text-primary-900'
-              size={50}
-            />
-          </div>
-        </Link>
-      </nav>
+      <Header />
       <div className='flex flex-col 2xl:flex-row 2xl:items-center my-20 py-20 px-4 md:px-16 lg:px-36 gap-16 2xl:gap-32'>
         <div className='flex flex-col gap-8 text-primary-900 order-2 2xl:order-1'>
           <h1 className='text-4xl font-semibold'>Vyřizujeme dotace z programu NZÚ Light</h1>

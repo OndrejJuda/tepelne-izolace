@@ -75,7 +75,7 @@ const Hero = () => {
   return (
     <section
       id=''
-      className='flex flex-col justify-center bg-white rounded-lg lg:mx-36 relative my-10 mb-[-100px]'
+      className='flex flex-col justify-center bg-white rounded-lg lg:mx-36 relative my-10 mb-32'
     >
       <div className="w-full relative">
         <img
@@ -84,24 +84,22 @@ const Hero = () => {
           className='w-full absolute object-cover h-[300px] md:h-[450px] lg:w-75 md:w-50 sm:w-35 rounded-2xl'
         />
 
-        <div className="absolute top-8 left-8 w-full h-96 flex flex-col">
+        <div className="relative z-10 w-full h-96 flex flex-col p-8">
           <p className="text-3xl sm:text-4xl md:text-6xl font-bold text-primary-white max-w-[900px]">
             Vaše cesta k větším úsporám!<br></br> To je
             <span className="text-transparent bg-gradient-to-r from-primary-50 to-primary-500 bg-clip-text  transition-bg-clip duration-500 "> LUNASTAV</span><br></br>
-            <div className="text-2xl sm:text-3xl md:text-3xl font-bold text-primary-white my-8 md:max-w-[300px] lg:max-w-[700px] sm:max-w-[300px]">
-              <em>{text}</em> {/* Použijte <em>, abyste text získali kurzívou */}
+            <div className="text-2xl sm:text-3xl md:text-3xl font-bold text-primary-white my-8 md:max-w-[500px] lg:max-w-[500px] w-full sm:max-w-[300px]">
+              {text}{/* Použijte <em>, abyste text získali kurzívou */}
               <span className="text-primary-white">{cursor}</span>
             </div>
           </p>
         </div>
       </div>
-      <div className="lg:flex md:flex justify-end">
-        <img
-          src='/business/typek.png'
-          alt='worker1'
-          className='sm:w-[400px] md:w-[500px] md:my-32 object-cover sm:mx-1 sm:my-32 z-10 relative opacity-0 sm:opacity-0 md:opacity-100'
-        />
-      </div>
+      <img
+        src='/business/typek.png'
+        alt='worker1'
+        className=' w-[250px] sm:w-[400px] md:w-[500px] md:my-32 object-cover sm:mx-1 z-10 absolute right-0 top-56 md:top-10 md:right-0'
+      />
 
 
 

@@ -29,7 +29,7 @@ const Benefits = () => {
   return (
     <SectionWrapper
       id='benefity'
-      innerDivStyle='mx-8 md:mx-16 lg:mx-36 bg-primary-50 rounded-lg overflow-hidden shadow-xl w-screen'
+      innerDivStyle='mx-8 md:mx-16 lg:mx-36 bg-primary-50 rounded-lg overflow-hidden shadow-xl w-screen '
     >
       <div className='flex flex-col items-center z-10 mb-6'>
         <HSecondary additionalStyling='text-4xl sm:text-5xl my-12 mb-12 text-center'>

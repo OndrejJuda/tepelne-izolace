@@ -6,7 +6,7 @@ const Offer = () => {
   return (
     <SectionWrapper
       id='sluzby'
-      innerDivStyle='flex flex-col justify-center items-center bg-white rounded-lg mx-8 md:mx-16 lg:mx-36 w-screen relative md:my-[-20px]'
+      innerDivStyle='flex flex-col justify-center items-center bg-white rounded-lg mx-8 md:mx-16 lg:mx-36 w-screen  relative'
     >
       <div className="flex flex-col md:flex-row w-full justify-center items-center mb-6 ">
         <div className="md:w-2/4 p-4 md:border-r-2 border-gray-400">

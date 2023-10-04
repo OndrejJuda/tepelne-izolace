@@ -137,7 +137,7 @@ const Header = () => {
                               <Link href='/#proces'>
                                 <div className="link-content h-16 text-center text-base py-5
                                  hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-br-md rounded-bl-md">
-                                  Náš proces
+                                  Náš postup
                                 </div>
                               </Link>
                             </>
@@ -228,7 +228,7 @@ const Header = () => {
                     </Link>
                     <Link href="/#proces">
                       <div className="link-content h-13 text-center py-4 text-sm  hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-br-md rounded-bl-md">
-                        Proces
+                        Náš postup
                       </div>
                     </Link>
                   </>

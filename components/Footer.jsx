@@ -55,6 +55,7 @@ const Footer = () => {
             <ul className="space-y-1">
               <li>+420 605 898 894</li>
               <li>info@lunastav.cz </li>
+              <li>IČO: 05591872 </li>
             </ul>
           </div>
           <div className="space-y-3">

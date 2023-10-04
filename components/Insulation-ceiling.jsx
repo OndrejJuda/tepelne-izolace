@@ -16,39 +16,45 @@ const InsulationCieling = () => {
       <Header />
       <SectionWrapper
         id='sluzby'
-        innerDivStyle='flex flex-col justify-center items-center my-32 md:my-32 bg-white rounded-lg mx-8 md:mx-16 lg:mx-36 w-screen  relative'
+        innerDivStyle='flex flex-col justify-center bg-white rounded-lg mx-8 md:mx-16 lg:mx-36 w-screen my-10 relative'
       >
         <Breadcrumb items={breadcrumbItems} />
-        <div className="flex flex-col md:flex-row w-full justify-center items-center mb-6 ">
-          <div className="md:w-2/4 p-4 md:border-r-2 border-gray-400">
-            <p className="text-center text-4xl mb-6">Zateplení stropu, střechy, fasády: Pro rodinné domy</p>
-            <p className="text-center text-lg mb-6">Přeměňte svůj dům v energeticky šetrnou oázu s top zateplením stropu, střechy nebo fasády. Komfort a úspora energie čeká!</p>
+
+        <div class="flex flex-col-reverse mt-6 lg:flex-row ">
+          <div class="w-full lg:w-3/4 pr-8 ">
+            <h1 class="text-3xl font-bold mb-4">Přijďte na teplou stranu života s foukanou izolací!</h1>
+            <p class="mb-4">Krása domova tkví nejen v designu, ale i v komfortu a energetické efektivitě, kterou vám může poskytnout správně zateplený strop. Objevte s námi magii foukané izolace a změňte svůj domov v útočiště pohodlí a úspor energie.</p>
+
+            <h2 class="text-2xl font-semibold mb-2">Proč foukaná izolace? Odpověď je jasná!</h2>
+            <ul class="list-disc list-inside mb-4">
+              <li class="mb-2">Blesková instalace: Efektivní a čistá metoda bez zbytečných nepořádků.</li>
+              <li class="mb-2">Úspory v kapse: Snížíme vaše energetické náklady a zvýšíme komfort bydlení.</li>
+              <li class="mb-2">Zelená volba: Optujeme pro ekologické a udržitelné řešení.</li>
+              <li class="mb-2">Dokonalé pokrytí: Izolace i nejdostupnějších koutů a štěrbin.</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold mb-2">Cesta k teplejšímu domovu – Jak na to?</h2>
+            <ol class="list-decimal list-inside mb-4">
+              <li class="mb-2">Bezpečí v první řadě: Podrobná konzultace a vyhodnocení vašeho projektu s odborníky.</li>
+              <li class="mb-2">Analyzujeme každý kout: Detailní průzkum pro identifikaci všech kritických míst a potřeb.</li>
+              <li class="mb-2">Transparentní nabídka: Jasné a přehledné cenové podmínky bez skrytých nákladů.</li>
+              <li class="mb-2">Příprava prostoru: Ochrana prostoru a příprava pro maximálně efektivní instalaci.</li>
+              <li class="mb-2">Magie foukání: S precizností aplikujeme izolaci, aby pokryla veškerý prostor.</li>
+              <li class="mb-2">Kvalita na prvním místě: Zajišťujeme, že každý kout je perfektně izolován a kontrolujeme výsledky.</li>
+            </ol>
+
+            <h2 class="text-2xl font-semibold mb-2">Vaše Cesta k úsporám a pohodlí začíná nyní!</h2>
+            <p class="mb-4">Nemusíte již hledat dál, protože ideální řešení pro váš komfortní a energeticky efektivní domov je přímo před vámi! S naším týmem profesionálů a špičkovou foukanou izolací získáte domov, ve kterém bude vždy příjemně. Kontaktujte nás a přidejte se k našim spokojeným klientům na cestě za lepším bydlením!</p>
+            <p class="mb-4 text-2xl">Jsme certifikovaná firma na aplikaci celulózy <span className='text-red-600 font-bold '>THERMOFLOC</span> a minerální vaty <span className='text-blue-600 font-bold '>KNAUF – SUPAFIL LOFT</span></p>
           </div>
-          <div className="sm:flex-1 flex flex-col p-4 text-center items-center w-3/4">
-            <Link href="/zatepleni/zatepleni-stropu" className="relative inline-flex items-center px-12 py-3 overflow-hidden text-lg bg-primary-50 h-24 text-black rounded-md hover:text-black group hover:bg-gray- sm:w-3/4">
-              <span className="absolute left-0 block w-full h-0 transition-all bg-primary-300 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
-              <span className="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-              </span>
-              <span className="relative text-xl">Zateplení stropu</span>
-            </Link>
-            <Link href="/zatepleni/zatepleni-strechy" className="relative inline-flex my-4 items-center px-12 py-3 overflow-hidden text-lg bg-primary-50 h-24 text-black rounded-md hover:text-black group hover:bg-gray-50 sm:w-3/4">
-              <span className="absolute left-0 block w-full h-0 transition-all bg-primary-300 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
-              <span className="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-              </span>
-              <span className="relative text-xl">Zateplení střechy</span>
-            </Link>
-            <Link href="/zatepleni/zatepleni-fasady" className="relative inline-flex items-center px-12 py-3 overflow-hidden text-lg bg-primary-50 h-24 text-black rounded-md hover:text-black group hover:bg-gray-50 sm:w-3/4">
-              <span className="absolute left-0 block w-full h-0 transition-all bg-primary-300 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
-              <span className="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-              </span>
-              <span className="relative text-xl">Zateplení fasády</span>
-            </Link>
+          <div class="w-full lg:w-1/4 order-first lg:order-last  ">
+            <img src="/business/vata1.jpg" alt="vata1" class="mb-4 rounded-md " />
+            <img src="/business/vata2.jpg" alt="vata2" class="mb-4 rounded-md" />
+            <img src="/business/foukana1.jpg" alt="foukana1" class=" rounded-md mb-4 w-full max-h-[170px] sm:max-h-[300px] lg:max-h-[230px] object-cover" />
           </div>
         </div>
-      </SectionWrapper>
+
+      </SectionWrapper >
     </>
   );
 };

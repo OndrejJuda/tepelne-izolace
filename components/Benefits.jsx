@@ -33,7 +33,7 @@ const Benefits = () => {
     >
       <div className='flex flex-col items-center z-10 mb-6'>
         <HSecondary additionalStyling='text-4xl sm:text-5xl my-12 mb-12 text-center'>
-          Proč si vybrat naše služby foukané izolace?
+          Proč si vybrat naše služby?
         </HSecondary>
         <div className="container mx-auto grid justify-center gap-8 sm:grid-cols-2 lg:grid-cols-4 text-center">
           {benefits.map((benefit, index) => (

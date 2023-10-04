@@ -81,7 +81,7 @@ const Hero = () => {
         <img
           src='/business/hero-gif.gif'
           alt='hero'
-          className='w-full absolute object-cover h-[300px] md:h-[450px] lg:w-75 md:w-50 sm:w-35 rounded-2xl'
+          className='w-full absolute object-cover h-[300px] md:h-[450px] lg:w-75 md:w-50 sm:w-35 lg:rounded-2xl'
         />
 
         <div className="relative z-10 w-full h-96 flex flex-col p-8">

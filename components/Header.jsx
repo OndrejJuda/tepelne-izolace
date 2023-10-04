@@ -97,31 +97,31 @@ const Header = () => {
                       </div>
                       {hoveredLink === index && (
                         <div
-                          className='bg-white my-2 rounded-md'
+                          className='bg-white my-2 w-64 rounded-md'
                           onMouseEnter={() => handleHover(index)}
                           onMouseLeave={handleHoverExit}
                         >
                           {link.title === 'Služby' && (
                             <>
-                              <Link href='/zatepleni-zatepleni-stropu' className="">
-                                <div className="link-content h-12 text-center text-base py-3 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-tr-md rounded-tl-md">
+                              <Link href='/zatepleni/zatepleni-stropu' className="">
+                                <div className="link-content h-16 text-center text-base py-5 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-tr-md rounded-tl-md">
                                   Zateplení stropu
                                 </div>
                               </Link>
 
-                              <Link href='/zatepleni-zatepleni-strechy'>
-                                <div className="link-content h-12 text-center text-base  py-3 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black">
+                              <Link href='/zatepleni/zatepleni-strechy'>
+                                <div className="link-content h-16 text-center text-base py-5 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black">
                                   Zateplení střechy
                                 </div>
                               </Link>
 
-                              <Link href='/zatepleni-zatepleni-fasady'>
-                                <div className="link-content h-12 text-center text-base  py-3 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-none">
+                              <Link href='/zatepleni/zatepleni-fasady'>
+                                <div className="link-content h-16 text-center text-base py-5 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-none">
                                   Zateplení fasády
                                 </div>
                               </Link>
-                              <Link href='/fotovoltaika-solarni-ohrev-vody'>
-                                <div className="link-content h-12 text-center text-base  py-3 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-br-md rounded-bl-md">
+                              <Link href='https://www.damepanely.cz'>
+                                <div className="link-content h-16 text-center text-base py-5 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-br-md rounded-bl-md">
                                   Solární ohřev vody
                                 </div>
                               </Link>
@@ -130,12 +130,13 @@ const Header = () => {
                           {link.title === 'Firma' && (
                             <>
                               <Link href='/#benefity'>
-                                <div className="link-content text-base h-12 text-center py-3 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black  rounded-tr-md rounded-tl-md">
+                                <div className="link-content h-16 text-center text-base py-5 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black  rounded-tr-md rounded-tl-md">
                                   Naše výhody
                                 </div>
                               </Link>
                               <Link href='/#proces'>
-                                <div className="link-content text-base h-12 text-center py-3 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-br-md rounded-bl-md">
+                                <div className="link-content h-16 text-center text-base py-5
+                                 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-br-md rounded-bl-md">
                                   Náš proces
                                 </div>
                               </Link>
@@ -194,19 +195,19 @@ const Header = () => {
               <div className='absolute top-full left-0 mt-4 bg-white text-center rounded-md w-[150px] h-auto  '>
                 {link.title === 'Služby' && (
                   <>
-                    <Link href='/zatepleni-zatepleni-stropu' className="">
+                    <Link href='/zatepleni/zatepleni-stropu' className="">
                       <div className="link-content h-13 text-center  text-sm  py-4 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-tr-md rounded-tl-md">
                         Zateplení stropu
                       </div>
                     </Link>
 
-                    <Link href='/zatepleni-zatepleni-strechy'>
+                    <Link href='/zatepleni/zatepleni-strechy'>
                       <div className="link-content h-13 text-center text-sm  py-4 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-none">
                         Zateplení střechy
                       </div>
                     </Link>
 
-                    <Link href='/zatepleni-zatepleni-fasady'>
+                    <Link href='/zatepleni/zatepleni-fasady'>
                       <div className="link-content h-13 text-center text-sm  py-4 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-none">
                         Zateplení fasády
                       </div>

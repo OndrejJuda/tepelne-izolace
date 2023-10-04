@@ -13,7 +13,7 @@ const DemandFormSection = () => {
   return (
     <SectionWrapper
       id={(width ?? 0) > 1024 ? 'poptavka' : ''}
-      innerDivStyle='bg-primary-50 lg:flex rounded-lg overflow-hidden shadow-xl mx-8 md:mx-16 lg:mx-36 w-full'
+      innerDivStyle='my-32 md:my-32 bg-primary-50 lg:flex rounded-lg overflow-hidden shadow-xl mx-8 md:mx-16 lg:mx-36 w-full'
     >
       <img
         src='/business/house.png'

@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const FVE = () => {
   return (
-    <SectionWrapper id='fve' innerDivStyle='flex flex-col justify-center bg-primary-50 rounded-lg items-center mx-8 md:mx-16 lg:mx-36 w-screen sm:grid sm:grid-cols-2 shadow-xl'>
+    <SectionWrapper id='fve' innerDivStyle='flex my-32 md:my-32 flex-col justify-center bg-primary-50 rounded-lg items-center mx-8 md:mx-16 lg:mx-36 w-screen sm:grid sm:grid-cols-2 shadow-xl'>
       <div className="p-8 md:p-12 lg:px-16 lg:py-24">
         <div
           className="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right"

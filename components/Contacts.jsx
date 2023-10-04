@@ -1,11 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { BiArrowBack } from 'react-icons/bi';
-import Link from 'next/link';
 import { useWindowWidth } from '@react-hook/window-size';
 import { Form, HSecondary, Map } from './';
 import { MdAlternateEmail } from 'react-icons/md';
-import { FiPhoneCall } from 'react-icons/fi';
-import { Header } from '../components';
+import { FiPhoneCall, FiHome, FiChevronRight } from 'react-icons/fi';
+import { Header, Breadcrumb } from '../components';
 import configuration from '../conf';
 
 const { email, phone, phoneSekretarka } = configuration;
@@ -15,7 +13,10 @@ const Contacts = () => {
 
   const width = useWindowWidth();
   const previousYScroll = useRef();
-
+  const breadcrumbItems = [
+    { href: '/', label: 'Úvod', icon: FiHome },
+    { href: '/kontakty', label: 'Kontakt' }
+  ];
   useEffect(() => {
     const handleScroll = (event) => {
       const { scrollY } = window;
@@ -45,6 +46,7 @@ const Contacts = () => {
 
       <Header />
       <div className='mt-20 2xl:my-20 px-4 md:px-16 lg:px-36 flex flex-col gap-16 2xl:gap-32'>
+        <Breadcrumb items={breadcrumbItems} />
         <section className='flex flex-col items-center'>
           <h1 className='text-4xl sm:text-5xl md:text-6xl font-semibold text-primary-900 mb-16 lg:mb-32'>Kde nás najdete?</h1>
           <div className='w-full grid grid-rows-2 gap-y-8 grid-flow-col-1 md:grid-cols-[1fr_max-content] md:grid-rows-1 gap-x-8'>

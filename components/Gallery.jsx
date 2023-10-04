@@ -70,7 +70,7 @@ const Gallery = () => {
   return (
     <SectionWrapper
       id='galerie'
-      innerDivStyle='bg-primary-50 w-screen p-8 overflow-x-hidden flex flex-col justify-center items-center px-8 md:px-16 lg:px-36'
+      innerDivStyle='bg-primary-50 my-32 md:my-32 w-screen p-8 overflow-x-hidden flex flex-col justify-center items-center px-8 md:px-16 lg:px-36'
     >
       <HSecondary additionalStyling='mb-8 lg:mb-16 mt-8 text-2xl sm:text-2xl lg:text-3xl '>Galerie</HSecondary>
       {

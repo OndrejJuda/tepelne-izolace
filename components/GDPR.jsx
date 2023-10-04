@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { BiArrowBack } from 'react-icons/bi';
+import { FiHome, FiChevronRight } from 'react-icons/fi';
 import Link from 'next/link';
 import parse from 'html-react-parser';
+import { Header, Breadcrumb } from '../components';
 
 import gdpr from '../gdpr';
 
@@ -9,7 +10,10 @@ const GDPR = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   const previousYScroll = useRef();
-
+  const breadcrumbItems = [
+    { href: '/', label: 'Úvod', icon: FiHome },
+    { href: '/gdpr', label: 'GDPR' }
+  ];
   useEffect(() => {
     const handleScroll = (event) => {
       const { scrollY } = window;
@@ -33,25 +37,12 @@ const GDPR = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  
+
   return (
     <>
-      <nav className={`ml-2 md:ml-16 mt-10 fixed transition ${isVisible ? '' : '-translate-y-[200px]'}`}>
-        <Link
-          href='/#poptavka'
-        >
-          <div className='p-2 shadow-lg rounded-full bg-primary-50
-      flex justify-center items-center transition
-      hover:shadow-md hover:scale-110
-      active:shadow-md active:scale-95'>
-            <BiArrowBack
-              className='text-primary-900'
-              size={50}
-            />
-          </div>
-        </Link>
-      </nav>
-      <div className='my-20 py-20 px-4 md:px-16 lg:px-36 flex flex-col gap-8 text-primary-900'>
+      <Header />
+      <div className='my-20 px-4 md:px-16 lg:px-36 flex flex-col gap-5 text-primary-900'>
+        <Breadcrumb items={breadcrumbItems} />
         <h1 className='text-4xl font-semibold'>Ochrana osobních údajů</h1>
         {
           gdpr.map((lv0, i0) => {

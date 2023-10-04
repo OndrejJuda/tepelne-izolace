@@ -8,7 +8,7 @@ const { email, phone, urlSubdomain } = configuration;
 
 const Footer = () => {
   return (
-    <footer className="px-4 divide-y dark:bg-gray-800 bg-primary-50 dark:text-gray-100">
+    <footer className="px-4 divide-y  bg-primary-50 ">
       <div className="container mr-4 flex flex-col justify-evenly py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
         <div className='flex justify-center'>
           <Link href='/'>
@@ -17,7 +17,7 @@ const Footer = () => {
         </div>
         <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
           <div className="space-y-3">
-            <h3 className="tracki uppercase dark:text-gray-50">Služby</h3>
+            <h3 className="tracki uppercase ">Služby</h3>
             <ul className="space-y-1">
               <li>
                 <Link href="/zatepleni/zatepleni-stropu">Zateplení stropu</Link>
@@ -34,7 +34,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="space-y-3">
-            <h3 className="tracki uppercase dark:text-gray-50">Firma</h3>
+            <h3 className="tracki uppercase ">Firma</h3>
             <ul className="space-y-1">
               <li>
                 <Link href="/gdpr">Ochrana osobních údajů</Link>
@@ -51,7 +51,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="space-y-3">
-            <h3 className="uppercase dark:text-gray-50">Kontakt</h3>
+            <h3 className="uppercase ">Kontakt</h3>
             <ul className="space-y-1">
               <li>+420 605 898 894</li>
               <li>info@lunastav.cz </li>
@@ -59,7 +59,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="space-y-3">
-            <div className="uppercase dark:text-gray-50">Sociální média</div>
+            <div className="uppercase ">Sociální média</div>
             <div className="flex justify-start space-x-2">
               <Link href="https://www.facebook.com/lunastav" title="Facebook" className="flex items-center p-1">
                 <FaFacebook className="w-5 h-5 fill-current" /> {/* Ikona Facebooku */}
@@ -74,7 +74,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="py-6 text-sm text-center dark:text-gray-400">© 2023 LUNSTAV CZ s.r.o. - všechna práva vyhrazena, použití obsahu nebo jeho částí je možné pouze se souhlasem společnosti.</div>
+      <div className="py-6 text-sm text-center ">© 2023 LUNSTAV CZ s.r.o. - všechna práva vyhrazena, použití obsahu nebo jeho částí je možné pouze se souhlasem společnosti.</div>
     </footer>
 
   );

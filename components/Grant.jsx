@@ -62,7 +62,7 @@ const Grant = () => {
             Jsme specialisté <span className="text-primary-nzumodra">Nové</span> <span className="text-primary-nzuzelena">zelené</span> <span className="text-primary-nzuzluta">úsporám</span>
           </div>
           <Link href='https://novazelenausporam.cz/specialista/14368' className='flex justify-center items-center w-full font-bold scale-100 hover:scale-110 duration-200 '>
-            <div className="text-">Oficialní seznam specialstů</div>
+            <div className="text-">Oficialní seznam specialistů</div>
           </Link>
         </div>
       </SectionWrapper>

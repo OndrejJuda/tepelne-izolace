@@ -24,4 +24,6 @@ export { default as SectionWrapper } from './SectionWrapper';
 export { default as Select } from './Select';
 export { default as Insulation } from './Insulation';
 export { default as InsulationCieling } from './Insulation-ceiling';
+export { default as InsulationRoof } from './Insulation-roof';
+export { default as InsulationFacade } from './Insulation-facade';
 export { default as WebsiteHead } from './WebsiteHead';

@@ -45,9 +45,6 @@ const Footer = () => {
               <li>
                 <Link href="/#benefity">Výhody</Link>
               </li>
-              <li>
-                <Link href="/#benefity">Certifikáty</Link>
-              </li>
             </ul>
           </div>
           <div className="space-y-3">

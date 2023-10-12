@@ -45,7 +45,7 @@ const Contacts = () => {
     <>
 
       <Header />
-      <div className='mt-20 2xl:my-20 px-4 md:px-16 lg:px-36 flex flex-col gap-16 2xl:gap-32'>
+      <div className='mt-20 2xl:my-10 px-4 md:px-16 lg:px-36 flex flex-col gap-16 2xl:gap-32'>
         <Breadcrumb items={breadcrumbItems} />
         <section className='flex flex-col items-center'>
           <h1 className='text-4xl sm:text-5xl md:text-6xl font-semibold text-primary-900 mb-16 lg:mb-32'>Kde nás najdete?</h1>

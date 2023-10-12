@@ -41,7 +41,7 @@ const Grant = () => {
   return (
     <>
       <Header />
-      <SectionWrapper innerDivStyle="my-32 md:my-32">
+      <SectionWrapper innerDivStyle="my-14 md:my-14">
         <div className='flex flex-col 2xl:flex-row 2xl:items-center px-4 md:px-16 lg:px-36 gap-16 2xl:gap-32'>
           <div className='flex flex-col gap-8 text-primary-900 order-2 2xl:order-1'>
             <Breadcrumb items={breadcrumbItems} />

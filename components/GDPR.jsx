@@ -41,7 +41,7 @@ const GDPR = () => {
   return (
     <>
       <Header />
-      <div className='my-20 px-4 md:px-16 lg:px-36 flex flex-col gap-5 text-primary-900'>
+      <div className='my-10 px-4 md:px-16 lg:px-36 flex flex-col gap-5 text-primary-900'>
         <Breadcrumb items={breadcrumbItems} />
         <h1 className='text-4xl font-semibold'>Ochrana osobních údajů</h1>
         {

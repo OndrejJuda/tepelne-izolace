@@ -24,6 +24,15 @@ export default function App({ Component, pageProps }) {
           window.rc.retargetingHit(retargetingConf);
         }
       ` }} />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11371180687"></script>
+      <script async dangerouslySetInnerHTML={{
+        __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-11371180687');
+      `}} />
       <Component {...pageProps} />
     </AppContextProvider>
   );

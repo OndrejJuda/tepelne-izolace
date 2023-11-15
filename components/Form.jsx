@@ -390,7 +390,6 @@ const Form = () => {
                         autoComplete: 'coupon',
                         placeholder: 'Zde zadejte',
                         onChange: updateValueHandlerCoupon.bind(null, 'coupon'),
-                        disabled: isValidCoupon === true && couponAdded,
                       }}
                       title='Slevový kód'
                     />

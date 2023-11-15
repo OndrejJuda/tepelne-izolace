@@ -75,7 +75,7 @@ const Form = () => {
     region && regionChangeHandler({ target: { value: region } });
     district && districtChangeHandler({ target: { value: district } });
     product && productChangeHandler({ target: { value: product } });
-    coupon && productChangeHandler({ target: { value: coupon } });
+    coupon && couponChangeHandler({ target: { value: coupon } });
     gdpr !== undefined && setIsGDPRChecked(gdpr);
   }, []);
 
@@ -141,7 +141,7 @@ const Form = () => {
     value: coupon,
     valueChangeHandler: couponChangeHandler,
     reset: couponResetHandler
-  } = useInput((value) => true);
+  } = useInput((value));
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -387,6 +387,7 @@ const Form = () => {
                         type: 'text',
                         name: 'coupon',
                         id: 'coupon',
+                        value: coupon,
                         autoComplete: 'coupon',
                         placeholder: 'Zde zadejte',
                         onChange: updateValueHandlerCoupon.bind(null, 'coupon'),

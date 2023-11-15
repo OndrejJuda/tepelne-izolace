@@ -387,9 +387,9 @@ const Form = () => {
                         type: 'text',
                         name: 'coupon',
                         id: 'coupon',
-                        value: coupon,
                         autoComplete: 'coupon',
                         placeholder: 'Zde zadejte',
+                        value: coupon,
                         onChange: updateValueHandlerCoupon.bind(null, 'coupon'),
                         disabled: isValidCoupon === true && couponAdded,
                       }}

@@ -227,8 +227,8 @@ const Form = () => {
         value = event;
         break;
       case 'coupon':
-        couponChangeHandler({ target: { value: event } });
-        value = event;
+        couponChangeHandler(event);
+        value = event.target.value;
         break;
     }
 
@@ -390,6 +390,7 @@ const Form = () => {
                         autoComplete: 'coupon',
                         placeholder: 'Zde zadejte',
                         onChange: updateValueHandlerCoupon.bind(null, 'coupon'),
+                        disabled: isValidCoupon === true && couponAdded,
                       }}
                       title='Slevový kód'
                     />

@@ -67,7 +67,7 @@ const Form = () => {
   const { formData, setFormData, clearFormData } = useContext(AppContext);
 
   useEffect(() => {
-    const { firstName, lastName, email, phone, gdpr, district, region, product } = formData;
+    const { firstName, lastName, email, phone, gdpr, district, region, product, coupon } = formData;
     firstName && firstNameChangeHandler({ target: { value: firstName } });
     lastName && lastNameChangeHandler({ target: { value: lastName } });
     email && emailChangeHandler({ target: { value: email } });
@@ -75,6 +75,7 @@ const Form = () => {
     region && regionChangeHandler({ target: { value: region } });
     district && districtChangeHandler({ target: { value: district } });
     product && productChangeHandler({ target: { value: product } });
+    coupon && productChangeHandler({ target: { value: coupon } });
     gdpr !== undefined && setIsGDPRChecked(gdpr);
   }, []);
 
@@ -136,6 +137,12 @@ const Form = () => {
     reset: districtResetHandler
   } = useInput((value) => true);
 
+  const {
+    value: coupon,
+    valueChangeHandler: couponChangeHandler,
+    reset: couponResetHandler
+  } = useInput((value) => true);
+
   const submitHandler = async (e) => {
     e.preventDefault();
 
@@ -177,6 +184,7 @@ const Form = () => {
     regionResetHandler();
     districtResetHandler();
     productResetHandler();
+    couponResetHandler();
     setIsGDPRChecked(false);
 
     clearFormData();
@@ -216,6 +224,10 @@ const Form = () => {
         break;
       case 'product':
         productChangeHandler({ target: { value: event } });
+        value = event;
+        break;
+      case 'coupon':
+        couponChangeHandler({ target: { value: event } });
         value = event;
         break;
     }

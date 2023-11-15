@@ -27,3 +27,4 @@ export { default as InsulationCieling } from './Insulation-ceiling';
 export { default as InsulationRoof } from './Insulation-roof';
 export { default as InsulationFacade } from './Insulation-facade';
 export { default as WebsiteHead } from './WebsiteHead';
+export { default as StickyPhoneNumber } from './StickyPhoneNumber';

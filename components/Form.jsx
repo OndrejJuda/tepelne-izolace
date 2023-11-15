@@ -10,6 +10,9 @@ import configuration from '../conf';
 import { regions } from '../regions-and-districts';
 import { products } from '../products';
 import { useRouter } from 'next/router';
+import { FaPlus } from 'react-icons/fa';
+import { FaCheck } from 'react-icons/fa';
+
 
 const { phone } = configuration;
 
@@ -32,6 +35,28 @@ const Input = ({ inputProps, hasError, title }) => {
     </div>
   )
 };
+const Coupon = ({ inputProps, hasError, title }) => {
+  return (
+    <div
+      className='flex-1 flex xl:w-auto flex-col gap-2'
+    >
+      <label
+        htmlFor={inputProps.id}
+        className='font-semibold text-lg text-primary-900'
+      >
+        {title}
+      </label>
+      <input
+        {...inputProps}
+        className={`shadow-lg rounded-l-xl py-4 px-4 w-full
+        ${hasError ? 'border-red-500 border-[2px]' : 'm-[2px]'}`}
+      />
+    </div>
+  )
+};
+
+
+
 
 const Form = () => {
   const router = useRouter();
@@ -119,7 +144,7 @@ const Form = () => {
         '/api/raynet/',
         {
           method: 'POST',
-          body: JSON.stringify({ firstName, lastName, email, phoneNumber, region: region.name, district: district.name, product: product.name }),
+          body: JSON.stringify({ firstName, lastName, email, phoneNumber, region: region.name, district: district.name, product: product.name, coupon }),
         }
       );
       if (response.ok) {
@@ -204,6 +229,37 @@ const Form = () => {
   }
 
   const districts = region?.districts ?? [];
+
+  const [loading, setLoading] = useState(false);
+
+  const handleAddCoupon = () => {
+    setLoading(true);
+
+    setTimeout(() => {
+      if (validCouponCodes.includes(couponCode.toLowerCase())) {
+        // Coupon code is valid
+        setIsValidCoupon(true);
+        setCouponAdded(true); // Set the state to indicate that the coupon was added successfully
+        // Additional steps after successful verification
+      } else {
+        // Coupon code is invalid
+        setIsValidCoupon(false);
+      }
+
+      setLoading(false);
+    }, 2000);
+  };
+  const updateValueHandlerCoupon = (field, event) => {
+    setCouponCode(event.target.value);
+    setIsValidCoupon(null); // Reset validation status when the user types
+    setCouponAdded(false); // Reset the state when the user types a new coupon code
+  };
+
+  const [isValidCoupon, setIsValidCoupon] = useState(null);
+  const [couponCode, setCouponCode] = useState('');
+  const [couponAdded, setCouponAdded] = useState(false);
+
+  const validCouponCodes = ['code1', 'CODE2', 'CODE3']; // Replace with your actual coupon codes
 
   return (
     <>
@@ -313,7 +369,53 @@ const Form = () => {
 
 
                 <div className='flex-1 flex xl:w-auto flex-col gap-4'>
-                  <p className='font-semibold text-primary-900 text-lg'>GDPR</p>
+                  <div className='flex items-center'>
+                    <Coupon
+                      inputProps={{
+                        type: 'text',
+                        name: 'coupon',
+                        id: 'coupon',
+                        autoComplete: 'coupon',
+                        placeholder: 'Zde zadejte',
+                        onChange: updateValueHandlerCoupon.bind(null, 'coupon'),
+                        disabled: isValidCoupon === true && couponAdded,
+                      }}
+                      title='Slevový kód'
+                    />
+                    <button
+                      type='button'
+                      className={`inline-block mt-9 py-[18px] px-8 rounded-r-xl font-semibold
+            text-xl text-primary-900 bg-primary-200 shadow-lg
+            transition hover:bg-primary-400 hover:shadow-md active:scale-95 active:shadow-lg ${loading ? 'cursor-wait' : ''}`}
+                      onClick={handleAddCoupon}
+                      disabled={loading || (isValidCoupon === true && couponAdded)}
+                    >
+                      {loading ? (
+                        <div className="flex items-center">
+                          <div className="animate-spin rounded-full h-5 w-5 border-t-2 border-b-2 border-black"></div>
+                        </div>
+                      ) : (
+                        <>
+                          {isValidCoupon === true && couponAdded ? (
+                            <span className="text-sm flex">Přidáno</span>
+                          ) : (
+                            <span className="text-sm flex">Přidat</span>
+                          )}
+                        </>
+                      )}
+                    </button>
+                  </div>
+                  {isValidCoupon === true && couponAdded && (
+                    <span className="ml-2 text-green-500">Kód byl úspěšně přidán!</span>
+                  )}
+                  {isValidCoupon === false && (
+                    <p className="text-red-500 ml-2">Neplatný kód. Prosím zkuste to znova.</p>
+                  )}
+                </div>
+              </div>
+              <div className='flex flex-col sm:flex-row lg:flex-col xl:flex-row ms:mt-[-70px] md:mt-[-20px] gap-8 sm:gap-8 lg w-full md:w-full'>
+                <div className='flex-1 flex xl:w-auto flex-col gap-2'>
+                  <p className='font-semibold text-primary-900 text-lg'>GDPR <span className='text-red-600 font-bold'> *</span></p>
                   <div className='flex items-center gap-5'>
                     <div
                       className='bg-white w-12 h-12 rounded-full group shadow-lg flex justify-center items-center'
@@ -331,19 +433,20 @@ const Form = () => {
                     </p>
                   </div>
                 </div>
-              </div>
 
-              <button
-                type='submit'
-                disabled={!isFormValid}
-                className='inline-block mt-4 py-4 px-8 rounded-xl font-semibold
-          text-xl text-primary-900 bg-primary-200 shadow-lg
-          disabled:bg-gray-200 disabled:text-black disabled:scale-90 disabled:shadow-none
-          transition enabled:hover:bg-primary-400
-          enabled:hover:scale-105 enabled:hover:shadow-md enabled:active:scale-95 enabled:active:shadow-lg'
-              >
-                Odeslat
-              </button>
+                {/* Tlačítko pro odeslání formuláře */}
+                <button
+                  type='submit'
+                  disabled={!isFormValid}
+                  className='inline-block mt-4 py-4 px-8 rounded-xl font-semibold
+                      text-xl text-primary-900 bg-primary-200 shadow-lg 
+                      disabled:bg-gray-200 disabled:text-black disabled:scale-90 disabled:shadow-none
+                      transition enabled:hover:bg-primary-400
+                      enabled:hover:scale-105 enabled:hover:shadow-md enabled:active:scale-95 enabled:active:shadow-lg'
+                >
+                  Odeslat
+                </button>
+              </div>
             </form >
           )
           : (

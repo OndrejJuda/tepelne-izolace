@@ -9,6 +9,7 @@ const defaultFormData = {
   region: {},
   district: {},
   gdpr: undefined,
+  coupon: ''
 };
 
 const AppContext = createContext({

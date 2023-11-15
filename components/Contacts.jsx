@@ -118,7 +118,10 @@ const Contacts = () => {
                 id={width > 1024 ? '' : 'kontakty'}
                 className='flex-1 rounded-xl p-6 sm:p-8 2xl:px-36 lg:py-8'
               >
-                <HSecondary additionalStyling='mb-8 lg:mb-16 text-4xl lg:text-5xl font-bold'>Pošlete nám nezávaznou poptávku</HSecondary>
+                <HSecondary additionalStyling='mb-8 lg:mb-16 text-2xl lg:text-4xl'>Pošlete nám nezávaznou poptávku</HSecondary>
+                <p>
+                  <span className='text-red-600 font-bold'>*</span> povinný údaj
+                </p>
                 <Form />
               </div>
             </div>

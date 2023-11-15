@@ -25,9 +25,13 @@ const DemandFormSection = () => {
         id={(width ?? 0) > 1024 ? '' : 'poptavka'}
         className='xl:flex-1 rounded-xl p-6 sm:p-8 2xl:px-36 lg:py-6'
       >
-        <HSecondary additionalStyling='mb-8 lg:text-5xl text-center'>
+        <HSecondary additionalStyling='mb-8 lg:text-3xl text-center'>
           Pošlete nám nezávaznou poptávku
+
         </HSecondary>
+        <p>
+          <span className='text-red-600 font-bold'>*</span> povinný údaj
+        </p>
         <Form />
       </div>
     </SectionWrapper>

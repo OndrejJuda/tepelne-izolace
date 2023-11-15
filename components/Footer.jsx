@@ -8,7 +8,7 @@ const { email, phone, urlSubdomain } = configuration;
 
 const Footer = () => {
   return (
-    <footer className="px-4 divide-y  bg-primary-50 ">
+    <footer className="px-4 divide-y mt-12 bg-primary-50 ">
       <div className="container mr-4 flex flex-col justify-evenly py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
         <div className='flex justify-center'>
           <Link href='/'>
@@ -50,7 +50,7 @@ const Footer = () => {
           <div className="space-y-3">
             <h3 className="uppercase ">Kontakt</h3>
             <ul className="space-y-1">
-              <li>+420 605 898 894</li>
+              <li>+420 705 968 968</li>
               <li>info@lunastav.cz </li>
               <li>IČO: 05591872 </li>
             </ul>

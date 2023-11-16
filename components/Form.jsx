@@ -141,7 +141,7 @@ const Form = () => {
     value: coupon,
     valueChangeHandler: couponChangeHandler,
     reset: couponResetHandler
-  } = useInput((value));
+  } = useInput((value) => value.trim() !== '');
 
   const submitHandler = async (e) => {
     e.preventDefault();

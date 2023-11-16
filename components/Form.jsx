@@ -269,7 +269,7 @@ const Form = () => {
   const [isValidCoupon, setIsValidCoupon] = useState(null);
   const [couponCode, setCoupon] = useState('');
   const [couponAdded, setCouponAdded] = useState(false);
-  const validCouponCodes = ['VIDBFL20', 'XTUZPZ20', 'BRWSTR20'];
+  const validCouponCodes = ['vidbfl20', 'xtuzpz20', 'brwstr2020'];
 
   return (
     <>

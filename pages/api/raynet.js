@@ -4,7 +4,7 @@ const instanceName = process.env.RAYNET_INSTANCE_NAME;
 
 const sendEmail = async (req, res) => {
   const data = req.body;
-  const { firstName, lastName, email, phoneNumber, region, district, product, coupon } = JSON.parse(data);
+  const { firstName, lastName, email, phoneNumber, region, district, product, couponCode } = JSON.parse(data);
 
   const token = btoa(`${userName}:${apiKey}`);
   const options = {
@@ -27,7 +27,7 @@ const sendEmail = async (req, res) => {
         "province": region,
         "city": district
       },
-      "notice": `Slevový kod: ${coupon}`
+      "notice": `Slevový kod: ${couponCode}`
     })
   };
 

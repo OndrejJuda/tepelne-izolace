@@ -150,7 +150,7 @@ const Form = () => {
         '/api/raynet/',
         {
           method: 'POST',
-          body: JSON.stringify({ firstName, lastName, email, phoneNumber, region: region.name, district: district.name, product: product.name, coupon }),
+          body: JSON.stringify({ firstName, lastName, email, phoneNumber, region: region.name, district: district.name, product: product.name, couponCode }),
         }
       );
       if (response.ok) {
@@ -373,18 +373,17 @@ const Form = () => {
                   />
                 </div>
 
-
                 <div className='flex-1 flex xl:w-auto flex-col gap-4'>
                   <div className='flex items-center'>
                     <Coupon
                       inputProps={{
                         type: 'text',
-                        name: 'coupon',
-                        id: 'coupon',
-                        autoComplete: 'coupon',
+                        name: 'couponCode',
+                        id: 'couponCode',
+                        autoComplete: 'couponCode',
                         placeholder: 'Zde zadejte',
                         value: couponCode,
-                        onChange: updateValueHandlerCoupon.bind(null, 'coupon'),  // Add this line
+                        onChange: updateValueHandlerCoupon.bind(null, 'couponCode'),  // Add this line
                         onBlur: couponBlurHandler,
                         disabled: isValidCoupon === true && couponAdded,
                       }}

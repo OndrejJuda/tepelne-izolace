@@ -155,7 +155,7 @@ const Form = () => {
         '/api/raynet/',
         {
           method: 'POST',
-          body: JSON.stringify({ firstName, lastName, email, phoneNumber, region: region.name, district: district.name, product: product.name, couponCode }),
+          body: JSON.stringify({ firstName, lastName, email, phoneNumber, region: region.name, district: district.name, product: product.name, couponCode: couponAdded ? '' : couponCode }),
         }
       );
       if (response.ok) {

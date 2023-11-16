@@ -75,7 +75,6 @@ const Form = () => {
     region && regionChangeHandler({ target: { value: region } });
     district && districtChangeHandler({ target: { value: district } });
     product && productChangeHandler({ target: { value: product } });
-    coupon && couponChangeHandler({ target: { value: coupon } });
     gdpr !== undefined && setIsGDPRChecked(gdpr);
   }, []);
 
@@ -140,7 +139,7 @@ const Form = () => {
   const {
     value: coupon,
     valueChangeHandler: couponChangeHandler,
-    reset: couponResetHandler
+    inputBlurHandler: couponBlurHandler,
   } = useInput((value) => value.trim() !== '');
 
   const submitHandler = async (e) => {
@@ -184,7 +183,6 @@ const Form = () => {
     regionResetHandler();
     districtResetHandler();
     productResetHandler();
-    couponResetHandler();
     setIsGDPRChecked(false);
 
     clearFormData();
@@ -226,10 +224,6 @@ const Form = () => {
         productChangeHandler({ target: { value: event } });
         value = event;
         break;
-      case 'coupon':
-        couponChangeHandler(event);
-        value = event.target.value;
-        break;
     }
 
     setFormData(fieldName, value);
@@ -262,13 +256,13 @@ const Form = () => {
     }, 2000);
   };
   const updateValueHandlerCoupon = (field, event) => {
-    setCouponCode(event.target.value);
-    setIsValidCoupon(null); // Reset validation status when the user types
-    setCouponAdded(false); // Reset the state when the user types a new coupon code
+    setCoupon(event.target.value);
+    setIsValidCoupon(null);
+    setCouponAdded(false);
   };
 
   const [isValidCoupon, setIsValidCoupon] = useState(null);
-  const [couponCode, setCouponCode] = useState('');
+  const [couponCode, setCoupon] = useState('');
   const [couponAdded, setCouponAdded] = useState(false);
 
   const validCouponCodes = ['code1', 'CODE2', 'CODE3']; // Replace with your actual coupon codes
@@ -389,8 +383,9 @@ const Form = () => {
                         id: 'coupon',
                         autoComplete: 'coupon',
                         placeholder: 'Zde zadejte',
-                        value: coupon,
-                        onChange: updateValueHandlerCoupon.bind(null, 'coupon'),
+                        value: couponCode,
+                        onChange: updateValueHandlerCoupon.bind(null, 'coupon'),  // Add this line
+                        onBlur: couponBlurHandler,
                         disabled: isValidCoupon === true && couponAdded,
                       }}
                       title='Slevový kód'

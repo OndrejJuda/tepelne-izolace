@@ -152,7 +152,7 @@ const Form = () => {
         '/api/raynet/',
         {
           method: 'POST',
-          body: JSON.stringify({ firstName, lastName, email, phoneNumber, region: region.name, district: district.name, product: product.name, couponCode }),
+          body: JSON.stringify({ firstName, lastName, email, phoneNumber, region: region.name, district: district.name, product: product.name, couponCode: couponAdded ? couponCode : '' }),
         }
       );
       if (response.ok) {
@@ -386,7 +386,7 @@ const Form = () => {
                         id: 'couponCode',
                         autoComplete: 'couponCode',
                         placeholder: 'Zde zadejte',
-                        value: couponAdded ? couponCode : '',
+                        value: couponCode,
                         onChange: updateValueHandlerCoupon.bind(null, 'couponCode'),
                         onBlur: couponBlurHandler,
                         disabled: isValidCoupon === true && couponAdded,

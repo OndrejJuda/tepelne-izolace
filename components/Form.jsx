@@ -148,6 +148,9 @@ const Form = () => {
 
     try {
       setLoadingSubmit(true);
+      if (!couponAdded) {
+        setCoupon('');
+      }
       const response = await fetch(
         '/api/raynet/',
         {
@@ -163,6 +166,7 @@ const Form = () => {
           category: 'Poptávka',
           label: 'Úspěšně odesláno'
         });
+
 
       } else {
         setShowValid(false);
@@ -268,7 +272,6 @@ const Form = () => {
   const [isValidCoupon, setIsValidCoupon] = useState(null);
   const [couponCode, setCoupon] = useState('');
   const [couponAdded, setCouponAdded] = useState(false);
-
   const validCouponCodes = ['code1', 'CODE2', 'CODE3']; // Replace with your actual coupon codes
 
   return (

@@ -386,7 +386,7 @@ const Form = () => {
                         id: 'couponCode',
                         autoComplete: 'couponCode',
                         placeholder: 'Zde zadejte',
-                        value: couponAdded ? '' : couponCode,
+                        value: couponAdded ? couponCode : '',
                         onChange: updateValueHandlerCoupon.bind(null, 'couponCode'),
                         onBlur: couponBlurHandler,
                         disabled: isValidCoupon === true && couponAdded,

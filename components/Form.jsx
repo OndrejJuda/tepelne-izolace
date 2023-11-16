@@ -142,10 +142,12 @@ const Form = () => {
     inputBlurHandler: couponBlurHandler,
   } = useInput((value) => value.trim() !== '');
 
+  const [loadingSubmit, setLoadingSubmit] = useState(false);
   const submitHandler = async (e) => {
     e.preventDefault();
 
     try {
+      setLoadingSubmit(true);
       const response = await fetch(
         '/api/raynet/',
         {
@@ -170,9 +172,11 @@ const Form = () => {
           label: 'Nastala chyba'
         });
       }
+      setLoadingSubmit(false);
     } catch (error) {
       setShowValid(false);
       setSubmitError(error.message);
+      setLoadingSubmit(false);
       console.error(error);
     }
 
@@ -445,13 +449,15 @@ const Form = () => {
                 <button
                   type='submit'
                   disabled={!isFormValid}
-                  className='inline-block mt-4 py-4 px-8 rounded-xl font-semibold
-                      text-xl text-primary-900 bg-primary-200 shadow-lg 
-                      disabled:bg-gray-200 disabled:text-black disabled:scale-90 disabled:shadow-none
-                      transition enabled:hover:bg-primary-400
-                      enabled:hover:scale-105 enabled:hover:shadow-md enabled:active:scale-95 enabled:active:shadow-lg'
+                  className={`inline-block mt-4 py-4 px-8 rounded-xl font-semibold
+          text-xl text-primary-900 bg-primary-200 shadow-lg 
+          disabled:bg-gray-200 disabled:text-black disabled:scale-90 disabled:shadow-none
+          transition ${loadingSubmit
+                      ? 'cursor-wait opacity-70' // Přidáno pro stav načítání
+                      : 'enabled:hover:bg-primary-400 enabled:hover:scale-105 enabled:hover:shadow-md enabled:active:scale-95 enabled:active:shadow-lg'
+                    }`}
                 >
-                  Odeslat
+                  {loadingSubmit ? 'Odesílání...' : 'Odeslat'}
                 </button>
               </div>
             </form >

@@ -53,6 +53,8 @@ export default function App({ Component, pageProps }) {
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1747459502334265');
     fbq('track', 'PageView');
+    fbq('track', 'Lead');
+    fbq('track', 'Contact');
   ` }} />
 
       <noscript dangerouslySetInnerHTML={{

@@ -18,6 +18,7 @@ const WebsiteHead = ({ titleSuffix, canonicalHref }) => {
         <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#e5a832" />
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="theme-color" content="#ffffff" />
+        <meta name="facebook-domain-verification" content="i9koc8z9q5slbeg6qdh7cd3gt27au4" />
 
         {/* <!-- Primary Meta Tags --> */}
         <title>{`${title}${titleSuffix ? titleSuffix : ''}`}</title>

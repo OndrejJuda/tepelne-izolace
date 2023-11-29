@@ -159,7 +159,7 @@ const Form = () => {
           '/api/facebook/',
           {
             method: 'POST',
-            body: JSON.stringify({ firstName, lastName, email, phoneNumber, district }),
+            body: JSON.stringify({ firstName, lastName, email, phoneNumber, district: district.name }),
           }
         );
         setShowValid(true);

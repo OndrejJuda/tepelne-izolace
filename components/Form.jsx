@@ -163,7 +163,7 @@ const Form = () => {
       if (response.ok) {
         console.log(firstName)
         console.log(firstName.toLowerCase())
-        const test = sha256(firstName.toLowerCase());
+        const test = firstName;
         console.log(test)
         const options = {
           method: 'POST',
@@ -178,7 +178,7 @@ const Form = () => {
                 "event_time": new Date().getTime(),
                 "user_data": {
                   "fn": [
-                    test
+                    firstName
                   ]
                 },
               }

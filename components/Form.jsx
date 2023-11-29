@@ -141,6 +141,12 @@ const Form = () => {
     inputBlurHandler: couponBlurHandler,
   } = useInput((value) => value.trim() !== '');
 
+  const sha256 = (data) => {
+    const hash = createHash('sha256');
+    hash.update(data);
+    return hash.digest('hex');
+  };
+
   const [loadingSubmit, setLoadingSubmit] = useState(false);
   const submitHandler = async (e) => {
     e.preventDefault();

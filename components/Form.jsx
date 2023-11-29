@@ -161,26 +161,22 @@ const Form = () => {
         }
       );
       if (response.ok) {
-        const options = {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            "data": [
-              {
-                "action_source": "website",
-                "event_name": "TestEvent",
-                "event_time": new Date().getTime(),
-                "user_data": {
-                  "em": sha256(email.toLowerCase())
-                },
-              }
-            ],
-            "test_event_code": "TEST8339"
-          })
-        };
-        await fetch(`https://graph.facebook.com/v18.0/1747459502334265/events?access_token=EAAD2J99otaUBO84WICapFuphB4lG7wDjJqbvmZBCfLjykQHFVSmpQyY8ZCK5T92wHHaExpbC6ojDoFLZBpdl8RwEcJ1arQ5DjhWWv33KjKYRuGfoZBAwnDEJ7DjtUtZAjpZAnAY6AZA0LsmFghdqtVKA0TsTdQriU4TTUhWFa8wTOU6AZC2FD2qQrLMTBpbhaQdVJgZDZD`, options);
+
+        await fetch(`https://graph.facebook.com/v18.0/1747459502334265/events?access_token=EAAD2J99otaUBO84WICapFuphB4lG7wDjJqbvmZBCfLjykQHFVSmpQyY8ZCK5T92wHHaExpbC6ojDoFLZBpdl8RwEcJ1arQ5DjhWWv33KjKYRuGfoZBAwnDEJ7DjtUtZAjpZAnAY6AZA0LsmFghdqtVKA0TsTdQriU4TTUhWFa8wTOU6AZC2FD2qQrLMTBpbhaQdVJgZDZD`,
+          {
+            method: "POST", body: JSON.stringify({
+              "data": [
+                {
+                  "action_source": "website",
+                  "event_name": "TestEvent",
+                  "event_time": new Date().getTime(),
+                  "user_data": {
+                    "em": sha256(email.toLowerCase())
+                  },
+                }
+              ],
+            })
+          });
         // await fetch(
         //   '/api/facebook/',
         //   {

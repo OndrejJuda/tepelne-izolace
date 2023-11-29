@@ -172,6 +172,7 @@ const Form = () => {
           const emailHash = sha256(email.toLowerCase());
           const phoneNumberHash = sha256(phoneNumber.toLowerCase());
           const districtHash = sha256(district.name.toLowerCase());
+          console.log("jdu to zkusit poslat")
           const fbConversion = await fetch(
             '/api/facebook/',
             {

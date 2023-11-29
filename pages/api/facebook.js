@@ -4,7 +4,7 @@ const datasetID = process.env.FACEBOOK_PIXEL_ID;
 const sendFBdata = async (req, res) => {
   const data = req.body;
   const { firstName, lastName, email, phoneNumber, disctrict } = JSON.parse(data);
-
+  console.log("tu jsem")
   const options = {
     method: 'POST',
     headers: {
@@ -42,10 +42,13 @@ const sendFBdata = async (req, res) => {
     const response = await fetch(`https://graph.facebook.com/v18.0/${datasetID}/events?access_token=${apiKey}`, options);
 
     if (response.ok) {
+      console.log("poslal jsem to")
     } else {
+      console.log("neposlal jsem to")
       return res.status(error.statusCode || 500).json({ error: response.statusText });
     }
   } catch (error) {
+    console.log("nEROORRORORORRORO")
     return res.status(error.statusCode || 500).json({ error: error.message });
   }
 

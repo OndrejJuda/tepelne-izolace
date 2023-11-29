@@ -181,7 +181,7 @@ const Form = () => {
               }),
             }
           );
-          if (fbConversion.ok) { console.info(fbConversion.ok); }
+          if (fbConversion.ok) { console.log(fbConversion.ok); }
         } catch (error) {
           console.error(error);
         }

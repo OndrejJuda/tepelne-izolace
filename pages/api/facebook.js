@@ -1,5 +1,5 @@
 const apiKey = process.env.FACEBOOK_TOKEN;
-const datasetID = process.env.FACEBOOK_PIXEL_ID
+const datasetID = process.env.FACEBOOK_PIXEL_ID;
 
 const sendFBdata = async (req, res) => {
   const data = req.body;
@@ -8,7 +8,7 @@ const sendFBdata = async (req, res) => {
   const options = {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json; charset=UTF-8'
+      'Content-Type': 'application/json'
     },
     body: JSON.stringify({
       "data": [

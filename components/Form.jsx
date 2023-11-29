@@ -155,13 +155,46 @@ const Form = () => {
         }
       );
       if (response.ok) {
-        await fetch(
-          '/api/facebook/',
-          {
-            method: 'POST',
-            body: JSON.stringify({ firstName, lastName, email, phoneNumber, district: district.name }),
-          }
-        );
+        const options = {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            "data": [
+              {
+                "action_source": "website",
+                "event_name": "Lead",
+                "event_time": new Date().getTime(),
+                "user_data": {
+                  "em": [
+                    sha256(email.toLowerCase())
+                  ],
+                  "ph": [
+                    sha256(phoneNumber.toLowerCase())
+                  ],
+                  "ln": [
+                    sha256(lastName.toLowerCase())
+                  ],
+                  "fn": [
+                    sha256(firstName.toLowerCase())
+                  ],
+                  "ct": [
+                    sha256(district.toLowerCase())
+                  ]
+                },
+              }
+            ]
+          })
+        };
+        await fetch(`https://graph.facebook.com/v18.0/1747459502334265/events?access_token=EAAD2J99otaUBO84WICapFuphB4lG7wDjJqbvmZBCfLjykQHFVSmpQyY8ZCK5T92wHHaExpbC6ojDoFLZBpdl8RwEcJ1arQ5DjhWWv33KjKYRuGfoZBAwnDEJ7DjtUtZAjpZAnAY6AZA0LsmFghdqtVKA0TsTdQriU4TTUhWFa8wTOU6AZC2FD2qQrLMTBpbhaQdVJgZDZD`, options);
+        // await fetch(
+        //   '/api/facebook/',
+        //   {
+        //     method: 'POST',
+        //     body: JSON.stringify({ firstName, lastName, email, phoneNumber, district: district.name }),
+        //   }
+        // );
         setShowValid(true);
         router.replace('/dekujeme-vam');
         setSubmitError('');

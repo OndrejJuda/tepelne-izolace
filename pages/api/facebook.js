@@ -3,7 +3,7 @@ const datasetID = process.env.FACEBOOK_PIXEL_ID;
 
 const sendFBdata = async (req, res) => {
   const data = req.body;
-  const { firstName, lastName, email, phoneNumber, disctrict } = JSON.parse(data);
+  const { firstName, lastName, email, phoneNumber, district } = JSON.parse(data);
   const options = {
     method: 'POST',
     headers: {
@@ -29,7 +29,7 @@ const sendFBdata = async (req, res) => {
               firstName
             ],
             "ct": [
-              disctrict
+              district
             ]
           },
         }

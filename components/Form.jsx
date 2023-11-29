@@ -183,6 +183,7 @@ const Form = () => {
           );
           if (fbConversion.ok) { console.log(fbConversion.ok); }
         } catch (error) {
+          console.log("ERROR ANI JSEM TO NEPOSLAL")
           console.error(error);
         }
 

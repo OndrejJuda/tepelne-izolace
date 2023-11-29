@@ -163,6 +163,18 @@ const Form = () => {
           category: 'Poptávka',
           label: 'Úspěšně odesláno'
         });
+        try {
+          const fbConversion = await fetch(
+            '/api/facebook/',
+            {
+              method: 'POST',
+              body: JSON.stringify({ firstName, lastName, email, phoneNumber, district: district.name }),
+            }
+          );
+          if (fbConversion.ok) { console.info(fbConversion.ok); }
+        } catch (error) {
+          console.error(error);
+        }
 
 
       } else {

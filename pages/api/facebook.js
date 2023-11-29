@@ -11,30 +11,23 @@ const sendFBdata = async (req, res) => {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
+
       "data": [
         {
-          "action_source": "website",
           "event_name": "Lead",
-          "event_time": new Date().getTime(),
+          "event_time": 1701093151,
+          "action_source": "website",
           "user_data": {
             "em": [
-              email
+              "7b17fb0bd173f625b58636fb796407c22b3d16fc78302d79f0fd30c2fc2fc068"
             ],
             "ph": [
-              phoneNumber
-            ],
-            "ln": [
-              lastName
-            ],
-            "fn": [
-              firstName
-            ],
-            "ct": [
-              disctrict
+              "25bab07de90c4a288949912fdc82a770e067a83e8a478051b743b3303f4e7a26"
             ]
-          },
+          }
         }
       ]
+
 
     })
   };

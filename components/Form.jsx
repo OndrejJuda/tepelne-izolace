@@ -171,7 +171,7 @@ const Form = () => {
           {
             method: 'POST',
             body: JSON.stringify({
-              firstNameHash, lastNameHash, emailHash, phoneNumberHash, district: districtHash
+              firstName: firstNameHash, lastName: lastNameHash, email: emailHash, phoneNumber: phoneNumberHash, district: districtHash
             }),
           }
         );

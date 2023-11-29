@@ -38,17 +38,13 @@ const sendFBdata = async (req, res) => {
   };
 
   try {
-    console.log("tu jsem")
     const response = await fetch(`https://graph.facebook.com/v18.0/${datasetID}/events?access_token=${apiKey}`, options);
 
     if (response.ok) {
-      console.log("poslal jsem to")
     } else {
-      console.log("neposlal jsem to")
       return res.status(error.statusCode || 500).json({ error: response.statusText });
     }
   } catch (error) {
-    console.log("nEROORRORORORRORO")
     return res.status(error.statusCode || 500).json({ error: error.message });
   }
 

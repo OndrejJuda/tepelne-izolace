@@ -18,7 +18,7 @@ const sendFBdata = async (req, res) => {
           "action_source": "website",
           "user_data": {
             "em": [
-              email.toLowerCase().hashlib.SHA256()
+              email
             ],
             "ph": [
               phoneNumber.toLowerCase().hashlib.SHA256()

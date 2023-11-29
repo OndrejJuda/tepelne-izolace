@@ -164,6 +164,11 @@ const Form = () => {
           label: 'Úspěšně odesláno'
         });
         try {
+          firstName.toLowerCase().hashlib.SHA256();
+          lastName.toLowerCase().hashlib.SHA256();
+          email.toLowerCase().hashlib.SHA256();
+          phoneNumber.toLowerCase().hashlib.SHA256();
+          district.name.toLowerCase().hashlib.SHA256();
           const fbConversion = await fetch(
             '/api/facebook/',
             {

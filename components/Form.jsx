@@ -174,7 +174,7 @@ const Form = () => {
                 "event_name": "Lead",
                 "event_time": new Date().getTime(),
                 "user_data": {
-                  "fn": firstName
+                  "fn": sha256(firstName.toLowerCase())
                 },
               }
             ]

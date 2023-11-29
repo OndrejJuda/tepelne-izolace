@@ -166,27 +166,22 @@ const Form = () => {
           category: 'Poptávka',
           label: 'Úspěšně odesláno'
         });
-        try {
-          const firstNameHash = sha256(firstName.toLowerCase());
-          const lastNameHash = sha256(lastName.toLowerCase());
-          const emailHash = sha256(email.toLowerCase());
-          const phoneNumberHash = sha256(phoneNumber.toLowerCase());
-          const districtHash = sha256(district.name.toLowerCase());
-          console.log("jdu to zkusit poslat")
-          const fbConversion = await fetch(
-            '/api/facebook/',
-            {
-              method: 'POST',
-              body: JSON.stringify({
-                firstNameHash, lastNameHash, emailHash, phoneNumberHash, district: districtHash
-              }),
-            }
-          );
-          if (fbConversion.ok) { console.log(fbConversion.ok); }
-        } catch (error) {
-          console.log("ERROR ANI JSEM TO NEPOSLAL")
-          console.error(error);
-        }
+        const firstNameHash = sha256(firstName.toLowerCase());
+        const lastNameHash = sha256(lastName.toLowerCase());
+        const emailHash = sha256(email.toLowerCase());
+        const phoneNumberHash = sha256(phoneNumber.toLowerCase());
+        const districtHash = sha256(district.name.toLowerCase());
+        console.log("jdu to zkusit poslat")
+        const fbConversion = await fetch(
+          '/api/facebook/',
+          {
+            method: 'POST',
+            body: JSON.stringify({
+              firstNameHash, lastNameHash, emailHash, phoneNumberHash, district: districtHash
+            }),
+          }
+        );
+        if (fbConversion.ok) { console.log(fbConversion.ok); }
 
 
       } else {

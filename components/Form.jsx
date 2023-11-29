@@ -161,22 +161,18 @@ const Form = () => {
         }
       );
       if (response.ok) {
+        let myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json; charset=UTF-8");
 
-        await fetch(`https://graph.facebook.com/v18.0/1747459502334265/events?access_token=EAAD2J99otaUBO84WICapFuphB4lG7wDjJqbvmZBCfLjykQHFVSmpQyY8ZCK5T92wHHaExpbC6ojDoFLZBpdl8RwEcJ1arQ5DjhWWv33KjKYRuGfoZBAwnDEJ7DjtUtZAjpZAnAY6AZA0LsmFghdqtVKA0TsTdQriU4TTUhWFa8wTOU6AZC2FD2qQrLMTBpbhaQdVJgZDZD`,
-          {
-            method: "POST", body: JSON.stringify({
-              "data": [
-                {
-                  "action_source": "website",
-                  "event_name": "TestEvent",
-                  "event_time": new Date().getTime(),
-                  "user_data": {
-                    "em": sha256(email.toLowerCase())
-                  },
-                }
-              ],
-            })
-          });
+        let raw = " {\"data\": [\r\n    {\r\n      \"action_source\": \"website\",\r\n      \"event_name\": \"Lead\",\r\n      \"event_time\": 1701256049,\r\n      \"user_data\": {\r\n        \"em\": \"29d8a1c1c100bdb5e3263eccb107b9f88d4253dfb40a407ef3aab546c57b7e5b\",\r\n        \"ln\": \"5e1db0b0ff9657b7e98b6c0c1b818d96add68b8ae8fbeee6bce9f041a13338be\",\r\n        \"ph\": \"7a1999d44f927c184f8a4e746f3e4d5be7cee868076d7d3c45381586c58d67f8\",\r\n        \"ct\": \"be79353aa5ab7f13c57309ed98fd49d4055312fa4378888ed442b039164a4f72\"\r\n      }\r\n    }\r\n  ]\r\n }";
+
+        let requestOptions = {
+          method: 'POST',
+          headers: myHeaders,
+          body: raw,
+          redirect: 'follow'
+        };
+        await fetch("https://graph.facebook.com/v18.0/1747459502334265/events?access_token=EAAD2J99otaUBO84WICapFuphB4lG7wDjJqbvmZBCfLjykQHFVSmpQyY8ZCK5T92wHHaExpbC6ojDoFLZBpdl8RwEcJ1arQ5DjhWWv33KjKYRuGfoZBAwnDEJ7DjtUtZAjpZAnAY6AZA0LsmFghdqtVKA0TsTdQriU4TTUhWFa8wTOU6AZC2FD2qQrLMTBpbhaQdVJgZDZD", requestOptions)
         // await fetch(
         //   '/api/facebook/',
         //   {

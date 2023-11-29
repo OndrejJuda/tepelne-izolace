@@ -163,7 +163,7 @@ const Form = () => {
       if (response.ok) {
         console.log(firstName)
         console.log(firstName.toLowerCase())
-        test = sha256(firstName.toLowerCase());
+        const test = sha256(firstName.toLowerCase());
         console.log(test)
         const options = {
           method: 'POST',

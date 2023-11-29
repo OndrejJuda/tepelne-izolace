@@ -13,9 +13,9 @@ const sendFBdata = async (req, res) => {
     body: JSON.stringify({
       "data": [
         {
+          "action_source": "website",
           "event_name": "Lead",
           "event_time": new Date().getTime(),
-          "action_source": "website",
           "user_data": {
             "em": [
               email

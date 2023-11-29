@@ -1,6 +1,12 @@
 const apiKey = process.env.FACEBOOK_TOKEN;
 const datasetID = process.env.FACEBOOK_PIXEL_ID;
 
+const sha256 = (data) => {
+  const hash = createHash('sha256');
+  hash.update(data);
+  return hash.digest('hex');
+};
+
 const sendFBdata = async (req, res) => {
   const data = req.body;
   const { firstName, lastName, email, phoneNumber, district } = JSON.parse(data);
@@ -17,19 +23,19 @@ const sendFBdata = async (req, res) => {
           "event_time": new Date().getTime(),
           "user_data": {
             "em": [
-              email
+              sha256(email.toLowerCase())
             ],
             "ph": [
-              phoneNumber
+              sha256(phoneNumber.toLowerCase())
             ],
             "ln": [
-              lastName
+              sha256(lastName.toLowerCase())
             ],
             "fn": [
-              firstName
+              sha256(firstName.toLowerCase())
             ],
             "ct": [
-              district
+              sha256(district.toLowerCase())
             ]
           },
         }

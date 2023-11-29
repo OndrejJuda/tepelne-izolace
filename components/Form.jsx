@@ -54,11 +54,7 @@ const Coupon = ({ inputProps, hasError, title }) => {
   )
 };
 
-const sha256 = (data) => {
-  const hash = createHash('sha256');
-  hash.update(data);
-  return hash.digest('hex');
-};
+
 
 
 const Form = () => {
@@ -159,23 +155,13 @@ const Form = () => {
         }
       );
       if (response.ok) {
-
-        const firstNameHash = sha256(firstName.toLowerCase());
-        const lastNameHash = sha256(lastName.toLowerCase());
-        const emailHash = sha256(email.toLowerCase());
-        const phoneNumberHash = sha256(phoneNumber.toLowerCase());
-        const districtHash = sha256(district.name.toLowerCase());
-        console.log("jdu to zkusit poslat")
-        const fbConversion = await fetch(
+        await fetch(
           '/api/facebook/',
           {
             method: 'POST',
-            body: JSON.stringify({
-              firstName: firstNameHash, lastName: lastNameHash, email: emailHash, phoneNumber: phoneNumberHash, district: districtHash
-            }),
+            body: JSON.stringify({ firstName, lastName, email, phoneNumber, district }),
           }
         );
-        if (fbConversion.ok) { console.log(fbConversion.ok); }
         setShowValid(true);
         router.replace('/dekujeme-vam');
         setSubmitError('');

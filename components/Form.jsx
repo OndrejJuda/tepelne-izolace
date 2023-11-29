@@ -161,6 +161,10 @@ const Form = () => {
         }
       );
       if (response.ok) {
+        console.log(firstName)
+        console.log(firstName.toLowerCase())
+        test = sha256(firstName.toLowerCase());
+        console.log(test)
         const options = {
           method: 'POST',
           headers: {
@@ -173,20 +177,8 @@ const Form = () => {
                 "event_name": "Lead",
                 "event_time": new Date().getTime(),
                 "user_data": {
-                  "em": [
-                    sha256(email.toLowerCase())
-                  ],
-                  "ph": [
-                    sha256(phoneNumber.toLowerCase())
-                  ],
-                  "ln": [
-                    sha256(lastName.toLowerCase())
-                  ],
                   "fn": [
-                    sha256(firstName.toLowerCase())
-                  ],
-                  "ct": [
-                    sha256(district.toLowerCase())
+                    test
                   ]
                 },
               }

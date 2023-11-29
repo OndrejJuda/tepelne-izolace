@@ -159,13 +159,7 @@ const Form = () => {
         }
       );
       if (response.ok) {
-        setShowValid(true);
-        router.replace('/dekujeme-vam');
-        setSubmitError('');
-        event('submit_form', {
-          category: 'Poptávka',
-          label: 'Úspěšně odesláno'
-        });
+
         const firstNameHash = sha256(firstName.toLowerCase());
         const lastNameHash = sha256(lastName.toLowerCase());
         const emailHash = sha256(email.toLowerCase());
@@ -182,7 +176,13 @@ const Form = () => {
           }
         );
         if (fbConversion.ok) { console.log(fbConversion.ok); }
-
+        setShowValid(true);
+        router.replace('/dekujeme-vam');
+        setSubmitError('');
+        event('submit_form', {
+          category: 'Poptávka',
+          label: 'Úspěšně odesláno'
+        });
 
       } else {
         setShowValid(false);

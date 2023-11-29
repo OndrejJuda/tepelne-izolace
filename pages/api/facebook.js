@@ -8,27 +8,33 @@ const sendFBdata = async (req, res) => {
   const options = {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json; charset=UTF-8'
     },
-    body: JSON.stringify({
-
+    body: JSON({
       "data": [
         {
-          "event_name": "Lead",
-          "event_time": 1701093151,
           "action_source": "website",
+          "event_name": "Lead",
+          "event_time": new Date().getTime(),
           "user_data": {
             "em": [
-              "7b17fb0bd173f625b58636fb796407c22b3d16fc78302d79f0fd30c2fc2fc068"
+              email
             ],
             "ph": [
-              "25bab07de90c4a288949912fdc82a770e067a83e8a478051b743b3303f4e7a26"
+              phoneNumber
+            ],
+            "ln": [
+              lastName
+            ],
+            "fn": [
+              firstName
+            ],
+            "ct": [
+              disctrict
             ]
-          }
+          },
         }
       ]
-
-
     })
   };
 

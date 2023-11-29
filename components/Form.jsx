@@ -10,8 +10,7 @@ import configuration from '../conf';
 import { regions } from '../regions-and-districts';
 import { products } from '../products';
 import { useRouter } from 'next/router';
-import { FaPlus } from 'react-icons/fa';
-import { FaCheck } from 'react-icons/fa';
+import { createHash } from 'crypto';
 
 
 const { phone } = configuration;
@@ -55,7 +54,11 @@ const Coupon = ({ inputProps, hasError, title }) => {
   )
 };
 
-
+const sha256 = (data) => {
+  const hash = createHash('sha256');
+  hash.update(data);
+  return hash.digest('hex');
+};
 
 
 const Form = () => {
@@ -164,11 +167,7 @@ const Form = () => {
           label: 'Úspěšně odesláno'
         });
         try {
-          firstName.toLowerCase().hashlib.SHA256();
-          lastName.toLowerCase().hashlib.SHA256();
-          email.toLowerCase().hashlib.SHA256();
-          phoneNumber.toLowerCase().hashlib.SHA256();
-          district.name.toLowerCase().hashlib.SHA256();
+          firstName = sha256(firstName.toLocaleLowerCase())
           const fbConversion = await fetch(
             '/api/facebook/',
             {

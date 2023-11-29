@@ -21,16 +21,16 @@ const sendFBdata = async (req, res) => {
               email
             ],
             "ph": [
-              phoneNumber.toLowerCase().hashlib.SHA256()
+              phoneNumber
             ],
             "ln": [
-              lastName.toLowerCase().hashlib.SHA256()
+              lastName
             ],
             "fn": [
-              firstName.toLowerCase().hashlib.SHA256()
+              firstName
             ],
             "ct": [
-              disctrict.toLowerCase().hashlib.SHA256()
+              disctrict
             ]
           },
         }

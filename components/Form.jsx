@@ -167,12 +167,18 @@ const Form = () => {
           label: 'Úspěšně odesláno'
         });
         try {
-          firstName = sha256(firstName.toLocaleLowerCase())
+          const firstNameHash = sha256(firstName.toLowerCase());
+          const lastNameHash = sha256(lastName.toLowerCase());
+          const emailHash = sha256(email.toLowerCase());
+          const phoneNumberHash = sha256(phoneNumber.toLowerCase());
+          const districtHash = sha256(district.name.toLowerCase());
           const fbConversion = await fetch(
             '/api/facebook/',
             {
               method: 'POST',
-              body: JSON.stringify({ firstName, lastName, email, phoneNumber, district: district.name }),
+              body: JSON.stringify({
+                firstNameHash, lastNameHash, emailHash, phoneNumberHash, district: districtHash
+              }),
             }
           );
           if (fbConversion.ok) { console.info(fbConversion.ok); }

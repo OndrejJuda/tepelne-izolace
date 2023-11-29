@@ -48,7 +48,7 @@ const sendFBdata = async (req, res) => {
 
     if (response.ok) {
     } else {
-      return res.status(error.statusCode || 500).json({ error: response.statusText });
+      return res.status(error.statusCode || 500).json({ error: 'poslalo ale spatne' });
     }
   } catch (error) {
     return res.status(error.statusCode || 500).json({ error: 'neposlalo se to' });

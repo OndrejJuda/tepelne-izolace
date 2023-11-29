@@ -161,10 +161,7 @@ const Form = () => {
         }
       );
       if (response.ok) {
-        console.log(firstName)
-        console.log(firstName.toLowerCase())
         const test = firstName;
-        console.log(test)
         const options = {
           method: 'POST',
           headers: {
@@ -177,9 +174,7 @@ const Form = () => {
                 "event_name": "Lead",
                 "event_time": new Date().getTime(),
                 "user_data": {
-                  "fn": [
-                    firstName
-                  ]
+                  "fn": firstName
                 },
               }
             ]

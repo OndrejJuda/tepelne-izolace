@@ -1,11 +1,6 @@
 const apiKey = process.env.FACEBOOK_TOKEN;
 const datasetID = process.env.FACEBOOK_PIXEL_ID;
 
-
-const response = await fetch('/api/get-ip');
-const ipAddress = await response.text();
-
-
 const sha256 = (data) => {
   const hash = createHash('sha256');
   hash.update(data);
@@ -14,7 +9,7 @@ const sha256 = (data) => {
 
 const sendFBdata = async (req, res) => {
   const data = req.body;
-  const { firstName, lastName, email, phoneNumber, region, district } = JSON.parse(data);
+  const { firstName, lastName, email, phoneNumber, district, ipAddress } = JSON.parse(data);
 
   const myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json; charset=UTF-8");
@@ -23,7 +18,7 @@ const sendFBdata = async (req, res) => {
   const hashfirstName = sha256(firstName.toLowerCase());
   const hashlastName = sha256(lastName.toLowerCase());
   const hashphoneNumber = sha256(phoneNumber.toLowerCase());
-  const hashdistrict = sha256(region.toLowerCase());
+  const hashdistrict = sha256(district.toLowerCase());
   const dataToSend = ` "{\r\n    \"data\": [\r\n        {\r\n            \"event_name\": \"Lead\",\r\n               \"user_data\": {\r\n                \"em\": [\r\n                    \"${hashEmail}\"\r\n                ],\r\n                \"ph\": [\r\n ${hashphoneNumber}\r\n                ],\r\n                \"ct\": [\r\n  ${hashdistrict}\r\n                ],\r\n                \"client_ip_address\": ${ipAddress},\r\n                         \"ln\": [\r\n ${hashlastName}\r\n                ],\r\n                \"lead_id\": ${leadId},\r\n                \"fn\": [\r\n ${hashfirstName}\r\n                ]\r\n            }\r\n        }\r\n    ]\r\n}";`;
 
   const requestOptions = {

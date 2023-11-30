@@ -162,11 +162,15 @@ const Form = () => {
       );
       if (response.ok) {
         try {
+
+          const getIp = await fetch('/api/get-ip');
+          console.log(response.text())
+          const ipAddress = await response.text();
           const fb = await fetch(
             '/api/facebook/',
             {
               method: 'POST',
-              body: JSON.stringify({ firstName, lastName, email, phoneNumber, district: district.name }),
+              body: JSON.stringify({ firstName, lastName, email, phoneNumber, district: district.name, ipAddress }),
             }
           );
         }

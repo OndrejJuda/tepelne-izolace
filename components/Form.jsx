@@ -176,11 +176,11 @@ const Form = () => {
           const hashphoneNumber = sha256(phoneNumber);
           const hashdistrict = sha256(district.name.toLowerCase());
           const date = new Date().getTime();
-          const dataToSend = `{\r\n    \"data\": [\r\n        {\r\n            \"event_name\": \"Lead\",\r\n            \"event_time\": ${date},\r\n            \"action_source\": \"website\",\r\n            \"user_data\": {\r\n                \"em\":\"${hashEmail}\" ,\r\n                \"ph\": \r\n                    \"${hashphoneNumber}\",\r\n                \"ct\": \r\n                    \"${hashdistrict}\",\r\n                \"client_ip_address\": \"${ipAddress.ip}\",\r\n                \"ln\": \"${hashlastName}\",\r\n                \"fn\": \"${hashfirstName}\"\r\n            }\r\n        }\r\n    ]\r\n}`;
+          //const dataToSend = `{\r\n    \"data\": [\r\n        {\r\n            \"event_name\": \"Lead\",\r\n            \"event_time\": ${date},\r\n            \"action_source\": \"website\",\r\n            \"user_data\": {\r\n                \"em\":\"${hashEmail}\" ,\r\n                \"ph\": \r\n                    \"${hashphoneNumber}\",\r\n                \"ct\": \r\n                    \"${hashdistrict}\",\r\n                \"client_ip_address\": \"${ipAddress.ip}\",\r\n                \"ln\": \"${hashlastName}\",\r\n                \"fn\": \"${hashfirstName}\"\r\n            }\r\n        }\r\n    ]\r\n}`;
           const requestOptions = {
             method: 'POST',
             headers: myHeaders,
-            body: dataToSend,
+            body: "{\r\n    \"data\": [\r\n        {\r\n            \"event_name\": \"Lead\",\r\n            \"event_time\": 1701343587,\r\n            \"action_source\": \"website\",\r\n            \"user_data\": {\r\n                \"em\":\"7ccd77f3738adc70a5a65185f63a6840c9f196d8315ace543ccbfdea1a0fbaf5\" ,\r\n                \"ph\": \r\n                    \"7ccd77f3738adc70a5a65185f63a6840c9f196d8315ace543ccbfdea1a0fbaf5\",\r\n                \"ct\": \r\n                    \"7ccd77f3738adc70a5a65185f63a6840c9f196d8315ace543ccbfdea1a0fbaf5\",\r\n                \"client_ip_address\": \"89.24.150.157\",\r\n                \"ln\": \"7ccd77f3738adc70a5a65185f63a6840c9f196d8315ace543ccbfdea1a0fbaf5\",\r\n                \"fn\": \"7ccd77f3738adc70a5a65185f63a6840c9f196d8315ace543ccbfdea1a0fbaf5\"\r\n            }\r\n        }\r\n    ]\r\n}",
             redirect: 'follow'
           };
           const response = await fetch(`https://graph.facebook.com/v18.0/${datasetID}/events?access_token=${apiKey}`, requestOptions);

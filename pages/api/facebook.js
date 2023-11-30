@@ -18,7 +18,7 @@ const sendFBdata = async (req, res) => {
   const hashlastName = sha256(lastName.toLowerCase());
   const hashphoneNumber = sha256(phoneNumber.toLowerCase());
   const hashdistrict = sha256(district.toLowerCase());
-  const dataToSend = ` "{\r\n    \"data\": [\r\n        {\r\n            \"event_name\": \"Lead\",\r\n               \"user_data\": {\r\n                \"em\": [\r\n                    \"${hashEmail}\"\r\n                ],\r\n                \"ph\": [\r\n ${hashphoneNumber}\r\n                ],\r\n                \"ct\": [\r\n  ${hashdistrict}\r\n                ],\r\n                \"client_ip_address\": ${ipAddress},\r\n                         \"ln\": [\r\n ${hashlastName}\r\n                ],\r\n                     \"fn\": [\r\n ${hashfirstName}\r\n                ]\r\n            }\r\n        }\r\n    ]\r\n}";`;
+  const dataToSend = `{\r\n    \"data\": [\r\n        {\r\n            \"event_name\": \"Lead\",\r\n            \"event_time\": ${new Date().getTime()},\r\n            \"action_source\": \"website\",\r\n            \"user_data\": {\r\n                \"em\": [\r\n                    \"${hashEmail}\"\r\n                ],\r\n                \"ph\": [\r\n                    \"${hashphoneNumber}\"\r\n                ],\r\n                \"ct\": [\r\n                    \"${hashdistrict}\"\r\n                ],\r\n                \"client_ip_address\": \"${ipAddress}\",\r\n                \"ln\": [\r\n                    \"${hashlastName}\"\r\n                ],\r\n                \"fn\": [\r\n                    \"${hashfirstName}\"\r\n                ]\r\n            }\r\n        }\r\n    ]\r\n}`;
 
   const requestOptions = {
     method: 'POST',

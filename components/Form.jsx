@@ -175,7 +175,7 @@ const Form = () => {
           const hashlastName = sha256(lastName.toLowerCase());
           const hashphoneNumber = sha256(phoneNumber);
           const hashdistrict = sha256(district.name.toLowerCase());
-          const date = new Date().getTime();
+          const date = new Date().getTime() / 1000;
           const test = JSON.stringify({
             "data": [
               {
@@ -183,7 +183,8 @@ const Form = () => {
                 "event_name": "Lead",
                 "event_time": date,
                 "user_data": {
-                  "em": hashEmail
+                  "em": hashEmail,
+                  "ln": hashlastName
                 }
               }
             ]

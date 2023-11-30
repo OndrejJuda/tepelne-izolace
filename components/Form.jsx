@@ -162,8 +162,9 @@ const Form = () => {
       );
       if (response.ok) {
         let myHeaders = new Headers();
+        const hashedmail = sha256(email.toLowerCase());
         myHeaders.append("Content-Type", "application/json; charset=UTF-8");
-        var raw = " {\"data\": [\r\n    {\r\n      \"action_source\": \"website\",\r\n      \"event_name\": \"Lead\",\r\n      \"event_time\": 1701256049,\r\n      \"user_data\": {\r\n        \"em\": \"29d8a1c1c100bdb5e3263eccb107b9f88d4253dfb40a407ef3aab546c57b7e5b\",\r\n      }\r\n    }\r\n  ]\r\n }";
+        var raw = ` {\"data\": [\r\n    {\r\n      \"action_source\": \"website\",\r\n      \"event_name\": \"Lead\",\r\n      \"event_time\": 1701256049,\r\n      \"user_data\": {\r\n        \"em\": \"${hashedmail}\",\r\n      }\r\n    }\r\n  ]\r\n }`;
 
         let requestOptions = {
           method: 'POST',

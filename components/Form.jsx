@@ -167,7 +167,7 @@ const Form = () => {
         let data = JSON.stringify({
           "data": [
             {
-              "action_source": "web",
+              "action_source": "website",
               "event_name": "Lead",
               "event_time": new Date().getTime(),
               "user_data": {

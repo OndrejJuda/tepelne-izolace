@@ -175,7 +175,7 @@ const Form = () => {
           const hashlastName = sha256(lastName.toLowerCase());
           const hashphoneNumber = sha256(phoneNumber);
           const hashdistrict = sha256(district.name.toLowerCase());
-          const date = Math.floor((new Date().getTime() + 3600000) / 1000);
+          const date = Math.floor((new Date().getTime()) / 1000);
           const test = JSON.stringify({
             "data": [
               {

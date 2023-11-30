@@ -12,8 +12,8 @@ import { products } from '../products';
 import { useRouter } from 'next/router';
 import { createHash } from 'crypto';
 
-const apiKey = process.env.FACEBOOK_TOKEN;
-const datasetID = process.env.FACEBOOK_PIXEL_ID;
+const apiKey = process.env.NEXT_PUBLIC_FACEBOOK_TOKEN;
+const datasetID = process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID;
 
 
 const { phone } = configuration;

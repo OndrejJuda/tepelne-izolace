@@ -165,7 +165,6 @@ const Form = () => {
 
           const getIp = await fetch('/api/get-ip');
           const ipAddress = await getIp.json();
-          console.log(data.ip)
           const fb = await fetch(
             '/api/facebook/',
             {

@@ -176,8 +176,7 @@ const Form = () => {
           const hashphoneNumber = sha256(phoneNumber);
           const hashdistrict = sha256(district.name.toLowerCase());
           const date = new Date().getTime();
-          const dataToSend = `{\r\n    \"data\": [\r\n        {\r\n            \"event_name\": \"Lead\",\r\n            \"event_time\": ${date},\r\n            \"action_source\": \"website\",\r\n            \"user_data\": {\r\n                \"em\": [\r\n                    \"${hashEmail}\"\r\n                ],\r\n                \"ph\": [\r\n                    \"${hashphoneNumber}\"\r\n                ],\r\n                \"ct\": [\r\n                    \"${hashdistrict}\"\r\n                ],\r\n                \"client_ip_address\": \"${ipAddress.ip}\",\r\n                \"ln\": [\r\n                    \"${hashlastName}\"\r\n                ],\r\n                \"fn\": [\r\n                    \"${hashfirstName}\"\r\n                ]\r\n            }\r\n        }\r\n    ]\r\n}`;
-
+          const dataToSend = `{\r\n    \"data\": [\r\n        {\r\n            \"event_name\": \"Lead\",\r\n            \"event_time\": ${date},\r\n            \"action_source\": \"website\",\r\n            \"user_data\": {\r\n                \"em\":\"${hashEmail}\" ,\r\n                \"ph\": \r\n                    \"${hashphoneNumber}\",\r\n                \"ct\": \r\n                    \"${hashdistrict}\",\r\n                \"client_ip_address\": \"${ipAddress.ip}\",\r\n                \"ln\": \"${hashlastName}\",\r\n                \"fn\": \"${hashfirstName}\"\r\n            }\r\n        }\r\n    ]\r\n}`;
           const requestOptions = {
             method: 'POST',
             headers: myHeaders,

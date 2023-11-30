@@ -13,7 +13,7 @@ const sendFBdata = async (req, res) => {
 
   const myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json; charset=UTF-8");
-  const leadId = generateRandomInt(1000000000, 9999999999);
+  const leadId = Math.random(100000000, 999999999);
   const hashEmail = sha256(email.toLowerCase());
   const hashfirstName = sha256(firstName.toLowerCase());
   const hashlastName = sha256(lastName.toLowerCase());

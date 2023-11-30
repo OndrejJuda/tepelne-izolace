@@ -1,5 +1,5 @@
 export default (req, res) => {
   const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-
-  res.status(200).json({ ip });
+  res.body({ "ip": ip })
+  res.status(200);
 };

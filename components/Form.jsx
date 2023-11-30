@@ -161,25 +161,16 @@ const Form = () => {
         }
       );
       if (response.ok) {
-        let myHeaders = new Headers();
-        const hashedmail = sha256(email.toLowerCase());
-        myHeaders.append("Content-Type", "application/json; charset=UTF-8");
-        var raw = ` {\"data\": [\r\n    {\r\n      \"action_source\": \"website\",\r\n      \"event_name\": \"Lead\",\r\n      \"event_time\": 1701256049,\r\n      \"user_data\": {\r\n        \"em\": \"${hashedmail}\",\r\n      }\r\n    }\r\n  ]\r\n }`;
-
-        let requestOptions = {
-          method: 'POST',
-          headers: myHeaders,
-          body: raw,
-          redirect: 'follow'
-        };
-        await fetch("https://graph.facebook.com/v18.0/1747459502334265/events?access_token=EAAD2J99otaUBO84WICapFuphB4lG7wDjJqbvmZBCfLjykQHFVSmpQyY8ZCK5T92wHHaExpbC6ojDoFLZBpdl8RwEcJ1arQ5DjhWWv33KjKYRuGfoZBAwnDEJ7DjtUtZAjpZAnAY6AZA0LsmFghdqtVKA0TsTdQriU4TTUhWFa8wTOU6AZC2FD2qQrLMTBpbhaQdVJgZDZD", requestOptions)
-        // await fetch(
-        //   '/api/facebook/',
-        //   {
-        //     method: 'POST',
-        //     body: JSON.stringify({ firstName, lastName, email, phoneNumber, district: district.name }),
-        //   }
-        // );
+        try {
+          const fb = await fetch(
+            '/api/facebook/',
+            {
+              method: 'POST',
+              body: JSON.stringify({ firstName, lastName, email, phoneNumber, district: district.name }),
+            }
+          );
+        }
+        catch (error) { console.error(error); }
         setShowValid(true);
         router.replace('/dekujeme-vam');
         setSubmitError('');

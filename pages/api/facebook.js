@@ -1,6 +1,11 @@
 const apiKey = process.env.FACEBOOK_TOKEN;
 const datasetID = process.env.FACEBOOK_PIXEL_ID;
 
+
+const response = await fetch('/api/get-ip');
+const ipAddress = await response.text();
+
+
 const sha256 = (data) => {
   const hash = createHash('sha256');
   hash.update(data);
@@ -9,52 +14,36 @@ const sha256 = (data) => {
 
 const sendFBdata = async (req, res) => {
   const data = req.body;
-  const { firstName, lastName, email, phoneNumber, district } = JSON.parse(data);
-  const options = {
+  const { firstName, lastName, email, phoneNumber, region, district } = JSON.parse(data);
+
+  const myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json; charset=UTF-8");
+  const leadId = generateRandomInt(1000000000, 9999999999);
+  const hashEmail = sha256(email.toLowerCase());
+  const hashfirstName = sha256(firstName.toLowerCase());
+  const hashlastName = sha256(lastName.toLowerCase());
+  const hashphoneNumber = sha256(phoneNumber.toLowerCase());
+  const hashdistrict = sha256(region.toLowerCase());
+  const dataToSend = ` "{\r\n    \"data\": [\r\n        {\r\n            \"event_name\": \"Lead\",\r\n               \"user_data\": {\r\n                \"em\": [\r\n                    \"${hashEmail}\"\r\n                ],\r\n                \"ph\": [\r\n ${hashphoneNumber}\r\n                ],\r\n                \"ct\": [\r\n  ${hashdistrict}\r\n                ],\r\n                \"client_ip_address\": ${ipAddress},\r\n                         \"ln\": [\r\n ${hashlastName}\r\n                ],\r\n                \"lead_id\": ${leadId},\r\n                \"fn\": [\r\n ${hashfirstName}\r\n                ]\r\n            }\r\n        }\r\n    ]\r\n}";`;
+
+  const requestOptions = {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      "data": [
-        {
-          "action_source": "website",
-          "event_name": "Lead",
-          "event_time": new Date().getTime(),
-          "user_data": {
-            "em": [
-              sha256(email.toLowerCase())
-            ],
-            "ph": [
-              sha256(phoneNumber.toLowerCase())
-            ],
-            "ln": [
-              sha256(lastName.toLowerCase())
-            ],
-            "fn": [
-              sha256(firstName.toLowerCase())
-            ],
-            "ct": [
-              sha256(district.toLowerCase())
-            ]
-          },
-        }
-      ]
-    })
+    headers: myHeaders,
+    body: dataToSend,
+    redirect: 'follow'
   };
 
   try {
-    const response = await fetch(`https://graph.facebook.com/v18.0/${datasetID}/events?access_token=${apiKey}`, options);
+    const response = await fetch(`https://graph.facebook.com/v18.0/${datasetID}/events?access_token=${apiKey}`, requestOptions);
 
     if (response.ok) {
     } else {
-      return res.status(error.statusCode || 500).json({ error: 'poslalo ale spatne' });
+      return res.status(error.statusCode || 500).json({ error: response.statusText });
     }
   } catch (error) {
-    return res.status(error.statusCode || 500).json({ error: 'neposlalo se to' });
+    return res.status(error.statusCode || 500).json({ error: error.message });
   }
 
   return res.status(200).json({ error: '' });
 };
-
 export default sendFBdata;

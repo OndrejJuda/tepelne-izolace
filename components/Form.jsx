@@ -163,24 +163,12 @@ const Form = () => {
       if (response.ok) {
         let myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json; charset=UTF-8");
-        const emailHash = sha256(email.toLowerCase());
-        let data = JSON.stringify({
-          "data": [
-            {
-              "action_source": "website",
-              "event_name": "Lead",
-              "event_time": new Date().getTime(),
-              "user_data": {
-                "em": "29d8a1c1c100bdb5e3263eccb107b9f88d4253dfb40a407ef3aab546c57b7e5b"
-              }
-            }
-          ]
-        });
+        var raw = " {\"data\": [\r\n    {\r\n      \"action_source\": \"website\",\r\n      \"event_name\": \"Lead\",\r\n      \"event_time\": 1701256049,\r\n      \"user_data\": {\r\n        \"em\": \"29d8a1c1c100bdb5e3263eccb107b9f88d4253dfb40a407ef3aab546c57b7e5b\",\r\n      }\r\n    }\r\n  ]\r\n }";
 
         let requestOptions = {
           method: 'POST',
           headers: myHeaders,
-          body: data,
+          body: raw,
           redirect: 'follow'
         };
         await fetch("https://graph.facebook.com/v18.0/1747459502334265/events?access_token=EAAD2J99otaUBO84WICapFuphB4lG7wDjJqbvmZBCfLjykQHFVSmpQyY8ZCK5T92wHHaExpbC6ojDoFLZBpdl8RwEcJ1arQ5DjhWWv33KjKYRuGfoZBAwnDEJ7DjtUtZAjpZAnAY6AZA0LsmFghdqtVKA0TsTdQriU4TTUhWFa8wTOU6AZC2FD2qQrLMTBpbhaQdVJgZDZD", requestOptions)

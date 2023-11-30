@@ -163,7 +163,7 @@ const Form = () => {
       if (response.ok) {
         let myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json; charset=UTF-8");
-
+        emailHash = ha256(email.toLowerCase());
         let data = JSON.stringify({
           "data": [
             {
@@ -171,10 +171,7 @@ const Form = () => {
               "event_name": "Lead",
               "event_time": new Date().getTime(),
               "user_data": {
-                "em": sha256(email.toLowerCase()),
-                "ln": sha256(lastName.toLowerCase()),
-                "ph": sha256(phoneNumber.toLowerCase()),
-                "ct": sha256(district.name.toLowerCase())
+                "em": emailHash
               }
             }
           ]

@@ -163,7 +163,7 @@ const Form = () => {
       if (response.ok) {
         let myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json; charset=UTF-8");
-        emailHash = ha256(email.toLowerCase());
+        emailHash = sha256(email.toLowerCase());
         let data = JSON.stringify({
           "data": [
             {

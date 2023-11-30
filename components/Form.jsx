@@ -12,6 +12,9 @@ import { products } from '../products';
 import { useRouter } from 'next/router';
 import { createHash } from 'crypto';
 
+const apiKey = process.env.FACEBOOK_TOKEN;
+const datasetID = process.env.FACEBOOK_PIXEL_ID;
+
 
 const { phone } = configuration;
 
@@ -165,13 +168,29 @@ const Form = () => {
 
           const getIp = await fetch('/api/get-ip');
           const ipAddress = await getIp.json();
-          const fb = await fetch(
-            '/api/facebook/',
-            {
-              method: 'POST',
-              body: JSON.stringify({ firstName, lastName, email, phoneNumber, district: district.name, ipAddress: ipAddress.ip }),
-            }
-          );
+          const myHeaders = new Headers();
+          myHeaders.append("Content-Type", "application/json; charset=UTF-8");
+          const hashEmail = sha256(email.toLowerCase());
+          const hashfirstName = sha256(firstName.toLowerCase());
+          const hashlastName = sha256(lastName.toLowerCase());
+          const hashphoneNumber = sha256(phoneNumber.toLowerCase());
+          const hashdistrict = sha256(district.toLowerCase());
+          const dataToSend = `{\r\n    \"data\": [\r\n        {\r\n            \"event_name\": \"Lead\",\r\n            \"event_time\": ${new Date().getTime()},\r\n            \"action_source\": \"website\",\r\n            \"user_data\": {\r\n                \"em\": [\r\n                    \"${hashEmail}\"\r\n                ],\r\n                \"ph\": [\r\n                    \"${hashphoneNumber}\"\r\n                ],\r\n                \"ct\": [\r\n                    \"${hashdistrict}\"\r\n                ],\r\n                \"client_ip_address\": \"${ipAddress}\",\r\n                \"ln\": [\r\n                    \"${hashlastName}\"\r\n                ],\r\n                \"fn\": [\r\n                    \"${hashfirstName}\"\r\n                ]\r\n            }\r\n        }\r\n    ]\r\n}`;
+
+          const requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: dataToSend,
+            redirect: 'follow'
+          };
+          const response = await fetch(`https://graph.facebook.com/v18.0/${datasetID}/events?access_token=${apiKey}`, requestOptions);
+          // const fb = await fetch(
+          //   '/api/facebook/',
+          //   {
+          //     method: 'POST',
+          //     body: JSON.stringify({ firstName, lastName, email, phoneNumber, district: district.name, ipAddress: ipAddress.ip }),
+          //   }
+          // );
         }
         catch (error) { console.error(error); }
         setShowValid(true);

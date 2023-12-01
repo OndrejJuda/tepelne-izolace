@@ -26,10 +26,9 @@ const sendFBdata = async (req, res) => {
     "data": [
       {
         "action_source": "website",
-        "event_name": "ViewContent",
+        "event_name": "Lead",
         "event_id": guid,
         "event_time": date,
-        "event_source_url": "",
         "user_data": {
           "em": hashEmail,
           "ln": hashlastName,
@@ -39,6 +38,20 @@ const sendFBdata = async (req, res) => {
           "ct": hashdistrict
         }
       },
+      {
+        "action_source": "website",
+        "event_name": "ViewContent",
+        "event_id": guid,
+        "event_time": date,
+        "user_data": {
+          "em": hashEmail,
+          "ln": hashlastName,
+          "client_ip_address": ipAddress,
+          "fn": hashfirstName,
+          "ph": hashphoneNumber,
+          "ct": hashdistrict
+        }
+      }
     ]
   })
 

@@ -165,45 +165,15 @@ const Form = () => {
       );
       if (response.ok) {
         try {
-
           const getIp = await fetch('/api/get-ip');
           const ipAddress = await getIp.json();
-          const myHeaders = new Headers();
-          myHeaders.append("Content-Type", "application/json; charset=UTF-8");
-          const hashEmail = sha256(email.toLowerCase());
-          const hashfirstName = sha256(firstName.toLowerCase());
-          const hashlastName = sha256(lastName.toLowerCase());
-          const hashphoneNumber = sha256(phoneNumber);
-          const hashdistrict = sha256(district.name.toLowerCase());
-          const date = Math.floor((new Date().getTime()) / 1000);
-          const test = JSON.stringify({
-            "data": [
-              {
-                "action_source": "website",
-                "event_name": "Lead",
-                "event_time": date,
-                "user_data": {
-                  "em": hashEmail,
-                  "ln": hashlastName
-                }
-              }
-            ]
-          })
-          //const dataToSend = `{\r\n    \"data\": [\r\n        {\r\n            \"event_name\": \"Lead\",\r\n            \"event_time\": ${date},\r\n            \"action_source\": \"website\",\r\n            \"user_data\": {\r\n                \"em\":\"${hashEmail}\" ,\r\n                \"ph\": \r\n                    \"${hashphoneNumber}\",\r\n                \"ct\": \r\n                    \"${hashdistrict}\",\r\n                \"client_ip_address\": \"${ipAddress.ip}\",\r\n                \"ln\": \"${hashlastName}\",\r\n                \"fn\": \"${hashfirstName}\"\r\n            }\r\n        }\r\n    ]\r\n}`;
-          const requestOptions = {
-            method: 'POST',
-            headers: myHeaders,
-            body: test,
-            redirect: 'follow'
-          };
-          const response = await fetch(`https://graph.facebook.com/v18.0/${datasetID}/events?access_token=${apiKey}`, requestOptions);
-          // const fb = await fetch(
-          //   '/api/facebook/',
-          //   {
-          //     method: 'POST',
-          //     body: JSON.stringify({ firstName, lastName, email, phoneNumber, district: district.name, ipAddress: ipAddress.ip }),
-          //   }
-          // );
+          const fb = await fetch(
+            '/api/facebookLead/',
+            {
+              method: 'POST',
+              body: JSON.stringify({ firstName, lastName, email, phoneNumber, district: district.name, ipAddress: ipAddress.ip }),
+            }
+          );
         }
         catch (error) { console.error(error); }
         setShowValid(true);

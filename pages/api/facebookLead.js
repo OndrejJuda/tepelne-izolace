@@ -10,7 +10,7 @@ const sha256 = (data) => {
 
 const sendFBdata = async (req, res) => {
   const data = req.body;
-  const { firstName, lastName, email, phoneNumber, district, ipAddress } = JSON.parse(data);
+  const { firstName, lastName, email, phoneNumber, district, ipAddress, currentUrl } = JSON.parse(data);
 
   const myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json; charset=UTF-8");
@@ -29,6 +29,7 @@ const sendFBdata = async (req, res) => {
         "event_name": "Lead",
         "event_id": guid,
         "event_time": date,
+        "event_source_url": currentUrl,
         "user_data": {
           "em": hashEmail,
           "ln": hashlastName,

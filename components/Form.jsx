@@ -165,11 +165,12 @@ const Form = () => {
         try {
           const getIp = await fetch('/api/get-ip');
           const ipAddress = await getIp.json();
+          const currentUrl = router.asPath;
           const fb = await fetch(
             '/api/facebookLead/',
             {
               method: 'POST',
-              body: JSON.stringify({ firstName, lastName, email, phoneNumber, district: district.name, ipAddress: ipAddress.ip, sourceURL }),
+              body: JSON.stringify({ firstName, lastName, email, phoneNumber, district: district.name, ipAddress: ipAddress.ip, currentUrl }),
             }
           );
         }

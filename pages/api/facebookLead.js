@@ -55,7 +55,7 @@ const sendFBLeaddata = async (req, res) => {
       return res.status(error.statusCode || 500).json({ error: response.statusText });
     }
   } catch (error) {
-    return res.status(error.statusCode || 500).json({ error: error.statusText });
+    return res.status(error.statusCode || 500).json({ error: '' });
   }
 
   return res.status(200).json({ error: '' });

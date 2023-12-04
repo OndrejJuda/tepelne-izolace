@@ -2,6 +2,7 @@ const apiKey = process.env.FACEBOOK_TOKEN;
 const datasetID = process.env.FACEBOOK_PIXEL_ID;
 
 import crypto from 'crypto';
+import { disconnect } from 'process';
 
 export function SHA256(inputString) {
   const hash = crypto.createHash('sha256');
@@ -20,7 +21,7 @@ const sendFBLeaddata = async (req, res) => {
   const hashlastName = SHA256(lastName.toLowerCase());
   const hashphoneNumber = SHA256(phoneNumber);
   const hashdistrict = '';
-  if (district === null || district === '') { hashdistrict = '' } else { hashdistrict = SHA256(district.toLowerCase()); }
+  if (district === null || district === undefined || district === '') { hashdistrict = '' } else { hashdistrict = SHA256(district.toLowerCase()); }
 
   const date = Math.floor((new Date().getTime()) / 1000);
 

@@ -170,7 +170,7 @@ const Form = () => {
             '/api/facebookLead/',
             {
               method: 'POST',
-              body: JSON.stringify({ firstName, lastName, email, phoneNumber, district: district.name ? district.name : '', ipAddress: ipAddress.ip, currentUrl: "https://lunastav.cz" + currentUrl }),
+              body: JSON.stringify({ firstName, lastName, email, phoneNumber, district: district.name, ipAddress: ipAddress.ip, currentUrl: "https://lunastav.cz" + currentUrl }),
             }
           );
         }

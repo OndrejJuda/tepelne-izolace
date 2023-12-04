@@ -21,7 +21,7 @@ const sendFBLeaddata = async (req, res) => {
   const hashlastName = SHA256(lastName.toLowerCase());
   const hashphoneNumber = SHA256(phoneNumber);
   const hashdistrict = '';
-  if (district === '') { } else { hashdistrict = SHA256(district.toLowerCase()); }
+  if (district !== null && district !== undefined) { hashdistrict = SHA256(district.toLowerCase()); }
 
   const date = Math.floor((new Date().getTime()) / 1000);
 

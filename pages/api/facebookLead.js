@@ -45,9 +45,9 @@ const sendFBLeaddata = async (req, res) => {
       {
         "action_source": "website",
         "event_name": "Lead",
-        "event_time": date,
+        "event_time": "1701343587",
         "user_data": {
-          "em": hashEmail,
+          "em": "7b17fb0bd173f625b58636fb796407c22b3d16fc78302d79f0fd30c2fc2fc068",
         }
       }
     ]

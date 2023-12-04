@@ -3,7 +3,8 @@ const datasetID = process.env.FACEBOOK_PIXEL_ID;
 import { createHash } from 'crypto';
 
 const sha256 = (data) => {
-  const crypto = require('crypto'), hash = crypto.getHashes();
+  const crypto = require('crypto'),
+    hash = crypto.getHashes();
   let hashedString = crypto.createHash('sha256').update(data).digest('hex');
   return hashedString
 };

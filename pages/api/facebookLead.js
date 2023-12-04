@@ -3,9 +3,9 @@ const datasetID = process.env.FACEBOOK_PIXEL_ID;
 import { createHash } from 'crypto';
 
 const sha256 = (data) => {
-  const hash = createHash('sha256');
-  hash.update(data);
-  return hash.digest('hex');
+  const crypto = require('crypto'), hash = crypto.getHashes();
+  let hashedString = crypto.createHash('sha256').update(data).digest('hex');
+  return hashedString
 };
 
 const sendFBLeaddata = async (req, res) => {

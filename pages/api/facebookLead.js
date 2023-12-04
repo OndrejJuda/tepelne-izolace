@@ -69,7 +69,7 @@ const sendFBdata = async (req, res) => {
       return res.status(error.statusCode || 500).json({ error: response.statusText });
     }
   } catch (error) {
-    return res.status(error.statusCode || 500).json({ error: error.message });
+    return res.status(error.statusCode || 500).json({ error: "yooooooooo" });
   }
 
   return res.status(200).json({ error: '' });

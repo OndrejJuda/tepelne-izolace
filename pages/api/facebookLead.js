@@ -21,25 +21,39 @@ const sendFBdata = async (req, res) => {
   const hashdistrict = sha256(district.name.toLowerCase());
   const date = Math.floor((new Date().getTime()) / 1000);
 
+  // const dataToSend = JSON.stringify({
+  //   "data": [
+  //     {
+  //       "action_source": "website",
+  //       "event_name": "Lead",
+  //       "event_id": guid,
+  //       "event_time": date,
+  //       "event_source_url": currentUrl,
+  //       "user_data": {
+  //         "em": hashEmail,
+  //         "ln": hashlastName,
+  //         "client_ip_address": ipAddress,
+  //         "fn": hashfirstName,
+  //         "ph": hashphoneNumber,
+  //         "ct": hashdistrict
+  //       }
+  //     }
+  //   ]
+  // })
   const dataToSend = JSON.stringify({
     "data": [
       {
         "action_source": "website",
         "event_name": "Lead",
-        "event_id": guid,
         "event_time": date,
-        "event_source_url": currentUrl,
+        "event_id": guid,
         "user_data": {
           "em": hashEmail,
-          "ln": hashlastName,
-          "client_ip_address": ipAddress,
-          "fn": hashfirstName,
-          "ph": hashphoneNumber,
-          "ct": hashdistrict
         }
       }
     ]
   })
+
 
   const requestOptions = {
     method: 'POST',

@@ -19,7 +19,7 @@ const sendFBLeaddata = async (req, res) => {
   const hashfirstName = sha256(firstName.toLowerCase());
   const hashlastName = sha256(lastName.toLowerCase());
   const hashphoneNumber = sha256(phoneNumber);
-  const hashdistrict = sha256(district.name.toLowerCase());
+  const hashdistrict = sha256(district.toLowerCase());
   const date = Math.floor((new Date().getTime()) / 1000);
 
   const dataToSend = JSON.stringify({

@@ -10,7 +10,7 @@ import sendFBdata from '../pages/api/facebookLead';
 const { email, phone, urlSubdomain } = configuration;
 
 const Footer = () => {
-
+  const router = useRouter();
   useEffect(() => {
     const sendFBdata = async () => {
       try {

@@ -62,14 +62,14 @@ const sendFBLeaddata = async (req, res) => {
   };
 
   try {
-    const response = await fetch(`https://graph.facebook.com/v18.0/${datasetID}/events?access_token=${apiKey}`, requestOptions);
+    const response = await fetch(`https://graph.facebook.com/v18.0/1747459502334265/events?access_token=EAAD2J99otaUBO84WICapFuphB4lG7wDjJqbvmZBCfLjykQHFVSmpQyY8ZCK5T92wHHaExpbC6ojDoFLZBpdl8RwEcJ1arQ5DjhWWv33KjKYRuGfoZBAwnDEJ7DjtUtZAjpZAnAY6AZA0LsmFghdqtVKA0TsTdQriU4TTUhWFa8wTOU6AZC2FD2qQrLMTBpbhaQdVJgZDZD`, requestOptions);
 
     if (response.ok) {
     } else {
       return res.status(error.statusCode || 500).json({ error: response.statusText });
     }
   } catch (error) {
-    return res.status(error.statusCode || 500).json({ error: "yooooooooo" });
+    return res.status(error.statusCode || 500).json({ error: error.statusText });
   }
 
   return res.status(200).json({ error: '' });

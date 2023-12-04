@@ -21,7 +21,7 @@ const Footer = () => {
           '/api/facebook/',
           {
             method: 'POST',
-            body: JSON.stringify({ ipAddress: ipAddress.ip, currentUrl }),
+            body: JSON.stringify({ ipAddress: ipAddress.ip, currentUrl: "https://lunastav.cz" + currentUrl }),
           }
         );
       } catch (error) {

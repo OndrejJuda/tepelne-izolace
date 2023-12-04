@@ -53,7 +53,7 @@ export default function App({ Component, pageProps }) {
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1747459502334265');
     fbq('track', 'PageView');
-    fbq('track', 'Lead');
+    fbq('track', 'Lead', {}, {eventID: 'e68cb608-4d6b-4ec4-ab9b-1310b790ec7a'});
     fbq('track', 'Contact');
   ` }} />
 

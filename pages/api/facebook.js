@@ -1,6 +1,5 @@
 const apiKey = process.env.FACEBOOK_TOKEN;
 const datasetID = process.env.FACEBOOK_PIXEL_ID;
-import { v4 as uuidv4 } from 'uuid';
 
 const sha256 = (data) => {
   const hash = createHash('sha256');
@@ -10,16 +9,10 @@ const sha256 = (data) => {
 
 const sendFBdata = async (req, res) => {
   const data = req.body;
-  const { firstName, lastName, email, phoneNumber, district, ipAddress } = JSON.parse(data);
+  const { ipAddress, currentURL } = JSON.parse(data);
 
   const myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json; charset=UTF-8");
-  const guid = uuidv4();
-  const hashEmail = sha256(email.toLowerCase());
-  const hashfirstName = sha256(firstName.toLowerCase());
-  const hashlastName = sha256(lastName.toLowerCase());
-  const hashphoneNumber = sha256(phoneNumber);
-  const hashdistrict = sha256(district.name.toLowerCase());
   const date = Math.floor((new Date().getTime()) / 1000);
 
   const dataToSend = JSON.stringify({
@@ -27,18 +20,12 @@ const sendFBdata = async (req, res) => {
       {
         "action_source": "website",
         "event_name": "ViewContent",
-        "event_id": guid,
         "event_time": date,
-        "event_source_url": "",
+        "event_source_url": currentURL,
         "user_data": {
-          "em": hashEmail,
-          "ln": hashlastName,
           "client_ip_address": ipAddress,
-          "fn": hashfirstName,
-          "ph": hashphoneNumber,
-          "ct": hashdistrict
         }
-      },
+      }
     ]
   })
 

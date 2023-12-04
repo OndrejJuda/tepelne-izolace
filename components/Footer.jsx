@@ -2,11 +2,37 @@
 import React from 'react';
 import Link from 'next/link';
 import configuration from '../conf';
-import { FaFacebook, FaSolarPanel, FaInstagram } from "react-icons/fa"; // Importovat ikony z knihovny react-icons
+import { FaFacebook, FaSolarPanel, FaInstagram } from "react-icons/fa";
+import { useRouter } from 'next/router';
+import sendFBdata from '../pages/api/facebookLead';
+
 
 const { email, phone, urlSubdomain } = configuration;
 
 const Footer = () => {
+
+  useEffect(() => {
+    const sendFBdata = async () => {
+      try {
+        const currentUrl = router.asPath;
+        console.log('Current URL:', currentUrl);
+        const getIp = await fetch('/api/get-ip');
+        const ipAddress = await getIp.json();
+        const fb = await fetch(
+          '/api/facebook/',
+          {
+            method: 'POST',
+            body: JSON.stringify({ ipAddress: ipAddress.ip, currentUrl }),
+          }
+        );
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    sendFBdata();
+  }, []);
+
   return (
     <footer className="px-4 divide-y mt-12 bg-primary-50 ">
       <div className="container mr-4 flex flex-col justify-evenly py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">

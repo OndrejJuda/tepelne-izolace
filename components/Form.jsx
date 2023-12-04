@@ -12,8 +12,6 @@ import { products } from '../products';
 import { useRouter } from 'next/router';
 import { createHash } from 'crypto';
 
-const apiKey = process.env.NEXT_PUBLIC_FACEBOOK_TOKEN;
-const datasetID = process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID;
 
 
 const { phone } = configuration;
@@ -171,7 +169,7 @@ const Form = () => {
             '/api/facebookLead/',
             {
               method: 'POST',
-              body: JSON.stringify({ firstName, lastName, email, phoneNumber, district: district.name, ipAddress: ipAddress.ip }),
+              body: JSON.stringify({ firstName, lastName, email, phoneNumber, district: district.name, ipAddress: ipAddress.ip, sourceURL }),
             }
           );
         }

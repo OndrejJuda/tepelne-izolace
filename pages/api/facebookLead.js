@@ -46,7 +46,6 @@ const sendFBdata = async (req, res) => {
         "action_source": "website",
         "event_name": "Lead",
         "event_time": date,
-        "event_id": guid,
         "user_data": {
           "em": hashEmail,
         }

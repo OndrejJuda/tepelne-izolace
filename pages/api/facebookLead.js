@@ -14,7 +14,6 @@ const sendFBLeaddata = async (req, res) => {
 
   const myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json; charset=UTF-8");
-  const guid = "e68cb608-4d6b-4ec4-ab9b-1310b790ec7a";
   const hashEmail = sha256(email.toLowerCase());
   const hashfirstName = sha256(firstName.toLowerCase());
   const hashlastName = sha256(lastName.toLowerCase());
@@ -27,7 +26,6 @@ const sendFBLeaddata = async (req, res) => {
       {
         "action_source": "website",
         "event_name": "Lead",
-        "event_id": guid,
         "event_time": date,
         "event_source_url": currentUrl,
         "user_data": {
@@ -41,8 +39,6 @@ const sendFBLeaddata = async (req, res) => {
       }
     ]
   })
-
-
 
   const requestOptions = {
     method: 'POST',

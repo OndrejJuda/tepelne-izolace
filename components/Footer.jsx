@@ -4,7 +4,6 @@ import configuration from '../conf';
 import { FaFacebook, FaSolarPanel, FaInstagram } from "react-icons/fa";
 import React, { useContext, useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import sendFBdata from '../pages/api/facebookLead';
 
 
 const { email, phone, urlSubdomain } = configuration;

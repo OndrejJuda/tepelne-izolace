@@ -1,13 +1,13 @@
 const apiKey = process.env.FACEBOOK_TOKEN;
 const datasetID = process.env.FACEBOOK_PIXEL_ID;
-import { createHash } from 'crypto';
 
-const sha256 = (data) => {
-  const crypto = require('crypto'),
-    hash = crypto.getHashes();
-  let hashedString = crypto.createHash('sha256').update(data).digest('hex');
-  return hashedString
-};
+import crypto from 'crypto';
+
+export function SHA256(inputString) {
+  const hash = crypto.createHash('sha256');
+  hash.update(inputString);
+  return hash.digest('hex');
+}
 
 const sendFBLeaddata = async (req, res) => {
   const data = req.body;
@@ -15,11 +15,11 @@ const sendFBLeaddata = async (req, res) => {
 
   const myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json; charset=UTF-8");
-  const hashEmail = sha256(email.toLowerCase());
-  const hashfirstName = sha256(firstName.toLowerCase());
-  const hashlastName = sha256(lastName.toLowerCase());
-  const hashphoneNumber = sha256(phoneNumber);
-  const hashdistrict = sha256(district.toLowerCase());
+  const hashEmail = SHA256(email.toLowerCase());
+  const hashfirstName = SHA256(firstName.toLowerCase());
+  const hashlastName = SHA256(lastName.toLowerCase());
+  const hashphoneNumber = SHA256(phoneNumber);
+  const hashdistrict = SHA256(district.toLowerCase());
   const date = Math.floor((new Date().getTime()) / 1000);
 
   const dataToSend = JSON.stringify({

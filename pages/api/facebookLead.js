@@ -13,13 +13,13 @@ const sendFBLeaddata = async (req, res) => {
 
   const myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json; charset=UTF-8");
-  const guid = "e68cb608-4d6b-4ec4-ab9b-1310b790ec7a";
-  const hashEmail = sha256(email.toLowerCase());
-  const hashfirstName = sha256(firstName.toLowerCase());
-  const hashlastName = sha256(lastName.toLowerCase());
-  const hashphoneNumber = sha256(phoneNumber);
-  const hashdistrict = sha256(district.name.toLowerCase());
-  const date = Math.floor((new Date().getTime()) / 1000);
+  // const guid = "e68cb608-4d6b-4ec4-ab9b-1310b790ec7a";
+  // const hashEmail = sha256(email.toLowerCase());
+  // const hashfirstName = sha256(firstName.toLowerCase());
+  // const hashlastName = sha256(lastName.toLowerCase());
+  // const hashphoneNumber = sha256(phoneNumber);
+  // const hashdistrict = sha256(district.name.toLowerCase());
+  // const date = Math.floor((new Date().getTime()) / 1000);
 
   // const dataToSend = JSON.stringify({
   //   "data": [

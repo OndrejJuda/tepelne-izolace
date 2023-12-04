@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-sync-scripts */
-import React from 'react';
 import Link from 'next/link';
 import configuration from '../conf';
 import { FaFacebook, FaSolarPanel, FaInstagram } from "react-icons/fa";

@@ -1,6 +1,5 @@
 const apiKey = process.env.FACEBOOK_TOKEN;
 const datasetID = process.env.FACEBOOK_PIXEL_ID;
-import { v4 as uuidv4 } from 'uuid';
 
 const sha256 = (data) => {
   const hash = createHash('sha256');

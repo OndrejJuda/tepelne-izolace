@@ -7,7 +7,7 @@ const sha256 = (data) => {
   return hash.digest('hex');
 };
 
-const sendFBdata = async (req, res) => {
+const sendFBLeaddata = async (req, res) => {
   const data = req.body;
   const { firstName, lastName, email, phoneNumber, district, ipAddress, currentUrl } = JSON.parse(data);
 
@@ -74,4 +74,4 @@ const sendFBdata = async (req, res) => {
 
   return res.status(200).json({ error: '' });
 };
-export default sendFBdata;
+export default sendFBLeaddata;

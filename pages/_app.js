@@ -33,6 +33,7 @@ export default function App({ Component, pageProps }) {
       gtag('js', new Date());
       gtag('config', 'AW-11371180687');
       `}} />
+
       <script dangerouslySetInnerHTML={{
         __html: `
     !function(f,b,e,v,n,t,s) {
@@ -53,8 +54,6 @@ export default function App({ Component, pageProps }) {
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1747459502334265');
     fbq('track', 'PageView');
-    fbq('track', 'Lead', {}, {eventID: 'e68cb608-4d6b-4ec4-ab9b-1310b790ec7a'});
-    fbq('track', 'Contact');
   ` }} />
 
       <noscript dangerouslySetInnerHTML={{

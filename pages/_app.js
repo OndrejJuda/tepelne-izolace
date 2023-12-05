@@ -54,10 +54,8 @@ export default function App({ Component, pageProps }) {
     fbq('init', '1747459502334265');
     fbq('track', 'PageView');
     fbq('track', 'Lead');
-    fbq(‘trackCustom’, ‘Scroll’,{depth: 25});
-    fbq(‘trackCustom’, ‘Scroll’,{depth: 50});
-    fbq(‘trackCustom’, ‘Scroll’,{depth: 75});
-    fbq(‘trackCustom’, ‘Scroll’,{depth: 90});
+    fbq(‘trackCustom’, ‘Scroll’, {depth: {{Scroll Depth Threshold}}})
+    
   ` }} />
 
       <noscript dangerouslySetInnerHTML={{

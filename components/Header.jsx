@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { IoIosArrowDown } from 'react-icons/io';
 import { FaBars, FaTimes } from 'react-icons/fa'; // Import React Icons
+import { BiShoppingBag } from "react-icons/bi";
 
 // Definice seznamu odkazů pro navigaci
 const links = [
@@ -158,13 +159,12 @@ const Header = () => {
                 </div>
               </div>
             ))}
-            <div className='my-4 bg-primary-400 rounded-full py-2 text-center text-lg font-bold mx-2 px-4 hover:text-white hover:scale-110 transition-transform'>
-              <Link href='/#poptavka' onClick={closeMobileMenu}>
-                <div className="link-content">
-                  📩 Nezávazná poptávka
-                </div>
-              </Link>
-            </div>
+            <Link href='/#poptavka' onClick={closeMobileMenu}>
+              <button type="button" className="flex items-center text-gray-900 ml-4 bg-[#F7BE38] hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-[#F7BE38]/50 me-2">
+                <BiShoppingBag className="text-2xl sm:text-3xl md:text-2xl me-2" />
+                Nezávazná poptávka
+              </button>
+            </Link>
           </div>
         </div>
       )}
@@ -240,14 +240,13 @@ const Header = () => {
       </nav>
 
       {/* Zaoblený div s odkazem na poptavku (verze pro desktop) */}
-      <div className='hidden btn rounded-full md:block bg-primary-400 text-black py-2 text-center text-base font-bold mx-2 px-4 hover:text-white hover:scale-110 transition-transform'>
-        <Link href='/#poptavka'>
-          <div className="link-content">
-            📩 Nezávazná poptávka
-          </div>
-        </Link>
-      </div>
-    </header>
+      <Link href='/#poptavka'>
+        <button type="button" className="hidden md:flex items-center text-gray-900 ml-4 bg-[#F7BE38] hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-[#F7BE38]/50 me-2 ">
+          <BiShoppingBag className=" text-2xl sm:text-3xl md:text-2xl me-2" />
+          Nezávazná poptávka
+        </button>
+      </Link>
+    </header >
   );
 };
 

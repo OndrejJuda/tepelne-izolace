@@ -2,6 +2,7 @@ import { Benefits, Footer, DemandFormSection, Header, Hero, Process, Services, N
 import configuration from '../conf';
 import CookieBot from 'react-cookiebot';
 import React, { useState, useEffect } from 'react';
+import ScrollButton from '../components/ScrollButton';
 
 
 const { url } = configuration;
@@ -44,6 +45,10 @@ export default function Home() {
         <Process />
         <DemandFormSection />
         <Gallery />
+        <div>
+          {/* Další obsah stránky */}
+          <ScrollButton />
+        </div>
       </main>
       <div>
         {isStickyVisible && <StickyPhoneNumber />}

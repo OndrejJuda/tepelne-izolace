@@ -1,6 +1,10 @@
 [[redirects]]
-  from = "/api/raynet/*"
-  to = "/functions/cors"
+  from = "https://damepanely.cz/<path-to-access-cors-url>"
+  to = "https://lunastav.cz/api/raynet"
   status = 200
   force = true
   headers = {X-From = "Netlify"}
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"

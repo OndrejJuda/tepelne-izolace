@@ -1,6 +1,6 @@
 [[redirects]]
-  from = "https://www.damepanely.cz/"
-  to = "https://lunastav.cz/api/raynet"
+  from = "/api/raynet/"
+  to = "https://lunastav.cz/api/raynet/"
   status = 200
   force = true
   headers = {X-From = "Netlify"}

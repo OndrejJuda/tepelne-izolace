@@ -31,8 +31,13 @@ module.exports = {
     return [
       {
         source: '/api/raynet/:path*', // Adjust path if needed
-        headers: corsOptions,
+        headers: [
+          { key: 'Access-Control-Allow-Origin', value: 'https://www.damepanely.cz' },
+          { key: 'Access-Control-Allow-Methods', value: 'POST' },
+          { key: 'Access-Control-Allow-Credentials', value: 'true' },
+        ],
       },
     ];
   },
 };
+

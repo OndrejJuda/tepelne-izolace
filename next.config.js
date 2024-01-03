@@ -1,6 +1,14 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+const cors = require('cors');
+
+const corsOptions = {
+  origin: 'https://www.damepanely.cz',
+  methods: 'POST',
+  credentials: true,
+};
+
+module.exports = {
   reactStrictMode: true,
+
   webpack: (
     config,
     { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }
@@ -9,21 +17,22 @@ const nextConfig = {
     config.resolve.extensions.push('.web.js');
     return config;
   },
+
+  async rewrites() {
+    return [
+      {
+        source: '/api/raynet/:path*', // Adjust path if needed
+        destination: 'https://www.lunastav.cz/api/raynet/:path*', // Your target API URL
+      },
+    ];
+  },
+
   async headers() {
     return [
       {
-        // matching all API routes
-        source: "/api/:path*",
-        headers: [
-          { key: "Access-Control-Allow-Credentials", value: "true" },
-          { key: "Access-Control-Allow-Origin", value: "https://www.damepanely.cz/" }, // replace this your actual origin
-          { key: "Access-Control-Allow-Methods", value: "GET,DELETE,PATCH,POST,PUT" },
-          { key: "Access-Control-Allow-Headers", value: "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version" },
-        ]
-      }
-    ]
-  }
-
+        source: '/api/raynet/:path*', // Adjust path if needed
+        headers: corsOptions,
+      },
+    ];
+  },
 };
-
-module.exports = nextConfig;

@@ -15,7 +15,7 @@ const sendEmail = async (req, res) => {
       'Authorization': `Basic ${token}`,
     },
     body: JSON.stringify({
-      "topic": `Poptávka přes web - ${product}`,
+      "topic": `${product}`,
       "priority": "DEFAULT",
       "firstName": firstName,
       "lastName": lastName,

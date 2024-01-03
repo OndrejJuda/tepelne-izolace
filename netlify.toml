@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/api/raynet/*"
-  to = "/.netlify/functions/cors"
+  to = "/functions/cors"
   status = 200
   force = true
   headers = {X-From = "Netlify"}

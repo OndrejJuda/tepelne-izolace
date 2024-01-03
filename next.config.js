@@ -7,16 +7,23 @@ const nextConfig = {
     async headers() {
       return [
         {
+          // matching all API routes
           source: "/api/:path*",
           headers: [
-            { key: "Access-Control-Allow-Credentials", value: "true" },
-            { key: "Access-Control-Allow-Origin", value: "https://damepanely.cz" },
-            { key: "Access-Control-Allow-Methods", value: "GET,OPTIONS,PATCH,DELETE,POST,PUT" },
-            { key: "Access-Control-Allow-Headers", value: "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version" },
-          ],
+            // omitted for brevity...
+          ]
         },
-      ];
-    },
+        {
+          source: "/api/raynet",
+          headers: [
+            { key: "Access-Control-Allow-Credentials", value: "false" },
+            { key: "Access-Control-Allow-Origin", value: "https://damepanely.com" },
+            { key: "Access-Control-Allow-Methods", value: "GET,DELETE,PATCH,POST,PUT" },
+            { key: "Access-Control-Allow-Headers", value: "Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date" },
+          ]
+        }
+      ]
+    }
   },
 
   webpack: (

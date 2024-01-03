@@ -1,13 +1,32 @@
-const cors = require('cors');
-
-const corsOptions = {
-  origin: 'https://www.damepanely.cz',
-  methods: 'POST',
-  credentials: true,
-};
-
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
+
+  experimental: {
+    appDir: true,
+    async headers() {
+      return [
+        {
+          // Matching all API routes
+          source: "/api/:path*",
+          headers: [
+            { key: "Access-Control-Allow-Credentials", value: "true" },
+            { key: "Access-Control-Allow-Origin", value: "https://damepanely.cz https://lunastav.cz" },
+            {
+              key: "Access-Control-Allow-Methods",
+              value: "GET,OPTIONS,PATCH,DELETE,POST,PUT",
+            },
+            {
+              key: "Access-Control-Allow-Headers",
+              value:
+                "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
+            },
+          ],
+        },
+        // Additional headers configurations for other routes if needed
+      ];
+    },
+  },
 
   webpack: (
     config,
@@ -17,27 +36,6 @@ module.exports = {
     config.resolve.extensions.push('.web.js');
     return config;
   },
-
-  async rewrites() {
-    return [
-      {
-        source: '/api/raynet/:path*', // Adjust path if needed
-        destination: 'https://www.lunastav.cz/api/raynet/:path*', // Your target API URL
-      },
-    ];
-  },
-
-  async headers() {
-    return [
-      {
-        source: '/api/raynet/:path*', // Adjust path if needed
-        headers: [
-          { key: 'Access-Control-Allow-Origin', value: 'https://www.damepanely.cz' },
-          { key: 'Access-Control-Allow-Methods', value: 'POST' },
-          { key: 'Access-Control-Allow-Credentials', value: 'true' },
-        ],
-      },
-    ];
-  },
 };
 
+module.exports = nextConfig;

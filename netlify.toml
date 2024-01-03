@@ -1,5 +1,5 @@
 [[headers]]
-  for = "https://lunastav.cz/api/raynet"
+  for = "/*"
     [headers.values]
       Access-Control-Allow-Origin = "https://www.damepanely.cz"
       Access-Control-Allow-Methods = "GET, POST, PUT, DELETE"

@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "https://damepanely.cz/<path-to-access-cors-url>"
+  from = "https://www.damepanely.cz/"
   to = "https://lunastav.cz/api/raynet"
   status = 200
   force = true

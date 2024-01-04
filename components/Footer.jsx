@@ -33,8 +33,8 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="px-4 divide-y mt-12 bg-primary-50 ">
-      <div className="container mr-4 flex flex-col justify-evenly py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
+    <footer className="px-8 divide-y mt-12 bg-primary-50 flex flex-col items-center">
+      <div className="container flex flex-col justify-evenly py-10 space-y-8 lg:flex-row lg:space-y-0">
         <div className='flex justify-center'>
           <Link href='/'>
             <img src='/logo/logo-name.png' alt='logo' className='w-[200px]' />
@@ -96,7 +96,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="py-6 text-sm text-center ">© 2023 LUNASTAV CZ s.r.o. - všechna práva vyhrazena, použití obsahu nebo jeho částí je možné pouze se souhlasem společnosti.</div>
+      <div className="py-6 text-sm text-center self-stretch">© 2023 LUNASTAV CZ s.r.o. - všechna práva vyhrazena, použití obsahu nebo jeho částí je možné pouze se souhlasem společnosti.</div>
     </footer>
 
   );

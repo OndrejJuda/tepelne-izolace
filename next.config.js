@@ -6,10 +6,10 @@ const nextConfig = {
       {
         source: "/api/raynet",
         headers: [
-          { key: "Access-Control-Allow-Credentials", value: "false" },
-          { key: "Access-Control-Allow-Origin", value: "https://damepanely.com" },
+          { key: "Access-Control-Allow-Credentials", value: "true" },
+          { key: "Access-Control-Allow-Origin", value: "https://www.damepanely.cz" },
           { key: "Access-Control-Allow-Methods", value: "GET,DELETE,PATCH,POST,PUT" },
-          { key: "Access-Control-Allow-Headers", value: "Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date" },
+          { key: "Access-Control-Allow-Headers", value: "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version" },
         ]
       }
     ]

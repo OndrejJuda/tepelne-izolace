@@ -18,7 +18,7 @@ const Gallery = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response = await fetch('https://api.woxo.tech/instagram?source=%40lunastav.cz&count=20&type=hashtag&sort=top&token=null');
+      const response = await fetch('https://api.woxo.tech/instagram?source=%40lunastavcz&count=20&type=hashtag&sort=top&token=null');
       const { data } = await response.json();
 
       const transformedData = data.map(({ id, image: imageUrl, link, text3: text, text7: date }) => ({

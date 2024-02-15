@@ -19,9 +19,9 @@ const benefits = [
   { icon: <TbAward {...iconProps} />, title: 'Garance nejvyšší kvality použitých materiálů' },
   { icon: <MdLooksOne {...iconProps} />, title: 'Zvolíme vhodný typ izolace pro Váš dům' },
   { icon: <GiTakeMyMoney {...iconProps} />, title: 'Vyřídíme za Vás dotaci Nová Zelená Úsporám Light' },
-  { icon: <GiDiceSixFacesFive {...iconProps} />, title: 'Realizujeme i revizní lávky a podlahy' },
+  { icon: <GiDiceSixFacesFive {...iconProps} />, title: 'Zakázku realizujeme kompletně na klíč' },
   { icon: <FiTrendingDown {...iconProps} />, title: 'Snížíme Vám účty za vytápění až o 30%' },
-  { icon: <GiShieldReflect {...iconProps} />, title: 'Ochráníme Vaši nemovitost před horkem' },
+  { icon: <GiShieldReflect {...iconProps} />, title: 'Snížíme energetickou náročnost budovy' },
   { icon: <RiLeafLine {...iconProps} />, title: 'Přispějete k ochraně životního prostředí' },
 ];
 

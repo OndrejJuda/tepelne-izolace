@@ -123,7 +123,7 @@ const Header = () => {
                               </Link>
                               <Link href='https://www.damepanely.cz'>
                                 <div className="link-content h-16 text-center text-base py-5 hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-br-md rounded-bl-md">
-                                  Solární ohřev vody
+                                  FVE na ohřev vody
                                 </div>
                               </Link>
                             </>
@@ -214,7 +214,7 @@ const Header = () => {
                     </Link>
                     <Link href="https://www.damepanely.cz">
                       <div className="link-content h-13 text-center py-4 text-sm  hover:bg-primary-200 hover:bg-opacity-50 hover:text-black rounded-br-md rounded-bl-md">
-                        Solární ohřev vody
+                        FVE na ohřev vody
                       </div>
                     </Link>
                   </>

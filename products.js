@@ -6,6 +6,6 @@ export const products = [
     name: 'Zateplení fasády',
   },
   {
-    name: 'Solární ohřev vody',
+    name: 'FVE na ohřev vody',
   }
 ];

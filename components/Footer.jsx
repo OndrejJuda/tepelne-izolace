@@ -54,7 +54,7 @@ const Footer = () => {
                 <Link href="/zatepleni/zatepleni-fasady">Zateplení fasády</Link>
               </li>
               <li>
-                <Link href="https://www.damepanely.cz">Solární ohřev vody</Link>
+                <Link href="https://www.damepanely.cz">FVE na ohřev vody</Link>
               </li>
             </ul>
           </div>

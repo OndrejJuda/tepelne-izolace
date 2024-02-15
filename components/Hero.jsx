@@ -10,7 +10,7 @@ const Hero = () => {
   const textOptions = [
     'Zvyšte komfort a účinnost vašeho domova.',
     'Zateplením ušetříte 30 % nákladů na vytápění.',
-    'Solární ohřev vody v základní sestavě za korunu.',
+    'FVE na ohřev vody v základní sestavě za korunu.',
     'Zajistíme vše od žádosti o dotaci až po realizaci.',
     'Užijte si rovnoměrně izolovaný prostor bez tepelných mostů.',
   ];

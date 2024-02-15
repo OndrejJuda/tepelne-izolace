@@ -35,7 +35,7 @@ const Offer = () => {
       </div> */}
       <div className="flex flex-col md:flex-row w-full justify-center items-center my-2">
         <div className="md:w-2/4 p-4 md:border-r-2 border-gray-400">
-          <p className="text-center text-4xl mb-6">Solární ohřev vody: Přírodní cesta k teplé vodě</p>
+          <p className="text-center text-4xl mb-6">FVE na ohřev vody: Přírodní cesta k teplé vodě</p>
           <p className="text-center text-lg mb-6">Využijte energii slunce pro ohřev vody. Moderní, ekologické řešení pro každodenní potřeby vašeho domova.</p>
         </div>
         <div className="md:flex-1 md:flex flex-col p-4 text-center mt-6 items-center ">
@@ -44,7 +44,7 @@ const Offer = () => {
             <span className="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </span>
-            <span className="relative text-xl">Solární ohřev vody</span>
+            <span className="relative text-xl">FVE na ohřev vody</span>
           </Link>
 
         </div>

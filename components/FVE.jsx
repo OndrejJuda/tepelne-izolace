@@ -11,11 +11,11 @@ const FVE = () => {
           className="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right"
         >
           <h2 className="text-4xl sm:text-6xl mb-10 text-center font-bold">
-            Solární ohřev vody
+            FVE na ohřev vody
           </h2>
 
           <p className="text-m sm:text-l">
-            Máte jedinečnou příležitost získat dotaci až 90 000 Kč na instalaci solárního ohřevu vody. Ušetřete na energiích, chraňte planetu a užívejte si teplou vodu díky slunci. Tato nabídka je omezená, tak neváhejte. Investujte do své budoucnosti a budoucnosti naší planety. Pro více informací nás kontaktujte.
+            Máte jedinečnou příležitost získat dotaci až 90 000 Kč na instalaci FVE na ohřev vody. Ušetřete na energiích, chraňte planetu a užívejte si teplou vodu díky slunci. Tato nabídka je omezená, tak neváhejte. Investujte do své budoucnosti a budoucnosti naší planety. Pro více informací nás kontaktujte.
           </p>
 
           <div className="mt-4 md:mt-8">
@@ -23,7 +23,7 @@ const FVE = () => {
               href='https://www.damepanely.cz/'
               className="inline-block rounded-full bg-green-500 px-6 pb-2.5 pt-2.5 text-xl font-bold leading-normal text-white shadow-md transition ease-in-out hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg scale-100 hover:scale-110 duration-200"
             >
-              Získejte solární ohřev za symbolickou korunu!
+              Získejte FVE na ohřev vody za symbolickou korunu!
             </Link>
           </div>
         </div>

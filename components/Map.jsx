@@ -10,7 +10,7 @@ const MapContainer = ({ google }) => {
     <Map
       google={google}
       zoom={9}
-      initialCenter={{ lat: 49.763318, lng: 15.804715 }}
+      initialCenter={{ lat: 50.14542209177925, lng: 15.122542620688579 }}
     >
       {
         PLACES.map((place, index) => (

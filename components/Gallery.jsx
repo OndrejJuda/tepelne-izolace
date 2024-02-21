@@ -24,7 +24,12 @@ const Gallery = () => {
     >
       <HSecondary additionalStyling='mb-8 lg:mb-16 mt-8 text-2xl sm:text-2xl lg:text-3xl'>Galerie</HSecondary>
       <div className={`gallery__woxo-carousel--${sizeClassName}`}>
-        {/* PASTE HERE */}
+        <div data-mc-src="2321a380-7adb-403f-a172-a9103affccf3#instagram"></div>
+
+        <script
+          src="https://cdn2.woxo.tech/a.js#65cdfc5f13d9d3047ad36ff6"
+          async data-usrc>
+        </script>
       </div>
     </SectionWrapper>
   );

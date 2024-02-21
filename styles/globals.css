@@ -36,3 +36,13 @@ html {
 .alice-carousel__dots-item.__active {
   background-color: #967943 !important;
 }
+
+.gallery__woxo-carousel--big>div {
+  width: 1000px;
+}
+
+.gallery__woxo-carousel--medium>div {
+  width: 600px;
+}
+
+.gallery__woxo-carousel--small>div {}

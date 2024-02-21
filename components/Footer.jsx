@@ -70,6 +70,9 @@ const Footer = () => {
               <li>
                 <Link href="/#benefity">Výhody</Link>
               </li>
+              <li>
+                <Link href="/dotace">Dotace</Link>
+              </li>
             </ul>
           </div>
           <div className="space-y-3">

@@ -67,9 +67,9 @@ const Grant = () => {
                     Zateplení stropu
                   </dt>
                   <dd className="mt-2 mb-2  text-base leading-7 text-gray-600">Dotace na kompletní zateplení stropu pod nevytápěnými prostory nebo stropu obývaného podkroví.</dd>
-                  <Link href="/dotace" title="Zateplení stropu" className="mt-4 text-sm font-medium text-primary-500 hover:text-primary-600">
+                  {/* <Link href="/dotace" title="Zateplení stropu" className="mt-4 text-sm font-medium text-primary-500 hover:text-primary-600">
                     Zjistit více
-                  </Link>
+                  </Link> */}
                 </div>
                 <div className="relative pl-16">
                   <dt className="text-base font-semibold leading-7 text-gray-900">
@@ -79,9 +79,9 @@ const Grant = () => {
                     Zateplení střechy
                   </dt>
                   <dd className="mt-2 mb-2  text-base leading-7 text-gray-600">Dotace na kompletní zateplení střechy.</dd>
-                  <Link href="/dotace" title="Zateplení stropu" className="mt-4 text-sm font-medium text-primary-500 hover:text-primary-600">
+                  {/* <Link href="/dotace" title="Zateplení stropu" className="mt-4 text-sm font-medium text-primary-500 hover:text-primary-600">
                     Zjistit více
-                  </Link>
+                  </Link> */}
                 </div>
                 <div className="relative pl-16">
                   <dt className="text-base font-semibold leading-7 text-gray-900">
@@ -91,9 +91,9 @@ const Grant = () => {
                     Zateplení fasády
                   </dt>
                   <dd className="mt-2 mb-2  text-base leading-7 text-gray-600">Dotace na zateplení fasády vhodnými tepelněizolačními materiály.</dd>
-                  <Link href="/dotace" title="Zateplení stropu" className="mt-4 text-sm font-medium text-primary-500 hover:text-primary-600">
+                  {/* <Link href="/dotace" title="Zateplení stropu" className="mt-4 text-sm font-medium text-primary-500 hover:text-primary-600">
                     Zjistit více
-                  </Link>
+                  </Link> */}
                 </div>
                 <div className="relative pl-16">
                   <dt className="text-base font-semibold leading-7 text-gray-900">
@@ -103,9 +103,9 @@ const Grant = () => {
                     FVE na ohřev vody
                   </dt>
                   <dd className="mt-2 mb-2 text-base leading-7 text-gray-600">Dotace na termický nebo fotovoltaický ohřev vody s využitím stávajícího bojleru nebo s novým bojlerem.</dd>
-                  <Link href="/dotace" title="Zateplení stropu" className="text-sm font-medium text-primary-500 hover:text-primary-600">
+                  {/* <Link href="/dotace" title="Zateplení stropu" className="text-sm font-medium text-primary-500 hover:text-primary-600">
                     Zjistit více
-                  </Link>
+                  </Link> */}
                 </div>
               </dl>
             </div>

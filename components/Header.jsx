@@ -181,15 +181,13 @@ const Header = () => {
             <div
               className={`text-lg hover:text-primary-500 transition-transform cursor-pointer ${link.title === 'Zateplení' && hoveredLink === index ? 'open-submenu' : ''}`}
             >
-              <Link href={link.href}>
-                <div className="link-content flex items-center">
-                  {link.title} {link.title === 'Firma' || link.title === 'Služby' ? (
-                    <span className={`inline-block ml-2 transform transition-transform ${hoveredLink === index ? 'rotate-180 mt-0.5' : ''}`}> {/* Upraveno margin-top */}
-                      <IoIosArrowDown />
-                    </span>
-                  ) : null}
-                </div>
-              </Link>
+              <div className="link-content flex items-center">
+                {link.title} {link.title === 'Firma' || link.title === 'Služby' ? (
+                  <span className={`inline-block ml-2 transform transition-transform ${hoveredLink === index ? 'rotate-180 mt-0.5' : ''}`}> {/* Upraveno margin-top */}
+                    <IoIosArrowDown />
+                  </span>
+                ) : null}
+              </div>
             </div>
             {hoveredLink === index && (link.title === 'Firma' || link.title === 'Služby') && (
               <div className='absolute top-full left-0 mt-4 bg-white text-center rounded-md w-[150px] h-auto  '>

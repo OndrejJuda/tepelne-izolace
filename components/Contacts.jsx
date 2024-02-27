@@ -45,10 +45,10 @@ const Contacts = () => {
     <>
 
       <Header />
-      <div className='mt-20 2xl:my-10 px-4 md:px-16 lg:px-36 flex flex-col gap-16 2xl:gap-32'>
+      <div className='mt-20 2xl:my-10 px-4 md:px-16 lg:px-36 flex flex-col gap-16 2xl:gap-16'>
         <Breadcrumb items={breadcrumbItems} />
         <section className='flex flex-col items-center'>
-          <h1 className='text-4xl sm:text-5xl md:text-6xl font-semibold text-primary-900 mb-16 lg:mb-32'>Kde nás najdete?</h1>
+          <h1 className='text-4xl sm:text-5xl md:text-4xl font-semibold text-primary-900 mb-8 lg:mb-16'>Kde nás najdete?</h1>
           <div className='w-full grid grid-rows-2 gap-y-8 grid-flow-col-1 md:grid-cols-[1fr_max-content] md:grid-rows-1 gap-x-8'>
             <div className='relative w-full h-full rounded-lg overflow-hidden row-start-2 row-end-3 md:row-span-1 shadow-lg'>
               {

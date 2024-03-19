@@ -1,18 +1,22 @@
 /* @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@100;300;400;500;600;700&display=swap'); */
-
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fjalla+One&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Sans+Narrow:wght@400;700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .clip-hero {
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
-  }
+
+
+body {
+  background-color: #fefbf3;
 }
 
 html {
   --scroll-behavior: smooth !important;
   scroll-behavior: smooth !important;
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .alice-carousel__wrapper {

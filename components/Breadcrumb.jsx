@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export const Breadcrumb = ({ items }) => {
   return (
-    <nav className="flex" aria-label="Breadcrumb">
+    <nav className="flex bg-primary-25" aria-label="Breadcrumb">
       <ol className="inline-flex items-center space-x-1 md:space-x-3">
         {items.map((item, index) => (
           <li key={index} className="inline-flex items-center">

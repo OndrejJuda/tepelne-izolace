@@ -13,11 +13,11 @@ const Process = () => {
   return (
     <SectionWrapper
       id='proces'
-      innerDivStyle='flex flex-col justify-center items-center mx-8 md:mx-16 lg:mx-36 my-32 md:my-32 w-screen'
+      innerDivStyle='flex flex-col justify-center items-center mx-8 md:mx-16 lg:mx-36 my-12 md:my-16 w-screen'
     >
-      <HSecondary additionalStyling='text-4xl sm:text-5xl my-12 mb-12 text-center'>Jak to u nás funguje a jak postupujeme?</HSecondary>
+      <HSecondary additionalStyling='text-4xl sm:text-5xl my-12 mb-12 text-center z-20'>Jak to u nás funguje a jak postupujeme?</HSecondary>
 
-      <ul className='flex flex-col gap-24 xl:gap-16 mb-16 xl:mb-32'>
+      <ul className='flex flex-col gap-24 xl:gap-16 my-6 mb-16 xl:mb-2'>
         {
           processSteps.map(({ image, title, descripton }, index) => (
             <li

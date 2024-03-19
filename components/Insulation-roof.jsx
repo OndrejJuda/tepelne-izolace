@@ -16,7 +16,7 @@ const InsulationRoof = () => {
       <Header />
       <SectionWrapper
         id='sluzby'
-        innerDivStyle='flex flex-col justify-center bg-white rounded-lg mx-8 md:mx-16 lg:mx-36 w-screen my-10 relative'
+        innerDivStyle='flex flex-col justify-center bg-primary-25 rounded-lg mx-8 md:mx-16 lg:mx-36 w-screen my-24 md:my-4  relative'
       >
         <Breadcrumb items={breadcrumbItems} />
 
@@ -48,11 +48,9 @@ const InsulationRoof = () => {
             <p class="mb-4 text-2xl">Jsme certifikovanou firmou pro aplikaci celulózy <span className='text-red-600 font-bold '>THERMOFLOC</span> a minerální vaty <span className='text-blue-600 font-bold '>KNAUF – SUPAFIL LOFT</span></p>
           </div>
 
-          {/* <div class="w-full lg:w-1/4 order-first lg:order-last  ">
-            <img src="/business/vata1.jpg" alt="vata1" class="mb-4 " />
-            <img src="/business/vata2.jpg" alt="vata2" class="mb-4 " />
-            <img src="/business/foukana1.jpg" alt="foukana1" class="mb-4 w-full max-h-[170px] sm:max-h-[300px] lg:max-h-[230px] object-cover" />
-          </div> */}
+          <img src="/business/supafil.png" className="w-1/2 object-contain" alt="SUPAFIL LOFT" />
+          <img src="/business/thermofloc-baleni.png" className="w-1/2 object-contain" alt="THERMOFLOC" />
+
         </div>
 
       </SectionWrapper >

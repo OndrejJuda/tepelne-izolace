@@ -89,10 +89,10 @@ const Footer = () => {
               <Link href="https://www.facebook.com/lunastav" title="Facebook" className="flex items-center p-1">
                 <FaFacebook className="w-5 h-5 fill-current" /> {/* Ikona Facebooku */}
               </Link>
-              <Link href="https://damepanely.cz" title="Damepanely" className="flex items-center p-1">
+              <Link href="https://damepanely.cz" title="damepanely" className="flex items-center p-1">
                 <FaSolarPanel className="w-5 h-5 fill-current" /> {/* Ikona solárního panelu */}
               </Link>
-              <Link href="https://www.instagram.com/lunastavcz/" title="Instagram" className="flex items-center p-1">
+              <Link href="https://www.instagram.com/lunastav.cz/" title="Instagram" className="flex items-center p-1">
                 <FaInstagram className="w-5 h-5 fill-current" /> {/* Ikona Instagramu */}
               </Link>
             </div>
@@ -101,7 +101,6 @@ const Footer = () => {
       </div>
       <div className="py-6 text-sm text-center self-stretch">© 2023 LUNASTAV CZ s.r.o. - všechna práva vyhrazena, použití obsahu nebo jeho částí je možné pouze se souhlasem společnosti.</div>
     </footer>
-
   );
 };
 

@@ -29,22 +29,23 @@ const Benefits = () => {
   return (
     <SectionWrapper
       id='benefity'
-      innerDivStyle='mx-8 md:mx-16 lg:mx-36 my-32 md:my-32 bg-primary-50 rounded-lg overflow-hidden shadow-xl w-screen '
+      innerDivStyle='mx-8 md:mx-16 lg:mx-36 mt-4 rounded-lg  w-screen'
     >
       <div className='flex flex-col items-center z-10 mb-6'>
-        <HSecondary additionalStyling='text-4xl sm:text-5xl my-12 mb-12 text-center'>
+        <HSecondary additionalStyling='text-4xl sm:text-5xl my-12 mb-12 pb-8 text-center border-b-2 border-gray-400'>
           Proč si vybrat naše služby?
         </HSecondary>
-        <div className="container mx-auto grid justify-center gap-8 sm:grid-cols-2 lg:grid-cols-4 text-center">
+        <div className="container mx-auto grid my-2 justify-center gap-8 sm:grid-cols-2 lg:grid-cols-4 text-center">
           {benefits.map((benefit, index) => (
-            <div className="flex flex-col items-center p-4" key={index}>
+            <div className="flex flex-col items-center h-64 w-full justify-center bg-primary-100 p-4 rounded-xl transition-all duration-300 transform hover:scale-110" key={index}>
               {benefit.icon}
-              <h3 className="my-3 text-2xl text-center">{benefit.title}</h3>
+              <h3 className="my-3 text-xl text-center">{benefit.title}</h3>
             </div>
           ))}
         </div>
       </div>
     </SectionWrapper>
+
   );
 };
 

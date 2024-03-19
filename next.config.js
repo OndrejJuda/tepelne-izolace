@@ -17,7 +17,8 @@ const nextConfig = {
 
   webpack: (
     config,
-    { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }
+    { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack },
+
   ) => {
     config.resolve.extensions.push('.web.js');
     return config;

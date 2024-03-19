@@ -15,7 +15,7 @@ const InsulationFacade = () => {
       <Header />
       <SectionWrapper
         id='sluzby'
-        innerDivStyle='flex flex-col justify-center bg-white rounded-lg mx-8 md:mx-16 lg:mx-36 w-screen my-10 relative'
+        innerDivStyle='flex flex-col justify-center bg-primary-25 rounded-lg mx-8 md:mx-16 lg:mx-36 w-screen my-24 md:my-4  relative'
       >
         <Breadcrumb items={breadcrumbItems} />
 

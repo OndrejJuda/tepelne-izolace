@@ -4,7 +4,6 @@ import CookieBot from 'react-cookiebot';
 import React, { useState, useEffect } from 'react';
 import ScrollButton from '../components/ScrollButton';
 
-
 const { url } = configuration;
 const domainGroupId = process.env.NEXT_PUBLIC_COOKIEBOT_DOMAIN_GROUP_ID;
 
@@ -16,24 +15,23 @@ export default function Home() {
       const footer = document.getElementById('footer');
       const footerPosition = footer.getBoundingClientRect().top;
 
-      // Hide the sticky phone number when user scrolls to the footer
       setIsStickyVisible(footerPosition > window.innerHeight);
     };
 
-    // Attach the event listener for scroll
     window.addEventListener('scroll', handleScroll);
 
-    // Remove the event listener when component unmounts
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
   return (
-    <div>
+    <div className="relative">
       <WebsiteHead canonicalHref={url} />
       {domainGroupId && (
         <CookieBot domainGroupId={domainGroupId} />
       )}
+      <div className="absolute top-[-10px] left-0 w-full h-[440px]  md:h-[700px] z-0 shadow-md" style={{ backgroundImage: "url('/business/pozadi.png')", backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundAttachment: "absolute" }}></div>
+
       <Header />
       <main className=''>
         <Hero />
@@ -57,6 +55,6 @@ export default function Home() {
         </div>
       </div>
 
-    </div>
+    </div >
   );
 }

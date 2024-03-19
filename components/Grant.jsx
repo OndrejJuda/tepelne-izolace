@@ -47,11 +47,11 @@ const Grant = () => {
       <Header />
       <SectionWrapper
         id='dotace'
-        innerDivStyle='flex flex-col justify-center bg-white rounded-lg mx-8 md:mx-16 lg:mx-36 w-screen my-10 relative'
+        innerDivStyle='flex flex-col justify-center bg-primary-25 rounded-lg mx-8 md:mx-16 lg:mx-36 w-screen my-24 md:my-4  relative'
       >
         <Breadcrumb items={breadcrumbItems} />
 
-        <div className="bg-white py-10 sm:py-10">
+        <div className="py-10 sm:py-10">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl lg:text-center">
               <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Dotaci NZÚ Light vyřídíme my!</p>
@@ -70,6 +70,7 @@ const Grant = () => {
                   {/* <Link href="/dotace" title="Zateplení stropu" className="mt-4 text-sm font-medium text-primary-500 hover:text-primary-600">
                     Zjistit více
                   </Link> */}
+                  <p><strong>Dotace  50 000 Kč</strong></p>
                 </div>
                 <div className="relative pl-16">
                   <dt className="text-base font-semibold leading-7 text-gray-900">
@@ -82,6 +83,7 @@ const Grant = () => {
                   {/* <Link href="/dotace" title="Zateplení stropu" className="mt-4 text-sm font-medium text-primary-500 hover:text-primary-600">
                     Zjistit více
                   </Link> */}
+                  <p><strong>Dotace  120 000 Kč</strong></p>
                 </div>
                 <div className="relative pl-16">
                   <dt className="text-base font-semibold leading-7 text-gray-900">
@@ -94,6 +96,7 @@ const Grant = () => {
                   {/* <Link href="/dotace" title="Zateplení stropu" className="mt-4 text-sm font-medium text-primary-500 hover:text-primary-600">
                     Zjistit více
                   </Link> */}
+                  <p><strong>Dotace až 150 000 Kč (6 000 Kč/běžný metr)</strong></p>
                 </div>
                 <div className="relative pl-16">
                   <dt className="text-base font-semibold leading-7 text-gray-900">
@@ -106,6 +109,7 @@ const Grant = () => {
                   {/* <Link href="/dotace" title="Zateplení stropu" className="text-sm font-medium text-primary-500 hover:text-primary-600">
                     Zjistit více
                   </Link> */}
+                  <p><strong>Dotace  90 000 Kč</strong></p>
                 </div>
               </dl>
             </div>

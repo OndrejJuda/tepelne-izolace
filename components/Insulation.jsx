@@ -87,87 +87,22 @@ const Insulation = () => {
               Důležitost zateplení nelze přehlížet. Kromě úspor na energiích přináší také zvýšený komfort. V zatepleném domě je příjemnější v horkých letních dnech i v chladných zimních měsících. Zateplení rovněž prodlužuje životnost vašeho domu.
             </p>
           </div>
-          {/* Pokračování s dalšími částmi článku */}
-
           <div className="my-8">
-            <h2 className="text-2xl font-bold">3. Jak probíhá zateplení střechy?</h2>
-            <p>
-              Zateplení střechy je jedním z klíčových prvků celého procesu. To zahrnuje přidání izolační vrstvy pod střešní krytinu, což minimalizuje únik tepla a zvyšuje odolnost vůči povětrnostním vlivům.
-            </p>
-          </div>
-          <div className="my-8">
-            <h2 className="text-2xl font-bold">4. Zateplení stropu: Co je třeba vědět</h2>
-            <p>
-              Zateplení stropu možná není tak časté, ale může přinést mnoho výhod. Tímto způsobem zlepšíte izolaci mezi jednotlivými patry domu a snížíte hluk.
-            </p>
-          </div>
-          <div className="my-8">
-            <h2 className="text-2xl font-bold">5. Fasáda: Krása a funkce zateplení</h2>
-            <p>
-              Zateplení fasády není jen o izolaci. Moderní materiály a designy mohou váš domov výrazně zlepšit esteticky.
-            </p>
-          </div>
-          <div className="my-8">
-            <h2 className="text-2xl font-bold">6. Jaký materiál vybrat pro zateplení?</h2>
+            <h2 className="text-2xl font-bold">3. Jaký materiál vybrat pro zateplení?</h2>
             <p>
               Při zateplení je rozhodující volba správného materiálu. Existuje mnoho možností, včetně minerální vlny, polystyrenu nebo ekologických materiálů. Výběr závisí na vašich potřebách a finančních možnostech.
             </p>
           </div>
           <div className="my-8">
-            <h2 className="text-2xl font-bold">7. Jaký je proces zateplení?</h2>
+            <h2 className="text-2xl font-bold">4. Jaký je proces zateplení?</h2>
             <p>
-              Zateplení není jednoduchou záležitostí, ale profesionální tým vám rád poskytne pomoc. Proces zahrnuje přípravu povrchu, instalaci izolace a následné úpravy fasády nebo střechy.
+              Zateplení není jednoduchou záležitostí, ale náš profesionální tým vám rád poskytne pomoc. Proces zahrnuje přípravu povrchu, instalaci izolace a následné úpravy fasády nebo střechy.
             </p>
           </div>
           <div className="my-8">
-            <h2 className="text-2xl font-bold">8. Jaké jsou výhody zateplení?</h2>
+            <h2 className="text-2xl font-bold">5. Jaké jsou výhody zateplení?</h2>
             <p>
               Zateplení přináší mnoho výhod. Kromě úspor na energiích přispívá také k ochraně životního prostředí a snižuje emise skleníkových plynů. Vaše domácnost tak má nižší ekologickou stopu.
-            </p>
-          </div>
-          <div className="my-8">
-            <h2 className="text-2xl font-bold">9. Kolik stojí zateplení?</h2>
-            <p>
-              Náklady na zateplení se liší podle rozsahu práce a zvolených materiálů. Je však důležité mít na paměti, že investice do zateplení se v dlouhodobém horizontu vyplatí.
-            </p>
-          </div>
-          <div className="my-8">
-            <h2 className="text-2xl font-bold">10. Důležité rady před zahájením zateplení</h2>
-            <p>
-              Před započetím zateplení je důležité si udělat plán a zvážit všechny možnosti. Dbejte na kvalitu materiálů a vyberte si odborníka, který práci provede.
-            </p>
-          </div>
-          {/* Závěr článku */}
-
-          <div className="my-8">
-            <h2 className="text-2xl font-bold">Závěr</h2>
-            <p>
-              Zateplení je investicí do budoucnosti vašeho domova. Zlepšuje komfort, šetří peníze a chrání životní prostředí. Pokud uvažujete o zateplení střechy, stropu nebo fasády, důležité je vybrat kvalitní materiály a spolehlivé odborníky na provedení práce. Vaše domácnost zaznamená pozitivní změny a vy budete moci žít pohodlněji.
-            </p>
-          </div>
-          {/* Často kladené otázky */}
-
-          <div className="my-8">
-            <h2 className="text-2xl font-bold">Často kladené otázky</h2>
-            <p>
-              <strong>1. Jak dlouho trvá zateplení domu?</strong><br />
-              Délka trvání zateplení závisí na rozsahu práce, ale obvykle trvá několik týdnů.
-            </p>
-            <p>
-              <strong>2. Jaké jsou nejběžnější materiály pro zateplení fasády?</strong><br />
-              Mezi nejběžnější materiály patří minerální vlna, polystyren a dřevovláknité desky.
-            </p>
-            <p>
-              <strong>3. Mohu zateplit dům sám?</strong><br />
-              I když to teoreticky lze udělat samostatně, doporučujeme profesionální instalaci pro nejlepší výsledky.
-            </p>
-            <p>
-              <strong>4. Jaké jsou úspory na energiích po zateplení?</strong><br />
-              Úspory se mohou lišit, ale můžete očekávat výrazné snížení nákladů na vytápění a klimatizaci.
-            </p>
-            <p>
-              <strong>5. Může zateplení domu zvýšit hodnotu nemovitosti?</strong><br />
-              Ano, zateplení může zvýšit hodnotu nemovitosti tím, že zlepšuje energetickou efektivitu a vzhled domu.
             </p>
           </div>
 

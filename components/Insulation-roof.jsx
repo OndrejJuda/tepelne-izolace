@@ -22,7 +22,7 @@ const InsulationRoof = () => {
 
         <div class="flex flex-col-reverse mt-6 lg:flex-row ">
           <div class="w-full lg:w-3/4 pr-8 ">
-            <h1 class="text-3xl font-bold mb-4">Nyní zvažte zateplení střechy pro komfort a úsporu energie!</h1>
+            <h1 class="text-3xl font-bold mb-4">Zateplení střechy pro komfort a úsporu energie!</h1>
             <p class="mb-4">Vaše domácí pohodlí a finanční úspory mohou být na dosah ruky díky kvalitnímu zateplení střechy. Přijměte výzvu a proměňte svůj domov v energeticky efektivní útočiště.</p>
 
             <h2 class="text-2xl font-semibold mb-2">Proč zvolit zateplení střechy s námi?</h2>
@@ -33,7 +33,7 @@ const InsulationRoof = () => {
               <li class="mb-2">Precizní provedení: Zajistíme, že zateplení pokryje každý detail střechy.</li>
             </ul>
 
-            <h2 class="text-2xl font-semibold mb-2">Jak probíhá proces zateplení střechy s námi?</h2>
+            <h2 class="text-2xl font-semibold mb-2">Jak probíhá proces zateplení střechy?</h2>
             <ol class="list-decimal list-inside mb-4">
               <li class="mb-2">Bezpečnost na prvním místě: Spolehněte se na naše odborníky, kteří vám poskytnou podrobnou konzultaci.</li>
               <li class="mb-2">Důkladný průzkum: Každý kout střechy bude pod drobnohledem, abychom identifikovali všechny potřeby.</li>

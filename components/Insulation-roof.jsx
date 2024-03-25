@@ -48,9 +48,6 @@ const InsulationRoof = () => {
             <p class="mb-4 text-2xl">Jsme certifikovanou firmou pro aplikaci celulózy <span className='text-red-600 font-bold '>THERMOFLOC</span> a minerální vaty <span className='text-blue-600 font-bold '>KNAUF – SUPAFIL LOFT</span></p>
           </div>
 
-          <img src="/business/supafil.png" className="w-1/2 object-contain" alt="SUPAFIL LOFT" />
-          <img src="/business/thermofloc-baleni.png" className="w-1/2 object-contain" alt="THERMOFLOC" />
-
         </div>
 
       </SectionWrapper >

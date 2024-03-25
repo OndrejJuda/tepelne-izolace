@@ -31,7 +31,8 @@ module.exports = {
           white: '#ffffff',
           nzumodra: '#006fb9',
           nzuzelena: '#2cb34a',
-          nzuzluta: '#bfd22b'
+          nzuzluta: '#bfd22b',
+          supafil: '#03aeec'
           // 50: '#f5ede9',
           // 100: '#ebdbd3',
           // 200: '#cda590',

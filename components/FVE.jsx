@@ -15,7 +15,7 @@ const FVE = () => {
           </h2>
 
           <p className="text-m sm:text-l">
-            Máte jedinečnou příležitost získat dotaci až 90 000 Kč na instalaci FVE na ohřev vody. Ušetřete na energiích, chraňte planetu a užívejte si teplou vodu díky slunci. Tato nabídka je omezená, tak neváhejte. Investujte do své budoucnosti a budoucnosti naší planety. Pro více informací nás kontaktujte.
+            Máte jedinečnou příležitost získat dotaci až 70 000 Kč na instalaci FVE na ohřev vody. Ušetřete na energiích, chraňte planetu a užívejte si teplou vodu díky slunci. Tato nabídka je omezená, tak neváhejte. Investujte do své budoucnosti a budoucnosti naší planety. Pro více informací nás kontaktujte.
           </p>
 
           <div className="mt-4 md:mt-8">

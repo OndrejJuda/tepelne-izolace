@@ -109,7 +109,7 @@ const Grant = () => {
                   {/* <Link href="/dotace" title="Zateplení stropu" className="text-sm font-medium text-primary-500 hover:text-primary-600">
                     Zjistit více
                   </Link> */}
-                  <p><strong>Dotace  90 000 Kč</strong></p>
+                  <p><strong>Dotace  70 000 Kč</strong></p>
                 </div>
               </dl>
             </div>

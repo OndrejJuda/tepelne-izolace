@@ -70,7 +70,7 @@ const Grant = () => {
                   {/* <Link href="/dotace" title="Zateplení stropu" className="mt-4 text-sm font-medium text-primary-500 hover:text-primary-600">
                     Zjistit více
                   </Link> */}
-                  <p><strong>Dotace  50 000 Kč</strong></p>
+                  <p><strong>Dotace  1500 Kč/m²</strong></p>
                 </div>
                 <div className="relative pl-16">
                   <dt className="text-base font-semibold leading-7 text-gray-900">
@@ -83,7 +83,7 @@ const Grant = () => {
                   {/* <Link href="/dotace" title="Zateplení stropu" className="mt-4 text-sm font-medium text-primary-500 hover:text-primary-600">
                     Zjistit více
                   </Link> */}
-                  <p><strong>Dotace  120 000 Kč</strong></p>
+                  <p><strong>Dotace  1500 Kč/m²</strong></p>
                 </div>
                 <div className="relative pl-16">
                   <dt className="text-base font-semibold leading-7 text-gray-900">
@@ -116,8 +116,10 @@ const Grant = () => {
             <div>
               <ul className="list-disc mt-16 text-lg">
                 <strong className='text-2xl '>Podmínky pro získání dotace:</strong>
-                <li className='mb-2 mt-2'>Jste vlastníci nebo spoluvlastníci rodinného domu, nebo trvale obývané rekreační stavby, bytu nebo podílu v bytovém družstvu a máte tam trvalý pobyt déle než od 12. září 2022.</li>
-                <li className='mb-2 '>Jsou všichni členové vaší domácnosti příjemci starobního důchodu nebo invalidního důchodu 3. stupně, nebo vaše domácnost pobírala v období od 12. září 2022 příspěvek na bydlení či přídavky na děti aspoň jeden měsíc.</li>
+                <p className='text-lg mt-2'>Nárok na dotaci máte v případě, že jste <strong>vlastníci</strong> nebo <strong>spoluvlastníci</strong> rodinného domu, nebo trvale obývané rekreační stavby, bytu nebo podílu v bytovém družstvu s právem užívat byt a zároveň splňujete jednu z těchto podmínek:</p>
+                <li className='mb-2 mt-2'>Všichni členové vaší domácnosti pobírají starobní důchod nebo invalidní důchod 3. stupně.</li>
+                <li className='mb-2 '>Vy nebo členové vaší domácnosti pobíráte v době podání žádosti příspěvek na bydlení či přídavek na dítě..</li>
+                <p className='text-lg mt-2'>Jste-li příjemce starobního důchodu, na dotaci máte nárok v případě, že vy ani ostatní členové vaší domácnosti nevlastníte žádnou další nemovitost určenou k bydlení nebo podíl na takové nemovitosti.</p>
               </ul>
             </div>
           </div>

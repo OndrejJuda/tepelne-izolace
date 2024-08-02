@@ -39,6 +39,8 @@
     "react-icons": "^4.7.1",
     "react-scrollmagic": "^2.3.0",
     "react-spring": "^9.7.3",
+    "survey-core": "^1.11.5",
+    "survey-react-ui": "^1.11.5",
     "swr": "^2.2.5",
     "uuid": "^9.0.1"
   },

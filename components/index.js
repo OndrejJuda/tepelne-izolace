@@ -29,3 +29,5 @@ export { default as InsulationFacade } from './Insulation-facade';
 export { default as WebsiteHead } from './WebsiteHead';
 export { default as StickyPhoneNumber } from './StickyPhoneNumber';
 export { default as Carousel } from './Carousel';
+export { default as GrantForm } from './GrantForm';
+export { default as SurveyComponent } from './SurveyComponent';

@@ -1,6 +1,7 @@
 import { GoogleAnalytics } from 'nextjs-google-analytics';
 import { AppContextProvider } from '../context/app-context';
 import '../styles/globals.css';
+import '../styles/survey.css';
 import Script from 'next/script';
 
 const measurementId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;

@@ -2,7 +2,7 @@ const userName = process.env.RAYNET_USERNAME;
 const apiKey = process.env.RAYNET_API_KEY;
 const instanceName = process.env.RAYNET_INSTANCE_NAME;
 
-const sendEmail = async (req, res) => {
+const sendSurvey = async (req, res) => {
   const data = req.body;
   const {
     solarOrInsulationPlan,
@@ -32,15 +32,15 @@ const sendEmail = async (req, res) => {
     body: JSON.stringify({
       "topic": "Poptávka přes dotazník",
       "priority": "DEFAULT",
-      "firstName": contactInformation.fullname.split(' ')[0],
-      "lastName": contactInformation.fullname.split(' ').slice(1).join(' '),
+      "firstName": fullname.split(' ')[0],
+      "lastName": fullname.split(' ').slice(1).join(' '),
       "contactSource": 306,
       "contactInfo": {
-        "email": contactInformation.email,
-        "tel1": contactInformation.phone
+        "email": email,
+        "tel1": phone
       },
       "address": {
-        "city": contactInformation.province
+        "city": province
       },
       "notice": `
       Má zájem o zateplení strop nebo fotovoltaiku? ${solarOrInsulationPlan},
@@ -58,14 +58,13 @@ const sendEmail = async (req, res) => {
     const response = await fetch('https://app.raynet.cz/api/v2/lead/', options);
 
     if (response.ok) {
+      return res.status(200).json({ error: '' });
     } else {
-      return res.status(error.statusCode || 500).json({ error: response.statusText });
+      return res.status(response.status).json({ error: response.statusText });
     }
   } catch (error) {
     return res.status(error.statusCode || 500).json({ error: error.message });
   }
-
-  return res.status(200).json({ error: '' });
 };
 
-export default sendEmail;
+export default sendSurvey;

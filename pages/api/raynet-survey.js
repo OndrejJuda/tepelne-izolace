@@ -3,23 +3,23 @@ const apiKey = process.env.RAYNET_API_KEY;
 const instanceName = process.env.RAYNET_INSTANCE_NAME;
 
 const sendSurvey = async (req, res) => {
-  const data = req.body;
-  const {
-    solarOrInsulationPlan,
-    conditions,
-    houseOrFlat,
-    ownerOfProperty,
-    permanentResidence,
-    moreThan2Properties,
-    otherPeople,
-    contactInformation: {
-      fullname,
-      phone,
-      email,
-      province
-    },
-    gdpr
-  } = JSON.parse(data);
+  // const data = req.body;
+  // const {
+  //   solarOrInsulationPlan,
+  //   conditions,
+  //   houseOrFlat,
+  //   ownerOfProperty,
+  //   permanentResidence,
+  //   moreThan2Properties,
+  //   otherPeople,
+  //   contactInformation: {
+  //     fullname,
+  //     phone,
+  //     email,
+  //     province
+  //   },
+  //   gdpr
+  // } = JSON.parse(data);
 
   const token = btoa(`${userName}:${apiKey}`);
   const options = {
@@ -32,15 +32,15 @@ const sendSurvey = async (req, res) => {
     body: JSON.stringify({
       "topic": "Poptávka přes dotazník",
       "priority": "DEFAULT",
-      "firstName": fullname,
-      "lastName": fullname,
+      "firstName": "Roman",
+      "lastName": "Erlebach",
 
       "contactInfo": {
-        "email": email,
-        "tel1": phone
+        "email": "roman.erle@seznam.cz",
+        "tel1": "732915199"
       },
       "address": {
-        "city": province
+        "city": "Hradec"
       },
 
     })

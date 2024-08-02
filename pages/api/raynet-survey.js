@@ -3,20 +3,19 @@ const apiKey = process.env.RAYNET_API_KEY;
 const instanceName = process.env.RAYNET_INSTANCE_NAME;
 
 const sendSurvey = async (req, res) => {
-  console.log("req body:" + req.body);
   const data = req.body;
-  // const {
-  //   solarOrInsulationPlan,
-  //   conditions,
-  //   houseOrFlat,
-  //   ownerOfProperty,
-  //   permanentResidence,
-  //   moreThan2Properties,
-  //   otherPeople,
-  //   contactInformation,
-  //   gdpr
-  // } = JSON.parse(data);
-  // console.log(data);
+  const {
+    solarOrInsulationPlan,
+    conditions,
+    houseOrFlat,
+    ownerOfProperty,
+    permanentResidence,
+    moreThan2Properties,
+    otherPeople,
+    contactInformation,
+    gdpr
+  } = JSON.parse(data);
+
 
   const token = btoa(`${userName}:${apiKey}`);
   const options = {

@@ -34,7 +34,7 @@ const sendSurvey = async (req, res) => {
       "priority": "DEFAULT",
       "firstName": fullname.split(' ')[0],
       "lastName": fullname.split(' ').slice(1).join(' '),
-      "contactSource": 306,
+
       "contactInfo": {
         "email": email,
         "tel1": phone

@@ -17,7 +17,8 @@ const sendEmail = async (req, res) => {
       phone,
       email,
       province
-    }
+    },
+    gdpr
   } = JSON.parse(data);
 
   const token = btoa(`${userName}:${apiKey}`);

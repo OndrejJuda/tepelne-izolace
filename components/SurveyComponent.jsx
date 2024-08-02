@@ -74,13 +74,7 @@ const SurveyComponent = () => {
     console.log(JSON.stringify(surveyData, null, 3));
     submitHandler(surveyData);
   });
-
-  return (
-    <div>
-      {submitError && <div>{submitError}</div>}
-      <Survey model={survey} />
-    </div>
-  );
+  return (<Survey model={survey} />);
 }
 
 export default SurveyComponent;

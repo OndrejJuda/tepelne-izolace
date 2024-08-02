@@ -32,8 +32,8 @@ const sendSurvey = async (req, res) => {
     body: JSON.stringify({
       "topic": "Poptávka přes dotazník",
       "priority": "DEFAULT",
-      "firstName": fullname.split(' ')[0],
-      "lastName": fullname.split(' ').slice(1).join(' '),
+      "firstName": fullname,
+      "lastName": fullname,
 
       "contactInfo": {
         "email": email,
@@ -42,15 +42,7 @@ const sendSurvey = async (req, res) => {
       "address": {
         "city": province
       },
-      "notice": `
-      Má zájem o zateplení strop nebo fotovoltaiku? ${solarOrInsulationPlan},
-      Splňujete alespoň jednu z následujících podmínek? ${conditions},
-      Bydlíte v rodinném domě či bytě? ${houseOrFlat},
-      Jste vlastníkem rodinného domu? ${ownerOfProperty},
-      Máte u této nemovitosti trvalé bydliště? ${permanentResidence}, 
-      Jste v důchodu a jste majitelem nebo spolumajitelem 2 a více nemovitostí určené k obývání? ${moreThan2Properties}, 
-      Pokud ve domě nebydlíte sami, splňují všechny ostatní osoby alespoň jednu z podmínek? ${otherPeople},
-      `
+
     })
   };
 

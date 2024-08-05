@@ -16,9 +16,7 @@ const SurveyComponent = () => {
     try {
       setLoadingSubmit(true);
 
-      const datatt = JSON.stringify(surveyData);
-
-      console.log(datatt);
+      const data = JSON.stringify(surveyData);
 
       const {
         solarOrInsulationPlan,
@@ -29,10 +27,15 @@ const SurveyComponent = () => {
         moreThan2Properties,
         otherPeople,
         contactInformation
-      } = JSON.parse(datatt);
-      console.log("iinformace" + contactInformation.phone)
+      } = JSON.parse(data);
 
-      console.log("parsed data   " + datatt);
+      console.log("iinformace" + contactInformation.phone)
+      const phone = contactInformation.phone;
+      const email = contactInformation.email;
+      const fullname = contactInformation.fullname;
+      const province = contactInformation.province;
+
+      console.log("parsed data   " + data);
 
       const response = await fetch(
         '/api/raynet-survey/',
@@ -41,16 +44,7 @@ const SurveyComponent = () => {
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify({
-            solarOrInsulationPlan: surveyData.solarOrInsulationPlan,
-            conditions: surveyData.conditions,
-            houseOrFlat: surveyData.houseOrFlat,
-            ownerOfProperty: surveyData.ownerOfProperty,
-            permanentResidence: surveyData.permanentResidence,
-            moreThan2Properties: surveyData.moreThan2Properties,
-            otherPeople: surveyData.otherPeople,
-            contactInformation: surveyData.contactInformation
-          }),
+          body: JSON.stringify({ solarOrInsulationPlan, conditions, houseOrFlat, ownerOfProperty, permanentResidence, moreThan2Properties, otherPeople, phone, email, fullname, province }),
         }
       );
 

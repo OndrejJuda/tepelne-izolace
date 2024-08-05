@@ -12,13 +12,14 @@ const SurveyComponent = () => {
   const [showValid, setShowValid] = useState(false);
   const router = useRouter();
 
-
-
   const submitHandler = async (surveyData) => {
     try {
       setLoadingSubmit(true);
-      const datatt = JSON.stringify(surveyData)
-      console.log(datatt)
+
+      const datatt = JSON.stringify(surveyData);
+
+      console.log(datatt);
+
       const {
         solarOrInsulationPlan,
         conditions,
@@ -30,16 +31,8 @@ const SurveyComponent = () => {
         contactInformation
       } = JSON.parse(datatt);
 
-      console.log("stringified json     " + JSON.stringify({
-        solarOrInsulationPlan: surveyData.solarOrInsulationPlan,
-        conditions: surveyData.conditions,
-        houseOrFlat: surveyData.houseOrFlat,
-        ownerOfProperty: surveyData.ownerOfProperty,
-        permanentResidence: surveyData.permanentResidence,
-        moreThan2Properties: surveyData.moreThan2Properties,
-        otherPeople: surveyData.otherPeople,
-        contactInformation: surveyData.contactInformation
-      }))
+      console.log("parsed data   " + datatt);
+
       const response = await fetch(
         '/api/raynet-survey/',
         {
@@ -59,6 +52,7 @@ const SurveyComponent = () => {
           }),
         }
       );
+
       if (response.ok) {
         try {
           const getIp = await fetch('/api/get-ip');

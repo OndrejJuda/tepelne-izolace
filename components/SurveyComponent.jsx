@@ -29,13 +29,11 @@ const SurveyComponent = () => {
         contactInformation
       } = JSON.parse(data);
 
-      console.log("iinformace" + contactInformation.phone)
       const phone = contactInformation.phone;
       const email = contactInformation.email;
       const fullname = contactInformation.fullname;
       const province = contactInformation.province;
 
-      console.log("parsed data   " + data);
 
       const response = await fetch(
         '/api/raynet-survey/',

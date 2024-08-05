@@ -30,7 +30,7 @@ const SurveyComponent = () => {
         otherPeople,
         contactInformation
       } = JSON.parse(datatt);
-      console.log("iinformace" + contactInformation)
+      console.log("iinformace" + contactInformation.phone)
 
       console.log("parsed data   " + datatt);
 

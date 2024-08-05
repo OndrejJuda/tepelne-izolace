@@ -16,8 +16,6 @@ const SurveyComponent = () => {
     try {
       setLoadingSubmit(true);
 
-      const data = JSON.stringify(surveyData);
-
       const {
         solarOrInsulationPlan,
         conditions,
@@ -27,7 +25,7 @@ const SurveyComponent = () => {
         moreThan2Properties,
         otherPeople,
         contactInformation
-      } = JSON.parse(data);
+      } = JSON.parse(surveyData);
 
       const phone = contactInformation.phone;
       const email = contactInformation.email;
@@ -42,7 +40,7 @@ const SurveyComponent = () => {
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify({ solarOrInsulationPlan, conditions, houseOrFlat, ownerOfProperty, permanentResidence, moreThan2Properties, otherPeople, phone, email, fullname, province }),
+          body: JSON.stringify({ email: email }),
         }
       );
 
@@ -90,7 +88,6 @@ const SurveyComponent = () => {
   survey.applyTheme(themeJson);
   survey.onComplete.add((sender, options) => {
     const surveyData = sender.data;
-    console.log(JSON.stringify(surveyData, null, 3));
     submitHandler(surveyData);
   });
   return (<Survey model={survey} />);

@@ -30,6 +30,7 @@ const SurveyComponent = () => {
         otherPeople,
         contactInformation
       } = JSON.parse(datatt);
+      console.log("podminky" + conditions)
 
       console.log("parsed data   " + datatt);
 

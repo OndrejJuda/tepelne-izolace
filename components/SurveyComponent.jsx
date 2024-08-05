@@ -15,7 +15,7 @@ const SurveyComponent = () => {
   const submitHandler = async (surveyData) => {
     try {
       setLoadingSubmit(true);
-      const { contactInformation, gdpr, ...otherData } = surveyData;
+      const { contactInformation, gdpr, solarOrInsulationPlan, conditions, liveAlone, ownerOfProperty, permanentResidence, moreThan2Properties, otherPeople } = surveyData;
       const [firstName, lastName] = contactInformation.fullname.split(' ') || ['', ''];
 
       const requestBody = {
@@ -24,16 +24,16 @@ const SurveyComponent = () => {
         email: contactInformation.email || '',
         phoneNumber: contactInformation.phone || '',
         province: contactInformation.province || '',
-        solarOrInsulationPlan: surveyData.solarOrInsulationPlan || false,
-        conditions: surveyData.conditions || '',
-        liveAlone: surveyData.liveAlone || false,
-        ownerOfProperty: surveyData.ownerOfProperty || false,
-        permanentResidence: surveyData.permanentResidence || false,
-        moreThan2Properties: surveyData.moreThan2Properties || '',
-        otherPeople: surveyData.otherPeople || '',
-        gdpr: gdpr.includes("Souhlasím") // Assuming GDPR needs to be boolean
+        solarOrInsulationPlan: solarOrInsulationPlan || false,
+        conditions: conditions || '',
+        liveAlone: liveAlone || false,
+        ownerOfProperty: ownerOfProperty || false,
+        permanentResidence: permanentResidence || false,
+        moreThan2Properties: moreThan2Properties || '',
+        otherPeople: otherPeople || '',
+        gdpr: gdpr.includes("Souhlasím")
       };
-      console.log("enmail" + JSON.stringify({ email: surveyData.contactInformation.email }))
+      console.log("request body" + requestBody)
       const response = await fetch(
         '/api/raynet-survey/',
         {

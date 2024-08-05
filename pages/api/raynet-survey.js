@@ -12,8 +12,7 @@ const sendSurvey = async (req, res) => {
     permanentResidence,
     moreThan2Properties,
     otherPeople,
-    contactInformation,
-    gdpr
+    contactInformation
   } = JSON.parse(data);
 
 

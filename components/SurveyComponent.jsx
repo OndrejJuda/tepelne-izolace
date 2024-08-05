@@ -17,6 +17,16 @@ const SurveyComponent = () => {
   const submitHandler = async (surveyData) => {
     try {
       setLoadingSubmit(true);
+      console.log("pred odeslanim" + JSON.stringify({
+        solarOrInsulationPlan: surveyData.solarOrInsulationPlan,
+        conditions: surveyData.conditions,
+        houseOrFlat: surveyData.houseOrFlat,
+        ownerOfProperty: surveyData.ownerOfProperty,
+        permanentResidence: surveyData.permanentResidence,
+        moreThan2Properties: surveyData.moreThan2Properties,
+        otherPeople: surveyData.otherPeople,
+        contactInformation: surveyData.contactInformation
+      }))
       const response = await fetch(
         '/api/raynet-survey/',
         {
@@ -24,7 +34,16 @@ const SurveyComponent = () => {
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify(surveyData),
+          body: JSON.stringify({
+            solarOrInsulationPlan: surveyData.solarOrInsulationPlan,
+            conditions: surveyData.conditions,
+            houseOrFlat: surveyData.houseOrFlat,
+            ownerOfProperty: surveyData.ownerOfProperty,
+            permanentResidence: surveyData.permanentResidence,
+            moreThan2Properties: surveyData.moreThan2Properties,
+            otherPeople: surveyData.otherPeople,
+            contactInformation: surveyData.contactInformation
+          }),
         }
       );
       if (response.ok) {

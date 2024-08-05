@@ -5,7 +5,7 @@ const instanceName = process.env.RAYNET_INSTANCE_NAME;
 const sendSurvey = async (req, res) => {
   const data = req.body;
   const { email } = JSON.parse(data);
-
+  return res.status(200).json({ error: '' });
 
   const token = btoa(`${userName}:${apiKey}`);
   const options = {

@@ -3,6 +3,7 @@ const apiKey = process.env.RAYNET_API_KEY;
 const instanceName = process.env.RAYNET_INSTANCE_NAME;
 
 const sendSurvey = async (req, res) => {
+  console.log('Raw request body:', req.body);
   const data = req.body;
   const {
     solarOrInsulationPlan,

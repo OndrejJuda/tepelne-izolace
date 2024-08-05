@@ -17,7 +17,20 @@ const SurveyComponent = () => {
   const submitHandler = async (surveyData) => {
     try {
       setLoadingSubmit(true);
-      console.log("pred odeslanim" + JSON.stringify({
+      const datatt = JSON.stringify(surveyData)
+      console.log(datatt)
+      const {
+        solarOrInsulationPlan,
+        conditions,
+        houseOrFlat,
+        ownerOfProperty,
+        permanentResidence,
+        moreThan2Properties,
+        otherPeople,
+        contactInformation
+      } = JSON.parse(datatt);
+
+      console.log("stringified json     " + JSON.stringify({
         solarOrInsulationPlan: surveyData.solarOrInsulationPlan,
         conditions: surveyData.conditions,
         houseOrFlat: surveyData.houseOrFlat,

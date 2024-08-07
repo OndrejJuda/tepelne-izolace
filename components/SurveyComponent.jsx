@@ -14,9 +14,8 @@ const SurveyComponent = () => {
 
   const submitHandler = async (surveyData) => {
     try {
+
       setLoadingSubmit(true);
-
-
       const response = await fetch(
         '/api/survey/',
         {
@@ -29,27 +28,27 @@ const SurveyComponent = () => {
         }
       );
 
-
       if (response.ok) {
         try {
           const getIp = await fetch('/api/get-ip');
           const ipAddress = await getIp.json();
           const currentUrl = router.asPath;
+
           const fb = await fetch(
-            '/api/facebookLead/',
+            '/api/facebookLeadV2/',
             {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json'
               },
               body: JSON.stringify({
-                firstName: surveyData.contactInformation.fullname.split(' ')[0],
-                lastName: surveyData.contactInformation.fullname.split(' ').slice(1).join(' '),
-                email: surveyData.contactInformation.email,
-                phoneNumber: surveyData.contactInformation.phone,
-                district: surveyData.contactInformation.province,
-                ipAddress: ipAddress.ip,
-                currentUrl: "https://lunastav.cz" + currentUrl
+                "firstName": surveyData.contactInformation.fullname.split(' ')[0],
+                "lastName": surveyData.contactInformation.fullname.split(' ').slice(1).join(' '),
+                "email": surveyData.contactInformation.email,
+                "phoneNumber": surveyData.contactInformation.phone,
+                "district": surveyData.contactInformation.province,
+                "ipAddress": ipAddress.ip,
+                "currentUrl": "https://lunastav.cz" + currentUrl
               }),
             }
           );

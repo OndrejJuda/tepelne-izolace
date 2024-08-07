@@ -4,8 +4,8 @@ const instanceName = process.env.RAYNET_INSTANCE_NAME;
 
 const sendSurvey = async (req, res) => {
   try {
+    JSON.parse(req.body);
     const data = {};
-
     Object.keys(req.body).forEach((key) => {
       if (typeof req.body[key] === 'boolean') {
         data[key] = req.body[key] ? 'ANO' : 'NE';

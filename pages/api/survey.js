@@ -4,7 +4,19 @@ const instanceName = process.env.RAYNET_INSTANCE_NAME;
 
 const sendSurvey = async (req, res) => {
   try {
-    const data = req.body;
+    const data = {};
+
+    Object.keys(req.body).forEach((key) => {
+      if (typeof req.body[key] === 'boolean') {
+        data[key] = req.body[key] ? 'ANO' : 'NE';
+      } else if (typeof req.body[key] === 'object' && !Array.isArray(req.body[key])) {
+        data[key] = transformBooleans(req.body[key]); // Recursively handle nested objects
+      } else {
+        data[key] = req.body[key];
+      }
+    });
+
+
     const token = btoa(`${userName}:${apiKey}`);
     const options = {
       method: 'PUT',

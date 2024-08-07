@@ -24,7 +24,7 @@ const SurveyComponent = () => {
           headers: {
             'Content-Type': 'application/json'
           },
-          body: surveyData,
+          body: JSON.stringify(surveyData),
 
         }
       );
@@ -76,6 +76,7 @@ const SurveyComponent = () => {
     const surveyData = sender.data;
     submitHandler(surveyData);
   });
+
   return (<Survey model={survey} />);
 }
 

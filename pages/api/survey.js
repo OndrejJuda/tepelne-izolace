@@ -2,20 +2,23 @@ const userName = process.env.RAYNET_USERNAME;
 const apiKey = process.env.RAYNET_API_KEY;
 const instanceName = process.env.RAYNET_INSTANCE_NAME;
 
+const transformBooleans = (obj) => {
+  const newObj = {};
+  Object.keys(obj).forEach((key) => {
+    if (typeof obj[key] === 'boolean') {
+      newObj[key] = obj[key] ? 'ANO' : 'NE';
+    } else if (typeof obj[key] === 'object' && !Array.isArray(obj[key])) {
+      newObj[key] = transformBooleans(obj[key]);
+    } else {
+      newObj[key] = obj[key];
+    }
+  });
+  return newObj;
+};
+
 const sendSurvey = async (req, res) => {
   try {
-    JSON.parse(req.body);
-    const data = {};
-    Object.keys(req.body).forEach((key) => {
-      if (typeof req.body[key] === 'boolean') {
-        data[key] = req.body[key] ? 'ANO' : 'NE';
-      } else if (typeof req.body[key] === 'object' && !Array.isArray(req.body[key])) {
-        data[key] = transformBooleans(req.body[key]); // Recursively handle nested objects
-      } else {
-        data[key] = req.body[key];
-      }
-    });
-
+    const data = transformBooleans(req.body);
 
     const token = btoa(`${userName}:${apiKey}`);
     const options = {
@@ -37,14 +40,14 @@ const sendSurvey = async (req, res) => {
         "address": {
           "city": data.contactInformation.province
         },
-        "notice": ` Má zájem o zateplení strop nebo fotovoltaiku? ${data.solarOrInsulationPlan},
-                        Splňujete alespoň jednu z následujících podmínek? ${data.conditions},
-                        Bydlíte v rodinném domě či bytě? ${data.houseOrFlat},
-                        Jste vlastníkem rodinného domu? ${data.ownerOfProperty},
-                        Máte u této nemovitosti trvalé bydliště? ${data.permanentResidence}, 
-                        Jste v důchodu a jste majitelem nebo spolumajitelem 2 a více nemovitostí určené k obývání? ${data.oreThan2Properties}, 
-                        Pokud ve domě nebydlíte sami, splňují všechny ostatní osoby alespoň jednu z podmínek? ${data.otherPeople},
-                    `
+        "notice": `-> Má zájem o zateplení strop nebo fotovoltaiku? ${data.solarOrInsulationPlan}
+                      -> Splňujete alespoň jednu z následujících podmínek? ${data.conditions}
+                      -> Bydlíte v rodinném domě či bytě? ${data.houseOrFlat}
+                      -> Jste vlastníkem rodinného domu? ${data.ownerOfProperty}
+                      -> Máte u této nemovitosti trvalé bydliště? ${data.permanentResidence}
+                      -> Jste v důchodu a jste majitelem nebo spolumajitelem 2 a více nemovitostí určené k obývání? ${data.moreThan2Properties}
+                      -> Pokud ve domě nebydlíte sami, splňují všechny ostatní osoby alespoň jednu z podmínek? ${data.otherPeople}
+                  `
       }),
     };
 

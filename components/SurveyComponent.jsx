@@ -15,25 +15,8 @@ const SurveyComponent = () => {
   const submitHandler = async (surveyData) => {
     try {
       setLoadingSubmit(true);
-      const { contactInformation, gdpr, solarOrInsulationPlan, conditions, liveAlone, ownerOfProperty, permanentResidence, moreThan2Properties, otherPeople } = surveyData;
-      const [firstName, lastName] = contactInformation.fullname.split(' ') || ['', ''];
 
-      const requestBody = {
-        firstName: firstName || '',
-        lastName: lastName || '',
-        email: contactInformation.email || '',
-        phoneNumber: contactInformation.phone || '',
-        province: contactInformation.province || '',
-        solarOrInsulationPlan: solarOrInsulationPlan || false,
-        conditions: conditions || '',
-        liveAlone: liveAlone || false,
-        ownerOfProperty: ownerOfProperty || false,
-        permanentResidence: permanentResidence || false,
-        moreThan2Properties: moreThan2Properties || '',
-        otherPeople: otherPeople || '',
-        gdpr: gdpr.includes("Souhlasím")
-      };
-      console.log("request body" + requestBody)
+
       const response = await fetch(
         '/api/raynet-survey/',
         {
@@ -41,7 +24,7 @@ const SurveyComponent = () => {
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify(requestBody),
+          body: surveyData,
 
         }
       );

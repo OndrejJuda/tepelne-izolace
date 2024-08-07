@@ -4,21 +4,7 @@ const instanceName = process.env.RAYNET_INSTANCE_NAME;
 
 const sendSurvey = async (req, res) => {
   try {
-    // Ensure the request body is parsed correctly
     const data = req.body;
-    if (typeof data === 'string') {
-      // If data is a JSON string, parse it
-      data = JSON.parse(data);
-    }
-
-    // Extract the necessary fields
-    const { email } = data;
-
-    if (!email) {
-      return res.status(400).json({ error: 'Email is required' });
-    }
-
-    // Prepare the API request
     const token = btoa(`${userName}:${apiKey}`);
     const options = {
       method: 'PUT',
@@ -30,15 +16,23 @@ const sendSurvey = async (req, res) => {
       body: JSON.stringify({
         "topic": "Poptávka přes dotazník",
         "priority": "DEFAULT",
-        "firstName": "Roman",  // Replace with dynamic value if needed
-        "lastName": "Erlebach", // Replace with dynamic value if needed
+        "contactSource": 306,
+        "companyName": data.contactInformation.fullname,
         "contactInfo": {
-          "email": email,
-          "tel1": "732915199"
+          "email": data.contactInformation.email,
+          "tel1": data.contactInformation.phone
         },
         "address": {
-          "city": "Hradec"
+          "city": data.contactInformation.province
         },
+        "notice": ` Má zájem o zateplení strop nebo fotovoltaiku? ${data.solarOrInsulationPlan},
+                        Splňujete alespoň jednu z následujících podmínek? ${data.conditions},
+                        Bydlíte v rodinném domě či bytě? ${data.houseOrFlat},
+                        Jste vlastníkem rodinného domu? ${data.ownerOfProperty},
+                        Máte u této nemovitosti trvalé bydliště? ${data.permanentResidence}, 
+                        Jste v důchodu a jste majitelem nebo spolumajitelem 2 a více nemovitostí určené k obývání? ${data.oreThan2Properties}, 
+                        Pokud ve domě nebydlíte sami, splňují všechny ostatní osoby alespoň jednu z podmínek? ${data.otherPeople},
+                    `
       }),
     };
 

@@ -18,7 +18,7 @@ const SurveyComponent = () => {
 
 
       const response = await fetch(
-        '/api/raynet-survey/',
+        '/api/survey/',
         {
           method: 'POST',
           headers: {

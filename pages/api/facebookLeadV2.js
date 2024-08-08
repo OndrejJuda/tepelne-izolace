@@ -9,7 +9,7 @@ export function SHA256(inputString) {
   return hash.digest('hex');
 }
 
-const sendFBLeaddata = async (req, res) => {
+const sendFBLeaddatav2 = async (req, res) => {
   const data = req.body;
 
   const myHeaders = new Headers();
@@ -63,4 +63,4 @@ const sendFBLeaddata = async (req, res) => {
 
   return res.status(200).json({ error: '' });
 };
-export default sendFBLeaddata;
+export default sendFBLeaddatav2;

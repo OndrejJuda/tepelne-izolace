@@ -7,15 +7,11 @@ import { json } from "./json";
 import { useRouter } from 'next/router';
 
 const SurveyComponent = () => {
-  const [loadingSubmit, setLoadingSubmit] = useState(false);
-  const [submitError, setSubmitError] = useState('');
-  const [showValid, setShowValid] = useState(false);
   const router = useRouter();
 
   const submitHandler = async (surveyData) => {
     try {
 
-      setLoadingSubmit(true);
       const response = await fetch(
         '/api/survey/',
         {
@@ -29,17 +25,13 @@ const SurveyComponent = () => {
       );
 
       if (response.ok) {
-        router.replace('/dekujeme-vam');
+
       } else {
         <div>Něco se pokazilo, zkuste to prosím znovu.
           Můžete se nám ozvat hned na číslo 705 968 968.
         </div>
       }
-      setLoadingSubmit(false);
     } catch (error) {
-      setShowValid(false);
-      setSubmitError(error.message);
-      setLoadingSubmit(false);
       console.error(error);
     }
   }
@@ -48,6 +40,7 @@ const SurveyComponent = () => {
   survey.applyTheme(themeJson);
   survey.onComplete.add((sender, options) => {
     const surveyData = sender.data;
+    router.replace('/dekujeme-vam');
     submitHandler(surveyData);
   });
 

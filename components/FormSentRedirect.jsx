@@ -51,7 +51,9 @@ const FormSentRedirect = () => {
         </Link>
       </nav>
       <div className='my-40 py-20 px-4  md:px-16 lg:px-36 flex flex-col justify-center items-center gap-8  text-primary-900 '>
-        <h1 className='text-4xl font-semibold text-center'>Děkujeme vám. Poptávkový formulář byl úspěšně odeslán ✅</h1>
+        <h1 className='text-4xl font-semibold text-center'>Děkujeme vám. Poptávkový formulář byl úspěšně odeslán ✅
+          Obchodní zástupci se Vám ozvou co nejdříve.
+        </h1>
       </div>
     </>
   );

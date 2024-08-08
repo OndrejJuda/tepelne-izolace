@@ -71,18 +71,26 @@ export const json = {
             "name": "Living in house or flat",
             "elements": [
                 {
-                    "type": "boolean",
+                    "type": "radiogroup",
                     "name": "houseOrFlat",
                     "title": {
                         "cs": "Bydlíte v rodinném domě či bytě?"
                     },
                     "isRequired": true,
-                    "labelTrue": {
-                        "cs": "Byt"
-                    },
-                    "labelFalse": {
-                        "cs": "Rodinný dům"
-                    }
+                    "choices": [
+                        {
+                            "value": "Rodinný dům",
+                            "text": {
+                                "cs": "Rodinný dům"
+                            }
+                        },
+                        {
+                            "value": "Byt",
+                            "text": {
+                                "cs": "Byt"
+                            }
+                        }
+                    ]
                 }
             ]
         },

@@ -29,36 +29,11 @@ const SurveyComponent = () => {
       );
 
       if (response.ok) {
-        try {
-          const getIp = await fetch('/api/get-ip');
-          const ipAddress = await getIp.json();
-          const currentUrl = router.asPath;
-
-          const fb = await fetch(
-            '/api/facebookLeadV2/',
-            {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json'
-              },
-              body: JSON.stringify({
-                "firstName": surveyData.contactInformation.fullname.split(' ')[0],
-                "lastName": surveyData.contactInformation.fullname.split(' ').slice(1).join(' '),
-                "email": surveyData.contactInformation.email,
-                "phoneNumber": surveyData.contactInformation.phone,
-                "district": surveyData.contactInformation.province,
-                "ipAddress": ipAddress.ip,
-                "currentUrl": "https://lunastav.cz" + currentUrl
-              }),
-            }
-          );
-        }
-        catch (error) { console.error(error); }
-        setShowValid(true);
         router.replace('/dekujeme-vam');
-
       } else {
-        setShowValid(false);
+        <div>Něco se pokazilo, zkuste to prosím znovu.
+          Můžete se nám ozvat hned na číslo 705 968 968.
+        </div>
       }
       setLoadingSubmit(false);
     } catch (error) {

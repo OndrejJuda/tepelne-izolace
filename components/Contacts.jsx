@@ -80,27 +80,6 @@ const Contacts = () => {
                   </a>
                 </div>
               </li>
-              <li className='bg-primary-50 p-8 shadow-lg rounded-lg'>
-                <p className='text-3xl text-primary-900 font-semibold mb-8'>Královéhradecký kraj<br />a Pardubický kraj:</p>
-                <div className='text-2xl text-primary-900'>
-                  <address>
-                    Spojovací 670/17 <br />
-                    503 11, Hradec Králové
-                  </address>
-                  <a href={`mailto:${email}`} target='_blank' rel='noreferrer' className='block'>
-                    <div className='flex items-center gap-4 mt-4'>
-                      <MdAlternateEmail size={36} className='text-primary-900' />
-                      <span>{email}</span>
-                    </div>
-                  </a>
-                  <a href={`tel:${phoneSekretarka.replaceAll(' ', '')}`} target='_blank' rel='noreferrer' className='block'>
-                    <div className='flex items-center gap-4 mt-4'>
-                      <FiPhoneCall size={36} className='text-primary-900' />
-                      <span>{phoneSekretarka}</span>
-                    </div>
-                  </a>
-                </div>
-              </li>
             </ul>
           </div>
         </section>

@@ -1,10 +1,10 @@
 const configuration = {
   title: 'LUNASTAV CZ s.r.o.',
-  description: 'Zateplujeme pomocí foukané izolace a vyřídíme za Vás dotaci NZÚ Light.',
+  description: 'Zateplujeme pomocí foukané nebo stríkané izolace a vyřídíme za Vás dotaci NZÚ Light.',
   url: 'https://www.lunastav.cz',
   urlSubdomain: 'www.lunastav.cz',
   email: 'info@lunastav.cz',
-  phone: '+420 605 898 894',
+  phone: '+420 731 513 994',
   phoneSekretarka: '+420 731 513 994',
   jsonLd: {
     '@context': 'https://schema.org',

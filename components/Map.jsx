@@ -2,7 +2,6 @@ import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
 
 const PLACES = [
   { lat: 50.08025330059694, lng: 14.414347861165416 },
-  { lat: 50.22383794575171, lng: 15.78019676441785 }
 ];
 
 const MapContainer = ({ google }) => {
@@ -10,7 +9,7 @@ const MapContainer = ({ google }) => {
     <Map
       google={google}
       zoom={10}
-      initialCenter={{ lat: 50.14542209177925, lng: 15.122542620688579 }}
+      initialCenter={{ lat: 50.08025330059694, lng: 14.414347861165416 }}
     >
       {
         PLACES.map((place, index) => (

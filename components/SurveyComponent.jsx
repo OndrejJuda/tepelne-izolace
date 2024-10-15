@@ -28,7 +28,7 @@ const SurveyComponent = () => {
 
       } else {
         <div>Něco se pokazilo, zkuste to prosím znovu.
-          Můžete se nám ozvat hned na číslo 705 968 968.
+          Můžete se nám ozvat hned na číslo 731 513 994.
         </div>
       }
     } catch (error) {

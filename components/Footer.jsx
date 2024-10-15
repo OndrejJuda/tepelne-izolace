@@ -78,7 +78,7 @@ const Footer = () => {
           <div className="space-y-3">
             <h3 className="uppercase ">Kontakt</h3>
             <ul className="space-y-1">
-              <li>+420 705 968 968</li>
+              <li>+420 731 513 994</li>
               <li>info@lunastav.cz </li>
               <li>IČO: 05591872 </li>
             </ul>

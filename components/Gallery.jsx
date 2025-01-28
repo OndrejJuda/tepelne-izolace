@@ -6,11 +6,15 @@ import { Carousel } from '../components';
 const Gallery = () => {
 
   const blowingInsualtionSlides = [
-    "/gallery/lavka1.jpg",
-    "/gallery/vata1.jpg",
-    "/gallery/vata2.jpg",
-    "/gallery/celuloza1.jpg",
-    "/gallery/celuloza2.jpg",
+    "/gallery/pochozi4.png",
+    "/gallery/vata3.png",
+    "/gallery/celu3.png",
+    "/gallery/pochozi1.png",
+    "/gallery/pochozi2.png",
+    "/gallery/pochozi3.png",
+    "/gallery/pochozi5.png",
+    "/gallery/pochozi6.png",
+    "/gallery/pochozi7.png",
 
   ]
   return (
@@ -20,7 +24,7 @@ const Gallery = () => {
     >
       <HSecondary additionalStyling='mb-8 lg:mb-8 mt-8 text-2xl sm:text-2xl lg:text-3xl'>Galerie</HSecondary>
       <div className="flex justify-center mb-10">
-        <div className="max-w-[800px]">
+        <div className="max-w-[800px] ">
           <Carousel slides={blowingInsualtionSlides} />
         </div>
       </div>

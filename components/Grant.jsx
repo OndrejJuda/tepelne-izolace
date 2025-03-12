@@ -66,11 +66,11 @@ const Grant = () => {
                     </div>
                     Zateplení stropu
                   </dt>
-                  <dd className="mt-2 mb-2  text-base leading-7 text-gray-600">Dotace na kompletní zateplení stropu pod nevytápěnými prostory nebo stropu obývaného podkroví.</dd>
+                  <dd className="mt-2 mb-2  text-base leading-7 text-gray-600">Dotace na kompletní zateplení stropu pod nevytápěnými prostory nebo stropu pod nevytápěnou půdou.</dd>
                   {/* <Link href="/dotace" title="Zateplení stropu" className="mt-4 text-sm font-medium text-primary-500 hover:text-primary-600">
                     Zjistit více
                   </Link> */}
-                  <p><strong>Dotace  1500 Kč/m²</strong></p>
+                  <p><strong>Dotace 300 Kč/m² nebo 750 Kč/m² pro nízkopřijmové domácnosti</strong></p>
                 </div>
                 <div className="relative pl-16">
                   <dt className="text-base font-semibold leading-7 text-gray-900">
@@ -83,7 +83,7 @@ const Grant = () => {
                   {/* <Link href="/dotace" title="Zateplení stropu" className="mt-4 text-sm font-medium text-primary-500 hover:text-primary-600">
                     Zjistit více
                   </Link> */}
-                  <p><strong>Dotace  1500 Kč/m²</strong></p>
+                  <p><strong>Dotace  700 Kč/m² nebo 1500 Kč/m² pro nízkopřijmové domácnosti</strong></p>
                 </div>
                 <div className="relative pl-16">
                   <dt className="text-base font-semibold leading-7 text-gray-900">
@@ -96,7 +96,7 @@ const Grant = () => {
                   {/* <Link href="/dotace" title="Zateplení stropu" className="mt-4 text-sm font-medium text-primary-500 hover:text-primary-600">
                     Zjistit více
                   </Link> */}
-                  <p><strong>Dotace až 150 000 Kč (6 000 Kč/běžný metr)</strong></p>
+                  <p><strong>Dotace  700 Kč/m² nebo 1500 Kč/m² pro nízkopřijmové domácnosti</strong></p>
                 </div>
                 <div className="relative pl-16">
                   <dt className="text-base font-semibold leading-7 text-gray-900">
@@ -109,18 +109,18 @@ const Grant = () => {
                   {/* <Link href="/dotace" title="Zateplení stropu" className="text-sm font-medium text-primary-500 hover:text-primary-600">
                     Zjistit více
                   </Link> */}
-                  <p><strong>Dotace  70 000 Kč</strong></p>
+                  <p><strong>Dotace až 60 000 Kč</strong></p>
                 </div>
               </dl>
             </div>
             <div className='mx-auto max-w-2xl lg:text-center'><p className="mt-14 mb-14 text-3xl tracking-tight text-gray-900 sm:text-2xl">Na jakýkoliv dotaz Vám odpovíme na našem emailu <strong>dotace@lunastav.cz</strong></p></div>
             <div>
               <ul className="list-disc mt-16 text-lg">
-                <strong className='text-2xl border-b-4 border-primary-300 pb-1'>Podmínky pro získání dotace:</strong>
+                <strong className='text-2xl border-b-4 border-primary-300 pb-1'>Podmínky pro získání nízkopřijmové dotac NZÚ Light:</strong>
                 <p className='text-lg mt-2'>Nárok na dotaci máte v případě, že jste <strong>vlastníci</strong> nebo <strong>spoluvlastníci</strong> rodinného domu, nebo trvale obývané rekreační stavby, bytu nebo podílu v bytovém družstvu s právem užívat byt a zároveň splňujete jednu z těchto podmínek:</p>
                 <li className='mb-2 mt-2'><strong>Všichni členové </strong>vaší domácnosti pobírají <strong>starobní důchod</strong>  nebo <strong>invalidní důchod 3. stupně</strong>.</li>
                 <li className='mb-2 '>Vy nebo členové vaší domácnosti pobíráte v době podání žádosti <strong>příspěvek na bydlení</strong> či <strong>přídavek na dítě</strong>.</li>
-                <p className='text-lg mt-2'>Jste-li příjemce starobního důchodu, na dotaci máte nárok v případě, že vy ani ostatní členové vaší domácnosti nevlastníte žádnou další nemovitost určenou k bydlení nebo podíl na takové nemovitosti.</p>
+                <p className='text-lg mt-2'>Jste-li příjemce starobního důchodu, na dotaci máte nárok v případě, že vy a ostatní členové vaší domácnosti vlastníte maximálně 2 nemovitosti určené k bydlení nebo podíl na takové nemovitosti.</p>
               </ul>
             </div>
           </div>

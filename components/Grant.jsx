@@ -116,7 +116,7 @@ const Grant = () => {
             <div className='mx-auto max-w-2xl lg:text-center'><p className="mt-14 mb-14 text-3xl tracking-tight text-gray-900 sm:text-2xl">Na jakýkoliv dotaz Vám odpovíme na našem emailu <strong>dotace@lunastav.cz</strong></p></div>
             <div>
               <ul className="list-disc mt-16 text-lg">
-                <strong className='text-2xl border-b-4 border-primary-300 pb-1'>Podmínky pro získání nízkopřijmové dotac NZÚ Light:</strong>
+                <strong className='text-2xl border-b-4 border-primary-300 pb-1'>Podmínky pro získání nízkopřijmové dotace NZÚ Light:</strong>
                 <p className='text-lg mt-2'>Nárok na dotaci máte v případě, že jste <strong>vlastníci</strong> nebo <strong>spoluvlastníci</strong> rodinného domu, nebo trvale obývané rekreační stavby, bytu nebo podílu v bytovém družstvu s právem užívat byt a zároveň splňujete jednu z těchto podmínek:</p>
                 <li className='mb-2 mt-2'><strong>Všichni členové </strong>vaší domácnosti pobírají <strong>starobní důchod</strong>  nebo <strong>invalidní důchod 3. stupně</strong>.</li>
                 <li className='mb-2 '>Vy nebo členové vaší domácnosti pobíráte v době podání žádosti <strong>příspěvek na bydlení</strong> či <strong>přídavek na dítě</strong>.</li>
